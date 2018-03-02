@@ -1,0 +1,30 @@
+//  *************************************************************************
+//  File : mtip_fc_pack_package.verilog
+//  *************************************************************************
+//  This program is controlled by a written license agreement.
+//  Unauthorized Reproduction or Use is Expressly Prohibited. 
+//  Copyright (c) 2003 MoreThanIP.com
+//  An der Steinernen Brueke 1, 85757 Karlsfeld, Germany
+//  Designed by : Francois Balay
+//  info@morethanip.com
+//  *************************************************************************
+//                  Multi-Gigabit Fibre Channel Core
+//  *************************************************************************
+//  Decription : Multi-Gigabit Fiber Channel Core Configuration
+//  Version    : $Id: mtip_fc_pack_package.verilog,v 1.2 2009/06/03 14:33:41 fb Exp $
+//  *************************************************************************
+
+`define FALSE 1'b 0
+`define TRUE 1'b 1
+
+//  Core Configuration
+//  ------------------
+
+parameter CORE_VERSION  = 1;            //  MorethanIP Core Version
+parameter CORE_REVISION = 2;            //  MorethanIP Core Revision
+parameter CUST_VERSION  = 1;            //  Customer Core Version
+parameter EG_FIFO       = 256 ;          //  Egress FIFO Depth
+parameter EG_ADDR       = 8 ;            //  Egress FIFO Depth
+parameter ING_FIFO      = 256 ;         //  Ingress FIFO Depth
+parameter ING_ADDR      = 8 ;           //  Egress FIFO Depth
+parameter ENA_32	= `TRUE ;		//  Enable 32-Bit Client Interface

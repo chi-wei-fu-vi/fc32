@@ -1,0 +1,1 @@
+../../../fc1_layer_kr_16_8/rtl/SERDES/includes/vi_defines.vh

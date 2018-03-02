@@ -1,0 +1,2 @@
+set_global_assignment -library ucstats_pipe -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ucstats_pipe.v]
+set_global_assignment -library ucstats_pipe -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../lib/onehot_to_bin.v]

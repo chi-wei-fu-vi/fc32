@@ -1,0 +1,818 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date              : Fri Feb  9 15:52:33 2018
+| Host              : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
+| Command           : report_clock_utilization -file xilinx_pcie4_uscale_ep_clock_utilization_routed.rpt
+| Design            : xilinx_pcie4_uscale_ep
+| Device            : xcku15p-ffve1517
+| Speed File        : -3  ADVANCE 1.14 09-15-2017
+| Temperature Grade : E
+---------------------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Global Clock Resources
+3. Global Clock Source Details
+4. Clock Regions : Clock Primitives
+5. Clock Regions : Load Primitives
+6. Clock Regions : Global Clock Summary
+7. Clock Regions : Routing Resource Utilization
+8. Device Cell Placement Summary for Global Clock g0
+9. Device Cell Placement Summary for Global Clock g1
+10. Device Cell Placement Summary for Global Clock g2
+11. Device Cell Placement Summary for Global Clock g3
+12. Device Cell Placement Summary for Global Clock g4
+13. Device Cell Placement Summary for Global Clock g5
+14. Device Cell Placement Summary for Global Clock g6
+15. Device Cell Placement Summary for Global Clock g7
+16. Device Cell Placement Summary for Global Clock g8
+17. Device Cell Placement Summary for Global Clock g9
+18. Device Cell Placement Summary for Global Clock g10
+19. Device Cell Placement Summary for Global Clock g11
+20. Device Cell Placement Summary for Global Clock g12
+21. Device Cell Placement Summary for Global Clock g13
+22. Clock Region Cell Placement per Global Clock: Region X0Y4
+23. Clock Region Cell Placement per Global Clock: Region X1Y4
+24. Clock Region Cell Placement per Global Clock: Region X0Y5
+25. Clock Region Cell Placement per Global Clock: Region X0Y6
+26. Clock Region Cell Placement per Global Clock: Region X0Y7
+
+1. Clock Primitive Utilization
+------------------------------
+
++------------+------+-----------+-----+--------------+--------+
+| Type       | Used | Available | LOC | Clock Region | Pblock |
++------------+------+-----------+-----+--------------+--------+
+| BUFGCE     |    0 |       280 |   0 |            0 |      0 |
+| BUFGCE_DIV |    0 |        44 |   0 |            0 |      0 |
+| BUFGCTRL   |    0 |        88 |   0 |            0 |      0 |
+| BUFG_GT    |   14 |       456 |   0 |            0 |      0 |
+| MMCM       |    0 |        11 |   0 |            0 |      0 |
+| PLL        |    0 |        22 |   0 |            0 |      0 |
++------------+------+-----------+-----+--------------+--------+
+
+
+2. Global Clock Resources
+-------------------------
+
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Root              | Clock Delay Group | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                                                                                                                                                                                                                                                                                                             | Driver Pin                                                                                                                                                                                                                                                                                                                                                                       | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y154 | X0Y6         | X0Y5              |                   |                 4 |        3513 |               0 |       10.000 | sys_clk                                                                                                                                                                                                                                                                                                                                                                           | pcie4_uscale_plus_1_i/inst/bufg_gt_sysclk/O                                                                                                                                                                                                                                                                                                                                      | pcie4_uscale_plus_1_i/inst/ext_ch_gt_drpclk                                                                                                                                                                                                                                                                                                                       |
+| g1        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y158 | X0Y6         | CLOCK_REGION_X0Y6 |                   |                 3 |        2753 |               0 |        4.000 | pipe_clk                                                                                                                                                                                                                                                                                                                                                                          | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O                                                                                                                                                                                                                                                                                     | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT                                                                                                                                                                                                                                                                        |
+| g2        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y156 | X0Y6         | CLOCK_REGION_X0Y6 |                   |                 3 |        1870 |               0 |        2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_coreclk/O                                                                                                                                                                                                                                                                                  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                                                                         |
+| g3        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y146 | X0Y6         | CLOCK_REGION_X0Y6 |                   |                 2 |         750 |               0 |        4.000 | user_clk                                                                                                                                                                                                                                                                                                                                                                          | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_userclk/O                                                                                                                                                                                                                                                                                  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                                                                         |
+| g4        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y162 | X0Y6         | X0Y7              |                   |                 1 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g5        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y150 | X0Y6         | CLOCK_REGION_X0Y6 |                   |                 1 |          13 |               0 |     1000.000 | intclk                                                                                                                                                                                                                                                                                                                                                                            | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_intclk/O                                                                                                                                                                                                                                                                                   | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK                                                                                                                                                                                                                                                                          |
+| g6        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y166 | X0Y6         | CLOCK_REGION_X0Y6 |                   |                 1 |           1 |               0 |        8.000 | mcap_clk                                                                                                                                                                                                                                                                                                                                                                          | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_mcapclk/O                                                                                                                                                                                                                                                                                  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_MCAPCLK                                                                                                                                                                                                                                                                         |
+| g7        | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y137 | X0Y5         | X0Y4              |                   |                 2 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g8        | src3      | BUFG_GT/O       | None       | BUFG_GT_X0Y141 | X0Y5         | X0Y5              |                   |                 1 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g9        | src4      | BUFG_GT/O       | None       | BUFG_GT_X0Y136 | X0Y5         | X0Y5              |                   |                 1 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g10       | src5      | BUFG_GT/O       | None       | BUFG_GT_X0Y128 | X0Y5         | X0Y5              |                   |                 1 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g11       | src6      | BUFG_GT/O       | None       | BUFG_GT_X0Y151 | X0Y6         | X0Y6              |                   |                 1 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g12       | src7      | BUFG_GT/O       | None       | BUFG_GT_X0Y164 | X0Y6         | X0Y6              |                   |                 1 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g13       | src8      | BUFG_GT/O       | None       | BUFG_GT_X0Y155 | X0Y6         | X0Y6              |                   |                 1 |          31 |               0 |        8.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O  | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+3. Global Clock Source Details
+------------------------------
+
++-----------+------------------------+------------------------+---------------------+---------------------+--------------+-------------+-----------------+---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Source Id | Global Id              | Driver Type/Pin        | Constraint          | Site                | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                                                                                                                                                                                                                                                                                                                                                                      | Driver Pin                                                                                                                                                                                                                                                                                                                                                                        | Net                                                                                                                                                                                                                                                                                                                  |
++-----------+------------------------+------------------------+---------------------+---------------------+--------------+-------------+-----------------+---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| src0      | g0                     | IBUFDS_GTE4/ODIV2      | GTYE4_COMMON_X0Y3   | GTYE4_COMMON_X0Y3   | X0Y6         |           2 |               0 |              10.000 | sys_clk                                                                                                                                                                                                                                                                                                                                                                           | refclk_ibuf/ODIV2                                                                                                                                                                                                                                                                                                                                                                 | sys_clk                                                                                                                                                                                                                                                                                                              |
+| src1      | g1, g2, g3, g4, g5, g6 | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y15 | GTYE4_CHANNEL_X0Y15 | X0Y6         |           7 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[3] |
+| src2      | g7                     | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y8  | GTYE4_CHANNEL_X0Y8  | X0Y5         |           2 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[0] |
+| src3      | g8                     | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y9  | GTYE4_CHANNEL_X0Y9  | X0Y5         |           2 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[1] |
+| src4      | g9                     | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y10 | GTYE4_CHANNEL_X0Y10 | X0Y5         |           2 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[2] |
+| src5      | g10                    | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y11 | GTYE4_CHANNEL_X0Y11 | X0Y5         |           2 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[3] |
+| src6      | g11                    | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y12 | GTYE4_CHANNEL_X0Y12 | X0Y6         |           2 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[0] |
+| src7      | g12                    | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y13 | GTYE4_CHANNEL_X0Y13 | X0Y6         |           2 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[1] |
+| src8      | g13                    | GTYE4_CHANNEL/TXOUTCLK | GTYE4_CHANNEL_X0Y14 | GTYE4_CHANNEL_X0Y14 | X0Y6         |           2 |               0 |               2.000 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[2] |
++-----------+------------------------+------------------------+---------------------+---------------------+--------------+-------------+-----------------+---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+4. Clock Regions : Clock Primitives
+-----------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |    BUFGCE    |  BUFGCE_DIV  |   BUFGCTRL   |    BUFG_GT   |     MMCM     |      PLL     |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X1Y0              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y0              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y0              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y1              |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X1Y1              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y1              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y1              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y2              |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X1Y2              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y2              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y2              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y3              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X1Y3              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y3              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y3              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y4              |    6 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X1Y4              |    2 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y4              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y4              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y5              |    8 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    4 |    24 |    0 |     0 |    0 |     0 |
+| X1Y5              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y5              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y5              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y6              |    5 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |   10 |    24 |    0 |     0 |    0 |     0 |
+| X1Y6              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y6              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y6              |    0 |    24 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y7              |    2 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X1Y7              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y7              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y7              |    0 |    24 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y8              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X1Y8              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y8              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y8              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y9              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X1Y9              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y9              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y9              |    0 |    24 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y10             |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X1Y10             |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y10             |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y10             |    0 |    24 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+5. Clock Regions : Load Primitives
+----------------------------------
+
++-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+|                   |   Global Clock   |        FF        |      LUTRAM      |  Block RAM (18K) |       URAM       |        DSP       |        GT        |      HARD IP     |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| X0Y0              |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |
+| X1Y0              |      0 |      24 |      0 |   18240 |      0 |    4800 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y0              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y0              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       1 |
+| X0Y1              |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |
+| X1Y1              |      0 |      24 |      0 |   18240 |      0 |    4800 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y1              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y1              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       0 |
+| X0Y2              |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |      0 |       0 |
+| X1Y2              |      0 |      24 |      0 |   18240 |      0 |    4800 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y2              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y2              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       0 |
+| X0Y3              |      0 |      24 |      0 |   20160 |      0 |    3840 |      0 |     216 |      0 |      16 |      0 |      48 |      0 |       4 |      0 |       1 |
+| X1Y3              |      0 |      24 |      0 |   19200 |      0 |    5280 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y3              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y3              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       1 |
+| X0Y4              |      6 |      24 |   3918 |   20160 |      0 |    3840 |     40 |     216 |      0 |      16 |      0 |      48 |      0 |       4 |      1 |       1 |
+| X1Y4              |      2 |      24 |     48 |   19200 |      0 |    5280 |     10 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y4              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y4              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       1 |
+| X0Y5              |      8 |      24 |   3243 |   20160 |     11 |    3840 |      2 |     216 |      0 |      16 |      0 |      48 |      4 |       4 |      0 |       1 |
+| X1Y5              |      0 |      24 |      0 |   19200 |      0 |    5280 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y5              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y5              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       1 |
+| X0Y6              |      5 |      24 |   1740 |   20160 |      4 |    3840 |      0 |     216 |      0 |      16 |      0 |      48 |      4 |       4 |      0 |       1 |
+| X1Y6              |      0 |      24 |      0 |   19200 |      0 |    5280 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y6              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y6              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       0 |
+| X0Y7              |      2 |      24 |     81 |   20160 |      0 |    3840 |      0 |     216 |      0 |      16 |      0 |      48 |      0 |       4 |      0 |       1 |
+| X1Y7              |      0 |      24 |      0 |   19200 |      0 |    5280 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y7              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y7              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       0 |
+| X0Y8              |      0 |      24 |      0 |   20160 |      0 |    3840 |      0 |     216 |      0 |      16 |      0 |      48 |      0 |       4 |      0 |       1 |
+| X1Y8              |      0 |      24 |      0 |   19200 |      0 |    5280 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y8              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y8              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       1 |
+| X0Y9              |      0 |      24 |      0 |   20160 |      0 |    3840 |      0 |     216 |      0 |      16 |      0 |      48 |      0 |       4 |      0 |       1 |
+| X1Y9              |      0 |      24 |      0 |   19200 |      0 |    5280 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y9              |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y9              |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       0 |
+| X0Y10             |      0 |      24 |      0 |   20160 |      0 |    3840 |      0 |     216 |      0 |      16 |      0 |      48 |      0 |       4 |      0 |       1 |
+| X1Y10             |      0 |      24 |      0 |   19200 |      0 |    5280 |      0 |     216 |      0 |       0 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y10             |      0 |      24 |      0 |   34560 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       0 |      0 |       0 |
+| X3Y10             |      0 |      24 |      0 |   26880 |      0 |    3360 |      0 |     216 |      0 |       0 |      0 |      24 |      0 |       4 |      0 |       0 |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+6. Clock Regions : Global Clock Summary
+---------------------------------------
+
+All Modules
++-----+----+----+----+----+
+|     | X0 | X1 | X2 | X3 |
++-----+----+----+----+----+
+| Y10 |  0 |  0 |  0 |  0 |
+| Y9  |  0 |  0 |  0 |  0 |
+| Y8  |  0 |  0 |  0 |  0 |
+| Y7  |  2 |  0 |  0 |  0 |
+| Y6  |  5 |  0 |  0 |  0 |
+| Y5  |  8 |  0 |  0 |  0 |
+| Y4  |  6 |  2 |  0 |  0 |
+| Y3  |  0 |  0 |  0 |  0 |
+| Y2  |  0 |  0 |  0 |  0 |
+| Y1  |  0 |  0 |  0 |  0 |
+| Y0  |  0 |  0 |  0 |  0 |
++-----+----+----+----+----+
+
+
+7. Clock Regions : Routing Resource Utilization
+-----------------------------------------------
+
+All Modules
++-------------------+----------------------+----------------------+----------------------+----------------------+
+|                   |        HROUTES       |        HDISTRS       |        VROUTES       |        VDISTRS       |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| Clock Region Name | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| X0Y0              |    0 |     0 |  0.00 |    0 |     0 |  0.00 |    0 |     0 |  0.00 |    0 |     0 |  0.00 |
+| X1Y0              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y0              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y0              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y1              |    0 |     0 |  0.00 |    0 |     0 |  0.00 |    0 |     0 |  0.00 |    0 |     0 |  0.00 |
+| X1Y1              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y1              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y1              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y2              |    0 |     0 |  0.00 |    0 |     0 |  0.00 |    0 |     0 |  0.00 |    0 |     0 |  0.00 |
+| X1Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y4              |    0 |    24 |  0.00 |    6 |    24 | 25.00 |    1 |    24 |  4.17 |    6 |    24 | 25.00 |
+| X1Y4              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y5              |    1 |    24 |  4.17 |    8 |    24 | 33.33 |    2 |    24 |  8.33 |    6 |    24 | 25.00 |
+| X1Y5              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y5              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y5              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y6              |    7 |    24 | 29.17 |    5 |    24 | 20.83 |    1 |    24 |  4.17 |    6 |    24 | 25.00 |
+| X1Y6              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y6              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y6              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y7              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    1 |    24 |  4.17 |    1 |    24 |  4.17 |
+| X1Y7              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y7              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y7              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y8              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y8              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y8              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y8              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y9              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y9              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y9              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y9              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y10             |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y10             |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y10             |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y10             |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+
+
+8. Device Cell Placement Summary for Global Clock g0
+----------------------------------------------------
+
++-----------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                         |
++-----------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------+
+| g0        | BUFG_GT/O       | X0Y6              | sys_clk |      10.000 | {0.000 5.000} | X0Y5     |        3503 |        0 |              0 |       10 | pcie4_uscale_plus_1_i/inst/ext_ch_gt_drpclk |
++-----------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+-----------+----+----+----+
+|     | X0        | X1 | X2 | X3 |
++-----+-----------+----+----+----+
+| Y10 |         0 |  0 |  0 |  0 |
+| Y9  |         0 |  0 |  0 |  0 |
+| Y8  |         0 |  0 |  0 |  0 |
+| Y7  |        50 |  0 |  0 |  0 |
+| Y6  |  (D) 1616 |  0 |  0 |  0 |
+| Y5  |  (R) 1535 |  0 |  0 |  0 |
+| Y4  |       312 |  0 |  0 |  0 |
+| Y3  |         0 |  0 |  0 |  0 |
+| Y2  |         0 |  0 |  0 |  0 |
+| Y1  |         0 |  0 |  0 |  0 |
+| Y0  |         0 |  0 |  0 |  0 |
++-----+-----------+----+----+----+
+
+
+9. Device Cell Placement Summary for Global Clock g1
+----------------------------------------------------
+
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R)          | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                        |
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------+
+| g1        | BUFG_GT/O       | X0Y6              | pipe_clk |       4.000 | {0.000 2.000} | CLOCK_REGION_X0Y6 |        2721 |        0 |              0 |        8 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT |
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+------------+----+----+----+
+|     | X0         | X1 | X2 | X3 |
++-----+------------+----+----+----+
+| Y10 |          0 |  0 |  0 |  0 |
+| Y9  |          0 |  0 |  0 |  0 |
+| Y8  |          0 |  0 |  0 |  0 |
+| Y7  |          0 |  0 |  0 |  0 |
+| Y6  | (R) (D) 44 |  0 |  0 |  0 |
+| Y5  |       1586 |  0 |  0 |  0 |
+| Y4  |       1099 |  0 |  0 |  0 |
+| Y3  |          0 |  0 |  0 |  0 |
+| Y2  |          0 |  0 |  0 |  0 |
+| Y1  |          0 |  0 |  0 |  0 |
+| Y0  |          0 |  0 |  0 |  0 |
++-----+------------+----+----+----+
+
+
+10. Device Cell Placement Summary for Global Clock g2
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                             | Period (ns) | Waveform (ns) | Root (R)          | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                       |
++-----------+-----------------+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| g2        | BUFG_GT/O       | X0Y6              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK |       2.000 | {0.000 1.000} | CLOCK_REGION_X0Y6 |        1842 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK |
++-----------+-----------------+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+-----------+-----+----+----+
+|     | X0        | X1  | X2 | X3 |
++-----+-----------+-----+----+----+
+| Y10 |         0 |   0 |  0 |  0 |
+| Y9  |         0 |   0 |  0 |  0 |
+| Y8  |         0 |   0 |  0 |  0 |
+| Y7  |         0 |   0 |  0 |  0 |
+| Y6  | (R) (D) 0 |   0 |  0 |  0 |
+| Y5  |        14 |   0 |  0 |  0 |
+| Y4  |      1810 |  18 |  0 |  0 |
+| Y3  |         0 |   0 |  0 |  0 |
+| Y2  |         0 |   0 |  0 |  0 |
+| Y1  |         0 |   0 |  0 |  0 |
+| Y0  |         0 |   0 |  0 |  0 |
++-----+-----------+-----+----+----+
+
+
+11. Device Cell Placement Summary for Global Clock g3
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R)          | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                       |
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| g3        | BUFG_GT/O       | X0Y6              | user_clk |       4.000 | {0.000 2.000} | CLOCK_REGION_X0Y6 |         746 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK |
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+-----------+-----+----+----+
+|     | X0        | X1  | X2 | X3 |
++-----+-----------+-----+----+----+
+| Y10 |         0 |   0 |  0 |  0 |
+| Y9  |         0 |   0 |  0 |  0 |
+| Y8  |         0 |   0 |  0 |  0 |
+| Y7  |         0 |   0 |  0 |  0 |
+| Y6  | (R) (D) 0 |   0 |  0 |  0 |
+| Y5  |         0 |   0 |  0 |  0 |
+| Y4  |       711 |  35 |  0 |  0 |
+| Y3  |         0 |   0 |  0 |  0 |
+| Y2  |         0 |   0 |  0 |  0 |
+| Y1  |         0 |   0 |  0 |  0 |
+| Y0  |         0 |   0 |  0 |  0 |
++-----+-----------+-----+----+----+
+
+
+12. Device Cell Placement Summary for Global Clock g4
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g4        | BUFG_GT/O       | X0Y6              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y7     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+--------+----+----+----+
+|     | X0     | X1 | X2 | X3 |
++-----+--------+----+----+----+
+| Y10 |      0 |  0 |  0 |  0 |
+| Y9  |      0 |  0 |  0 |  0 |
+| Y8  |      0 |  0 |  0 |  0 |
+| Y7  | (R) 31 |  0 |  0 |  0 |
+| Y6  |  (D) 0 |  0 |  0 |  0 |
+| Y5  |      0 |  0 |  0 |  0 |
+| Y4  |      0 |  0 |  0 |  0 |
+| Y3  |      0 |  0 |  0 |  0 |
+| Y2  |      0 |  0 |  0 |  0 |
+| Y1  |      0 |  0 |  0 |  0 |
+| Y0  |      0 |  0 |  0 |  0 |
++-----+--------+----+----+----+
+
+
+13. Device Cell Placement Summary for Global Clock g5
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Root (R)          | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                      |
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------+
+| g5        | BUFG_GT/O       | X0Y6              | intclk |    1000.000 | {0.000 500.000} | CLOCK_REGION_X0Y6 |          13 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK |
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+-----------+----+----+----+
+|     | X0        | X1 | X2 | X3 |
++-----+-----------+----+----+----+
+| Y10 |         0 |  0 |  0 |  0 |
+| Y9  |         0 |  0 |  0 |  0 |
+| Y8  |         0 |  0 |  0 |  0 |
+| Y7  |         0 |  0 |  0 |  0 |
+| Y6  | (R) (D) 0 |  0 |  0 |  0 |
+| Y5  |        13 |  0 |  0 |  0 |
+| Y4  |         0 |  0 |  0 |  0 |
+| Y3  |         0 |  0 |  0 |  0 |
+| Y2  |         0 |  0 |  0 |  0 |
+| Y1  |         0 |  0 |  0 |  0 |
+| Y0  |         0 |  0 |  0 |  0 |
++-----+-----------+----+----+----+
+
+
+14. Device Cell Placement Summary for Global Clock g6
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R)          | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                       |
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| g6        | BUFG_GT/O       | X0Y6              | mcap_clk |       8.000 | {0.000 4.000} | CLOCK_REGION_X0Y6 |           1 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_MCAPCLK |
++-----------+-----------------+-------------------+----------+-------------+---------------+-------------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+-----------+----+----+----+
+|     | X0        | X1 | X2 | X3 |
++-----+-----------+----+----+----+
+| Y10 |         0 |  0 |  0 |  0 |
+| Y9  |         0 |  0 |  0 |  0 |
+| Y8  |         0 |  0 |  0 |  0 |
+| Y7  |         0 |  0 |  0 |  0 |
+| Y6  | (R) (D) 0 |  0 |  0 |  0 |
+| Y5  |         0 |  0 |  0 |  0 |
+| Y4  |         1 |  0 |  0 |  0 |
+| Y3  |         0 |  0 |  0 |  0 |
+| Y2  |         0 |  0 |  0 |  0 |
+| Y1  |         0 |  0 |  0 |  0 |
+| Y0  |         0 |  0 |  0 |  0 |
++-----+-----------+----+----+----+
+
+
+15. Device Cell Placement Summary for Global Clock g7
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g7        | BUFG_GT/O       | X0Y5              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y4     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+---------+----+----+----+
+|     | X0      | X1 | X2 | X3 |
++-----+---------+----+----+----+
+| Y10 |       0 |  0 |  0 |  0 |
+| Y9  |       0 |  0 |  0 |  0 |
+| Y8  |       0 |  0 |  0 |  0 |
+| Y7  |       0 |  0 |  0 |  0 |
+| Y6  |       0 |  0 |  0 |  0 |
+| Y5  |  (D) 23 |  0 |  0 |  0 |
+| Y4  |   (R) 8 |  0 |  0 |  0 |
+| Y3  |       0 |  0 |  0 |  0 |
+| Y2  |       0 |  0 |  0 |  0 |
+| Y1  |       0 |  0 |  0 |  0 |
+| Y0  |       0 |  0 |  0 |  0 |
++-----+---------+----+----+----+
+
+
+16. Device Cell Placement Summary for Global Clock g8
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g8        | BUFG_GT/O       | X0Y5              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y5     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+------------+----+----+----+
+|     | X0         | X1 | X2 | X3 |
++-----+------------+----+----+----+
+| Y10 |          0 |  0 |  0 |  0 |
+| Y9  |          0 |  0 |  0 |  0 |
+| Y8  |          0 |  0 |  0 |  0 |
+| Y7  |          0 |  0 |  0 |  0 |
+| Y6  |          0 |  0 |  0 |  0 |
+| Y5  | (R) (D) 31 |  0 |  0 |  0 |
+| Y4  |          0 |  0 |  0 |  0 |
+| Y3  |          0 |  0 |  0 |  0 |
+| Y2  |          0 |  0 |  0 |  0 |
+| Y1  |          0 |  0 |  0 |  0 |
+| Y0  |          0 |  0 |  0 |  0 |
++-----+------------+----+----+----+
+
+
+17. Device Cell Placement Summary for Global Clock g9
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g9        | BUFG_GT/O       | X0Y5              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y5     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+------------+----+----+----+
+|     | X0         | X1 | X2 | X3 |
++-----+------------+----+----+----+
+| Y10 |          0 |  0 |  0 |  0 |
+| Y9  |          0 |  0 |  0 |  0 |
+| Y8  |          0 |  0 |  0 |  0 |
+| Y7  |          0 |  0 |  0 |  0 |
+| Y6  |          0 |  0 |  0 |  0 |
+| Y5  | (R) (D) 31 |  0 |  0 |  0 |
+| Y4  |          0 |  0 |  0 |  0 |
+| Y3  |          0 |  0 |  0 |  0 |
+| Y2  |          0 |  0 |  0 |  0 |
+| Y1  |          0 |  0 |  0 |  0 |
+| Y0  |          0 |  0 |  0 |  0 |
++-----+------------+----+----+----+
+
+
+18. Device Cell Placement Summary for Global Clock g10
+------------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g10       | BUFG_GT/O       | X0Y5              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y5     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+------------+----+----+----+
+|     | X0         | X1 | X2 | X3 |
++-----+------------+----+----+----+
+| Y10 |          0 |  0 |  0 |  0 |
+| Y9  |          0 |  0 |  0 |  0 |
+| Y8  |          0 |  0 |  0 |  0 |
+| Y7  |          0 |  0 |  0 |  0 |
+| Y6  |          0 |  0 |  0 |  0 |
+| Y5  | (R) (D) 31 |  0 |  0 |  0 |
+| Y4  |          0 |  0 |  0 |  0 |
+| Y3  |          0 |  0 |  0 |  0 |
+| Y2  |          0 |  0 |  0 |  0 |
+| Y1  |          0 |  0 |  0 |  0 |
+| Y0  |          0 |  0 |  0 |  0 |
++-----+------------+----+----+----+
+
+
+19. Device Cell Placement Summary for Global Clock g11
+------------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g11       | BUFG_GT/O       | X0Y6              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y6     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+------------+----+----+----+
+|     | X0         | X1 | X2 | X3 |
++-----+------------+----+----+----+
+| Y10 |          0 |  0 |  0 |  0 |
+| Y9  |          0 |  0 |  0 |  0 |
+| Y8  |          0 |  0 |  0 |  0 |
+| Y7  |          0 |  0 |  0 |  0 |
+| Y6  | (R) (D) 31 |  0 |  0 |  0 |
+| Y5  |          0 |  0 |  0 |  0 |
+| Y4  |          0 |  0 |  0 |  0 |
+| Y3  |          0 |  0 |  0 |  0 |
+| Y2  |          0 |  0 |  0 |  0 |
+| Y1  |          0 |  0 |  0 |  0 |
+| Y0  |          0 |  0 |  0 |  0 |
++-----+------------+----+----+----+
+
+
+20. Device Cell Placement Summary for Global Clock g12
+------------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g12       | BUFG_GT/O       | X0Y6              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y6     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+------------+----+----+----+
+|     | X0         | X1 | X2 | X3 |
++-----+------------+----+----+----+
+| Y10 |          0 |  0 |  0 |  0 |
+| Y9  |          0 |  0 |  0 |  0 |
+| Y8  |          0 |  0 |  0 |  0 |
+| Y7  |          0 |  0 |  0 |  0 |
+| Y6  | (R) (D) 31 |  0 |  0 |  0 |
+| Y5  |          0 |  0 |  0 |  0 |
+| Y4  |          0 |  0 |  0 |  0 |
+| Y3  |          0 |  0 |  0 |  0 |
+| Y2  |          0 |  0 |  0 |  0 |
+| Y1  |          0 |  0 |  0 |  0 |
+| Y0  |          0 |  0 |  0 |  0 |
++-----+------------+----+----+----+
+
+
+21. Device Cell Placement Summary for Global Clock g13
+------------------------------------------------------
+
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                                                                                                                                                                                                                                                                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g13       | BUFG_GT/O       | X0Y6              | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O |       8.000 | {0.000 4.000} | X0Y6     |          31 |        0 |              0 |        0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-----------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++-----+------------+----+----+----+
+|     | X0         | X1 | X2 | X3 |
++-----+------------+----+----+----+
+| Y10 |          0 |  0 |  0 |  0 |
+| Y9  |          0 |  0 |  0 |  0 |
+| Y8  |          0 |  0 |  0 |  0 |
+| Y7  |          0 |  0 |  0 |  0 |
+| Y6  | (R) (D) 31 |  0 |  0 |  0 |
+| Y5  |          0 |  0 |  0 |  0 |
+| Y4  |          0 |  0 |  0 |  0 |
+| Y3  |          0 |  0 |  0 |  0 |
+| Y2  |          0 |  0 |  0 |  0 |
+| Y1  |          0 |  0 |  0 |  0 |
+| Y0  |          0 |  0 |  0 |  0 |
++-----+------------+----+----+----+
+
+
+22. Clock Region Cell Placement per Global Clock: Region X0Y4
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_GT/O       | None       |         312 |               0 |  312 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/ext_ch_gt_drpclk                                                                                                                                                                                                                                                                                                                       |
+| g1        | 14    | BUFG_GT/O       | None       |        1099 |               0 | 1098 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       1 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT                                                                                                                                                                                                                                                                        |
+| g2        | 12    | BUFG_GT/O       | None       |        1810 |               0 | 1790 |      0 |   19 |    0 |   0 |  0 |    0 |   0 |       1 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                                                                         |
+| g3        | 2     | BUFG_GT/O       | None       |         711 |               0 |  710 |      0 |    1 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                                                                         |
+| g7        | 17    | BUFG_GT/O       | None       |           8 |               0 |    8 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g6        | 22    | BUFG_GT/O       | None       |           1 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       1 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_MCAPCLK                                                                                                                                                                                                                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+23. Clock Region Cell Placement per Global Clock: Region X1Y4
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+| g2        | 12    | BUFG_GT/O       | None       |          18 |               0 | 16 |      0 |    2 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK |
+| g3        | 2     | BUFG_GT/O       | None       |          35 |               0 | 32 |      0 |    3 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+24. Clock Region Cell Placement per Global Clock: Region X0Y5
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_GT/O       | None       |        1535 |               0 | 1519 |     11 |    0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/ext_ch_gt_drpclk                                                                                                                                                                                                                                                                                                                       |
+| g1        | 14    | BUFG_GT/O       | None       |        1586 |               0 | 1582 |      0 |    0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT                                                                                                                                                                                                                                                                        |
+| g2        | 12    | BUFG_GT/O       | None       |          14 |               0 |   13 |      0 |    1 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                                                                         |
+| g3+       | 2     | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                                                                         |
+| g7        | 17    | BUFG_GT/O       | None       |          23 |               0 |   23 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g8        | 21    | BUFG_GT/O       | None       |          31 |               0 |   31 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g9        | 16    | BUFG_GT/O       | None       |          31 |               0 |   31 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g10       | 8     | BUFG_GT/O       | None       |          31 |               0 |   31 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g5        | 6     | BUFG_GT/O       | None       |          13 |               0 |   13 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK                                                                                                                                                                                                                                                                          |
+| g6+       | 22    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_MCAPCLK                                                                                                                                                                                                                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
+
+
+25. Clock Region Cell Placement per Global Clock: Region X0Y6
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_GT/O       | None       |        1616 |               0 | 1607 |      4 |    0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/ext_ch_gt_drpclk                                                                                                                                                                                                                                                                                                                       |
+| g1        | 14    | BUFG_GT/O       | None       |          44 |               0 |   40 |      0 |    0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT                                                                                                                                                                                                                                                                        |
+| g2+       | 12    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                                                                         |
+| g3+       | 2     | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                                                                         |
+| g11       | 7     | BUFG_GT/O       | None       |          31 |               0 |   31 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g12       | 20    | BUFG_GT/O       | None       |          31 |               0 |   31 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g13       | 11    | BUFG_GT/O       | None       |          31 |               0 |   31 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g4+       | 18    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
+| g5+       | 6     | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK                                                                                                                                                                                                                                                                          |
+| g6+       | 22    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_MCAPCLK                                                                                                                                                                                                                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
+
+
+26. Clock Region Cell Placement per Global Clock: Region X0Y7
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                                                                                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_GT/O       | None       |          50 |               0 | 50 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/ext_ch_gt_drpclk                                                                                                                                                                                                                                                                                                                       |
+| g4        | 18    | BUFG_GT/O       | None       |          31 |               0 | 31 |      0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/txoutclkmon |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+

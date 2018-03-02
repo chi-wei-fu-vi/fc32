@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="s5_native_phy_16gbps_synth_1" LaunchPart="xcku15p-ffve1517-3-e" LaunchTime="1515435806">
+  <File Type="VDS-TIMING-PB" Name="s5_native_phy_16gbps_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="s5_native_phy_16gbps_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="s5_native_phy_16gbps.dcp"/>
+  <File Type="REPORTS-TCL" Name="s5_native_phy_16gbps_reports.tcl"/>
+  <File Type="PA-TCL" Name="s5_native_phy_16gbps.tcl"/>
+  <File Type="RDS-RDS" Name="s5_native_phy_16gbps.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="s5_native_phy_16gbps_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="s5_native_phy_16gbps_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="s5_native_phy_16gbps_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/s5_native_phy_16gbps">
+    <File Path="$PSRCDIR/sources_1/ip/s5_native_phy_16gbps/s5_native_phy_16gbps.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="s5_native_phy_16gbps"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/s5_native_phy_16gbps">
+    <File Path="$PSRCDIR/sources_1/ip/s5_native_phy_16gbps/s5_native_phy_16gbps.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="s5_native_phy_16gbps"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

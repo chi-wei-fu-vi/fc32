@@ -1,0 +1,59 @@
+<decl_reg_list>
+  <register name="test_reg" default="64'h0" offset="10'h0" type="RW">
+    <field loc="[63:0]" name="test_reg"/>
+  </register>
+  <register name="ctrl" default="64'h0" offset="10'h1" type="RW">
+    <field loc="[0:0]" name="run"> 0-to-1 transition starts the test </field>
+    <field loc="[15:4]" name="pat_type"> 0=incrementing, 1=prbs7 </field>
+    <field loc="[27:16]" name="link_en"> 1=link is enabled to generate. Atleast one link must be enabled. </field>
+    <field loc="[63:32]" name="iterations"> 0=run forever, non-zero means run for that many iterations </field>
+  </register>    
+  <register name="status0" default="64'h0" offset="10'h2" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 0 </field>
+  </register>      
+  <register name="status1" default="64'h0" offset="10'h3" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 1 </field>
+  </register>      
+  <register name="status2" default="64'h0" offset="10'h4" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 2 </field>
+  </register>      
+  <register name="status3" default="64'h0" offset="10'h5" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 3 </field>
+  </register>            
+  <register name="status4" default="64'h0" offset="10'h6" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 4 </field>
+  </register>      
+  <register name="status5" default="64'h0" offset="10'h7" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 5 </field>
+  </register>      
+  <register name="status6" default="64'h0" offset="10'h8" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 6 </field>
+  </register>      
+  <register name="status7" default="64'h0" offset="10'h9" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 7 </field>
+  </register>            
+  <register name="status8" default="64'h0" offset="10'ha" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 8 </field>
+  </register>            
+  <register name="status9" default="64'h0" offset="10'hb" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 9 </field>
+  </register>            
+  <register name="status10" default="64'h0" offset="10'hc" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 10 </field>
+  </register>            
+  <register name="status11" default="64'h0" offset="10'hd" type="RO">
+    <field loc="[0:0]" name="run_dyn"/> 
+    <field loc="[63:32]" name="iterations"> number of iterations completed on link 11 </field>
+  </register>            
+</decl_reg_list>

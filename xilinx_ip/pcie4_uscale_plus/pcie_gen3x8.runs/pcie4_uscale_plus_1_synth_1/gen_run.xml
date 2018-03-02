@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="pcie4_uscale_plus_1_synth_1" LaunchPart="xcku15p-ffve1517-3-e" LaunchTime="1518218318">
+  <File Type="VDS-TIMING-PB" Name="pcie4_uscale_plus_1_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pcie4_uscale_plus_1_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="pcie4_uscale_plus_1.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="pcie4_uscale_plus_1_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="pcie4_uscale_plus_1_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="pcie4_uscale_plus_1_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="pcie4_uscale_plus_1.vds"/>
+  <File Type="REPORTS-TCL" Name="pcie4_uscale_plus_1_reports.tcl"/>
+  <File Type="PA-TCL" Name="pcie4_uscale_plus_1.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pcie4_uscale_plus_1">
+    <File Path="$PSRCDIR/sources_1/ip/pcie4_uscale_plus_1/pcie4_uscale_plus_1.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="pcie4_uscale_plus_1"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pcie4_uscale_plus_1">
+    <File Path="$PSRCDIR/sources_1/ip/pcie4_uscale_plus_1/pcie4_uscale_plus_1.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="pcie4_uscale_plus_1"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

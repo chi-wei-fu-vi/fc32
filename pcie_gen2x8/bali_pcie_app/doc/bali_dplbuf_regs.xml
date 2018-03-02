@@ -1,0 +1,36 @@
+<decl_reg_list>
+      <register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+         <field name="_scratch" loc="[63:0]"> 
+         </field>
+      </register>
+
+      <register name="DplBufStartPfn" offset="10'h5" default="64'h0" type="RW">
+         <field name="DplBufStartPfn" loc="[31:0]"> Buffer start page number
+         </field>
+      </register>
+
+      <register name="DplBufLastPfn" offset="10'h6" default="64'd0" type="RW">
+         <field name="DplBufLastPfn" loc="[31:0]"> Buffer last page number. (Each page is 4KB)
+         </field>
+      </register>            
+                              
+      <register name="DplBufRdPtr" offset="10'h7" default="64'd0" type="RW">
+         <field name="DplBufRdPtr" loc="[31:0]">  Last page read by DPL. (Each page is 4KB). Initialize to DplBufLastPfn.
+         </field>
+      </register>
+                              
+      <register name="DplBufWrPtr" offset="10'h8" default="64'h0" type="RO">
+         <field name="DplBufWrPtr" loc="[31:0]"> Next page to be written by FPGA (Each page is 4KB)
+         </field>
+      </register>      
+
+      <register name="DplBufFreePfn" offset="10'h9" default="64'h0" type="RO">
+         <field name="DplBufFreePfn" loc="[31:0]"> Buffer size \- pages written. Fifo full has 2 states: DlBufFreePfn=0xFFFFFFFF and DplBufFreePfn=0. Fifo empty is DplBufFreePfn=Buffer size \- 1.
+        </field>
+      </register>                              
+      <register name="DplBufPtrRst" offset="10'hA" default="64'h0" type="RW">
+         <field name="DplBufPtrRst" loc="[0:0]" type="SC"> Resets DplBufWrPtr to DplBufStartPfn
+        </field>
+      </register>                              
+</decl_reg_list>
+

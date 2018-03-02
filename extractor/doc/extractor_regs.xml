@@ -1,0 +1,54 @@
+<!-- Bali extractor module register definitions. -->
+<decl_reg_list> 
+  <register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+    scratch register
+    <field loc="[63:0]" name="_scratch">
+      scratch register
+    </field>
+  </register>
+  <register name="ExtrEnable" offset="10'h1" default="64'h1" type="RW">
+    Extractor enable register
+    <field loc="[0:0]" name="enable">
+      Extraction engine enable. This bit shall be set after the Template RAM has been initialized.
+    </field>
+  </register>
+  <register name="DataFrameBpCtr" offset="10'h4" default="64'h0" type="FRC">
+    Number of data frames discarded when FIFO is getting full due to back pressure condition. It signals that the PCIe bus fails to drain those frames in time. 
+    <field name="count" loc="[31:0]"> Data frame back pressure drop count </field>
+  </register>
+  <register name="DatChnlFifoStat" offset="10'h5" default="64'h0" type="RO">
+    Data Channel FIFO status register
+    <field name="Underflow" loc="[17:17]"> 
+    FIFO underflow. The error status is permanently latched once the error occurs. This error is not supposed to happen. If set, it indicates hardware design error.
+    </field>
+    <field name="Overflow" loc="[16:16]"> 
+    FIFO overflow. The error status is permanently latched once the error occurs. This error is not supposed to happen. If set, it indicates hardware design error.
+    </field>
+    <field name="Words" loc="[9:0]"> 
+    Number of words in the FIFO
+    </field>
+  </register>
+  <register name="DatChnlFifoLevel" offset="10'h6" size="10'h1" default="64'h0" type="MEM">
+    The maximum number of entries ever reached in the data channel FIFO. The value is latched until the register is written with a 0.
+    <field name="count" loc="[9:0]"> FIFO count</field>
+  </register>
+  <register name="TemplStop" offset="10'h10" default="64'h0" type="RO">
+    Template RAM programming stop register
+    <field name="Init" loc="[3:3]"> 
+    Template RAM is not initialized when frames are received. Extractor enable register must be set properly.
+    </field>
+    <field name="Overflow" loc="[2:2]"> 
+    Attempt to extract more than 54 bytes. This error is not supposed to happen. If set, it indicates software programming error.
+    </field>
+    <field name="Ofstorder" loc="[1:1]"> 
+    Instruction offsets are not in increasing order. This error is not supposed to happen. If set, it indicates software programming error.
+    </field>
+    <field name="Zerobyte" loc="[0:0]"> 
+    Zero byte was extracted from received frames. This can happen if all extracted patterns are zero or frame length is less than the smallest instruction offset.
+    </field>
+  </register>
+  <register name="TemplateRam" offset="10'h100" size="10'h100" type="MEM">
+    Frame Extractor template program memory. The template memory stores the instructions the Frame Extractor uses to pull the bytes out of the incoming frames. There are 4 templates indexed by frame types.
+    <field name="TemplateRam" loc="[63:0]"> </field>
+  </register>
+</decl_reg_list>

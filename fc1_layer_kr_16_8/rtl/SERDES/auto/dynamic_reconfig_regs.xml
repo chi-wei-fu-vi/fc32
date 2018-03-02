@@ -1,0 +1,396 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="32'h0" name="PMA_LogicalChanNo" offset="14'h8" type="RW">
+    logical channel number
+    <field loc="[9:0]" name="PMA_LogicalChanNo">
+      The logical channel number. Must be specified when performing dynamic updates. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="PMA_PhyChanAddr" offset="14'h9" type="RO">
+    physical channel address
+    <field loc="[9:0]" name="PMA_PhyChanAddr">
+      The physical channel address. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="PMA_ControlStatus" offset="14'hA" type="RO">
+    control and status
+    <field loc="[9:9]" name="PMA_Error">
+      Error. When asserted, indicates an error. This bit is asserted if any of the following conditions occur:
+  The channel address is invalid.
+  The PHY address is invalid.
+  The PMA offset is invalid.
+
+    </field>
+    <field loc="[8:8]" name="PMA_Busy">
+      Busy. When asserted, indicates that a reconfiguration operation is in progress.
+    </field>
+    <field loc="[1:1]" name="PMA_Read" type="SC">
+      Read. Writing a 1 to this bit triggers a read operation.
+    </field>
+    <field loc="[0:0]" name="PMA_Write" type="SC">
+      Write. Writing a 1 to this bit triggers a write operation.
+    </field>
+  </register>
+  <register default="32'h0" name="PMA_Offset" offset="14'hB" type="RW">
+    pma offset
+    <field loc="[5:0]" name="PMA_Offset">
+      Specifies the offset of the PMA analog setting to be reconfigured.
+    </field>
+  </register>
+  <register default="32'h0" name="PMA_Data" offset="14'hC" type="RW">
+    data
+    <field loc="[6:0]" name="PMA_Data">
+      Reconfiguration data for the PMA analog settings.
+    </field>
+  </register>
+  <register default="32'h0" name="EyeQ_LogicalChanNo" offset="14'h10" type="RW">
+    logical channel number
+    <field loc="[9:0]" name="EyeQ_LogicalChanNo">
+      The logical channel number. Must be specified when performing dynamic updates. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="EyeQ_PhyChanAddr" offset="14'h11" type="RW">
+    physical channel address
+    <field loc="[9:0]" name="EyeQ_PhyChanAddr">
+      The physical channel address. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="EyeQ_ControlStatus" offset="14'h12" type="RO">
+    control and status
+    <field loc="[9:9]" name="EyeQ_Error">
+      Error. When asserted, indicates an invalid channel or address.
+    </field>
+    <field loc="[8:8]" name="EyeQ_Busy">
+      Busy. When asserted, indicates that a reconfiguration operation is in progress.
+    </field>
+    <field loc="[1:1]" name="EyeQ_Read" type="SC">
+      Read. Writing a 1 to this bit triggers a read operation.
+    </field>
+    <field loc="[0:0]" name="EyeQ_Write" type="SC">
+      Write. Writing a 1 to this bit triggers a write operation.
+    </field>
+  </register>
+  <register default="32'h0" name="EyeQ_Offset" offset="14'h13" type="RW">
+    eyeq offset
+    <field loc="[5:0]" name="EyeQ_Offset">
+      Specifies the 6-bit offset of the EyeQ register.
+    </field>
+  </register>
+  <register default="32'h0" name="EyeQ_Data" offset="14'h14" type="RW">
+    data
+    <field loc="[15:0]" name="EyeQ_Data">
+      Reconfiguration data for the transceiver PHY registers.
+    </field>
+  </register>
+  <register default="32'h0" name="DFE_LogicalChanNo" offset="14'h18" type="RW">
+    logical channel number
+    <field loc="[9:0]" name="DFE_LogicalChanNo">
+      The logical channel address. Must be specified when performing dynamic updates. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="DFE_PhyChanAddr" offset="14'h19" type="RW">
+    physical channel address
+    <field loc="[9:0]" name="DFE_PhyChanAddr">
+      The physical channel address. The Transceiver Reconfiguration Controller maps the logical address to the physical address.  0x1A
+    </field>
+  </register>
+  <register default="32'h0" name="DFE_ControlStatus" offset="14'h1A" type="RO">
+    control and status
+    <field loc="[9:9]" name="DFE_Error">
+      Error. When asserted, indicates an invalid channel or address.
+    </field>
+    <field loc="[8:8]" name="DFE_Busy">
+      Busy. When asserted, indicates that a reconfiguration operation is in progress.
+    </field>
+    <field loc="[1:1]" name="DFE_Read" type="SC">
+      Read. Writing a 1 to this bit triggers a read operation.
+    </field>
+    <field loc="[0:0]" name="DFE_Write" type="SC">
+      Write. Writing a 1 to this bit triggers a write operation.
+    </field>
+  </register>
+  <register default="32'h0" name="DFE_Offset" offset="14'h1B" type="RW">
+    dfe_offset
+    <field loc="[5:0]" name="DFE_Offset">
+      Specifies the 6-bit offset of the DFE register.
+    </field>
+  </register>
+  <register default="32'h0" name="DFE_Data" offset="14'h1C" type="RW">
+    data
+    <field loc="[15:0]" name="DFE_Data">
+      Reconfiguration data for the transceiver PHY registers.
+    </field>
+  </register>
+  <register default="32'h0" name="AEQ_LogicalChanNo" offset="14'h28" type="RW">
+    logical channel number
+    <field loc="[9:0]" name="AEQ_LogicalChanNo">
+      The logical channel number of the AEQ hardware to be accessed. Must be specified when performing dynamic updates. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="AEQ_PhyChanAddr" offset="14'h29" type="RO">
+    physical channel address
+    <field loc="[9:0]" name="AEQ_PhyChanAddr">
+      The physical channel address. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="AEQ_ControlStatus" offset="14'h2A" type="RO">
+    control and status
+    <field loc="[9:9]" name="AEQ_Error">
+      Error. When asserted, indicates an error. This bit is asserted when the channel address is invalid.
+    </field>
+    <field loc="[8:8]" name="AEQ_Busy">
+      Busy. When asserted, indicates that a reconfiguration operation is in progress.
+    </field>
+    <field loc="[1:1]" name="AEQ_Read" type="SC">
+      Read. Writing a 1 to this bit triggers a read operation.
+    </field>
+    <field loc="[0:0]" name="AEQ_Write" type="SC">
+      Write. Writing a 1 to this bit triggers a write operation.
+    </field>
+  </register>
+  <register default="32'h0" name="AEQ_Offset" offset="14'h2B" type="RW">
+    aeq_offset
+    <field loc="[3:0]" name="AEQ_Offset">
+      Specifies the address of the AEQ register to be read or written.
+    </field>
+  </register>
+  <register default="32'h0" name="AEQ_Data" offset="14'h2C" type="RW">
+    data
+    <field loc="[15:0]" name="AEQ_Data">
+      Specifies the read or write data.
+    </field>
+  </register>
+  <register default="32'h0" name="ATX_LogicalChanNo" offset="14'h30" type="RW">
+    logical channel number
+    <field loc="[9:0]" name="ATX_LogicalChanNo">
+      The logical channel number. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="ATX_ControlStatus" offset="14'h32" type="RO">
+    control and status
+    <field loc="[9:9]" name="ATX_Error">
+      Error. When asserted, indicates an invalid channel or address. This bit is asserted after a write operation if the selected logical channel number selects a logical channel interface that is not connected to an ATX PLL. It is also be asserted if the tuning algorithm failed to converge on a working setting after a manual calibration.
+    </field>
+    <field loc="[8:8]" name="ATX_Busy">
+      Busy. When asserted, indicates that a reconfiguration operation is in progress.
+    </field>
+    <field loc="[1:1]" name="ATX_Read" type="SC">
+      Read. Writing a 1 to this bit triggers a read operation.
+    </field>
+    <field loc="[0:0]" name="ATX_Write" type="SC">
+      Write. Writing a 1 to this bit triggers a write operation.  0x33 [3:0] RW atx_offset Specifies the 4-bit register address used for indirect accesses
+    </field>
+  </register>
+  <register default="32'h0" name="ATX_Offset" offset="14'h33" type="RW">
+    atx offset
+    <field loc="[3:0]" name="ATX_Offset">
+      Specifies the 4-bit register address used for indirect to the PLL registers on the reconfiguration bus.
+    </field>
+  </register>
+  <register default="32'h0" name="ATX_Data" offset="14'h34" type="RW">
+    data
+    <field loc="[15:0]" name="ATX_Data">
+      Reconfiguration data for the transceiver PHY registers.
+    </field>
+  </register>
+  <register default="32'h0" name="PLL_LogicalChanNo" offset="14'h40" type="RW">
+    logical channel number
+    <field loc="[9:0]" name="PLL_LogicalChanNo">
+      The logical channel number. Must be specified when performing dynamic updates. The Transceiver Reconfiguration Controller maps the logical address to the physical address.  When reconfiguring the reference clock for the TX PLL you must specify the PLL's logical channel number. When reconfiguring the reference clock for the CDR you must specify the channel's logical channel number.
+    </field>
+  </register>
+  <register default="32'h0" name="PLL_PhyChanAddr" offset="14'h41" type="RO">
+    physical channel address
+    <field loc="[9:0]" name="PLL_PhyChanAddr">
+      The physical channel address. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="PLL_ControlStatus" offset="14'h42" type="RO">
+    control and status
+    <field loc="[9:9]" name="PLL_Error">
+      Error.  When asserted, indicates an error. This bit is asserted if any of the following conditions occur:
+  The channel address is invalid.
+  The PHY address is invalid.
+  The address offset is invalid.
+
+    </field>
+    <field loc="[8:8]" name="PLL_MIF_Busy">
+      MIF Busy. When asserted, indicates that a reconfiguration operation is in progress.
+    </field>
+    <field loc="[1:1]" name="PLL_Read" type="SC">
+      Read. Writing a 1 to this bit specifies a read operation.
+    </field>
+    <field loc="[0:0]" name="PLL_Write" type="SC">
+      Write. Writing a 1 to this bit specifies a write operation.
+    </field>
+  </register>
+  <register default="32'h0" name="PLL_Offset" offset="14'h43" type="RW">
+    pll offset
+    <field loc="[3:0]" name="PLL_Offset">
+      Specifies the 4-bit register address used for indirect to the PLL registers on the reconfiguration bus.
+    </field>
+  </register>
+  <register default="32'h0" name="PLL_Data" offset="14'h44" type="RW">
+    data
+    <field loc="[15:0]" name="PLL_Data">
+      Specifies the read or write data.
+    </field>
+  </register>
+  <register default="32'h0" name="Streamer_LogicalChanNo" offset="14'h38" type="RW">
+    logical channel number
+    <field loc="[9:0]" name="Streamer_LogicalChanNo">
+      The logical channel number. Must be specified when performing dynamic updates. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="Streamer_PhyChanAddr" offset="14'h39" type="RO">
+    physical channel address
+    <field loc="[9:0]" name="Streamer_PhyChanAddr">
+      The physical channel address. The Transceiver Reconfiguration Controller maps the logical address to the physical address.
+    </field>
+  </register>
+  <register default="32'h0" name="Streamer_ControlStatus" offset="14'h3A" type="RO">
+    control and status
+    <field loc="[9:9]" name="Streamer_Error">
+      Error. When asserted, indicates an error. This bit is asserted if any of the following conditions occur:
+  The channel address is invalid.
+  The PHY address is invalid.
+  The offset register address is invalid.
+
+    </field>
+    <field loc="[8:8]" name="Streamer_Busy">
+      Busy. When asserted, indicates that a reconfiguration operation is in progress.
+    </field>
+    <field loc="[3:2]" name="Streamer_Mode">
+      Mode. The following encodings are defined:
+  2'b00: MIF. This mode continuously reads and transfers a .mif file, which contains the reconfiguration data.
+  2'b01: Direct Write. In this mode, you specify a logical channel, a register offset, and data. Depending on the logical channel specified, the Transceiver Reconfiguration Controller may mask some of the data specified to prevent read-only values that were optimized during startup, from being over-written. In particular, this mode protects the following settings:
+    Decision feedback equalization controls
+    RX buffer offset calibration adjustments
+    Duty cycle distortion adjustments
+    PMA clock settings
+  2'b10: Reserved
+  2'b11: Reserved
+
+    </field>
+    <field loc="[1:1]" name="Streamer_Read" type="SC">
+      Read. Writing a 1 to this bit triggers a read operation. This bit is self clearing.
+    </field>
+    <field loc="[0:0]" name="Streamer_Write" type="SC">
+      Write. Writing a 1 to this bit triggers a write operation. This bit is self clearing.
+    </field>
+  </register>
+  <register default="32'h0" name="Streamer_Offset" offset="14'h3B" type="RW">
+    streamer offset
+    <field loc="[15:0]" name="Streamer_Offset">
+      When the MIF mode = 2'b00, the offset register specifies a an internal MIF Streamer register.  When MIF Mode = 2'b01, offset register specifies register in the transceiver
+    </field>
+  </register>
+  <register default="32'h0" name="Streamer_Data" offset="14'h3C" type="RW">
+    data
+    <field loc="[31:0]" name="Streamer_Data">
+      When the MIF Mode = 2'b00, the data register stores read or write data for indirect access to the location specified in the offset register. When MIF Mode = 2'b01, data holds an update for transceiver to be dynamically reconfigured.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_ResetChBitmask" offset="14'h241" type="RW">
+    reset_ch_bitmask
+    <field loc="[31:0]" name="XCVR0_ResetChBitmask">
+      Reset controller channel bitmask for digital resets. The default value is all 1s. Channel &lt;n&gt; can be reset when bit &lt;n&gt; = 1.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_ResetControl" offset="14'h242" type="RW">
+    reset_control
+    <field loc="[1:0]" name="XCVR0_ResetControl">
+      (write) Writing a 1 to bit 0 initiates a TX digital reset using the reset controller module. The reset affects channels enabled in the reset_ch_bitmask. Writing a 1 to bit 1 initiates a RX digital reset of channels enabled in the reset_ch_bitmask.
+(read) Reading bit 0 returns the status of the reset controller TX ready bit. Reading bit 1 returns the status of the reset controller RX ready bit. 
+
+
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_PhySerialLoopback" offset="14'h261" type="RW">
+    phy_serial_loopback
+    <field loc="[31:0]" name="XCVR0_PhySerialLoopback">
+      Writing a 1 to channel &lt;n&gt; puts channel &lt;n&gt; in serial loopback mode.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_PmaRxSignaldetect" offset="14'h263" type="RO">
+    pma_rx_signaldetect
+    <field loc="[31:0]" name="XCVR0_PmaRxSignaldetect">
+      When channel &lt;n&gt; =1, indicates that receive circuit for channel &lt;n&gt; senses the specified voltage exists at the RX input buffer.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_PmaRxSetLocktodata" offset="14'h264" type="RW">
+    pma_rx_set_locktodata
+    <field loc="[31:0]" name="XCVR0_PmaRxSetLocktodata">
+      When set, programs the RX CDR PLL to lock to the incoming data. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_PmaRxSetLocktoref" offset="14'h265" type="RW">
+    pma_rx_set_locktoref
+    <field loc="[31:0]" name="XCVR0_PmaRxSetLocktoref">
+      When set, programs the RX CDR PLL to lock to the reference clock. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_PmaRxIsLockedtodata" offset="14'h266" type="RO">
+    pma_rx_is_lockedtodata
+    <field loc="[31:0]" name="XCVR0_PmaRxIsLockedtodata">
+      When 1, indicates that the RX CDR PLL is locked to the RX data, and that the RX CDR has changed from LTR to LTD mode. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR0_PmaRxIsLockedtoref" offset="14'h267" type="RO">
+    pma_rx_is_lockedtoref
+    <field loc="[31:0]" name="XCVR0_PmaRxIsLockedtoref">
+      When 1, indicates that the RX CDR PLL is locked to the reference clock. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_ResetChBitmask" offset="14'h441" type="RW">
+    reset_ch_bitmask
+    <field loc="[31:0]" name="XCVR1_ResetChBitmask">
+      Reset controller channel bitmask for digital resets. The default value is all 1s. Channel &lt;n&gt; can be reset when bit &lt;n&gt; = 1.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_ResetControl" offset="14'h442" type="RW">
+    reset_control
+    <field loc="[1:0]" name="XCVR1_ResetControl">
+      (write) Writing a 1 to bit 0 initiates a TX digital reset using the reset controller module. The reset affects channels enabled in the reset_ch_bitmask. Writing a 1 to bit 1 initiates a RX digital reset of channels enabled in the reset_ch_bitmask.
+(read) Reading bit 0 returns the status of the reset controller TX ready bit. Reading bit 1 returns the status of the reset controller RX ready bit. 
+
+
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_PhySerialLoopback" offset="14'h461" type="RW">
+    phy_serial_loopback
+    <field loc="[31:0]" name="XCVR1_PhySerialLoopback">
+      Writing a 1 to channel &lt;n&gt; puts channel &lt;n&gt; in serial loopback mode.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_PmaRxSignaldetect" offset="14'h463" type="RO">
+    pma_rx_signaldetect
+    <field loc="[31:0]" name="XCVR1_PmaRxSignaldetect">
+      When channel &lt;n&gt; =1, indicates that receive circuit for channel &lt;n&gt; senses the specified voltage exists at the RX input buffer.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_PmaRxSetLocktodata" offset="14'h464" type="RW">
+    pma_rx_set_locktodata
+    <field loc="[31:0]" name="XCVR1_PmaRxSetLocktodata">
+      When set, programs the RX CDR PLL to lock to the incoming data. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_PmaRxSetLocktoref" offset="14'h465" type="RW">
+    pma_rx_set_locktoref
+    <field loc="[31:0]" name="XCVR1_PmaRxSetLocktoref">
+      When set, programs the RX CDR PLL to lock to the reference clock. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_PmaRxIsLockedtodata" offset="14'h466" type="RO">
+    pma_rx_is_lockedtodata
+    <field loc="[31:0]" name="XCVR1_PmaRxIsLockedtodata">
+      When 1, indicates that the RX CDR PLL is locked to the RX data, and that the RX CDR has changed from LTR to LTD mode. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+  <register default="32'h0" name="XCVR1_PmaRxIsLockedtoref" offset="14'h467" type="RO">
+    pma_rx_is_lockedtoref
+    <field loc="[31:0]" name="XCVR1_PmaRxIsLockedtoref">
+      When 1, indicates that the RX CDR PLL is locked to the reference clock. Bit &lt;n&gt; corresponds to channel &lt;n&gt;.
+    </field>
+  </register>
+</decl_reg_list>

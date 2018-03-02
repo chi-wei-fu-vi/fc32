@@ -1,0 +1,1 @@
+set_global_assignment -library dplbuf_pipe -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) dplbuf_pipe.v]

@@ -1,0 +1,3 @@
+DEVELOPMENT_DIR=$(shell mount | grep development | awk '{print $$3}')
+$(info $(DEVELOPMENT_DIR))
+$(info $(shell mount | grep development))

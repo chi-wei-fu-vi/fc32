@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="1'h1" name="ucstat_ctl" offset="10'h0" type="RW">
+    Control
+    <field loc="[0:0]" name="uc_en">ucstat interface enable</field>
+    <field loc="[1:1]" name="le_en">link engine interface enable</field>
+    <field loc="[2:2]" name="tempsense_en">temp sensor enable</field>
+  </register>
+  <register default="8'h0" name="ucstat_le_req_count" offset="10'h1" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">link engine read request count</field>
+  </register>
+  <register default="8'h0" name="ucstat_le_done_count" offset="10'h2" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">link engine done count</field>
+  </register>
+  <register default="8'h0" name="ucstat_uc_rd_count" offset="10'h3" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">uController read operation count</field>
+  </register>
+  <register default="8'h0" name="ucstat_uc_wr_count" offset="10'h4" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">uController write operation count</field>
+  </register>
+  <register default="8'h0" name="ucstat_uc_done_count" offset="10'h5" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">uController done count</field>
+  </register>
+  <register default="8'h0" name="ucstat_uc_early_done_count" offset="10'h6" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">uController early done count</field>
+  </register>
+  <register default="8'h0" name="ucstat_uc_invalid_addr_count" offset="10'h7" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">uController invalid address count</field>
+  </register>
+  <register default="8'h0" name="ucstat_errors" offset="10'h8" type="RO">
+    Status
+    <field loc="[0:0]" name="sm_uc_error">UC state machine in error state</field>
+    <field loc="[1:1]" name="sm_bank_error">bank state machine in error state</field>
+  </register>
+  <register default="8'h0" name="ucstat_fpga_temp" offset="10'h9" type="RO">
+    Status
+    <field loc="[7:0]" name="temp">FPGA temperature from on-die thermal diode</field>
+    <field loc="[8:8]" name="done">FPGA temp sense done</field>
+  </register>
+  <register default="32'h0" name="ucstat_collision_cycle_count" offset="10'hA" type="SATC">
+    Statistics and debug
+    <field loc="[31:0]" name="count">Count of cycles bank select logic is unable to switch banks due to collision with LE reading</field>
+  </register>
+  <register default="16'h0" name="ucstat_addr" offset="10'hB" type="RO">
+    UC interface debug
+    <field loc="[15:0]" name="addr">last value of uc_addr captured from UC bus</field>
+  </register>
+  <register default="32'h0" name="ucstat_data_in" offset="10'hC" type="RO">
+    UC interface debug
+    <field loc="[31:0]" name="data">last value received on UC bus</field>
+  </register>
+  <register default="32'h0" name="ucstat_data_out" offset="10'hD" type="RO">
+    UC interface debug
+    <field loc="[31:0]" name="data">last value driven out by FPGA on UC bus</field>
+  </register>
+</decl_reg_list>

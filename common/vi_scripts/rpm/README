@@ -1,0 +1,26 @@
+Re-usable FPGA Bitfile RPM Packager
+-----------------------------------
+
+A cmake build environment that, given an .rbf file and some paramters can generate an rpm.
+Based on the Fiji cmake build environment.
+
+
+========
+Requires
+========
+
+cmake (2.8 or higher)
+rpmbuild
+subversion (1.8 or higher)
+
+
+========
+Usage
+========
+
+./generate.bash <rbf file> <top-level regmap .xml> <rpm prefix> <project name>
+
+Example:
+
+./generate.bash /build/buildbot.fpga/fijiNightly/build.2014-06-26.0000-01/projects/fiji/top/syn_best/fiji_top.rbf /build/buildbot.fpga/fijiNightly/build.2014-06-26.0000-01/projects/fiji/top/doc/fiji_regs_top.xml nas fiji
+

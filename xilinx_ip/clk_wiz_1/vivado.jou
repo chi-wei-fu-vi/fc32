@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Feb  8 09:04:13 2018
+# Process ID: 19621
+# Current directory: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1
+# Command line: vivado clk_wiz.xpr
+# Log file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/vivado.log
+# Journal file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project clk_wiz.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002_1/s5_altpll_219in_212out_0002_1.xci] -no_script -reset -force -quiet
+remove_files  -fileset s5_altpll_219in_212out_0002_1 /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002_1/s5_altpll_219in_212out_0002_1.xci
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {425} CONFIG.MMCM_DIVCLK_DIVIDE {3} CONFIG.MMCM_CLKFBOUT_MULT_F {17} CONFIG.MMCM_CLKOUT0_DIVIDE_F {3} CONFIG.MMCM_CLKOUT1_DIVIDE {12} CONFIG.CLKOUT1_JITTER {90.222} CONFIG.CLKOUT1_PHASE_ERROR {108.544} CONFIG.CLKOUT2_JITTER {115.487} CONFIG.CLKOUT2_PHASE_ERROR {108.544}] [get_ips s5_altpll_219in_212out_0002]
+generate_target all [get_files  /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002/s5_altpll_219in_212out_0002.xci]
+catch { config_ip_cache -export [get_ips -all s5_altpll_219in_212out_0002] }
+catch { [ delete_ip_run [get_ips -all s5_altpll_219in_212out_0002] ] }
+export_ip_user_files -of_objects [get_files /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002/s5_altpll_219in_212out_0002.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002/s5_altpll_219in_212out_0002.xci]
+export_simulation -of_objects [get_files /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002/s5_altpll_219in_212out_0002.xci] -directory /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.ip_user_files/sim_scripts -ip_user_files_dir /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.ip_user_files -ipstatic_source_dir /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.cache/compile_simlib/modelsim} {questa=/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.cache/compile_simlib/questa} {ies=/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.cache/compile_simlib/ies} {vcs=/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.cache/compile_simlib/vcs} {riviera=/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/clk_wiz_1/clk_wiz.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet

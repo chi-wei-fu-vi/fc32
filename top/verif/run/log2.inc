@@ -1,0 +1,1 @@
+../../../link_engine/lib/log2.inc

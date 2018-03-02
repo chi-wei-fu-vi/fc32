@@ -1,0 +1,5 @@
+set_global_assignment -library top_addr_decoder -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) top_addr_decoder.v]
+set_global_assignment -library top_addr_decoder -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_sync_1c.sv]
+set_global_assignment -library top_addr_decoder -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_sync_csr.sv]
+set_global_assignment -library top_addr_decoder -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_sync_pulse.sv]
+set_global_assignment -library top_addr_decoder -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_sync_level.sv]

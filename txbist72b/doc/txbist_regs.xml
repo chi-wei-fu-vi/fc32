@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="64'h0" name="_scratch" offset="10'h0" type="RW">
+    Scratch
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register default="16'h4" name="txbist_ipg_min" offset="10'h1" type="RW">
+    Control
+    <field loc="[15:0]" name="size">
+      IPG minimum size (in 4B quantities).  Used along with ipg_size_offset to determine the IPG length.
+    </field>
+  </register>
+  <register default="4'h0" name="txbist_ipg_offset" offset="10'h2" type="RW">
+    Control
+    <field loc="[3:0]" name="offset">
+      IPG max offset (in 4B quantities).  The offset  value is (2^ipg_offset)-1.  For example, an ipg_offset=3 would result in a max offset up to 7.  The offset value is randomized up to the max value, and added to ipg_min to determine the IPG length.   A value of 0 creates a fixed IPG length determined by ipg_min
+    </field>
+  </register>
+  <register default="14'h0" name="txbist_ram_end" offset="10'h3" type="RW">
+    Control
+    <field loc="[13:0]" name="ptr">
+      Pointer to last valid double word (4B) in txbist RAM.  HW will dispatch the contents of the RAM from address 0 to txbist_ram_end.
+    </field>
+  </register>
+  <register default="32'h0" name="txbist_loop_cnt" offset="10'h4" type="RW">
+    Control
+    <field loc="[31:0]" name="cnt">
+      Number of times to transmit contents of txbist RAM.  If set to zero, indicates continuous transmission.  At the end of transmission from the RAM, the bist engine will transmit IDLE primitives specified in txbist_idle_primitive
+    </field>
+  </register>
+  <register default="64'h000000000000001E" name="txbist_reg_primitive" offset="10'h5" type="RW">
+    Control
+    <field loc="[63:0]" name="data">
+      4 Byte primitive value to transmit when txbist mode is set to transmit from register.  Upper 4b ([35:32]) specifies whether each byte is a K-code/D-code.  Converted to 10b value before transmission.  Big endian format.  Initialized with ARBff emissions lowering fill word primitive (K28.5-D20.4-D31.7-D31.7)
+    </field>
+  </register>
+  <register default="64'h000000000000001E" name="txbist_idle_primitive" offset="10'h6" type="RW">
+    Control
+    <field loc="[63:0]" name="data">
+      4 byte IDLE primitive.   Used to specify the IDLE primitive transmitted during the IPG interval or after transmitting from the RAM.   Converted to 10b value before transmission.   Initialized to IDLE  ARBFF (K28.5,D20.4,D31.7,D31.7 = 0xBC,0x94,0xFF,0xFF).  The alternate IDLE is (K28.5,D21.4,D21.5,D21.5 = 0xBC,0x95,0xB5,0xB5).  Big endian format
+    </field>
+  </register>
+  <register default="8'h108" name="txbist_ctl" offset="10'h7" type="RW">
+    Control
+    <field loc="[2:0]" name="mode">
+      txbist control - 3b mode field indicates transmission mode:  
+ - 000 : disabled
+ - 001 : from RAM.  Loop n times or continuous.  IPG inserted at end of RAM.
+ - 010 : from prim register, continuous
+ - 011 : reserved
+ - 1xx : reserved
+    </field>
+    <field loc="[3:3]" name="interval_sync_en">
+      Setting this bit to 1 instructs the transmit unit to delay transmission until the next interval stats pulse.  On the interval stats pulse, tranmission starts and continues based on txbist control mode settings.
+    </field>
+    <field loc="[4:4]" name="10b_err_inj" type="SC">
+      Writing this bit to 1 injects an invalid 10b code into the next transmitted word
+    </field>
+    <field loc="[5:5]" name="crc_auto_en">
+      txbist control - enable HW CRC generation.  Only used during RAM transmission mode.  HW detects end of frame and auto inserts CRC.  The HW generated CRC is inserted into the 4B primitive prior to the EOF, overwriting its value.
+    </field>
+    <field loc="[6:6]" name="crc_err_inj" type="SC">
+      Writing this bit to 1 injects a CRC error on the next frame.
+    </field>
+    <field loc="[7:7]" name="control_space">
+      0: access to data ram space, 1: access to control ram space
+    </field>
+    <field loc="[8:8]" name="bistout_en">
+      0: gate output enable signal, 1: reflect value of output enable signal
+    </field>
+    <field loc="[9:9]" name="fec_mode">
+      When this bit is set, the engine shall loop address location 0..31 (1st FEC frame) continuously.  This allows the RX
+      FEC engine to synchronize to the data stream.  When this bit is deasserted, the test continues normally.
+    </field>
+    <field loc="[10:10]" name="sync_start">
+      When this bit is set, this engine shall remain in IDLE state until the same bit is asserted for all other
+      BIST engines.  This mechanism synchronizes the START event to the last BIST engine enabled.
+      Note, if this bit is set, then it is implied that ALL other BIST engines are also going to have this bit
+      set at some point.  In other words, this is a global setting.
+      If global synchronization is desired, then this bit must be set before this BIST engine is activated.
+    </field>
+  </register>
+  <register default="36'h0" name="txbist_wr_data" offset="10'h8" type="RW">
+    Control
+    <field loc="[63:0]" name="data">
+      Specifies the 4B primitive to be written into the txbist RAM.  Upper 4b indicates whether bytes is K-code (=1) or D-code (=0).  The txbist RAM is written when HW detects a write to this register.  Following, the write, the internal write address register is auto-incremented.
+    </field>
+  </register>
+  <register default="14'h0" name="txbist_wr_addr" offset="10'h9" type="RW">
+    Control
+    <field loc="[13:0]" name="addr">
+      Writing this register updates the internal write address register used to index the txbist RAM on writes.  The internal write address register only needs to be updated once - prior to updating the wr_data register.  HW auto increments the internal write address register following every write.
+    </field>
+  </register>
+  <register default="48'h0" name="txbist_tx_prim_cnt" offset="10'hA" type="FRC">
+    Statistics and debug
+    <field loc="[47:0]" name="count">
+      Count of  transmitted register primitives
+    </field>
+  </register>
+  <register default="48'h0" name="txbist_tx_frame_cnt" offset="10'hB" type="FRC">
+    Statistics and debug
+    <field loc="[47:0]" name="count">
+      Count of transmitted frames - count is incremented on detection of an EOF.   Saturates at max value
+    </field>
+  </register>
+  <register default="48'h0" name="txbist_crc_err_inj_cnt" offset="10'hC" type="FRC">
+    Statistics and debug
+    <field loc="[47:0]" name="count">
+      Count of injected CRC errors
+    </field>
+  </register>
+  <register default="14'h0" name="txbist_rd_addr" offset="10'hD" type="RW">
+    Statistics and debug
+    <field loc="[13:0]" name="addr">
+      Read address index into txbist RAM.  Used to perform debug reads of the txbist RAM.  Writing to this register launches a read and returns data in txbist_rd_data
+    </field>
+  </register>
+  <register default="36'h0" name="txbist_rd_data" offset="10'hE" type="RO">
+    Statistics and debug
+    <field loc="[63:0]" name="data">
+      Read data from txbist RAM indexed by txbist_rd_addr[13:0]
+    </field>
+  </register>
+</decl_reg_list>

@@ -1,0 +1,1 @@
+vopt -64 +acc -l elaborate.log -L xil_defaultlib -L xpm -L blk_mem_gen_v8_4_0 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.test_ram1r1w128x6432 xil_defaultlib.glbl -o test_ram1r1w128x6432_opt

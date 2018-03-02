@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../altsyncram2blk_mem.srcs/sources_1/ip/s5_ram1w1r_1024x32b/sim/s5_ram1w1r_1024x32b.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

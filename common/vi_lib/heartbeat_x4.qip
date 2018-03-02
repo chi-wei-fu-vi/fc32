@@ -1,0 +1,1 @@
+set_global_assignment -library heartbeat_x4 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) heartbeat_x4.v]

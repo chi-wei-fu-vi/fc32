@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+    Scratch register
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register name="MiscCtrl" offset="10'h2" default="64'h0" type="RW">
+    Misc data path control register.
+    <field loc="[11:8]" name="MonitorMode">
+      0x0=Off. 0x1=Interval Only: allows interval stats to be generated and sent to the DPLBUF. 0x2=Normal Mode: allow interval stats and data to be sent to the DPLBUF.
+    </field>
+    <field loc="[7:0]" name="Reserved">
+      Reserved.
+    </field>
+  </register>
+  <register name="MiscDalDataCtr" offset="10'h7" default="8'h0" type="FRC">
+    Number of 512-byte DAL data packets processed by the Misc Round Robin Arbiter.
+    <field name="count" loc="[7:0]"> DAL packet count </field>
+  </register>
+  <register name="MiscDalStatCtr" offset="10'h8" default="8'h0" type="FRC">
+    Number of 64-byte DAL stats packets processed by the Misc Round Robin Arbiter.
+    <field name="count" loc="[7:0]"> DAL packet count </field>
+  </register>
+</decl_reg_list>

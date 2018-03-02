@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../altsyncram.srcs/sources_1/ip/fpga_rev_rom/sim/fpga_rev_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

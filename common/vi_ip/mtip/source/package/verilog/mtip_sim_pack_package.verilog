@@ -1,0 +1,60 @@
+//  *************************************************************************
+//  File : mtip_sim_pack.v
+//  *************************************************************************
+//  This program is controlled by a written license agreement.
+//  Unauthorized Reproduction or Use is Expressly Prohibited. 
+//  Copyright (c) 2003 Morethanip
+//  MorethanIP GmbH, Domagkstr33/75, 80807 Muenchen, GERMANY
+//  info@morethanip.com
+//  leave_with_comments
+//  *************************************************************************
+//   Version: $Id: mtip_sim_pack_package.verilog,v 1.6 2009/10/29 12:27:34 fb Exp $
+//   Author:	 Daniel Koehler
+//  *************************************************************************
+// 	Description:
+// 
+// 		Package defining component(s) and features of
+//       1000 / 2000 Fibre Channel Core with FIFO
+//  *************************************************************************
+
+//  Simulation Settings (Testbench)
+//  -------------------------------
+
+parameter loc_high = 5.0; 
+parameter loc_low = 5.0; 
+
+parameter tb_scrbl_ena = 1'b 1 ; //  enable srambler
+parameter tb_speed = 8000 ; // Internal Serdes speed
+parameter tb_rxframes = 5 ; //  number of frames to send in rx path - if set to 0, generator is diabled and loopbackmode is active
+parameter tb_txframes = 5 ; //  number of frames to send in tx path (set to 0 to disable)
+parameter tb_lenstart = 100 ; //  length to start (incremented each new frame by tb_lenstep)
+parameter tb_lenstep = 1 ; //  steps the length should increase with each frame
+parameter tb_lenmax = 2132 ; //  max. payload length for generation
+parameter tb_fc_frm_ipg = 6 ; //  ipg (idle primitives) between frames
+parameter ena_var_ipg = 1'b 0 ; //  enable variable ipg
+parameter rx_fifo_sf = 32 ; //  section full threshold
+parameter tx_fifo_se = 32 ; //  section empty threshold
+parameter tx_fifo_sf = 32 ; //  section full threshold
+parameter rx_fifo_ae = 8 ; //  almost empty threshold
+parameter rx_fifo_af = 8 ; //  almost full threshold
+parameter tx_fifo_ae = 8 ; //  almost empty threshold
+parameter tx_fifo_af = 16 ; //  almost full threshold
+parameter frm_lenmax = 2136 ; //  max. payload length for generation
+parameter ext_rdy_ena = 1'b 0 ; //  enable r_rdy via external pin
+parameter reg_rdy_ena = 1'b 0 ; //  enable r_rdy via command register
+parameter tb_stopread = 0 ; //  stop reading the rx fifo after x frames
+parameter tb_holdread = 100 ; //  clock cycles to wait after stopread before continuing to read
+// 
+parameter tb_fc_sof_eof_fwd = 1'b 0 ; //  forward frames with sof / eof to client
+parameter tb_fc_sof_eof_gen = 1'b 0 ; //  generate frames with sof / eof
+parameter tb_fc_n_port = 1'b 1 ; //  port type configuration
+parameter tb_fc_crc_fwd = 1'b 0 ; //  forward frames with crc to client
+// 
+parameter tb_ff_crc_fwd = 1'b 0 ; //  forward frames with crc from FIFO
+parameter tb_ff_ena_crc = 1'b 0 ; //  check crc from fifo
+parameter tb_ff_crc_crpt = 1'b 0 ; //  corrupt Tx crc
+// 
+parameter tb_fc_credit = 3 ; //  maximum class 3 credit
+parameter tb_fc_port_time_out = 128 ; //  port time out value
+parameter tb_fc_init_timer = 256 ; //  init timer value
+parameter tb_fc_bb_scn = 0 ; //  credit recovery period

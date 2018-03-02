@@ -1,0 +1,60 @@
+<vi_registers>
+  <a name="global" base="21'h0" size="21'h20000">
+    <aa name="xx01_g" base="17'h0" size="17'h4000">
+      <aaa name="fpga"      base="14'h0"    size="14'h400" src="../../chipregs/doc/chipregs.xml" clk="1"/>
+      <aaa name="clkrst"    base="14'h400"  size="14'h400" src="../../fc16clkrst/doc/fc16clkrst_regs.xml" clk="1"/>
+      <aaa name="ucstats"   base="14'h800"  size="14'h400" src="../../common/vi_design/ucstats/doc/ucstats_regs.xml"/>
+      <aaa name="xbar"      base="14'hC00"  size="14'h400" src="../../xbar/doc/xbar_regs.xml" clk="1"/>
+      <aaa name="cross_ch"  base="14'h1000" array="2" size="14'h400" src=""/>
+      <aaa name="rcfg"      base="14'h1800" size="14'h400" clk="1" src="../../fc1_layer_kr_16_8/rtl/SERDES/auto/dynamic_reconfig_regs.xml" etc="doc only"/>
+    </aa>
+  </a>
+  <a name="pcie" base="21'h20000"  size="21'h20000" clk="1">
+    <aa name="xx02_g" base="17'h0" size="17'h4000">
+      <aaa name="csr" base="14'h0"   size="14'h400" src="../../pcie_gen2x8/bali_pcie_app/doc/bali_pcie_regs.xml"/>
+      <aaa name="perf" base="14'h400" size="14'h400" src="../../pcie_gen2x8/bali_pcie_app/doc/pcie_perf_regs.xml"/>
+    </aa>
+    <aa name="dplbuf" base="17'h4000" size="17'h4000">
+      <aaa name="data" base="14'h0" array="12" size="14'h400" src="../../common/vi_design/sv_pcie/pcie_app/bali_pcie_app/doc/bali_dplbuf_regs.xml"/>
+    </aa>
+  </a>
+  <a name="bist" base="21'h60000" size="21'h20000">
+    <aa name="xx03_pcie" base="17'h4000" size="17'h4000" clk="1">
+      <aaa name="csr" base="14'h0" size="14'h400" src="../../pcie_gen2x8/pcie_mwr_bist/pcie_mwr_bist_regs.xml"/>
+    </aa>
+    <aa name="tx_ch" base="17'h8000" array="2" size="17'h4000" src="../../txbist72b/doc/txbist_regs.xml" clk="1"/>
+  </a>
+  <a name="link" base="21'h80000" array="12" size="21'h20000" sp="1">
+    <aa name="xx04_g" base="17'h0" size="17'h4000">
+      <aaa name="csr"     base="14'h0" size="14'h400" src="../../link_engine/doc/link_engine_regs.xml"/>
+      <aaa name="credit_stats" base="14'h400" array="2" size="14'h400" src="../../link_engine/doc/credit_stats_regs.xml" clk="1"/>
+    </aa>
+    <aa name="ch" base="17'h4000" array="2" size="17'h4000">
+      <aaa name="serdes"   base="14'h0"    size="14'h400" src="../../fc1_layer_kr_16_8/rtl/SERDES/auto/pma_1ch_regs.xml" clk="1"/>
+      <aaa name="fc1_layer_kr"  base="14'h400"  size="14'h400" src="../../fc1_layer_kr_16_8/doc/fc1_layer_csr.xml"/>
+      <aaa name="fmac"              base="14'h800"  size="14'h400" src="../../fmac/doc/fmac_regs.xml"/>
+      <aaa name="extr"     base="14'hC00" size="14'h400" src="../../extractor/doc/extractor_regs.xml"/>
+      <aaa name="ucstats"  base="14'h1000" size="14'h400" src="../../common/vi_design/ucstats/doc/ucstats_sfp_regs.xml"/>
+      <aaa name="mtip"     base="14'h1400"  size="14'h400" src="" clk="1"/>
+      <aaa name="mtip_fc1" base="14'h1800"  size="14'h400" src="../../mtip_if/doc/mtip_if_fc1_regs.xml" clk="1"/>
+      <aaa name="mtip_fc2" base="14'h1C00"  size="14'h400" src="../../mtip_if/doc/mtip_if_fc2_regs.xml"/>
+    </aa>
+ </a>   
+<vi_appendix>
+  <regt>
+    * more up-to-date version is available at http://eng-wiki/display/DEV/XML+register+definitions
+    
+    - "RO" : read only
+    - "RW" : read-write
+    - "FRC" : free running counter. It has 1 bit enable port. Counter can be reset by writing 1 to the register
+    - "LRC" : latchable counter. It has 1bit enble and 1bit latch port. Latch port can be used to take a snap shot of the counter value. Counter value will be reset upon triggering latch port. i.e 1 bit pulse is required to trigger latch port.
+    - "TRC" : Same as LRC butit has disable port to change to the FRC.
+    - "MEM" : It does not create any rtl code but create ports to connect to the memory instance and allocate address space.
+    - "SATC" : Same as FRC but counter staturated at maximum value.
+  </regt>
+  <rev_up>
+   > jun.31.2013
+      - initial
+  </rev_up>
+</vi_appendix>
+</vi_registers>

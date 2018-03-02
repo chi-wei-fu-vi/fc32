@@ -1,0 +1,246 @@
+<!-- PCIE registers -->
+<decl_reg_list> 
+           <register name="_scratch" offset="10'h000" default="64'd0" type="RW">           
+                 <field name="_scratch" loc="[63:0]"  type="RW"> </field>
+           </register>                    
+           
+           <register name="Ctrl" offset="10'h001" default="64'd0" type="RW">           
+                 <field name="LatchCtrs" loc="[0:0]"  type="SC"> On assertion latches and resets counters underneath. (auto-clears) </field>
+           </register>         
+           
+           <register name="TICKS_SINCE_LAST_LATCH" offset="10'h002" default="64'd0" type="LRC">           
+                 <field name="TICKS_SINCE_LAST_LATCH" loc="[63:0]"> Gen2=125MHz or 8ns per tick  </field>
+           </register>         
+
+           <register name="TX_ST_SOP_CTR" offset="10'h003" default="64'd0" type="LRC">
+                 <field name="TX_ST_SOP_CTR" loc="[63:0]"> Number of TLP's transferred into HIP.   </field>
+           </register>           
+           
+           <register name="TX_ST_READY_N_CTR" offset="10'h005" default="64'd0" type="LRC">
+                 <field name="TX_ST_READY_N_CTR" loc="[31:0]"> Count number of ticks that HIP de-asserts ready.   </field>
+           </register>                      
+
+           <register name="LINK0_REQ_TICKS" offset="10'h010" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK0_REQ_TICKS" loc="[31:0]">  Total number of ticks that this link asserts request and grant not issued. </field>
+           </register>       
+           
+           <register name="LINK1_REQ_TICKS" offset="10'h011" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK1_REQ_TICKS" loc="[31:0]">   </field>
+           </register>       
+           
+           <register name="LINK2_REQ_TICKS" offset="10'h012" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK2_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                  
+           
+           <register name="LINK3_REQ_TICKS" offset="10'h013" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK3_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK4_REQ_TICKS" offset="10'h014" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK4_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK5_REQ_TICKS" offset="10'h015" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK5_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK6_REQ_TICKS" offset="10'h016" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK6_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK7_REQ_TICKS" offset="10'h017" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK7_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK8_REQ_TICKS" offset="10'h018" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK8_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK9_REQ_TICKS" offset="10'h019" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK9_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK10_REQ_TICKS" offset="10'h01A" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK10_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK11_REQ_TICKS" offset="10'h01B" default="64'd0" type="LRC" usr="1">
+                 <field name="LINK11_REQ_TICKS" loc="[31:0]">   </field>
+           </register>                             
+
+           <register name="LINK0_REQ_TICKS_MAX" offset="10'h020" default="64'd0" type="RO">
+                 <field name="LINK0_REQ_TICKS_MAX" loc="[31:0]"> Max number of ticks this link asserted request before being serviced since last latch   </field>
+           </register>       
+           
+           <register name="LINK1_REQ_TICKS_MAX" offset="10'h021" default="64'd0" type="RO">
+                 <field name="LINK1_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>       
+           
+           <register name="LINK2_REQ_TICKS_MAX" offset="10'h022" default="64'd0" type="RO">
+                 <field name="LINK2_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                  
+           
+           <register name="LINK3_REQ_TICKS_MAX" offset="10'h023" default="64'd0" type="RO">
+                 <field name="LINK3_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK4_REQ_TICKS_MAX" offset="10'h024" default="64'd0" type="RO">
+                 <field name="LINK4_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK5_REQ_TICKS_MAX" offset="10'h025" default="64'd0" type="RO">
+                 <field name="LINK5_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK6_REQ_TICKS_MAX" offset="10'h026" default="64'd0" type="RO">
+                 <field name="LINK6_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK7_REQ_TICKS_MAX" offset="10'h027" default="64'd0" type="RO">
+                 <field name="LINK7_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK8_REQ_TICKS_MAX" offset="10'h028" default="64'd0" type="RO">
+                 <field name="LINK8_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK9_REQ_TICKS_MAX" offset="10'h029" default="64'd0" type="RO">
+                 <field name="LINK9_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK10_REQ_TICKS_MAX" offset="10'h02A" default="64'd0" type="RO">
+                 <field name="LINK10_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK11_REQ_TICKS_MAX" offset="10'h02B" default="64'd0" type="RO">
+                 <field name="LINK11_REQ_TICKS_MAX" loc="[31:0]">   </field>
+           </register>                                        
+                      
+           <register name="LINK0_VALID_TICKS" offset="10'h030" default="64'd0" type="LRC">
+                 <field name="LINK0_VALID_TICKS" loc="[31:0]"> Number of ticks that VALID is asserted since last latch </field>
+           </register>       
+           
+           <register name="LINK1_VALID_TICKS" offset="10'h031" default="64'd0" type="LRC">
+                 <field name="LINK1_VALID_TICKS" loc="[31:0]">   </field>
+           </register>       
+           
+           <register name="LINK2_VALID_TICKS" offset="10'h032" default="64'd0" type="LRC">
+                 <field name="LINK2_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                  
+           
+           <register name="LINK3_VALID_TICKS" offset="10'h033" default="64'd0" type="LRC">
+                 <field name="LINK3_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK4_VALID_TICKS" offset="10'h034" default="64'd0" type="LRC">
+                 <field name="LINK4_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK5_VALID_TICKS" offset="10'h035" default="64'd0" type="LRC">
+                 <field name="LINK5_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK6_VALID_TICKS" offset="10'h036" default="64'd0" type="LRC">
+                 <field name="LINK6_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK7_VALID_TICKS" offset="10'h037" default="64'd0" type="LRC">
+                 <field name="LINK7_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK8_VALID_TICKS" offset="10'h038" default="64'd0" type="LRC">
+                 <field name="LINK8_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK9_VALID_TICKS" offset="10'h039" default="64'd0" type="LRC">
+                 <field name="LINK9_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK10_VALID_TICKS" offset="10'h03A" default="64'd0" type="LRC">
+                 <field name="LINK10_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK11_VALID_TICKS" offset="10'h03B" default="64'd0" type="LRC">
+                 <field name="LINK11_VALID_TICKS" loc="[31:0]">   </field>
+           </register>                                                   
+           
+           <register name="LINK0_COMPLETE_TICKS" offset="10'h040" default="64'd0" type="LRC">
+                 <field name="LINK0_COMPLETE_TICKS" loc="[31:0]"> Number of 4KB transfers since last latch   </field>
+           </register>       
+           
+           <register name="LINK1_COMPLETE_TICKS" offset="10'h041" default="64'd0" type="LRC">
+                 <field name="LINK1_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>       
+           
+           <register name="LINK2_COMPLETE_TICKS" offset="10'h042" default="64'd0" type="LRC">
+                 <field name="LINK2_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                  
+           
+           <register name="LINK3_COMPLETE_TICKS" offset="10'h043" default="64'd0" type="LRC">
+                 <field name="LINK3_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK4_COMPLETE_TICKS" offset="10'h044" default="64'd0" type="LRC">
+                 <field name="LINK4_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK5_COMPLETE_TICKS" offset="10'h045" default="64'd0" type="LRC">
+                 <field name="LINK5_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK6_COMPLETE_TICKS" offset="10'h046" default="64'd0" type="LRC">
+                 <field name="LINK6_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK7_COMPLETE_TICKS" offset="10'h025" default="64'd0" type="LRC">
+                 <field name="LINK7_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK8_COMPLETE_TICKS" offset="10'h048" default="64'd0" type="LRC">
+                 <field name="LINK8_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK9_COMPLETE_TICKS" offset="10'h049" default="64'd0" type="LRC">
+                 <field name="LINK9_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK10_COMPLETE_TICKS" offset="10'h04A" default="64'd0" type="LRC">
+                 <field name="LINK10_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="LINK11_COMPLETE_TICKS" offset="10'h04B" default="64'd0" type="LRC">
+                 <field name="LINK11_COMPLETE_TICKS" loc="[31:0]">   </field>
+           </register>                                                              
+           
+           <register name="TX_ST_32BYTE_CTR" offset="10'h050" default="64'd0" type="LRC">
+                 <field name="TX_ST_BYTE_CTR" loc="[63:0]"> Count number of 32bytes transferred into HIP (st_empty=0).
+		 DAL MWr header and payload except last segment.</field>
+           </register>
+                      
+            <register name="TX_ST_24BYTE_CTR" offset="10'h051" default="64'd0" type="LRC">
+                 <field name="TX_ST_BYTE_CTR" loc="[63:0]"> Count number of 24bytes transferred into HIP (st_empty=1).
+		 All completions belongs to this entry.</field>
+           </register>
+        
+            <register name="TX_ST_16BYTE_CTR" offset="10'h052" default="64'd0" type="LRC">
+                 <field name="TX_ST_BYTE_CTR" loc="[63:0]"> Count number of 16bytes transferred into HIP (st_empty=2).
+		 Last segment of DAL MWr transaction.</field>
+           </register>
+
+           <register name="TX_POST_HDR_ZERO_CRED_CTR" offset="10'h053" default="64'd0" type="LRC">
+                 <field name="TX_POST_HDR_ZERO_CRED_CTR" loc="[15:0]"> POSTED header credit == ZERO.  One count per clock.  </field>
+           </register>
+
+           <register name="TX_POST_DAT_ZERO_CRED_CTR" offset="10'h054" default="64'd0" type="LRC">
+                 <field name="TX_POST_DAT_ZERO_CRED_CTR" loc="[15:0]"> POSTED data credit == ZERO.  One count per clock.  </field>
+           </register>
+
+           <register name="TX_NON_POST_HDR_ZERO_CRED_CTR" offset="10'h055" default="64'd0" type="LRC">
+                 <field name="TX_NON_POST_HDR_ZERO_CRED_CTR" loc="[15:0]"> NON_POSTED header credit == ZERO.  One count per clock.  </field>
+           </register>
+
+           <register name="TX_NON_POST_DAT_ZERO_CRED_CTR" offset="10'h056" default="64'd0" type="LRC">
+                 <field name="TX_NON_POST_DAT_ZERO_CRED_CTR" loc="[15:0]"> NON_POSTED data credit == ZERO.  One count per clock.  </field>
+           </register>
+
+</decl_reg_list>

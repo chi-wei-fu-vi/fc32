@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="s5_native_phy_16gbps_synth_1" LaunchDir="/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/gtwizard/gtwizard.runs/s5_native_phy_16gbps_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

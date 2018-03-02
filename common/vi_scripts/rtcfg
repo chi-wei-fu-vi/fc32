@@ -1,0 +1,69 @@
+#!/usr/bin/perl
+
+my $file=$ARGV[0];
+my $cfgv=$ARGV[1];
+
+print "debug ".$cfgv."\n";
+
+@array=split(/ |=/,$cfgv);
+
+#print ("arg1 = $file\n");
+@realarray = ();
+
+foreach $item (@array) {
+    if ($item ne '') {
+	push(@realarray,$item);
+    }
+}
+
+print "PRINTING: realarray\n";
+map { print "EL: $_\n"; } @realarray;
+
+#$index=0;
+#foreach $item (@array)
+#{
+#    print "arg2 = array[$index]=$item"."_aaa\n";
+#    $index++;
+#}
+
+#$index=0;
+#foreach $item (@realarray)
+#{
+#    print "realarray[$index]=$item\n";
+#    $index++;
+#}
+
+open(FF,$file) or die("Can't open file");
+@my_F = <FF>;
+close FF;
+
+
+while ($elem = shift(@realarray)){
+
+    $elem = ' ENV_'.$elem;
+
+    foreach (@my_F) {
+	if (m/\/\//) {
+# pass
+	}
+	elsif (m/$elem/) {
+	    print "MATCH: $elem\n";
+	    $val = shift(@realarray);
+	    if ($` eq "int") {
+		$_ =~ s/$'/ = $val;\n/;		
+	    }
+	    elsif ($` eq "string") {
+		$_ =~ s/$'/ = "$val";\n/;
+	    } 
+	}
+    }
+}
+
+
+open(FF,">",$file) or die("Can't open file");
+foreach (@my_F){
+    $_ =~ s/\r\n/\n/g;
+    print FF $_;
+
+}
+close FF

@@ -1,0 +1,29 @@
+<!-- FC1 stats module register definitions. -->
+<decl_reg_list> 
+  <register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+    Scratch register
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register name="TimeMinCredit" offset="10'h10" default="64'h0" type="RO">
+    Total time spent at minimum buffer-to-buffer credits in the current time interval. Resets to 0x0 at the end of an interval, and resets if a new minumum Credit Count is detected.. 
+    <field name="tick" loc="[31:0]"> clock ticks</field>
+  </register>
+  <register name="CreditBBMin" offset="10'h11" default="64'hFFFFFFFF" type="RO">
+    This is the minimum number the Credit Counter reached during the interval
+    <field name="credit" loc="[31:0]"> Buffer-to-buffer credit</field>
+  </register>
+  <register name="CreditBBMax" offset="10'h12" default="64'h0" type="RO">
+    Maximum buffer-to-buffer credits observed in the current time interval. Resets to 0x0 at the end of an interval.
+    <field name="credit" loc="[31:0]"> Buffer-to-buffer credit</field>
+  </register>
+  <register name="CreditCounter" offset="10'h13" default="64'h1000000" type="RO">
+    This counter is incremented every time a frame is detecting coming in, and decremented every time an RC_RDY is seen on the oposite channel.  It is NOT reset at the end of the interval.
+    <field name="credit" loc="[31:0]"> Buffer-to-buffer credit</field>
+  </register>
+  <register name="CreditStart" offset="10'h14" default="64'h1000000" type="RW">
+    The initialization value loaded into Credit Counter.
+    <field name="credit" loc="[31:0]"> Buffer-to-buffer credit</field>
+  </register>
+</decl_reg_list>

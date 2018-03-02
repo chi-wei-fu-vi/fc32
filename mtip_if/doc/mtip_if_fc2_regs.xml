@@ -1,0 +1,102 @@
+<!-- FC2 stats module register definitions. -->
+<decl_reg_list> 
+  <register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+    Scratch register
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register name="FcFrmCtr" offset="10'h10" default="64'h0" type="FRC">
+    Number of FC frames with and without error. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Receive frame count </field>
+  </register>
+  <register name="FcCrcErrCtr" offset="10'h11" default="64'h0" type="FRC">
+    Number of FC frames with CRC error. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> CRC error count </field>
+  </register>
+  <register name="FcTruncErrCtr" offset="10'h12" default="64'h0" type="FRC">
+    Number of FC frames with improperly truncated error (e.g. jabber or runt frames). It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Truncation error count </field>
+  </register>
+  <register name="FcEofErrCtr" offset="10'h13" default="64'h0" type="FRC">
+    Number of FC frames treated as invalid due to ending with an EOFa/EOFni/EOFdti character. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> EOF error count </field>
+  </register>
+  <register name="FcLosErrCtr" offset="10'h14" default="64'h0" type="FRC">
+    Number of loss of sync counted. Loss of sync indicates the serdes receiver frequency is not locked. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Loss of sync error count </field>
+  </register>
+  <register name="FcLosIErrCtr" offset="10'h15" default="64'h0" type="FRC">
+    Number of loss of signal counted. It is the loss of optical signal from SFP. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Loss of signal error count </field>
+  </register>
+  <register name="FcShortErrCtr" offset="10'h20" default="64'h0" type="FRC">
+    Number of short FC frames being discarded. Short frames are defined as less than or equal to 8 bytes excluding SOF/EOF delimiters. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Short frame error count </field>
+  </register>
+  <register name="TsFifoStat" offset="10'h22" default="64'h0" type="RO">
+    Timestamp FIFO status register
+    <field name="Underflow" loc="[17:17]"> 
+    FIFO underflow. The error status is permanently latched once the error occurs. This error is not supposed to happen. If set, it indicates hardware design error.
+    </field>
+    <field name="Overflow" loc="[16:16]"> 
+    FIFO overflow. The error status is permanently latched once the error occurs. This error is not supposed to happen. If set, it indicates hardware design error.
+    </field>
+    <field name="Words" loc="[4:0]"> 
+    Most number of timestamp entries in the FIFO
+    </field>
+  </register>
+  <register name="SingleStep" offset="10'h30" default="64'h0" type="RW">
+    Single step debug register
+    <field loc="[31:31]" name="mode">
+      When this bit is set, single step debug mode is enabled. Received frames are not processed until start bit is set to 1.  </field>
+    <field loc="[30:30]" name="start" type="RW">
+      When this bit is set along with bits 7:0, certain number of data, control, pause DAL packets are delivered. The subsequent frames are discarded once the threshold is reached. To receive the next batch of DAL packets, the start bit must be written with 0 first. Then it can be changed from 0 to 1 again.  </field>
+    <field loc="[7:0]" name="cnt">
+      The number of DAL packets delivered to software. </field>
+  </register>
+  <register name="FramingStop" offset="10'h40" default="64'h0" type="RO">
+    Framing stop error register
+    <field loc="[1:1]" name="b2beop">
+      Back to back EOP framing error received from MTIP. 
+    </field>
+    <field loc="[0:0]" name="b2bsop">
+      Back to back SOP framing error received from MTIP. 
+    </field>
+  </register>
+  <register name="mtip_debug" offset="10'h41" default="64'h0" type="RO">
+    mtip_debug register
+    <field name="reserved" loc="[63:49]"> </field>
+    <field name="rx_class_val" loc="[48:48]"> </field>
+    <field name="rx_class" loc="[47:44]"> </field>
+    <field name="rx_end_code_val" loc="[43:43]"> </field>
+    <field name="rx_end_code" loc="[42:39]"> </field>
+    <field name="rx_primitive" loc="[38:27]"> </field>
+    <field name="rx_fc1_kchn" loc="[26:26]"> </field>
+    <field name="rx_fc1_err" loc="[25:25]"> </field>
+    <field name="rx_disp_err" loc="[24:24]"> </field>
+    <field name="rx_char_err" loc="[23:23]"> </field>
+    <field name="led_link_sync" loc="[22:22]"> </field>
+    <field name="led_link_online" loc="[21:21]"> </field>
+    <field name="ff_tx_mod" loc="[20:19]"> </field>
+    <field name="ff_rx_dsav" loc="[18:18]"> </field>
+    <field name="ff_rx_sop" loc="[17:17]"> </field>
+    <field name="ff_rx_eop" loc="[16:16]"> </field>
+    <field name="ff_rx_err" loc="[15:15]"> </field>
+    <field name="ff_rx_rdy" loc="[14:14]"> </field>
+    <field name="ff_rx_dval" loc="[13:13]"> </field>
+    <field name="comma_det" loc="[12:12]"> </field>
+    <field name="rx_phy_los" loc="[11:11]"> </field>
+    <field name="scrb_ena" loc="[10:10]"> </field>
+    <field name="rx_crc_err" loc="[9:9]"> </field>
+    <field name="rx_frm_discard" loc="[8:8]"> </field>
+    <field name="rx_length_err" loc="[7:7]"> </field>
+    <field name="rx_frm_rcv" loc="[6:6]"> </field>
+    <field name="dec_error" loc="[5:5]"> </field>
+    <field name="sync_acqurd" loc="[4:4]"> </field>
+    <field name="node_off_line" loc="[3:3]"> </field>
+    <field name="node_on_line" loc="[2:2]"> </field>
+    <field name="node_fault" loc="[1:1]"> </field>
+    <field name="node_recovery" loc="[0:0]"> </field>
+  </register>
+</decl_reg_list>

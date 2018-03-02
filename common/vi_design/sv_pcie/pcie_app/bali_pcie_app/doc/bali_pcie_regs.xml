@@ -1,0 +1,133 @@
+<!-- PCIE registers -->
+<decl_reg_list> 
+		   <register name="_scratch" offset="10'h000" default="64'd0" type="RW">           
+		             <field name="_scratch" loc="[63:0]"  type="RW"> </field>
+           </register>                    
+           
+           <register name="PcieAppCtl" offset="10'h001" default="64'd0" type="RW">           
+                 <field name="RstPcieRegs" loc="[0:0]"  type="SC"> </field>
+           </register>         
+
+           <register name="PcieStatus" offset="10'h002" default="64'd0" type="RO">
+
+                 <field name="serdes_pll_locked" loc="[0:0]"> Indicates coreclkout_hip is locked.  </field>
+                 <field name="fixedclk_locked"   loc="[1:1]"> Indicates 50MHz iRECONFIG_XCVR_CLK for transceiver initialization is locked. Application should be held in reset until this is asserted. </field>
+                 <field name="CurrentSpeed"      loc="[5:4]"> 11\=Gen3,10\=Gen2,01\=Gen1,00\=Undefined  </field>
+                 <field name="CurrentLanes"      loc="[11:8]"> This signal indicates the number of lanes that configured during link training. The following encodings are defined: 0001\=1 lane,0010\=2 lanes,0100\=4 lanes,1000\=8 lanes  </field>
+           </register>
+
+           <register name="serdes_pll_locked_ctr" offset="10'h003" default="64'd0" type="FRC">
+                 <field name="serdes_pll_locked_ctr" loc="[15:0]">  </field> 
+           </register>
+           
+           <register name="dlup_exit_ctr" offset="10'h004" default="64'd0" type="FRC">
+                <field name="dlup_exit_ctr" loc="[15:0]"> Increments when the HIP core exits the DLCMSM DLUP state. Causes app reset.  </field>
+           </register>
+
+           <register name="l2_exit_ctr" offset="10'h005" default="64'd0" type="FRC">
+                <field name="l2_exit_ctr" loc="[15:0]"> Increments when the LTSSM transitions from l2.idle to detect. </field>
+           </register>
+
+           
+           <register name="ecc_derr_cor_ext_rcv" offset="10'h006" default="64'd0" type="FRC">
+                <field name="ecc_derr_cor_ext_rcv" loc="[15:0]"> Indicates a corrected error in the RX buffer. This signal is for debug only. It is not valid until the RX buffer is filled with data. </field>
+           </register>
+
+           <register name="ecc_derr_rpl" offset="10'h007" default="64'd0" type="FRC">
+                <field name="ecc_derr_rpl" loc="[15:0]"> Indicates an uncorrectable error in retry buffer. </field>
+           </register>
+           
+           <register name="ecc_derr_cor_ext_rpl" offset="10'h008" default="64'd0" type="FRC">
+                <field name="ecc_derr_cor_ext_rpl" loc="[15:0]"> Indicates a corrected ECC error in the retry buffer. </field>
+           </register>                                 
+           <register name="poison_tlp_received_cnt" offset="10'h00b" default="64'd0" type="FRC">
+                <field name="poison_tlp_received_cnt" loc="[15:0]"> app received TLP with poison bit set. (uncorrectable-non-fatal). </field>
+           </register>                                                       
+
+           <register name="ur_np_tlp_received_cnt" offset="10'h00c" default="64'd0" type="FRC">
+                <field name="ur_np_tlp_received_cnt" loc="[15:0]"> app received TLP with non-posted unsupported request (uncorrectable-non-fatal). </field>
+           </register>                                                                      
+           
+           <register name="ur_tlp_received_cnt" offset="10'h00d" default="64'd0" type="FRC">
+                <field name="ur_tlp_received_cnt" loc="[15:0]"> app received TLP with unsupported request (uncorrectable-non-fatal). </field>
+           </register>                                                                                 
+                                          
+           <register name="MaxPyld" offset="10'h010" default="64'd0" type="RW">           
+           Maximum TLP payload size register. Must be set to maximum supported size supported by motherboard.
+                 <field name="size" loc="[2:0]"> 000: 128 bytes. 001: 256 bytes. 010: 512 bytes. 011: 1024 bytes. 100: 2048 bytes. 101-111: reserved. </field>
+           </register>         
+
+           <register name="PcieTimeoutPeriod" offset="10'h011" default="20'd10000" type="RW">
+           Sets the timeout period for how long the FPGA should wait before sending a CplD in response to an unanswered MRd. The timebase is in ticks of 100MHz.  100us = 0d10000 ticks = 0x2710 ticks.  This timeout is also used for unacknoledged MWr.
+                 <field name="PcieTimeoutPeriod" loc="[19:0]">  </field>
+           </register>                                         
+
+           <register name="PcieRdTimeoutCtr" offset="10'h012" default="64'd0" type="FRC">
+           If a PCIe MRd TLP is issued to the FPGA fabric and there is no response after the timeout period then this counter is incremented.
+           <field name="PcieRdTimeoutCtr" loc="[15:0]">  </field>
+           </register>         
+
+           <register name="PcieWrTimeoutCtr" offset="10'h013" default="64'd0" type="FRC">
+           If a PCIe MWr TLP is issued to the FPGA fabric and there is no response after the timeout period then this counter is incremented.
+           <field name="PcieWrTimeoutCtr" loc="[15:0]">  </field>
+           </register>         
+
+           <register name="FlushStatus" offset="10'h020" default="64'd0" type="RO">
+           Before a link is reset, the corresponding bit in this register must be checked to ensure the data path is completely flushed. Bit 0 is for link 0 status, bit 1 is for link 1 status, etc.
+           <field name="Done" loc="[11:0]"> 1=Link data path is completely flushed. There is no stale packets in any of the FIFOs. </field>
+           </register>         
+
+           <register name="flush_ctr" offset="10'h030" default="36'd0" type="RO">
+	     flush_ctr
+             <field name="blk_flush_ctr_0" loc="[2:0]" >     link arbiter blk_flush_ctr[0] state bits </field>
+             <field name="blk_flush_ctr_1" loc="[5:3]" >     link arbiter blk_flush_ctr[1] state bits </field>
+             <field name="blk_flush_ctr_2" loc="[8:6]" >     link arbiter blk_flush_ctr[2] state bits </field>
+             <field name="blk_flush_ctr_3" loc="[11:9]" >     link arbiter blk_flush_ctr[3] state bits </field>
+             <field name="blk_flush_ctr_4" loc="[14:12]" >     link arbiter blk_flush_ctr[4] state bits </field>
+             <field name="blk_flush_ctr_5" loc="[17:15]" >   link arbiter blk_flush_ctr[5] state bits </field>
+             <field name="blk_flush_ctr_6" loc="[20:18]" >   link arbiter blk_flush_ctr[6] state bits </field>
+             <field name="blk_flush_ctr_7" loc="[23:21]" >   link arbiter blk_flush_ctr[7] state bits </field>
+             <field name="blk_flush_ctr_8" loc="[26:24]" >   link arbiter blk_flush_ctr[8] state bits </field>
+             <field name="blk_flush_ctr_9" loc="[29:27]" >   link arbiter blk_flush_ctr[9] state bits </field>
+             <field name="blk_flush_ctr_10" loc="[32:30]" >  link arbiter blk_flush_ctr[10] state bits </field>
+             <field name="blk_flush_ctr_11" loc="[35:33]" >  link arbiter blk_flush_ctr[11] state bits </field>
+           </register>         
+
+           <register name="hip_blk_done_cnt" offset="10'h031" default="32'd0" type="SATC">
+	     hip_blk_done_cnt.
+             <field name="Count" loc="[31:0]">  </field>
+           </register>         
+
+           <register name="gnt_cnt" offset="10'h032" default="32'd0" type="SATC">
+	     debug
+             <field name="Count" loc="[31:0]">  </field>
+           </register>         
+
+           <register name="dpl_fifo_wrreq_cnt" offset="10'h033" default="32'd0" type="SATC">
+	     debug
+             <field name="Count" loc="[31:0]">  </field>
+           </register>         
+
+           <register name="tx_blk_done_cnt" offset="10'h034" default="32'd0" type="SATC">
+	     debug
+             <field name="Count" loc="[31:0]">  </field>
+           </register>         
+
+           <register name="link_num_fifo_wr_pulse" offset="10'h035" default="32'd0" type="SATC">
+	     debug
+             <field name="Count" loc="[31:0]">  </field>
+           </register>         
+
+           <register name="debug_link_arb" offset="10'h036" default="32'd0" type="RO">
+	     debug
+             <field name="arb_ps" loc="[1:0]">             link abiter present state </field>
+             <field name="fifo_blk_avail" loc="[2:2]">       link arbiter fifo_blk_avail </field>
+             <field name="fifo_full" loc="[3:3]">            link arbiter dpl data FIFO full </field>
+             <field name="fifo_empty" loc="[4:4]">           link arbiter dpl data FIFO empty </field>
+             <field name="link_num_fifo_empty" loc="[5:5]">  link arbiter link_number_fifo_empty </field>
+             <field name="link_num_fifo_full" loc="[6:6]">   link arbiter link_number_fifo_full </field>
+             <field name="fifo_used" loc="[14:7]">         link arbiter dpl data FIFO usedw </field>
+           </register>         
+
+
+</decl_reg_list>

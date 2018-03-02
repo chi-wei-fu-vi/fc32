@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="s5_altpll_425in_219out_sim/s5_altpll_425in_219out.vo"
+   type="VERILOG" />
+ <topLevel name="s5_altpll_425in_219out" />
+ <deviceFamily name="stratixv" />
+</simPackage>

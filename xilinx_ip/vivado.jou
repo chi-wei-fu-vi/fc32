@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Dec 18 15:29:04 2017
+# Process ID: 25010
+# Current directory: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip
+# Command line: vivado -mode tcl
+# Log file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/vivado.log
+# Journal file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/vivado.jou
+#-----------------------------------------------------------
+set ::quartus [dict create key1 "black dict"]
+puts $::quartus
+puts $::quartus(key1)
+puts $::quartus({key1})
+puts $::quartus('key1')
+set ::quartus [dict create key1 "black dict" key2 "white dict"]
+puts $::quartus
+dict get $::quartus key1
+dict get $::quartus key2
+set ::quartus [dict create key1 "black dict" qip_path "white dict"]
+puts $::quartus
+puts $::quartus(qip_path)

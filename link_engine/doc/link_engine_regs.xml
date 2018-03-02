@@ -1,0 +1,139 @@
+<!-- Bali link_engine module register definitions. -->
+<decl_reg_list> 
+  <register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+    Scratch register
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register name="LinkCtrl" offset="10'h2" default="64'h23" type="RW" usr="1">
+    Link control register.
+    <field loc="[11:8]" name="MonitorMode">
+      0x0=Off. 0x1=Interval Only: allows interval stats to be generated and sent to the DPLBUF. 0x2=Normal Mode: allow interval stats and data to be sent to the DPLBUF.
+    </field>
+    <field loc="[5:5]" name="ScrmEnbl">
+      Controls the sramble-enable bit of the MTIP controllers for each channel of this link. Setting this bit to a '1'. will set the register bit within the MTIP controllers. Clearing this bit to '0' will clear the register bit within the MTIP controller.
+    </field>
+    <field loc="[4:4]" name="RateSel">
+      Set 1 for 16G. Set 0 for 8G/4G.
+    </field>
+    <field loc="[3:0]" name="LinkSpeed">
+      0x0=Reserved, 0x1=Reserved, 0x2=4G, 0x3=8G, 0x4=16G
+    </field>
+  </register>
+  <register name="LinkStatus" offset="10'h3" default="64'h0" type="RO">
+    Link status register.over
+    <field loc="[31:31]" name="CH1_REG_TSFIFOSTAT_UNDERFLOW">
+      CH1 Future Timestamp FIFO underflow
+    </field>
+    <field loc="[30:30]" name="CH1_REG_TSFIFOSTAT_OVERFLOW">
+      CH1 Future Timestamp FIFO overflow
+    </field>
+    <field loc="[28:24]" name="CH1_REG_TSFIFOSTAT_WORDS">
+      CH1 Future Timestamp FIFO word count
+    </field>
+    <field loc="[23:23]" name="CH0_REG_TSFIFOSTAT_UNDERFLOW">
+      CH0 Future Timestamp FIFO underflow
+    </field>
+    <field loc="[22:22]" name="CH0_REG_TSFIFOSTAT_OVERFLOW">
+      CH0 Future Timestamp FIFO overflow
+    </field>
+    <field loc="[20:16]" name="CH0_REG_TSFIFOSTAT_WORDS">
+      CH0 Future Timestamp FIFO word count
+    </field>
+    <field loc="[13:13]" name="DroppingCh1">
+      1=Channel FIFO dropping frames, 0=not dropping frames.
+    </field>
+    <field loc="[12:12]" name="DroppingCh0">
+      1=Channel FIFO dropping frames, 0=not dropping frames.
+    </field>
+    <field loc="[9:9]" name="LosigCh1">
+      1=SFP loss of signal, 0=SFP signal present.
+    </field>
+    <field loc="[8:8]" name="LosyncCh1">
+      1=MTIP loss of sync, 0=MTIP in sync.
+    </field>
+    <field loc="[5:5]" name="LosigCh0">
+      1=SFP loss of signal, 0=SFP signal present.
+    </field>
+    <field loc="[4:4]" name="LosyncCh0">
+      1=MTIP loss of sync, 0=MTIP in sync.
+    </field>
+    <field loc="[3:0]" name="LinkSpeed">
+       0x2=4G, 0x3=8G. 0x4=16G.
+    </field>
+  </register>
+  <register name="LinkFlush" offset="10'h4" default="64'h0" type="RO">
+    Link flush register.
+    <field loc="[0:0]" name="Done">
+      1=Link data path is completely flushed. There is no stale packets in any of the FIFOs.
+    </field>
+  </register>
+  <register name="TaDalDataCtr" offset="10'h7" default="64'h0" type="FRC">
+    Number of 64-byte DAL data packets processed by the Time Arbiter.
+    <field name="count" loc="[31:0]"> DAL packet count </field>
+  </register>
+  <register name="TaDalStatCtr" offset="10'h8" default="64'h0" type="FRC">
+    Number of 64-byte DAL stats packets processed by the Time Arbiter.
+    <field name="count" loc="[31:0]"> DAL packet count </field>
+  </register>
+  <register name="TaDalZeroCtr" offset="10'h9" default="64'h0" type="FRC">
+    Number of zero filling 64-byte packets in the DAL data 4KB blocks by the Time Arbiter.
+    <field name="count" loc="[31:0]"> DAL packet count </field>
+  </register>
+  <register name="DataLinkFifoStat" offset="10'h10" default="64'h0" type="RO">
+    Data Channel FIFO status register
+    <field name="Underflow" loc="[17:17]"> 
+    FIFO underflow. The error status is permanently latched once the error occurs. This error is not supposed to happen. If set, it indicates hardware design error.
+    </field>
+    <field name="Overflow" loc="[16:16]"> 
+    FIFO overflow. The error status is permanently latched once the error occurs. This error is not supposed to happen. If set, it indicates hardware design error.
+    </field>
+    <field name="Words" loc="[12:0]"> 
+    Number of words in the FIFO
+    </field>
+  </register>
+  <register name="DataLinkFifoLevel" offset="10'h11" size="10'h1" default="64'h0" type="MEM">
+    The maximum number of entries ever reached in the data link FIFO. The value is latched until the register is written with a 0.
+    <field name="Words" loc="[12:0]">
+    Number of words in the FIFO
+    </field>
+  </register>
+  <register name="InvlStatStop" offset="10'h20" default="64'h0" type="RO">
+    Interval stats error stop register.
+    <field name="TooSoon" loc="[2:2]">
+    Interval timer times out too soon. If set, it indicates software programming error to interval stats timer register.
+    </field>
+    <field name="Underflow" loc="[1:1]">
+    Interval stats FIFO underflow. If set, it indicates hardware design error.
+    </field>
+    <field name="Overflow" loc="[0:0]">
+    Interval stats FIFO overflow. If set, it indicates hardware design error.
+    </field>
+  </register>
+  <register name="TaFifoStop" offset="10'h21" default="64'h0" type="RO">
+    Time arbiter FIFO error stop register. If set, it indicates hardware design error.
+    <field name="InvlUnderflow" loc="[5:5]">
+    Interval stats good timestamp FIFO underflow.
+    </field>
+    <field name="InvlOverflow" loc="[4:4]">
+    Interval stats good timestamp FIFO overlow.
+    </field>
+    <field name="Ch1Underflow" loc="[3:3]">
+    Channel 1 good timestamp FIFO underflow.
+    </field>
+    <field name="Ch1Overflow" loc="[2:2]">
+    Channel 1 good timestamp FIFO overlow.
+    </field>
+    <field name="Ch0Underflow" loc="[1:1]">
+    Channel 0 good timestamp FIFO underflow.
+    </field>
+    <field name="Ch0Overflow" loc="[0:0]">
+    Channel 0 good timestamp FIFO overlow.
+    </field>
+  </register>
+  <register name="InvlDropCtr" offset="10'h30" default="64'h0" type="SATC">
+    Number of times the Interval Stats FIFO is full when interval timer expires. There are 4 interval stats packets discarded per occurrence.
+    <field name="count" loc="[7:0]"> Occurrence count </field>
+  </register>
+</decl_reg_list>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Jan  8 10:23:27 2018
+# Process ID: 7274
+# Current directory: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/gtwizard/gtwizard.runs/s5_native_phy_16gbps_synth_1
+# Command line: vivado -log s5_native_phy_16gbps.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source s5_native_phy_16gbps.tcl
+# Log file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/gtwizard/gtwizard.runs/s5_native_phy_16gbps_synth_1/s5_native_phy_16gbps.vds
+# Journal file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/gtwizard/gtwizard.runs/s5_native_phy_16gbps_synth_1/vivado.jou
+#-----------------------------------------------------------
+source s5_native_phy_16gbps.tcl -notrace

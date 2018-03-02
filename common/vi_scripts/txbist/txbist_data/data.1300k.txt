@@ -1,0 +1,69 @@
+4064
+Test Name: data
+-----Sequence of Events
+[cdf7][CH1] CMD (RD) - 0.000000ns
+[b13b][CH0] CMD (WR) - 442.740000ns
+[5e67][CH0] CMD (RD) - 885.480000ns
+[cdf7][CH1] DATA - 1328.220000ns
+[cdf7][CH1] STATUS - 2939.040000ns
+[b13b][CH0] T_RDY - 3358.230000ns
+[5e67][CH0] DATA - 3777.420000ns
+[a8e6][CH1] CMD (RD) - 5388.240000ns
+[5e67][CH0] STATUS - 5830.980000ns
+[a8e6][CH1] DATA - 6250.170000ns
+[c21a][CH0] CMD (WR) - 7860.990000ns
+[bc7d][CH1] CMD (WR) - 8303.730000ns
+[b13b][CH0] DATA - 8746.470000ns
+[b13b][CH0] STATUS - 10357.290000ns
+[a8e6][CH1] STATUS - 10790.610000ns
+[bc7d][CH1] T_RDY - 11209.800000ns
+[c21a][CH0] T_RDY - 11628.990000ns
+[bc7d][CH1] DATA - 12048.180000ns
+[01a4][CH1] CMD (WR) - 13659.000000ns
+[bc7d][CH1] STATUS - 14101.740000ns
+[01a4][CH1] T_RDY - 14535.060000ns
+[01a4][CH1] DATA - 14954.250000ns
+[c21a][CH0] DATA - 16565.070000ns
+[01a4][CH1] STATUS - 18175.890000ns
+[c21a][CH0] STATUS - 18609.210000ns
+-----
+Frame Report Summary
+-----
+OX_ID:b13b Type: CMD (WR)
+Time of CMD TX: 94.000000ns
+Time To First Response: 2915.490000ns
+Exchange Completion Time: 9914.550000ns
+-----
+OX_ID:c21a Type: CMD (WR)
+Time of CMD TX: 1669.000000ns
+Time To First Response: 3768.000000ns
+Exchange Completion Time: 10748.220000ns
+-----
+OX_ID:bc7d Type: CMD (WR)
+Time of CMD TX: 1763.000000ns
+Time To First Response: 2906.070000ns
+Exchange Completion Time: 5798.010000ns
+-----
+OX_ID:a8e6 Type: CMD (RD)
+Time of CMD TX: 1144.000000ns
+Time To First Response: 861.930000ns
+Exchange Completion Time: 5402.370000ns
+-----
+OX_ID:cdf7 Type: CMD (RD)
+Time of CMD TX: 0.000000ns
+Time To First Response: 1328.220000ns
+Exchange Completion Time: 2939.040000ns
+-----
+OX_ID:01a4 Type: CMD (WR)
+Time of CMD TX: 2900.000000ns
+Time To First Response: 876.060000ns
+Exchange Completion Time: 4516.890000ns
+-----
+OX_ID:5e67 Type: CMD (RD)
+Time of CMD TX: 188.000000ns
+Time To First Response: 2891.940000ns
+Exchange Completion Time: 4945.500000ns
+-----
+Reported Frame Rate: 1306066.837187
+Average Time To First Response: 2221.101429ns
+Average Exchange Completion Time: 6323.511429ns

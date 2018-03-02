@@ -1,0 +1,199 @@
+<!-- clk_rst_blk_regs -->
+<decl_reg_list>
+           <register name="_scratch" offset="10'h000" default="64'd0" type="RW">
+               <field name="_scratch" loc="[63:0]"  type="RW"> </field>
+           </register>
+           
+           <register name="RstCtrl_0" offset="10'h001" default="64'd0" type="RW">
+               Reset Control Register -              
+               <field name="LinkRst" loc="[20:8]"  type="SC">  
+                 On a per link basis resets pipeline which includes: SERDES, LinkEngine, PCIe
+               </field>      
+               
+               <field name="PllFcCoreRst" loc="[4:4]"  type="SC">                        
+               </field> 
+
+               <field name="GlbTimestampRst" loc="[2:2]"  type="SC">
+			           Active high reset signal to all devices in chassis to reset Global Timestamp counter.
+								 The register bit shall trigger a broadcast reset signal over ioSYNC_RIBBON and
+								 ioSYNC_NEIGHBOR.  ioSYNC_RIBBON is mapped to pin AT6 over connector J33 for connection
+								 to the other DAL.  ioSYNC_NEIGHBOR is mapped to pin A8 over 0 OHM resistor to 
+								 neighboring FPGA on the same DAL.
+								 SW can write to ANY mapped FPGA in the chassis to reset all other FPGA global timestamp
+								 counters.  The FPGA being written by SW is automatically recognized as the global master.
+								 The FPGA w/ ribbon connection (PIN AT6) is automatically recognized as the local master.
+								 All other FPGAs are recognized as slaves.
+								 The Global master will broadcast over ioSYNC_RIBBION and ioSYNC_NEIGHBOR.  The local master
+								 will forward reset to its neighbor.  
+               </field>                                                                       
+
+               <field name="ChipRst" loc="[0:0]"  type="SC">
+			           Performs reset to all blocks in FPGA	
+			           Blocks put in reset include: SERDES, Link Engine, PCIe, ChipReg, ClkRst
+               </field>                                                                       
+               <field name="PllXbarRst" loc="[1:1]"  type="SC">                        
+			           Performs reset to XBAR.
+               </field>                                                                       
+           </register>
+           
+           <register name="RstCtrl_1" offset="10'h002" default="64'd0" type="RW">
+               Reset Control Register - Per link reset of major blocks 
+               <field name="LinkPcieRst" loc="[59:48]"  type="SC"> </field>               
+               <field name="LinkFcCoreRst" loc="[43:32]"  type="SC"> </field>               
+               <field name="LinkSerdesTxRst" loc="[28:16]"  type="SC"> </field>
+               <field name="LinkSerdesRxRst" loc="[12:0]"  type="SC"> </field>           
+           </register>                      
+           
+           <register name="RstStatus" offset="10'h003" default="64'd0" type="RO">
+               Reset Status Register                                                               
+               <field name="PllFcCoreLocked" loc="[4:4]"  type="RO"> </field>                                                                       
+               <field name="ChipStatus" loc="[0:0]"  type="RO"> </field>                                                                       
+           </register>       
+           
+           <register name="TxBistCtrl" offset="10'h004" default="64'd3" type="RW">
+               TxBist32b clock control.
+               <field name="LinkSpeed" loc="[1:0]"  type="RW"> 
+               Set clock rate for TxBist32b.
+               0 = Not Used
+               1 = Not Used
+               2 = Not Used
+               3 = 156.25MHz   (10G)
+               </field>                                                                                      
+           </register>                  
+           
+           <register name="TxBistStatus" offset="10'h005" default="64'd0" type="RO">
+               TxBistStatus
+               <field name="PllLock" loc="[0:0]"  type="RO"> </field>                                                                                      
+           </register>                             
+           
+           <register name="ClkCtrCtrl" offset="10'h006" default="64'd0" type="RW">
+               Reset Control Register for all clock counters             
+               <field name="LatchAndRst" loc="[0:0]"  type="SC">	</field>                                                                       
+           </register>                                            
+           
+                      
+           <register name="ClkCtrFcCore" offset="10'h007" default="64'd0" type="RO">                            
+               <field name="ClkCtrFcCore" loc="[23:0]"  type="RO">
+               </field>                                                                       
+           </register>                                 
+                      
+           <register name="ClkCtrPcie" offset="10'h008" default="64'd0" type="RO">                            
+               <field name="ClkCtrPcie" loc="[23:0]"  type="RO">
+               </field>                                                                       
+           </register>                                  
+           <register name="ClkCtrTxBist" offset="10'h009" default="64'd0" type="RO">                            
+               <field name="ClkCtrTxBist" loc="[23:0]"  type="RO">
+               </field>                                                                       
+           </register>                                             
+                                          
+           <register name="ClkCtrSerdes0_0" offset="10'h010" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                               
+           </register>                                                                                                                                    
+           <register name="ClkCtrSerdes0_1" offset="10'h011" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                     
+           </register>                                                                                            
+           <register name="ClkCtrSerdes1_0" offset="10'h012" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO">  </field>                              
+           </register>                                                                                                  
+           <register name="ClkCtrSerdes1_1" offset="10'h013" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO">  </field>                     
+           </register>                                                                             
+           <register name="ClkCtrSerdes2_0" offset="10'h014" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                               
+           </register>                                                                             
+           <register name="ClkCtrSerdes2_1" offset="10'h015" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                     
+           </register>                                                                                            
+           <register name="ClkCtrSerdes3_0" offset="10'h016" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                    
+           </register>                                                                                            
+           <register name="ClkCtrSerdes3_1" offset="10'h017" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes4_0" offset="10'h018" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes4_1" offset="10'h019" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes5_0" offset="10'h01A" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes5_1" offset="10'h01B" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>  
+           
+           <register name="ClkCtrSerdes6_0" offset="10'h01C" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                               
+           </register>                                                                                                                                    
+           <register name="ClkCtrSerdes6_1" offset="10'h01D" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                     
+           </register>                                                                                            
+           <register name="ClkCtrSerdes7_0" offset="10'h01E" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO">  </field>                              
+           </register>                                                                                                  
+           <register name="ClkCtrSerdes7_1" offset="10'h01F" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO">  </field>                     
+           </register>                                                                             
+           <register name="ClkCtrSerdes8_0" offset="10'h020" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                               
+           </register>                                                                             
+           <register name="ClkCtrSerdes8_1" offset="10'h021" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                     
+           </register>                                                                                            
+           <register name="ClkCtrSerdes9_0" offset="10'h022" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                    
+           </register>                                                                                            
+           <register name="ClkCtrSerdes9_1" offset="10'h023" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes10_0" offset="10'h024" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes10_1" offset="10'h025" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes11_0" offset="10'h026" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                             
+           
+           <register name="ClkCtrSerdes11_1" offset="10'h027" default="64'd0" type="RO">                            
+               <field name="TxClk" loc="[55:32]"  type="RO"> </field>
+               <field name="RxRecClk" loc="[23:0]"  type="RO"> </field>                                                                                                    
+           </register>                                                                                                                     
+
+           <register name="ClkCtrXbar" offset="10'h028" default="64'd0" type="RO">                            
+               <field name="ClkCtrXbar" loc="[23:0]"  type="RO">
+               </field>                                                                       
+           </register>                                             
+</decl_reg_list>

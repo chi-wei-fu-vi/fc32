@@ -1,0 +1,42 @@
+DEVELOPMENT_DIR=$(shell mount | grep development | awk '{print $$3}')
+RELEASE_DIR = $(DEVELOPMENT_DIR)/Hardware/fpga_dev/bali_fc16
+ARCHIVE_DIR = $(DEVELOPMENT_DIR)/Hardware/fpga_release/bali_fc16
+RELEASE_DOS_DIR = \\\\devnull\\development\\Hardware\\fpga_dev\\bali_fc16\\
+ARCHIVE_DOS_DIR = \\\\devnull\\development\\Hardware\\fpga_release\\bali_fc16\\
+fpgarev := $(shell grep FPGA_VERSION ../syn/mk_mif.log | cut -c 14-19,22-25|sed 's/....../&_/')
+rev := $(shell grep FPGA_VERSION ../syn/mk_mif.log | cut -c 20-25)
+workdir := $(shell ls -l ../syn/work | sed 's/.*-> //')
+date := $(shell date +%B+%d,%Y | sed -e 's/+/ /' -e 's/,/, /')
+slack := $(shell head -6 ../syn/work/fc16_top.sta.summary | grep Slack | cut -c9-)
+
+all: release_gen release_cp release_echo path_echo
+path_echo:
+	@echo $(RELEASE_DOS_DIR)$(fpgarev)_fc16_bitfields.py 
+	@echo $(RELEASE_DOS_DIR)$(fpgarev)_fc16_register_defaults.py 
+	@echo $(RELEASE_DOS_DIR)$(fpgarev)_fc16_reg_map0.c
+	@echo $(RELEASE_DOS_DIR)$(fpgarev)_fc16_13p1.rbf
+	@echo $(ARCHIVE_DOS_DIR)$(fpgarev)_fc16_13p1.zip
+release_echo:
+	@echo "-----------------------------------------"
+	@echo "Date: "$(date)
+	@echo "Bitfile:  "$(fpgarev)_fc16_13p1.rbf
+	@echo "Notes:"
+	@echo "  - No timing violations with slack of "$(slack)"ns"
+	@echo "  - quartus 13.1"
+	@echo "  - SVN version "$(rev)
+	@echo "-----------------------------------------"
+release_gen:
+	../../../../common/vi_scripts/vgen.py fc16_regs_top.xml -c
+	../../../../common/vi_scripts/vgen.py fc16_regs_top.xml -p
+	mv bitfields.py  $(fpgarev)_fc16_bitfields.py 
+	mv register_defaults.py  $(fpgarev)_fc16_register_defaults.py 
+	mv reg_map0.c  $(fpgarev)_fc16_reg_map0.c
+	pushd ../syn/work;cp fc16_top.rbf $(fpgarev)_fc16_13p1.rbf
+	pushd ../syn;zip -r $(fpgarev)_fc16_13p1.zip $(workdir)
+release_cp:
+	cp $(fpgarev)_fc16_bitfields.py  $(RELEASE_DIR)
+	cp $(fpgarev)_fc16_register_defaults.py  $(RELEASE_DIR)
+	cp $(fpgarev)_fc16_reg_map0.c  $(RELEASE_DIR)
+	cp ../syn/work/$(fpgarev)_fc16_13p1.rbf  $(RELEASE_DIR)
+	cp ../syn/$(fpgarev)_fc16_13p1.zip  $(ARCHIVE_DIR)
+

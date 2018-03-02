@@ -1,0 +1,107 @@
+<!-- Bali FC1 Layer module register definitions. -->
+<decl_reg_list>
+
+	<register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+    Scratch register
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+
+	<register name="enc_config" offset="10'h10" default="64'h0" type="RW">
+	  Configure FC1 layer
+    <field loc="[0:0]" name="CSR_ENC_IN_ENDIAN_SWAP">
+      Encoder PCS side endianess swap
+    </field>
+    <field loc="[1:1]" name="CSR_ENC_OUT_ENDIAN_SWAP">
+      Encoder PMA side endianess swap
+    </field>
+    <field loc="[2:2]" name="CSR_PCS_SCRAMB_DIS">
+      Encoder scrambler disable
+    </field>
+    <field loc="[3:3]" name="CSR_PCS_ENC_FEC_ENA">
+      Encoder FEC enable.
+    </field>
+    <field loc="[4:4]" name="CSR_PCS_ENC_INV">
+      Encoder input invert.
+    </field>
+  </register>
+
+	<register name="enc_exception" offset="10'h20" default="64'h0" type="RO">
+    Exception register
+    <field loc="[0:0]" name="CSR_EXPT_ENC_FULL">
+      Encoder FIFO overflow.
+    </field>
+    <field loc="[1:1]" name="CSR_EXPT_ENC_EMPT">
+      Encoder FIFO underflow.
+    </field>
+  </register>
+
+	<register name="dec_config" offset="10'h90" default="64'h0" type="RW">
+	  Configure FC1 layer
+    <field loc="[0:0]" name="CSR_DEC_IN_ENDIAN_SWAP">
+      Decoder PMA side endianess swap.
+    </field>
+    <field loc="[1:1]" name="CSR_DEC_OUT_ENDIAN_SWAP">
+      Decoder PCS side endianess swap.
+    </field>
+    <field loc="[2:2]" name="CSR_PCS_FORCE_NO_FEC">
+      Override detected encoding and disable FEC decoder.
+    </field>
+    <field loc="[3:3]" name="CSR_PCS_DESCRAMB_DIS">
+      Disable descrambler.
+    </field>
+    <field loc="[4:4]" name="CSR_PCS_DEC_INV">
+      Decoder input invert.
+    </field>
+    <field loc="[5:5]" name="CSR_DEC_DESCRAM_IN_ENDIAN_SWAP">
+      Decoder PCS side descrambler input endianess swap.
+    </field>
+    <field loc="[6:6]" name="CSR_DEC_DESCRAM_OUT_ENDIAN_SWAP">
+      Decoder PCS side descrambler output endianess swap.
+    </field>
+  </register>
+
+	<register name="dec_exception" offset="10'ha0" default="64'h0" type="RO">
+    Exception register
+    <field loc="[0:0]" name="CSR_EXPT_FEC_LOCK_TO">
+      Decoder FEC lock timeout.
+    </field>
+    <field loc="[1:1]" name="CSR_STAT_FEC_LOCK">
+      Decoder FEC lock successful.
+    </field>
+    <field loc="[2:2]" name="CSR_EXPT_LOSS_BLOCKLOCK">
+      Decoder loss of block lock.
+    </field>
+    <field loc="[3:3]" name="CSR_STAT_BLOCK_LOCK">
+      Decoder block lock successful.
+    </field>
+  </register>
+
+	<register name="dec_slip_count" offset="10'hb0" default="64'h0" type="RO">
+	  Status registers
+    <field loc="[12:0]" name="CSR_STAT_SLIP_COUNT">
+      FEC data skew count
+    </field>
+  </register>
+
+	<register name="dec_corr_bit_count" offset="10'hb1" default="64'h0" type="FRC" incsz="4">
+    <field loc="[15:0]" name="CSR_STAT_CORR_BIT_CNT">
+      FEC corrected bits count
+    </field>
+  </register>
+
+	<register name="dec_corr_event_count" offset="10'hb2" default="64'h0" type="FRC">
+    <field loc="[15:0]" name="CSR_STAT_CORR_EVENT_CNT">
+      FEC correction event count
+    </field>
+  </register>
+
+	<register name="dec_uncorr_event_count" offset="10'hb3" default="64'h0" type="FRC">
+    <field loc="[15:0]" name="CSR_STAT_UNCORR_EVENT_CNT">
+      FEC uncorrectable event count
+    </field>
+  </register>
+
+</decl_reg_list>
+

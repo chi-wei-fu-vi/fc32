@@ -1,0 +1,41 @@
+<!-- FC1 stats module register definitions. -->
+<decl_reg_list> 
+  <register name="_scratch" offset="10'h0" default="64'h0" type="RW">
+    Scratch register
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register name="DispErrCtr" offset="10'h10" default="64'h0" type="FRC">
+    Number of bad disparity errors counted. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Disparity error count </field>
+  </register>
+  <register name="InvldErrCtr" offset="10'h11" default="64'h0" type="FRC">
+    Number of invalid character errors counted. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Invalid character error count </field>
+  </register>
+  <register name="SofErrCtr" offset="10'h12" default="64'h0" type="FRC">
+    Number of bad or missing SOF errors counted. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> EOF error count </field>
+  </register>
+  <register name="EofErrCtr" offset="10'h13" default="64'h0" type="FRC">
+    Number of bad or missing EOF errors counted. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> EOF error count </field>
+  </register>
+  <register name="PrimLipCtr" offset="10'h20" default="64'h0" type="FRC">
+    Counter for number of LIP event primitive sequence seen. Note that this is not the number of LIP primitives. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> LIP event count </field>
+  </register>
+  <register name="PrimNosOlsCtr" offset="10'h21" default="64'h0" type="FRC">
+    Counter for number of NOS/OLS event primitive sequence seen. Note that this is not the number of NOS/OLS primitives. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> NOS/OLS event count </field>
+  </register>
+  <register name="PrimLrLrrCtr" offset="10'h22" default="64'h0" type="FRC">
+    Counter for number of LR/LRR event primitive sequence seen. Note that this is not the number of LR/LRR primitives. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> LR/LRR event count </field>
+  </register>
+  <register name="PrimLinkUpCtr" offset="10'h23" default="64'h0" type="FRC">
+    Counter for number of times the link has returned to an idle state after the transmission of LOS, LOSIG, LIP, or NOS/OLS event. It is a free running counter and rolls over after reaching maximum.
+    <field name="count" loc="[31:0]"> Link up event count </field>
+  </register>
+</decl_reg_list>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="32'hff" name="vendor_oui_sfp_present" offset="10'h0" type="RO">
+    SFP memory mapped register interface
+    <field loc="[7:0]" name="sfp_present">- SFP Present : 00h - indicates not present, 01h - indicates present, FFh - reset state, indicates unknown</field>
+    <field loc="[31:8]" name="vendor_oui">vendor OUI: 3 byte vendor IEEE company identifier, all zero indicates OUI is unspecfieid.  Finisar transceivers contain values 00h, 90h, and 65h</field>
+  </register>
+  <register default="32'h0" name="vendor_part_number0" offset="10'h1" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_pn0">vendor part number (bytes 3-0) : 16 byte field that contains ASCII characters, left aligned, and padded on the right with ASCII spaces (20h).  Dfines the vendor part number or product name.  All zeros indicates vendor PN is unspecified</field>
+  </register>
+  <register default="32'h0" name="vendor_part_number1" offset="10'h2" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_pn1">vendor part number (bytes 7-4) : 16 byte field that contains ASCII characters, left aligned, and padded on the right with ASCII spaces (20h).  Dfines the vendor part number or product name.  All zeros indicates vendor PN is unspecified</field>
+  </register>
+  <register default="32'h0" name="vendor_part_number2" offset="10'h3" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_pn2">vendor part number (bytes 11-8) : 16 byte field that contains ASCII characters, left aligned, and padded on the right with ASCII spaces (20h).  Dfines the vendor part number or product name.  All zeros indicates vendor PN is unspecified</field>
+  </register>
+  <register default="32'h0" name="vendor_part_number3" offset="10'h4" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_pn3">vendor part number (bytes 15-12) : 16 byte field that contains ASCII characters, left aligned, and padded on the right with ASCII spaces (20h).  Dfines the vendor part number or product name.  All zeros indicates vendor PN is unspecified</field>
+  </register>
+  <register default="32'h0" name="vendor_serial_number0" offset="10'h5" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_sn0">vendor SN (bytes 3-0) : 16 character field that contains ASCII characters, left-aligned and padded on the right with ASCII space (20h), defining the vendor's serial number for the transceiver.  A value of all zeros in the 16-byte field indicates the vendor SN is unspecfieid</field>
+  </register>
+  <register default="32'h0" name="vendor_serial_number1" offset="10'h6" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_sn1">vendor SN (bytes 5-7) : 16 character field that contains ASCII characters, left-aligned and padded on the right with ASCII space (20h), defining the vendor's serial number for the transceiver.  A value of all zeros in the 16-byte field indicates the vendor SN is unspecfieid</field>
+  </register>
+  <register default="32'h0" name="vendor_serial_number2" offset="10'h7" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_sn2">vendor SN (bytes 8-11) : 16 character field that contains ASCII characters, left-aligned and padded on the right with ASCII space (20h), defining the vendor's serial number for the transceiver.  A value of all zeros in the 16-byte field indicates the vendor SN is unspecfieid</field>
+  </register>
+  <register default="32'h0" name="vendor_serial_number3" offset="10'h8" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_sn3">vendor SN (bytes 12-15) : 16 character field that contains ASCII characters, left-aligned and padded on the right with ASCII space (20h), defining the vendor's serial number for the transceiver.  A value of all zeros in the 16-byte field indicates the vendor SN is unspecfieid</field>
+  </register>
+  <register default="32'h0" name="vendor_revision_number" offset="10'h9" type="RO">
+    SFP memory mapped register interface
+    <field loc="[31:0]" name="vendor_rn">vendor revision number : 4-byte field that contains ASCII characters, left-aligned and padded on the right with ASCII spaces (20h), defining the vendor's product revision number.  A value of all zero in the 4-byte field indicates that the vendor rev is unspecified.  </field>
+  </register>
+  <register default="16'h0" name="SFP_temperature_rate" offset="10'hA" type="RO">
+    SFP stats
+    <field loc="[15:0]" name="temp">Internally measured transceiver temperature. Represented as a 16 bit signed twos complement value in increments of 1/256 degrees Celsius, yielding a total range of -128C to +128C. Temperature measurement is valid from -40C to +125C with an accuracy of +/- 3C. The temperature sensor is located in the center of the module and is typically 5 to 10 degrees hotter than the module case.</field>
+    <field loc="[23:16]" name="bit_rate">1 Byte field.  Specifies  nominal bit rate in units of 100 Megabits/sec, rounded off to the nearest 100 Megabits/sec.  The bit rate includes those bits necessary to encode and delimit the signal as well as those bits carrying data information.  A value of 0 indicates that the bit rate is not specified.  </field>
+  </register>
+  <register default="32'h0" name="SFP_power" offset="10'hB" type="RO">
+    SFP stats
+    <field loc="[15:0]" name="rx_power">RX Power :  Measured  average optical power in mW. Represented as a 16 bit unsigned integer with the power defined as the full 16 bit value (0 - 65535) with LSB equal to 0.1 uW, yielding a total range of 0 to 6.5535 mW. Absolute accuracy is dependent upon the exact optical wavelength. For the specified wavelength, accuracy is +/-3dB.</field>
+    <field loc="[31:16]" name="tx_power">RX Power :  Measured  average optical power in mW. Represented as a 16 bit unsigned integer with the power defined as the full 16 bit value (0 - 65535) with LSB equal to 0.1 uW, yielding a total range of 0 to 6.5535 mW. Absolute accuracy is dependent upon the exact optical wavelength. For the specified wavelength, accuracy is +/-3dB.</field>
+  </register>
+  <register default="32'h0" name="warning" offset="10'hC" type="RO">
+    SFP stats
+    <field loc="[31:0]" name="flags">Warning flags.  Once set, remains set until link engine read and UC write to zero.  refer to Finisar spec for more details.</field>
+  </register>
+  <register default="32'h0" name="alarm" offset="10'hD" type="RO">
+    SFP stats
+    <field loc="[31:0]" name="flags">Alarm flags.  Once set, remains set until link engine read and UC write to zero.  refer to Finisar spec for more details.</field>
+  </register>
+</decl_reg_list>

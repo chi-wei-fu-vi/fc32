@@ -1,0 +1,333 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="64'h0" name="_scratch" offset="10'h0" type="RW">
+    FMAC scratch
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register default="32'h0" name="fmac_ctl" offset="10'h1" type="RW">
+    FMAC ctl
+    <field loc="[0:0]" name="crc_disable">
+      CRC disable - forces CRC check to always return good
+    </field>
+    <field loc="[1:1]" name="le_endianess">
+      FMAC to Link Engine endianess:  0=Big Endian (first byte located at [63:56]), 1= Little Endian (first byte located at [7:0]).  
+    </field>
+  </register>
+  <register default="32'h0" name="fmac_err_inj" offset="10'h2" type="RW">
+    FMAC inj err
+    <field loc="[7:0]" name="code_viol" type="SC">
+      inject code violation 
+    </field>
+    <field loc="[8:8]" name="CRC_err" type="SC">
+      inject CRC error
+    </field>
+  </register>
+  <register default="32'h0" name="sof_cnt" offset="10'h3" type="FRC">
+    SOF count
+    <field loc="[7:0]" name="count">
+      count of SOF special functions
+    </field>
+  </register>
+  <register default="32'h0" name="eof_cnt" offset="10'h4" type="FRC">
+    EOF count
+    <field loc="[7:0]" name="count">
+      count of EOF special functions
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="idle_cnt" offset="10'h5" type="FRC">
+    IDLE count
+    <field loc="[7:0]" name="count">
+      count of IDLE special functions
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="data_cnt" offset="10'h6" type="FRC">
+    DATA count
+    <field loc="[7:0]" name="count">
+      count of 32b data words
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="r_rdy_cnt" offset="10'h7" type="FRC">
+    R_RDY count
+    <field loc="[7:0]" name="count">
+      count of receiver ready primitives (all virtual channels)
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="vc_rdy_cnt" offset="10'h8" type="FRC">
+    VC_RDY count
+    <field loc="[7:0]" name="count">
+      count of virtual circuit ready primitives (all virtual channels)
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="bb_scs_cnt" offset="10'h9" type="FRC">
+    BB_SCs count
+    <field loc="[7:0]" name="count">
+      count of buffer-to-buffer state change (SOF) primitives
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="bb_scr_cnt" offset="10'hA" type="FRC">
+    BB_SCr count
+    <field loc="[7:0]" name="count">
+      count of buffer -to-buffer state change (R_RDY) primitives
+    </field>
+  </register>
+  <register default="32'h0" name="nos_ols_cnt" offset="10'hB" type="FRC">
+    NOS/OLS count
+    <field loc="[7:0]" name="count">
+      count of NOS/OLS primitive sequences (only counted once on transition)
+    </field>
+  </register>
+  <register default="32'h0" name="lr_lrr_cnt" offset="10'hC" type="FRC">
+    LR/LRR count
+    <field loc="[7:0]" name="count">
+      count of LR/LRR primitive sequences (only counted once on transition)
+    </field>
+  </register>
+  <register default="32'h0" name="bad_eof_cnt" offset="10'hD" type="FRC">
+    Bad EOF count
+    <field loc="[7:0]" name="count">
+      count of EOF error types (EOF normal-invalid, EOF terminate,  EOF aborts)
+    </field>
+  </register>
+  <register default="32'h0" name="sync_hdr_err_cnt" offset="10'hE" type="FRC">
+    invalid sync header count
+    <field loc="[7:0]" name="count">
+      count of invalid 2b synchronization headers
+    </field>
+  </register>
+  <register default="32'h0" name="invalid_type_err_cnt" offset="10'hF" type="FRC">
+    invalid transmission word type count
+    <field loc="[7:0]" name="count">
+      count of invalid transmission word types
+    </field>
+  </register>
+  <register default="32'h0" name="sof_dec_err_cnt" offset="10'h10" type="FRC">
+    SOF decode error count
+    <field loc="[7:0]" name="count">
+      count of SOFs with invalid modifier bytes or order code
+    </field>
+  </register>
+  <register default="32'h0" name="eof_dec_err_cnt" offset="10'h11" type="FRC">
+    EOF decode error count
+    <field loc="[7:0]" name="count">
+      count of EOFs with invalid modifier bytes or order code
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="other_dec_err_cnt" offset="10'h12" type="FRC">
+    OTHER decode error count
+    <field loc="[7:0]" name="count">
+      count of OTHER special functions with invalid modifier bytes or order code
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="idle_dec_err_cnt" offset="10'h13" type="FRC">
+    IDLE decode error count
+    <field loc="[7:0]" name="count">
+      count of IDLEs with invalid control code
+    </field>
+  </register>
+  <register default="32'h0" incsz="2" name="code_viol_cnt" offset="10'h14" type="FRC">
+    code violation count
+    <field loc="[7:0]" name="count">
+      count of code violations
+    </field>
+  </register>
+  <register default="32'h0" name="crc_err_cnt" offset="10'h15" type="FRC">
+    CRC error count
+    <field loc="[7:0]" name="count">
+      count of CRC errors
+    </field>
+  </register>
+  <register default="32'h0" name="length_err_cnt" offset="10'h16" type="FRC">
+    frame length error count
+    <field loc="[7:0]" name="count">
+      count of fibre channel frames that had length errors - too short, less than 24B or too long, &gt; max frame length (default is 2136 bytes)
+    </field>
+  </register>
+  <register default="32'h0" name="ipg_err_cnt" offset="10'h17" type="FRC">
+    fill_error_count
+    <field loc="[7:0]" name="count">
+      count of instances where the minimum number of fill words (IDLE special function with four IDLE control codes) between frames does not meet the value specified in fill_word_min.  
+    </field>
+  </register>
+  <register default="32'h0" name="link_up_cnt" offset="10'h18" type="FRC">
+    fibre channel link up count
+    <field loc="[7:0]" name="count">
+      count of link up events 
+    </field>
+  </register>
+  <register default="32'h0" name="link_down_cnt" offset="10'h19" type="FRC">
+    fibre channel link down count
+    <field loc="[7:0]" name="count">
+      count of link down events
+    </field>
+  </register>
+  <register default="16'h18" name="frame_min" offset="10'h1A" type="RW">
+    fibre channel min frame length
+    <field loc="[15:0]" name="value">
+      minimum fibre channel frame length - used to perform fibre channel frame length checks.  Frame length error is reported if frame length is &gt; fc_frame_max.  Default is 24B
+    </field>
+  </register>
+  <register default="16'h858" name="frame_max" offset="10'h1B" type="RW">
+    fibre channel max frame length
+    <field loc="[15:0]" name="value">
+      maximum  fibre channel frame length - used to perform fibre channel frame length checks.  Frame length error is reported if frame length is &gt; fc_frame_max.  Default is 2136
+    </field>
+  </register>
+  <register default="8'h4" name="fill_word_min" offset="10'h1C" type="RW">
+    minimum fill word gap
+    <field loc="[7:0]" name="value">
+      minimum number of fill words (32b IDLEs) between frames.  Default is four IDLEs.  
+    </field>
+  </register>
+  <register default="16'h0" name="efifo_overflow_cnt" offset="10'h1D" type="RO">
+    eFIFO_overflow_cnt
+    <field loc="[15:0]" name="count">
+      count of elastic FIFO overflow events 
+    </field>
+  </register>
+  <register default="16'h0" name="efifo_underflow_cnt" offset="10'h1E" type="FRC">
+    eFIFO_underflow_cnt
+    <field loc="[7:0]" name="count">
+      count of  elastic FIFO underflow events
+    </field>
+  </register>
+  <register default="32'h0" name="fmac_fifo_status" offset="10'h30" type="RO">
+    fmac FIFO status
+    <field loc="[0:0]" name="fmac_fifo_full">
+      fmac FIFO empty
+    </field>
+    <field loc="[1:1]" name="fmac_fifo_empty">
+      fmac FIFO full
+    </field>
+    <field loc="[7:2]" name="fmac_fifo_usedw">
+      fmac FIFO used
+    </field>
+    <field loc="[8:8]" name="rcv_fifo_full">
+      rcv FIFO empty
+    </field>
+    <field loc="[9:9]" name="rcv_fifo_empty">
+      rcv FIFO full
+    </field>
+    <field loc="[13:10]" name="rcv_fifo_usedw">
+      rcv FIFO used
+    </field>
+    <field loc="[14:14]" name="elastic_fifo_rd_full">
+      elastic FIFO rd empty
+    </field>
+    <field loc="[15:15]" name="elastic_fifo_rd_empty">
+      elastic FIFO rd full
+    </field>
+    <field loc="[16:16]" name="elastic_fifo_wr_full">
+      elastic FIFO wr empty
+    </field>
+    <field loc="[17:17]" name="elastic_fifo_wr_empty">
+      elastic FIFO wr full
+    </field>
+    <field loc="[22:18]" name="elastic_fifo_rdusedw">
+      elastic FIFO rd used
+    </field>
+    <field loc="[27:23]" name="elastic_fifo_wrusedw">
+      elastic FIFO wr used
+    </field>
+  </register>
+  <register default="8'h10" name="efifo_read_level" offset="10'h31" type="RW">
+    efifo_read_level
+    <field loc="[7:0]" name="value ">
+      EFIFO read threshold.  The EFIFO read state machine waits until the entries exceed the read level before reading.  Default value is 16 (midpoint of 32 entry FIFO).
+    </field>
+  </register>
+  <register default="8'h0A" name="efifo_low_limit" offset="10'h32" type="RW">
+    efifo_low_limit
+    <field loc="[7:0]" name="value ">
+      EFIFO low water mark.  If the EFIFO drops below the low_limit, the read interface will auto insert IDLEs to prevent underflow.  Default value is 12.
+    </field>
+  </register>
+  <register default="8'h14" name="efifo_high_limit" offset="10'h33" type="RW">
+    efifo_high_limit
+    <field loc="[7:0]" name="value ">
+      EFIFO high water mark.  If the EFIFO exceeds the high_limit, the write interface will auto drop IDLEs to prevent overflow. Default value is 18.
+    </field>
+  </register>
+  <register default="32'h0" name="efifo_insert_cnt" offset="10'h34" type="RO">
+    eFIFO_insert_cnt
+    <field loc="[15:0]" name="count">
+      64b clock correction words (NOS, OLS, LR, LRR, Idles)  inserted.
+    </field>
+  </register>
+  <register default="32'h0" name="efifo_delete_cnt" offset="10'h35" type="RO">
+    eFIFO_delete_cnt
+    <field loc="[15:0]" name="count">
+      64b clock correction words  (NOS, OLS, LR, LRR, Idles) deleted.
+    </field>
+  </register>
+  <register default="64'h0" name="pcs_rx_data" offset="10'h36" type="RO">
+    PCS rx_data debug
+    <field loc="[63:0]" name="data">
+      real-time value of 64b transmission word from PCS
+    </field>
+  </register>
+  <register default="64'h0" name="fmac_debug_0" offset="10'h37" type="RO">
+    fmac debug register 0
+    <field loc="[1:0]" name="pcs_hdr">
+      real time value of 2b synchronization header
+    </field>
+    <field loc="[2:2]" name="pcs_sync">
+      real time value of 1b block sync
+    </field>
+    <field loc="[3:3]" name="pcs_valid">
+      real time value of 1b valid
+    </field>
+    <field loc="[6:4]" name="sm_efifo_rd">
+      efifo read state machine
+    </field>
+    <field loc="[9:7]" name="sm_efifo_wr">
+      efifo write state machine
+    </field>
+    <field loc="[10:10]" name="sm_linkup">
+      linkup state machine state
+    </field>
+  </register>
+  <register default="32'h0" name="fmac_time_min_credit" offset="10'h40" type="RO">
+    fmac time min credit
+    <field loc="[15:0]" name="value">
+      time spent at minimum buffer credits in the current time interval.  Resets to 0x0 at the end of an interval, and resets if a new min credit count is detected.  In the case of ISL's with multiple virtual channels, use fmac_vc_sel to specify the VC ID.
+    </field>
+  </register>
+  <register default="10'h0" name="fmac_credit_bbc_min" offset="10'h41" type="RO">
+    fmac credit BBC min
+    <field loc="[9:0]" name="value">
+      minimum number the credit counter reached during the interval.  In the case of ISL's with multiple virtual channels, use fmac_vc_sel to specify the VC ID.
+    </field>
+  </register>
+  <register default="10'h0" name="fmac_credit_bbc_max" offset="10'h42" type="RO">
+    fmac credit BBC max
+    <field loc="[9:0]" name="value">
+      maximum number the credit counter reached during the interval.  In the case of ISL's with multiple virtual channels, use fmac_vc_sel to specify the VC ID.
+    </field>
+  </register>
+  <register default="10'h200" name="fmac_credit_cnt" offset="10'h43" type="RO">
+    fmac credit counter
+    <field loc="[9:0]" name="value">
+      current value of credit counter.  Incremented every time a frame is received, and decremented every time a R_RDY is seen on the other channel.  It is not reset at the end of the interval
+    </field>
+  </register>
+  <register default="10'h200" name="fmac_credit_start" offset="10'h44" type="RW">
+    fmac credit start
+    <field loc="[9:0]" name="value">
+      initialization value loaded into credit counter.  Writing a new value to this register resets the fmac time min/max credit counters
+    </field>
+  </register>
+  <register default="16'h0" name="fmac_vc_id" offset="10'h45" type="RO">
+    fmac VC ID
+    <field loc="[15:0]" name="value">
+      specifies the 16b VC_ID based on fmac_vc_sel.  Valid only in ISL enabled versions.  
+    </field>
+  </register>
+  <register default="3'b0" name="fmac_vc_sel" offset="10'h46" type="RW">
+    fmac VC sel
+    <field loc="[2:0]" name="value">
+      selects the per VC credit counter group to mux onto fmac credit registers.  The number of VC credit groups is capped at 8.  The VC_ID of the VC group is available on fmac VC ID.  Valid only in ISL enabled versions.  
+    </field>
+  </register>
+</decl_reg_list>

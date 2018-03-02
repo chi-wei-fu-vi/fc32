@@ -1,0 +1,255 @@
+/*
+
+Xilinx Vivado v2017.3 (64-bit) [Major: 2017, Minor: 3]
+SW Build: 2018833 on Wed Oct  4 19:58:07 MDT 2017
+IP Build: 2016188 on Wed Oct  4 21:52:56 MDT 2017
+
+Process ID: 12630
+License: Customer
+
+Current time: 	Wed Feb 07 10:28:32 PST 2018
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: CentOS Linux release 7.2.1511 (Core)
+OS Version: 3.10.0-327.36.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: localhost:10.0
+Screen size: 3840x1089
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 11 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/opt/Xilinx/Vivado/2017.3/tps/lnx64/jre
+JVM executable location: 	/opt/Xilinx/Vivado/2017.3/tps/lnx64/jre/bin/java
+
+User name: 	chiwei
+User home directory: /home/chiwei
+User working directory: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2017.3
+RDI_DATADIR: /opt/Xilinx/Vivado/2017.3/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2017.3/bin
+
+User preferences location: /home/chiwei/.Xilinx/Vivado
+Vivado preferences directory: /home/chiwei/.Xilinx/Vivado/2017.3/vivado.xml
+Vivado layouts directory: /home/chiwei/.Xilinx/Vivado/2017.3/layouts
+PlanAhead jar file location: 	/opt/Xilinx/Vivado/2017.3/lib/classes/planAhead.jar
+Vivado log file location: 	/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/vivado.log
+Vivado journal file location: 	/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-12630-lzhou-dt2-vi-local
+
+GUI allocated memory:	188 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,972 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 35 MB (+33853kb) [00:00:05]
+// [Engine Memory]: 4,957 MB (+5046565kb) [00:00:05]
+// Opening Vivado Project: pcie_gen3x8.xpr. Version: Vivado v2017.3 
+// bs (cl):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project pcie_gen3x8.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 48 MB (+11726kb) [00:00:08]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,987 MB. GUI used memory: 28 MB. Current time: 2/7/18 10:28:34 AM PST
+// [Engine Memory]: 5,220 MB (+15425kb) [00:00:23]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 58 MB (+7978kb) [00:00:25]
+// Tcl Message: open_project pcie_gen3x8.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.3/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,248 MB. GUI used memory: 32 MB. Current time: 2/7/18 10:28:50 AM PST
+// Project name: pcie_gen3x8; location: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus; part: xcku15p-ffve1517-3-e
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 6367.793 ; gain = 279.652 ; free physical = 239 ; free virtual = 26271 
+dismissDialog("Open Project"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 5,298 MB. GUI used memory: 31 MB. Current time: 2/7/18 10:29:49 AM PST
+// [GUI Memory]: 61 MB (+371kb) [00:01:29]
+// Elapsed time: 98 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pcie4_uscale_plus_1 (pcie4_uscale_plus_1.xci)]", 1, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pcie4_uscale_plus_1 (pcie4_uscale_plus_1.xci)]", 1, false, false, false, false, false, true); // B (D, cl) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// r (cl): Re-customize IP: addNotify
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pcie4_uscale_plus_1 (pcie4_uscale_plus_1.xci)]", 1, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pcie4_uscale_plus_1 (pcie4_uscale_plus_1.xci)]", 1, false, false, false, false, false, true); // B (D, cl) - Double Click
+// [GUI Memory]: 64 MB (+449kb) [00:02:17]
+// Elapsed time: 586 seconds
+selectComboBox("Lane Width (PL_LINK_CAP_MAX_LINK_WIDTH)", "X8", 3); // y (C, r)
+selectRadioButton((HResource) null, "5.0 GT/s"); // aO
+// Elapsed time: 12 seconds
+selectComboBox("Axisten If Width (axisten_if_width)", "256 bit", 1); // y (C, r)
+// [GUI Memory]: 70 MB (+2558kb) [00:12:49]
+// Elapsed time: 52 seconds
+selectCheckBox((HResource) null, "Additional Transceiver Control and Status Ports", true); // g (l, r): TRUE
+selectCheckBox((HResource) null, "Additional Transceiver Control and Status Ports", false); // g (l, r): FALSE
+selectCheckBox((HResource) null, "Additional Transceiver Control and Status Ports", true); // g (l, r): TRUE
+// Elapsed time: 17 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Capabilities", 1); // bb (C, r)
+// [GUI Memory]: 76 MB (+2320kb) [00:13:34]
+// [GUI Memory]: 80 MB (+6kb) [00:13:44]
+// Elapsed time: 28 seconds
+selectComboBox("PFx Max Payload Size (pf0_dev_cap_max_payload)", "1024 bytes", 3); // y (C, r)
+selectComboBox("Total Physical Functions (TL_PF_ENABLE_REG)", "2", 1); // y (C, r)
+selectComboBox("Total Physical Functions (TL_PF_ENABLE_REG)", "1", 0); // y (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "PF IDs", 2); // bb (C, r)
+// Elapsed time: 12 seconds
+setText("Vendor Id", (String) null); // z (bc, r)
+setText("Vendor Id", "1bb9"); // z (bc)
+setText("Pf0 Device Id", "1003"); // z (bc)
+setText("Pf0 Revision Id", "01"); // z (bc)
+// Elapsed time: 14 seconds
+setText("Pf0 Subsystem Vendor Id", "1bb9"); // z (bc)
+setText("Pf0 Subsystem Id", "1003"); // z (bc)
+// Elapsed time: 27 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Capabilities", 1); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "PF IDs", 2); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "PF BARs", 3); // bb (C, r)
+// [GUI Memory]: 85 MB (+1889kb) [00:16:34]
+// [GUI Memory]: 90 MB (+554kb) [00:16:39]
+// Elapsed time: 298 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Legacy/MSI Cap", 4); // bb (C, r)
+// Elapsed time: 86 seconds
+selectComboBox("PF0 Multiple Message Capable (PF0_MSI_CAP_MULTIMSGCAP)", "4 vectors", 2); // y (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "PF BARs", 3); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "PF IDs", 2); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Capabilities", 1); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bb (C, r)
+// Elapsed time: 75 seconds
+selectCheckBox((HResource) null, "Enable External PIPE Interface", true); // g (l, r): TRUE
+selectCheckBox((HResource) null, "Enable External PIPE Interface", false); // g (l, r): FALSE
+selectCheckBox((HResource) null, "Enable External PIPE Interface", true); // g (l, r): TRUE
+// Elapsed time: 19 seconds
+selectComboBox("Mode (mode_selection)", "Advanced", 1); // y (C, r)
+selectComboBox("Mode (mode_selection)", "Basic", 0); // y (C, r)
+selectComboBox("Mode (mode_selection)", "Advanced", 1); // y (C, r)
+// Elapsed time: 12 seconds
+selectComboBox("Mode (mode_selection)", "Basic", 0); // y (C, r)
+selectComboBox("Mode (mode_selection)", "Advanced", 1); // y (C, r)
+// Elapsed time: 17 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Capabilities", 1); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bb (C, r)
+selectComboBox("Mode (mode_selection)", "Basic", 0); // y (C, r)
+selectComboBox("Mode (mode_selection)", "Advanced", 1); // y (C, r)
+// Elapsed time: 34 seconds
+selectCheckBox((HResource) null, "PCIe DRP Ports", true); // g (l, r): TRUE
+selectCheckBox((HResource) null, "Enable Parity", true); // g (l, r): TRUE
+// [GUI Memory]: 98 MB (+3912kb) [00:25:39]
+// Elapsed time: 16 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Adv. Options-1", 5); // bb (C, r)
+// Elapsed time: 11 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Adv. Options-2", 6); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Adv. Options-3", 7); // bb (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "GT Settings", 8); // bb (C, r)
+// Elapsed time: 13 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Shared Logic", 9); // bb (C, r)
+// Elapsed time: 10 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Add. Debug Options", 10); // bb (C, r)
+// Elapsed time: 15 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Capabilities", 1); // bb (C, r)
+// Elapsed time: 29 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bb (C, r)
+selectComboBox("Mode (mode_selection)", "Basic", 0); // y (C, r)
+// Elapsed time: 24 seconds
+selectComboBox("Mode (mode_selection)", "Advanced", 1); // y (C, r)
+// [GUI Memory]: 104 MB (+117kb) [00:28:04]
+// Elapsed time: 25 seconds
+selectComboBox("Mode (mode_selection)", "Basic", 0); // y (C, r)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// r (cl): Re-customize IP: addNotify
+// bs (r):  Re-customize IP : addNotify
+// Tcl Message: INFO: [Device 21-403] Loading part xcku15p-ffve1517-3-e 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,339 MB. GUI used memory: 54 MB. Current time: 2/7/18 10:56:59 AM PST
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// [Engine Memory]: 5,742 MB (+273525kb) [00:28:44]
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: xit::create_sub_core: Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 7150.246 ; gain = 705.480 ; free physical = 4092 ; free virtual = 29953 
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// au (cl): Generate Output Products: addNotify
+// Elapsed time: 29 seconds
+dismissDialog("Re-customize IP"); // bs (r)
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 4000 ms.
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 6,028 MB. GUI used memory: 55 MB. Current time: 2/7/18 10:57:25 AM PST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 6,073 MB (+46144kb) [00:29:01]
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 5000 ms.
+// Elapsed time: 18 seconds
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (au)
+// bs (cl):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.srcs/sources_1/ip/pcie4_uscale_plus_1/pcie4_uscale_plus_1.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'pcie4_uscale_plus_1'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'pcie4_uscale_plus_1'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'pcie4_uscale_plus_1'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'pcie4_uscale_plus_1'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'pcie4_uscale_plus_1'... 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7223.012 ; gain = 0.000 ; free physical = 3998 ; free virtual = 29680 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all pcie4_uscale_plus_1] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.srcs/sources_1/ip/pcie4_uscale_plus_1/pcie4_uscale_plus_1.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.srcs/sources_1/ip/pcie4_uscale_plus_1/pcie4_uscale_plus_1.xci] 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs -jobs 4 pcie4_uscale_plus_1_synth_1 
+// Tcl Message: [Wed Feb  7 10:57:50 2018] Launched pcie4_uscale_plus_1_synth_1... Run output will be captured here: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 23 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton (A, G)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 6,095 MB. GUI used memory: 64 MB. Current time: 2/7/18 11:02:39 AM PST

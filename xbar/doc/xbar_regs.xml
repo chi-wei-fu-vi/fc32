@@ -1,0 +1,243 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="64'h0" name="_scratch" offset="10'h0" type="RW">
+    XBAR scratch
+    <field loc="[63:0]" name="_scratch">
+      scratch register
+    </field>
+  </register>
+  <register default="30'h3ffffff0" name="Ctl" offset="10'h1" type="RW">
+    XBAR reset and control
+    <field loc="[0:0]" name="SwRst" type="SC">
+      SW reset - applies reset to all clock domains in entire xbar
+    </field>
+    <field loc="[1:1]" name="IdleType">
+      IDLE primitive type: 0=IDLE, 1=ARBFF
+    </field>
+    <field loc="[29:4]" name="FarLoopbackEn">
+      per channel, far-end loopback enable.  When enabled, RX recovered data is looped back and sent into transmit.  Because of PPM clock differences between the RX recovered clock and transmit clock, primitives may be added/deleted from the RX data stream.  When far-end loopback is enabled, txbist data streams cannot be transmitted.
+    </field>
+  </register>
+  <register default="36'h300100200" name="EfifoCtl" offset="10'h2" type="RW">
+    EFIFO Control
+    <field loc="[11:0]" name="EfifoReadThresh">
+      Elastic FIFO read threshold.  The EFIFO contains 1024 entries.  The EFIFO starts reading after the number of entries passes the read threshold.  The EFIFO maintains a buffer of data before reading to allow sufficient time to identify frame boundaries for auto insertion of IDLEs.
+    </field>
+    <field loc="[23:12]" name="EfifoLowThresh">
+      Elastic FIFO low threshold.  The EFIFO contains 1024 entries.  If the EFIFO drops below the low threshold mark, read logic auto inserts one IDLE in between frames.  This value must be set less than the read threshold mark for correct operation.
+    </field>
+    <field loc="[35:24]" name="EfifoHighThresh">
+      Elastic FIFO high threshold.  The EFIFO contains 1024 entries.  If the EFIFO exceeds the high threshold, write logic auto drops one IDLE between frames.  The write logic never drops payload data - in case there are no IDLEs in between frames (error case), the EFIFO may overflow.  The write logic will always attempt to drop IDLEs when required, even if the number of IDLEs in between frames does not meet minimum fibre channel requirements.
+    </field>
+  </register>
+  <register default="64'h0" name="Cfg" offset="10'h4" type="RW">
+    XBAR config
+    <field loc="[3:0]" name="Link0Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[7:4]" name="Link1Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[11:8]" name="Link2Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[15:12]" name="Link3Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[19:16]" name="Link4Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[23:20]" name="Link5Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[27:24]" name="Link6Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[31:28]" name="Link7Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[35:32]" name="Link8Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[39:36]" name="Link9Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[43:40]" name="Link10Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[47:44]" name="Link11Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1100=link11, 1101=crosslink
+    </field>
+    <field loc="[51:48]" name="Link12Cfg">
+      Configuration: link xbar configuration.  Specifies source of data to be transmitted out on this link.  0000=txbist, 0001=link0, 0010=link1, etc, 1011=link11, 1100=crosslink
+    </field>
+  </register>
+  <register default="16'h0" name="Link0IdleInsertCnt" offset="10'h5" type="SATC">
+    XBAR Link0 Idle Insert Cnt
+    <field loc="[15:0]" name="Link0IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link1IdleInsertCnt" offset="10'h6" type="SATC">
+    XBAR Link1 Idle Insert Cnt
+    <field loc="[15:0]" name="Link1IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link2IdleInsertCnt" offset="10'h7" type="SATC">
+    XBAR Link2 Idle Insert Cnt
+    <field loc="[15:0]" name="Link2IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link3IdleInsertCnt" offset="10'h8" type="SATC">
+    XBAR Link3 Idle Insert Cnt
+    <field loc="[15:0]" name="Link3IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link4IdleInsertCnt" offset="10'h9" type="SATC">
+    XBAR Link4 Idle Insert Cnt
+    <field loc="[15:0]" name="Link4IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link5IdleInsertCnt" offset="10'hA" type="SATC">
+    XBAR Link5 Idle Insert Cnt
+    <field loc="[15:0]" name="Link5IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link6IdleInsertCnt" offset="10'hB" type="SATC">
+    XBAR Link6 Idle Insert Cnt
+    <field loc="[15:0]" name="Link6IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link7IdleInsertCnt" offset="10'hC" type="SATC">
+    XBAR Link7 Idle Insert Cnt
+    <field loc="[15:0]" name="Link7IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link8IdleInsertCnt" offset="10'hD" type="SATC">
+    XBAR Link8 Idle Insert Cnt
+    <field loc="[15:0]" name="Link8IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link9IdleInsertCnt" offset="10'hE" type="SATC">
+    XBAR Link9 Idle Insert Cnt
+    <field loc="[15:0]" name="Link9IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link10IdleInsertCnt" offset="10'hF" type="SATC">
+    XBAR Link10 Idle Insert Cnt
+    <field loc="[15:0]" name="Link10IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link11IdleInsertCnt" offset="10'h10" type="SATC">
+    XBAR Link11 Idle Insert Cnt
+    <field loc="[15:0]" name="Link11IdleInsertCnt">
+      Count of IDLEs inserted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link12IdleInsertCnt" offset="10'h11" type="SATC">
+    XBAR Link12 Idle Delete Cnt
+    <field loc="[15:0]" name="Link12IdleInsertCnt">
+      Count of IDLEs Deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link0IdleDeleteCnt" offset="10'h12" type="SATC">
+    XBAR Link0 Idle Delete Cnt
+    <field loc="[15:0]" name="Link0IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link1IdleDeleteCnt" offset="10'h13" type="SATC">
+    XBAR Link1 Idle Delete Cnt
+    <field loc="[15:0]" name="Link1IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link2IdleDeleteCnt" offset="10'h14" type="SATC">
+    XBAR Link2 Idle Delete Cnt
+    <field loc="[15:0]" name="Link2IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link3IdleDeleteCnt" offset="10'h15" type="SATC">
+    XBAR Link3 Idle Delete Cnt
+    <field loc="[15:0]" name="Link3IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link4IdleDeleteCnt" offset="10'h16" type="SATC">
+    XBAR Link4 Idle Delete Cnt
+    <field loc="[15:0]" name="Link4IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link5IdleDeleteCnt" offset="10'h17" type="SATC">
+    XBAR Link5 Idle Delete Cnt
+    <field loc="[15:0]" name="Link5IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link6IdleDeleteCnt" offset="10'h18" type="SATC">
+    XBAR Link6 Idle Delete Cnt
+    <field loc="[15:0]" name="Link6IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link7IdleDeleteCnt" offset="10'h19" type="SATC">
+    XBAR Link7 Idle Delete Cnt
+    <field loc="[15:0]" name="Link7IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link8IdleDeleteCnt" offset="10'h1A" type="SATC">
+    XBAR Link8 Idle Delete Cnt
+    <field loc="[15:0]" name="Link8IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link9IdleDeleteCnt" offset="10'h1B" type="SATC">
+    XBAR Link9 Idle Delete Cnt
+    <field loc="[15:0]" name="Link9IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link10IdleDeleteCnt" offset="10'h1C" type="SATC">
+    XBAR Link10 Idle Delete Cnt
+    <field loc="[15:0]" name="Link10IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link11IdleDeleteCnt" offset="10'h1D" type="SATC">
+    XBAR Link11 Idle Delete Cnt
+    <field loc="[15:0]" name="Link11IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="16'h0" name="Link12IdleDeleteCnt" offset="10'h1F" type="SATC">
+    XBAR Link12 Idle Delete Cnt
+    <field loc="[15:0]" name="Link12IdleDeleteCnt">
+      Count of IDLEs deleted by read logic in the EFIFO for this link.  Can be used for debug or to determine PPM clock differences.  
+    </field>
+  </register>
+  <register default="26'h0" name="EfifoOverflowStatus" offset="10'h20" type="RO">
+    EFIFO Overflow Status
+    <field loc="[25:0]" name="Overflow">
+      EFIFO Overflow state - sticky.  Cleared on write
+    </field>
+  </register>
+  <register default="26'h0" name="EfifoUnderflowStatus" offset="10'h21" type="RO">
+    EFIFO Underflow Status
+    <field loc="[25:0]" name="Underflow">
+      EFIFO Underflow state - sticky.  Cleared on write
+    </field>
+  </register>
+</decl_reg_list>

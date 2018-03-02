@@ -1,0 +1,231 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date         : Fri Feb  9 15:52:08 2018
+| Host         : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
+| Command      : report_methodology -file xilinx_pcie4_uscale_ep_methodology_drc_routed.rpt -pb xilinx_pcie4_uscale_ep_methodology_drc_routed.pb -rpx xilinx_pcie4_uscale_ep_methodology_drc_routed.rpx
+| Design       : xilinx_pcie4_uscale_ep
+| Device       : xcku15p-ffve1517-3-e
+| Speed File   : -3
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 34
++----------+----------+-------------------------------------------------------------------+------------+
+| Rule     | Severity | Description                                                       | Violations |
++----------+----------+-------------------------------------------------------------------+------------+
+| TIMING-3 | Warning  | Invalid primary clock on Clock Modifying Block                    | 17         |
+| TIMING-9 | Warning  | Unknown CDC Logic                                                 | 1          |
+| XDCB-2   | Warning  | Clock defined on multiple objects                                 | 1          |
+| XDCB-5   | Warning  | Runtime inefficient way to find pin objects                       | 14         |
+| XDCV-2   | Advisory | Incomplete constraint coverage due to missing replicated objects. | 1          |
++----------+----------+-------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-3#1 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock intclk is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_intclk/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#2 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#3 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#4 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#5 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#6 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#7 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#8 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#9 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[3].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#10 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#11 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#12 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#13 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#14 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#15 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#16 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#17 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O is created on the output pin or net pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_1_gtye4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+XDCB-2#1 Warning
+Clock defined on multiple objects  
+The clock pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/pcie4_uscale_plus_1_gt_i/inst/gen_gtwizard_gtye4_top.pcie4_uscale_plus_1_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK is defined on multiple objects. Although this is logically functional for timing analysis, it cannot exist in hardware. It is recommended to define a primary clock on a single object.
+create_clock -period 2.000 [get_pins -filter REF_PIN_NAME=~TXOUTCLK -of_objects [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ ADVANCED.GT.* }]]
+/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/source/ip_pcie4_uscale_plus_x0y2.xdc (Line: 117)
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_meta_reg/D}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '34' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 228)
+Related violations: <none>
+
+XDCB-5#2 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_meta_reg/PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '35' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 229)
+Related violations: <none>
+
+XDCB-5#3 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_out_reg/PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '39' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 233)
+Related violations: <none>
+
+XDCB-5#4 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync1_reg/PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '36' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 230)
+Related violations: <none>
+
+XDCB-5#5 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync2_reg/PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '37' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 231)
+Related violations: <none>
+
+XDCB-5#6 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync3_reg/PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '38' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 232)
+Related violations: <none>
+
+XDCB-5#7 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[0].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '1' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 67)
+Related violations: <none>
+
+XDCB-5#8 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[1].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '5' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 88)
+Related violations: <none>
+
+XDCB-5#9 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[2].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '9' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 109)
+Related violations: <none>
+
+XDCB-5#10 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[3].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '13' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 130)
+Related violations: <none>
+
+XDCB-5#11 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[4].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '17' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 151)
+Related violations: <none>
+
+XDCB-5#12 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[5].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '21' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 172)
+Related violations: <none>
+
+XDCB-5#13 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[6].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '25' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 193)
+Related violations: <none>
+
+XDCB-5#14 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[7].*bufg_gt_txoutclkmon_inst/O}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '29' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/synth/pcie4_uscale_plus_1_gt.xdc (Line: 214)
+Related violations: <none>
+
+XDCV-2#1 Advisory
+Incomplete constraint coverage due to missing replicated objects.  
+The option '-to : [get_pins gt_top_i/diablo_gt.diablo_gt_phy_wrapper/rst_psrst_n_r_rep_reg/CLR]' of the following constraint is attached to some original objects but not to all their replicated objects. Please review the missing replicated objects and assess if they need to be included in the constraint. Use 'get_cells or get_pins -include_replicated_objects <origObjectName>' to query all replicated objects associated with an original object.
+Current Constraint: set_false_path -to [get_pins gt_top_i/diablo_gt.diablo_gt_phy_wrapper/rst_psrst_n_r_rep_reg/CLR]
+Current XDC: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/source/ip_pcie4_uscale_plus_x0y2.xdc (Line: 184)
+Original cells:
+<none>
+Original pins:
+pcie4_uscale_plus_1_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/rst_psrst_n_r_rep_reg/CLR
+Related violations: <none>
+
+

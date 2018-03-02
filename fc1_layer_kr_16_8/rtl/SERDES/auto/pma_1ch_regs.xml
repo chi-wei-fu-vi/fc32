@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="1'h0" name="Ctl" offset="10'h0" type="RW">
+    SERDES reset and control
+    <field loc="[0:0]" name="TxReset" type="SC">
+      SW reset - applies reset to transmit.  To reset the entire transceiver, assert both TxReset and RxReset on the same write event
+    </field>
+    <field loc="[1:1]" name="RxReset" type="SC">
+      SW reset - applies reset to receive.   To reset the entire transceiver, assert both TxReset and RxReset on the same write event
+    </field>
+    <field loc="[2:2]" name="SerialLpbkEn">
+      Enable near end serial loopback.  Connects transmit output to receive at FPGA.
+    </field>
+    <field loc="[4:3]" name="CDRLockMode">
+      CDR lock mode.  Controls the CDR PLL lock to reference / lock to data settings.  
+ 00 = Automatic CDR lock mode.  CDR initially locks to reference clock, and then locks to data.  This should be the default setting
+ X1 = Manual CDR  lock to data.  Lock time is dependent on transition density of incoming data and clock PPM difference.  When bit 0 is set, bit 1 is a don't care.
+ 10 = Manual CDR lock to reference.  CDR tracks the receiver input reference clock.
+    </field>
+    <field loc="[5:5]" name="TxMuxSel">
+      Transmit mux select between PRBS and crossbar.  0=crossbar, 1=PRBS.  Transmit is always enabled.  
+    </field>
+    <field loc="[6:6]" name="EyeHClear" type="SC">
+      Clear horizontal eye monitor (this feature is still TBD)
+    </field>
+    <field loc="[7:7]" name="EyeVClear" type="SC">
+      Clear vertical eye monitor (this feature is still TBD)
+    </field>
+    <field loc="[8:8]" name="TxInvert">
+      Invert polarity of TX serial line
+    </field>
+    <field loc="[9:9]" name="RxInvert">
+      Invert polarity of RX serial line
+    </field>
+    <field loc="[10:10]" name="CDRLockOverride">
+      Override CDR lock mode.  Controls the Override CDR PLL lock to reference / lock to data settings.
+ 0 = lock to ref when  SFP Losig is high.
+ 1 = Use CDR lock mode bits to control.
+    </field>
+  </register>
+  <register default="1'h0" name="Status" offset="10'h1" type="RO">
+    SERDES status
+    <field loc="[0:0]" name="PLLPwrDn">
+      Current value of pll_powerdown (from reset controller)
+    </field>
+    <field loc="[1:1]" name="TxDigitalRst">
+      Current value of tx_digitalreset
+    </field>
+    <field loc="[2:2]" name="TxAnalogRst">
+      Current value of tx_analogreset
+    </field>
+    <field loc="[3:3]" name="RxDigitalRst">
+      Current value of rx_digitalreset
+    </field>
+    <field loc="[4:4]" name="RxAnalogRst">
+      Current value of rx_analogreset
+    </field>
+    <field loc="[5:5]" name="RxLockedToRef">
+      Current value of rx_is_lockedtoref
+    </field>
+    <field loc="[6:6]" name="RxLockedToData">
+      Current value of rx_is_lockedtodata
+    </field>
+    <field loc="[7:7]" name="TxCalBusy">
+      Current value of tx_cal_busy, transmit calibration is busy
+    </field>
+    <field loc="[8:8]" name="RxCalBusy">
+      Current value of rx_cal_busy, receive calibration is busy
+    </field>
+    <field loc="[10:10]" name="RxReady">
+      Current value of rx_ready (from reset controller)
+    </field>
+    <field loc="[11:11]" name="TxReady">
+      Current value of tx_ready (from reset controller)
+    </field>
+    <field loc="[14:12]" name="LinkSpeed">
+      Current value of link speed setting from link engine. 000 = 1G, 001=2G, 010=4G, 011=8G.  Other encodings are reserved.  same rate.  
+    </field>
+    <field loc="[16:16]" name="PLLLocked_219">
+      Current value of 219MHz pll_locked (from ATX PLL)
+    </field>
+    <field loc="[17:17]" name="PLLLocked_425">
+      Current value of 425MHz pll_locked (from ATX PLL)
+    </field>
+  </register>
+  <register default="40'h0" name="RxData" offset="10'h2" type="RO">
+    SERDES rx data
+    <field loc="[39:0]" name="RxData">
+      Last received 40b parallel data value
+    </field>
+  </register>
+  <register default="40'h0" name="TxData" offset="10'h3" type="RO">
+    SERDES tx data
+    <field loc="[39:0]" name="RxData">
+      Last transmitted 40b parallel data value
+    </field>
+  </register>
+  <register default="2'h0" name="PrbsCtl" offset="10'h6" type="RW">
+    PRBS control
+    <field loc="[1:0]" name="PrbsSel">
+      PRBS control register: prbs mode select.  00 = off, 01 = prbs7, 10=prbs31. other encodings reserved. 
+    </field>
+    <field loc="[2:2]" name="InjErr" type="SC">
+      PRBS control register: inject a random bit error into the next transmitted PRBS primitive
+    </field>
+    <field loc="[3:3]" name="ErrCntClr" type="SC">
+      PRBS control register: clear PRBS error count register
+    </field>
+    <field loc="[4:4]" name="RxCntClr" type="SC">
+      PRBS control register: clear PRBS receive count register
+    </field>
+    <field loc="[5:5]" name="NotLockedCntClr" type="SC">
+      PRBS control register: clear PRBS not locked count register
+    </field>
+  </register>
+  <register default="16'h0" name="PrbsErrCnt" offset="10'h7" type="RO">
+    PRBS error count
+    <field loc="[15:0]" name="PrbsErrCnt">
+      Count of PRBS errors.  Along with PrbsRxCnt register, can be used to calculate bit error rates
+    </field>
+  </register>
+  <register default="48'h0" name="PrbsRxCnt" offset="10'h8" type="RO">
+    PRBS rx bit count
+    <field loc="[47:0]" name="PrbsRxCnt">
+      Count of received PRBS bits for use in calculating bit error rate.  This counter only starts incrementing after the prbs checker locks onto the incoming stream.   
+    </field>
+  </register>
+  <register default="32'h0" name="PrbsNotLockedCnt" offset="10'h9" type="RO">
+    PRBS not locked count
+    <field loc="[31:0]" name="PrbsNotLockedCnt">
+      Count of cycles when PRBS is enabled, and the prbs checker is not locked.  
+    </field>
+  </register>
+  <register default="1'h0" name="PrbsLock" offset="10'hA" type="RO">
+    PRBS locked
+    <field loc="[0:0]" name="PrbsLock">
+      Current value of PRBS lock signal.  
+    </field>
+  </register>
+  <register default="64'h0" name="_scratch" offset="10'hB" type="RW">
+    scratch
+    <field loc="[63:0]" name="scratch">
+      scratch register
+    </field>
+  </register>
+  <register default="64'h0" name="PrbsInjErrCnt" offset="10'hC" type="RO">
+    PRBS inj error count
+    <field loc="[15:0]" name="PrbsInjErrCnt">
+      Count of PRBS inject error requests
+    </field>
+  </register>
+</decl_reg_list>

@@ -1,0 +1,183 @@
+<decl_reg_list>
+  <register name="_scratch" default="64'd0" offset="10'h0" type="RW">
+    <field loc="[63:0]" name="_scratch"/>
+  </register>  
+  <register name="FpgaCap" default="64'h0" offset="10'h1" type="RO">   
+<!--  The capabilties register is intended to be used to determine logic available in FPGA. S/w should not use to parameterize their design. -->
+
+    <field loc="[61:61]" name="Lite"/>        
+    <field loc="[60:60]" name="FpgaRightLeft_n"/>        
+    <field loc="[59:57]" name="DalIdReserved"> reserved board ID fields - not allocated  </field>       
+    <field loc="[56:56]" name="DalTopBtm"> 0=top (jumper installed), 1=bottom (no jumper) </field>
+    <field loc="[52:52]" name="BistTx32b"/>    
+    <field loc="[51:51]" name="BistPrbsXcvr"/>
+    <field loc="[50:50]" name="BistPcie1"/>
+    <field loc="[49:49]" name="BistPcie0"/>
+    <field loc="[48:48]" name="Xbar"/>
+    <field loc="[47:36]" name="XcvrSpeedMax"/>
+    <field loc="[35:28]" name="NumPcieLanesMax"/>
+    <field loc="[27:24]" name="PcieGenMax"/>
+    <field loc="[23:20]" name="NumPcieEp"/>
+    <field loc="[19:12]" name="NumXcvr"/>
+    <field loc="[11:8]" name="Protocol"> 1 = FC, 2 = FCoE, 3 = NFS, 4 = SMB, 5 = iSCSI </field>
+    <field loc="[7:4]" name="NumLinkEngines"/>
+    <field loc="[3:0]" name="NumDplBuf"/> 
+  </register>
+  <register name="FpgaRev" default="64'h0" offset="10'h2" type="RO">
+    <field loc="[63:40]" name="yymmdd"/>
+    <field loc="[39:16]" name="RepoRev"> Intended for SVN rev id </field>
+    <field loc="[15:8]" name="Author"> t=tim, j=jay, d=duane,k=jdonkim,c=chi-wei,h=honda,g=gene,b=builder,f=barry feild</field> 
+    <field loc="[7:0]" name="BitfileRev"/>
+  </register>  
+  
+  <register name="PCBRev" default="64'h0" offset="10'h3" type="RO">
+    <field loc="[3:0]" name="AssemblyRev"> Increments if a assembly change leads to change in behavior </field>
+  </register>  
+  
+  <register name="ReconfigCtrl" offset="10'h4" type="RW">
+    <field loc="[0:0]" name="Retry"/>
+    <field loc="[1:1]" name="Direct"/>
+  </register>
+  <register name="ReconfigStatus" offset="10'h5" type="RO">
+    <field loc="[3:0]" name="Error"/>
+    <field loc="[4:4]" name="Busy"/>
+    <field loc="[5:5]" name="Timeout"/>
+  </register>  
+
+  <register name="FpgaDev" default="64'h0" offset="10'h6" type="RO">
+    <field loc="[63:48]" name="Vendor"> a17=Altera </field>
+    <field loc="[47:40]" name="Family"> A5 = Arria V, 55 = Stratix V </field>
+    <field loc="[39:32]" name="SERDESGrade"> SERDES speed grade </field>
+    <field loc="[31:8]" name="Package"> F = FineLine BGA, B = BGA, pin count </field>
+    <field loc="[7:0]" name="speedGrade"> Vendor speed grade </field>
+  </register>
+
+  <register name="TimeStamp" offset="10'h10" default="64'h0" type="RO">
+    Global timestamp register used for frame monitoring
+    <field loc="[55:0]" name="Tick">
+      One tick represents 10 nano-seconds
+     </field>
+  </register>
+  <register name="IntervalPeriod" offset="10'h11" default="64'h5f5e100" type="RW">
+    Duration between each group of interval stats packets
+    <field loc="[39:0]" name="clocks">
+      The number of 100MHz clock cycles that makes up an interval. Interval stats DAL packets are sent to the DPL on this period. 
+      The following sample values shall be programmed for example interval period.
+      1  second: 40'h5f5e100 (Default value)
+      10 second: 40'h3b9aca00
+      30 second: 40'hb2d05e00
+      60 second: 40'h165a0bc00
+     </field>
+  </register>
+  <register name="LoopbackSerdesCfg" offset="10'h12" default="64'h1" type="RW">
+    Specifies the board revision, product, and loopback mode.  Based on the configuration, the FPGA automatically inverts TX/RX 
+    SERDES interfaces to compensate for polarity inversions in board traces.
+    <field loc="[3:0]" name="Mode">
+      4'h0 : near-end internal loopback (within FPGA, serdes transmit to receive)
+      4'h1 : external loopback (at board transceiver)
+      4'h2 : far-end  loopback (at far-end FPGA)
+      Other encodings are reserved 
+     </field>
+    <field loc="[7:4]" name="Rev">
+      4'h0 : rev A
+      Other encodings are reserved
+     </field>
+    <field loc="[11:8]" name="Product">
+      4'h0 : auto - FPGA bitfile specifies product family 
+      4'h1 : force Bali board
+      4'h2 : force Dominica board
+      Other encodings are reserved 
+     </field>
+  </register>
+  <register name="ExtIODebug" offset="10'h13" default="64'h0" type="RO">
+    Current value of FPGA I/O pins - used for debug
+    <field loc="[0:0]" name="iFPGA_RSTN">
+     </field>
+    <field loc="[1:1]" name="iFPGA_CLRN">
+     </field>
+    <field loc="[2:2]" name="iBUS_CLK">
+     </field>
+    <field loc="[3:3]" name="iBUS_EN">
+     </field>
+    <field loc="[4:4]" name="iBUS_MASTER">
+     </field>
+    <field loc="[6:5]" name="ioBUS_SPARE">
+     </field>
+    <field loc="[14:7]" name="ioFPGA_DATA">
+     </field>
+    <field loc="[15:15]" name="ioEXT1">
+     </field>
+    <field loc="[16:16]" name="ioEXT2">
+     </field>
+    <field loc="[17:17]" name="ioEXT3">
+     </field>
+    <field loc="[18:18]" name="ioEXT4">
+     </field>
+    <field loc="[30:19]" name="oFC_RATE_SEL">
+     </field>
+    <field loc="[34:31]" name="iASY">
+     </field>
+    <field loc="[35:35]" name="iFPGA_ID_N">
+     </field>
+    <field loc="[51:36]" name="oLED_N">
+     </field>
+    <field loc="[52:52]" name="iRXD">
+     </field>
+    <field loc="[53:53]" name="oTXD">
+     </field>
+    <field loc="[55:54]" name="iBD_NO">
+     </field>
+    <field loc="[56:56]" name="ioOPT_1">    
+     </field>		                    
+    <field loc="[57:57]" name="ioOPT_2">    
+     </field>	                       
+    <field loc="[58:58]" name="ioOPT_3">    
+     </field>	      	                    
+    <field loc="[59:59]" name="ioOPT_4">    
+     </field>	      	                    
+    <field loc="[60:60]" name="ioOPT_5">    
+     </field>	      	                    
+    <field loc="[61:61]" name="ioOPT_6">    
+     </field>	      	                    
+    <field loc="[62:62]" name="ioOPT_ROT_1">
+     </field>	      	                    
+    <field loc="[63:63]" name="ioOPT_ROT_2">
+     </field>
+  </register>
+  <register name="SFP_LoSig_Force_En" default="64'h0" offset="10'h14" type="RW">
+    <field loc="[23:0]" name="En"> Used to force SFP LoSig to the value specified in SFP_LosSig_Force_Value.</field>
+  </register>  
+  <register name="SFP_LoSig_Force_Value" default="64'h0" offset="10'h15" type="RW">
+    <field loc="[23:0]" name="Value"> Value to force onto SFP LoSig when SFP_LoSig_Force_En is asserted.</field>
+  </register>  
+  <register name="iSFP_LoSig" default="64'h0" offset="10'h16" type="RO">
+    <field loc="[23:0]" name="Value"> Current value of iSFP_LOS from FPGA pin.</field>
+  </register>  
+  <register name="FPGA_Ctl" default="6'h10" offset="10'h17" type="RW">
+    <field loc="[0:0]" name="Tx_Serdes_Disable"> Forces SERDES transmit into reset - disabling transmit functionality.  Can be used to reduce power and lower EMI emissions. </field>
+    <field loc="[1:1]" name="Rx_Serdes_Disable"> Forces SERDES receive into reset - disabling receive functionality.  Can be used to reduce power and lower EMI emissions. </field>
+    <field loc="[2:2]" name="Logic_Analyzer_Inf_Disable"> Disables drive of the logic analyzer output pins.  Logic analyzer interface is held low when disabled.  Can be used to reduce power and lower EMI emissions. </field>
+    <field loc="[3:3]" name="LED_Output_Disable"> Disables drive of the output LEDs.  LEDs outputs are forced high when disabled.  Can be used to reduce power and lower EMI emissions. </field>
+    <field loc="[4:4]" name="PCIE_Autoreset_Disable"> Disables HW based mechanism which monitors for PCIE LTSSM lockups and initiates a reset.  Default is disabled. </field>
+    <field loc="[5:5]" name="Force_RxData_On_Lossig_Disable"> Disables HW based mechanism which forces a good data value on rx_data on detection of SFP lossig. </field>
+  </register>  
+  <register name="PCIE_Autoreset_Cnt" default="8'h0" offset="10'h18" type="RO">
+    <field loc="[7:0]" name="reset_count"> Number of autoresets initiated by the PCIE LTSSM monitor.</field>
+  </register>  
+  <register name="CRC_Error_Cnt" default="32'h0" offset="10'h19" type="SATC">
+    <field loc="[31:0]" name="count"> Number of CRC error events.</field>
+  </register>  
+  <register name="CRC_Error_Message_Register0" default="64'h0" offset="10'h1A" type="RO">
+    <field loc="[63:0]" name="data"> Fields are TBD.</field>
+  </register>  
+  <register name="CRC_Error_Message_Register1" default="64'h0" offset="10'h1B" type="RO">
+    <field loc="[63:0]" name="data"> Fields are TBD.</field>
+  </register>  
+  <register name="Min_LinkSpeed_Reconfig" default="32'h0" offset="10'h20" type="RO">
+    <field loc="[31:0]" name="time"> Measured minimum number of 100Mhz clock cycles to perform a link speed reconfiguration.</field>
+  </register>  
+  <register name="Max_LinkSpeed_Reconfig" default="32'h0" offset="10'h21" type="RO">
+    <field loc="[31:0]" name="time"> Measured maximum number of 100Mhz clock cycles to perform a link speed reconfiguration.</field>
+  </register>  
+</decl_reg_list>
+

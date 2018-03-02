@@ -1,0 +1,4122 @@
+<FinisarBERT Version="1">
+	<BERTDescription/>
+	<TrafficCaptureFileName>data</TrafficCaptureFileName>
+	<ScriptText/>
+	<DeviceStore>
+		<EnableCompare>True</EnableCompare>
+	</DeviceStore>
+	<DomainStore>
+		<ProtocolType>FiberChannel</ProtocolType>
+		<DefaultSendWord>ARB(FF,FF)</DefaultSendWord>
+		<StopSendingOnError>False</StopSendingOnError>
+		<StopSendingOnLOS>False</StopSendingOnLOS>
+	</DomainStore>
+	<SyncPattern>
+		<ProtocolType>FiberChannel</ProtocolType>
+		<Pattern>
+ARB(FF,FF)
+ARB(FF,FF)
+		</Pattern>
+	</SyncPattern>
+	<ComparePattern>
+		<ProtocolType>FiberChannel</ProtocolType>
+		<Pattern>
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+R-Rdy
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+14 72 27 cc
+69 f8 fa 01
+f0 70 df 21
+ee d3 6d a9
+16 e6 82 ef
+96 58 52 d8
+42 04 d2 1e
+07 fc 9d d5
+a9 b7 41 78
+de 18 21 f3
+ab db dd 8f
+bb 21 c9 df
+12 80 9d 1e
+ff 85 5d e0
+6b 40 4d 19
+4a 19 67 03
+a0 98 8b 8d
+8e 6b f1 e9
+04 58 a4 81
+3c 36 ef f9
+a5 13 df 48
+11 b5 f4 27
+81 0b ea b3
+58 7a 97 ca
+99 76 e4 a5
+8d 98 5f fa
+57 94 db dc
+f8 9a c3 e9
+40 da bf 8f
+ea ad 56 6a
+19 3e 13 8a
+b2 0b 95 09
+4d 73 13 ca
+1d e9 71 05
+ee ec 22 e4
+06 9f 71 22
+32 98 61 16
+c1 52 98 e3
+b2 ac db 96
+65 65 f0 86
+c6 c5 58 db
+7f 71 29 fe
+20 75 ef eb
+3a 2e 5e 30
+f4 15 59 94
+8f 36 4b a9
+d1 13 77 7f
+ad 7c 49 a4
+55 da db 07
+5e 1c c9 fd
+fc fb 1f d5
+0a 25 a0 e0
+8b 11 04 ad
+77 ca f4 0e
+dc 1c c1 9e
+f5 6a ee 6d
+ac b2 a0 19
+0b ab 8e cd
+56 bb c9 84
+5b 33 b5 2c
+c6 dc b7 cd
+e1 d5 29 d0
+5f 59 ee 5c
+fb eb 53 61
+c3 31 ad 0b
+62 ed 1c 50
+e2 bf 5b 16
+c7 84 8d a8
+7c 82 f7 a2
+50 32 f9 68
+df 1c 0b bc
+32 27 77 86
+3f 7f e0 7c
+06 a7 9e 28
+e8 fa 56 cf
+4e 68 f6 96
+6f 2e 46 92
+f7 de ca 23
+3d 90 e1 b8
+15 ae 6b f3
+49 bd 11 0f
+28 b6 ee a3
+34 a1 d1 08
+4f 6d b0 ca
+6d 75 c5 c8
+3f 0f 44 dc
+50 de df af
+0b 3c 30 a2
+48 d7 be 15
+16 26 39 56
+68 ab 6f 6b
+7e c3 ea 8d
+06 44 38 95
+d7 26 be b0
+56 c1 e8 cf
+ff d4 0d 87
+8a 21 83 a3
+38 49 cc 7b
+1e 98 47 8b
+9b 28 1e f4
+24 3f 4a 9e
+30 4b a2 d7
+d4 2d 9f 6b
+0a 57 96 6e
+ae 88 d9 fc
+b3 bb d6 2b
+6d bc 38 37
+0a ef 7b fe
+44 c3 5c ce
+c7 87 d1 8b
+3f b5 5c 3d
+19 2b 06 27
+47 94 11 37
+a4 7a 6c 29
+0e f7 60 4c
+4c 10 d6 c1
+8e 6b 77 38
+43 5c b3 c8
+57 f5 10 8a
+22 1d c4 e6
+e9 76 f6 8c
+df 32 0e 1b
+e8 40 f1 6e
+df fb 8d 70
+d4 23 00 c1
+f8 fc 2f 3e
+85 2d 3c 01
+73 09 6a 72
+2c 1d ca 4c
+3a 44 54 56
+78 36 d3 4e
+CRC	\\ CRC=4d d7 a2 cb
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+15 72 27 cc
+69 f8 fa 01
+b0 70 df 23
+7f e5 73 3e
+3d e9 a3 8c
+e3 fc 58 ee
+57 e6 dd 6b
+d2 29 cf fe
+28 06 2e 58
+31 a8 8a f0
+46 8a e3 92
+8b 8c f6 4e
+2e 31 4e 97
+d2 be 80 95
+13 fa b3 ae
+c3 ab 7b 59
+f3 02 4e 9b
+f6 38 d1 ac
+d5 93 0d 98
+2f 18 08 58
+39 42 1d 7f
+05 1a 95 4c
+0c 8d 22 d1
+f8 e5 bc e0
+7e 26 a6 27
+5f d8 58 9f
+b9 78 04 fe
+70 1b 6c 1a
+37 d2 b1 d8
+1d 4d 88 d5
+b6 99 9c d0
+95 3e 05 ff
+4b 74 f5 fc
+ed 8f e3 da
+9f 2f 66 04
+29 14 40 ca
+36 79 d4 62
+6f 04 f6 78
+37 0a 12 42
+1a 4b 9d f6
+64 86 a1 8d
+44 05 23 3f
+98 ef 5f f7
+63 07 9e ee
+30 be e1 0a
+b1 17 0a 41
+93 86 44 a8
+e9 4c b3 7c
+b0 35 74 eb
+58 a6 ef 35
+7f db e4 3b
+e2 60 22 83
+06 78 0b 02
+4d b3 07 21
+8a d5 12 94
+a5 a6 b3 e6
+d2 f5 0a a6
+42 16 61 c7
+7c 9c 9a 8a
+42 a6 0a 83
+a8 fc 41 37
+54 1f d7 7b
+4a d9 8f 9e
+4c be 3a a0
+bf fb d5 44
+b7 2d ad bc
+d9 3d 67 7f
+5e fe 4e 82
+71 c5 6a 24
+8a 61 51 87
+04 7c e1 85
+08 11 0a 47
+49 4e 95 66
+7c 87 e8 8f
+5d 8e 17 34
+d6 b8 d8 fd
+54 ff a5 a7
+a4 96 a9 82
+3a 0b 75 41
+6b 85 4c 97
+c4 a2 c6 e5
+f5 d6 f0 97
+51 7a 6d 5f
+54 5e 18 b1
+ab 70 cf aa
+af ff 1b aa
+a5 29 43 66
+f5 1d ed d8
+a3 42 e6 69
+c4 1f 11 c1
+ca 4a 5e dd
+c1 c0 71 ff
+f3 f4 f6 2e
+3c a2 2c 82
+33 2d df 3f
+7a b4 4d 85
+0f 14 3a ce
+39 4f 39 09
+15 50 66 23
+08 a5 34 38
+b0 83 3f 95
+87 de f7 7b
+04 7a 87 8b
+21 84 42 8e
+3f aa 67 5a
+74 7d b8 b7
+91 1b ff 6b
+65 1f f5 55
+e4 3b d8 57
+bc f6 66 7a
+4e 66 5e 37
+bd 1b 7a 77
+e1 c9 f4 d2
+8e 2b 17 0f
+eb a0 7a ea
+32 1f e7 d7
+7b 20 89 e8
+2e e0 c1 1a
+0d da 15 98
+d1 00 7c 39
+55 8d 86 91
+63 2e 43 c1
+f3 a7 fd 3b
+ad 72 1b e6
+68 c9 32 d3
+8a f4 13 86
+72 a5 3d 57
+aa a7 f7 47
+6c 4e 7a 74
+67 b7 6e af
+80 47 4a 15
+CRC	\\ CRC=76 c5 dd c0
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+16 72 27 cc
+69 f8 fa 01
+70 70 df 25
+fb 51 eb 80
+a1 d4 0b 7d
+3a 4c 25 cf
+2a 5e 05 bf
+0b 00 a3 c5
+2f ba 8d 12
+2d ce 64 e0
+e4 9c d0 f5
+79 d3 9b 8f
+58 d5 c7 e3
+64 9c 57 41
+83 9a e8 20
+b8 21 c6 f3
+b7 a5 aa 97
+85 0b aa 2a
+ee 33 35 7b
+64 cd 20 41
+96 33 68 ca
+f9 97 ff d6
+7f 0a d2 d9
+96 ab be 5d
+5c 1e 1e f0
+e7 34 6e 97
+1a 20 b3 09
+91 04 4c 69
+ec 93 4d 6f
+a4 3d ef b0
+5f 1d d9 43
+2c 80 56 cc
+a4 cd 78 78
+49 f9 67 cc
+87 73 80 f1
+d1 2c 2b 42
+d2 d3 1e 23
+d8 68 0b 4c
+ea 3b a4 98
+05 80 0a 83
+2d 17 4f d6
+ca 28 13 bd
+36 08 9f 9e
+86 b3 74 aa
+0b d5 53 51
+0c 9f 21 f5
+ff 8c 3f b8
+2f ea 51 6f
+5e ad 9c 80
+fd 31 b1 0b
+a8 0e 20 18
+29 47 9b d1
+3b fd a3 2c
+3c 72 91 d4
+d8 74 24 b4
+2d 42 61 30
+3f 01 7e 55
+aa 6a 16 ab
+00 c3 9e 69
+40 d4 ef 9d
+0f a5 0d ce
+04 14 32 2a
+c5 e0 44 55
+88 17 34 4f
+0f 45 44 0b
+a0 29 c3 05
+36 69 99 57
+83 85 10 bc
+92 d8 b0 04
+45 e0 89 9e
+d4 03 31 ae
+bd cd 66 f4
+5d d5 18 5b
+db 22 78 fe
+6b 39 42 83
+71 a3 b3 0c
+cb 95 42 3d
+1c 13 ac 35
+5e 22 23 d0
+ba ba 73 7f
+aa fd af d8
+66 a7 75 cc
+80 05 61 e8
+d3 76 06 06
+89 02 7e ca
+25 21 d9 04
+0e dd b9 c6
+d5 da 06 02
+6a 7d 45 4b
+1d b7 f3 71
+0a 76 00 a6
+c7 a5 df 2c
+25 e0 4d e3
+76 70 70 07
+ba 6a 8c d6
+2e 7b 6a c9
+b2 4a 40 4f
+25 14 e9 0b
+20 4b 48 11
+e6 46 9e 01
+e1 00 24 c5
+0f e6 14 09
+3f 3f b1 16
+e6 1d 9c 92
+98 63 af d5
+1a e9 31 90
+9d eb d8 1b
+91 3b 0a c1
+8e 21 d8 24
+ad 1c 6f 3a
+fa 7f 79 bc
+f5 bf 6e 07
+3e 5e 23 38
+03 b8 1b 0e
+02 98 3c da
+83 8d da 64
+a4 7f 7e 21
+b2 f3 dd b0
+4b 84 42 6c
+2a 45 89 ca
+5d 7b 28 6c
+93 92 6a d0
+b2 6d 0d 18
+fd 63 72 b7
+60 49 e4 c7
+3f 32 de c6
+b0 07 79 26
+3a 38 75 f5
+9c df cd 04
+15 9c fa 07
+51 5f a0 4a
+CRC	\\ CRC=11 22 f7 95
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 50 12
+17 62 27 cc
+49 f8 fa 03
+30 70 df 27
+4c 83 85 59
+1d a7 40 a2
+68 0f 48 f6
+a1 37 a8 52
+c5 b2 51 11
+66 c1 8c 93
+5f 32 a1 49
+bc 73 c7 d0
+0f d4 2d e0
+12 a8 06 5c
+65 95 bf 30
+b0 77 e5 d5
+0f d5 9a 61
+05 04 52 e9
+90 b4 8d 60
+7e 9e 96 57
+71 fc 1f 42
+5c b5 a6 4d
+5e 54 8a e9
+37 8a fc a5
+c7 d8 8d 7d
+4e af 41 bf
+47 68 19 59
+d7 8b 4f 4d
+2f f9 f6 2f
+cb 6d af 0f
+6e b7 01 eb
+63 cc 17 98
+d5 0b 94 66
+a1 1a 89 55
+11 14 bd b8
+cd 9f 67 ea
+9d 11 f0 1f
+20 c3 80 e5
+a5 ad 90 c9
+68 43 f6 8e
+91 7e e6 63
+3c 86 0e 98
+ac 50 eb bf
+cf 72 31 0d
+38 f1 c7 6b
+ab 26 c0 cd
+72 6f 37 a6
+b4 ff de 62
+66 87 29 f8
+a1 7d e9 5f
+de af 89 f4
+b8 bb a2 1a
+f3 e4 da 76
+7f 60 e9 a0
+b2 5b 15 52
+9d fa 68 d9
+a3 20 b0 97
+5f 05 59 8d
+82 2c bf d8
+a6 18 07 df
+bd 47 68 75
+f8 bd 41 e9
+5c 74 3f f1
+72 01 b0 cf
+cf 84 ce b4
+50 7c c9 b0
+5b 39 42 83
+6e 98 60 26
+ff 19 fe a3
+c4 ba d2 e5
+96 19 fe ad
+41 69 79 18
+cb ed c4 8a
+2f 39 38 95
+60 6e 0a 36
+e5 e0 d6 25
+3d b3 31 8a
+ec b2 8c 5a
+b8 d5 73 9e
+be 4b 98 73
+0a ab c7 30
+02 a3 e7 f5
+b7 0d 70 0c
+52 d1 4c 2f
+d9 29 7e e4
+69 74 39 ac
+e0 23 e8 df
+29 9c 53 2e
+a3 a8 bb 43
+e9 f4 4e 03
+29 e0 53 ae
+11 c5 4c 99
+e4 a5 18 f9
+c4 75 4e f3
+ca 06 01 59
+e7 49 f7 30
+2a 5d 41 81
+a7 5e c6 cb
+d6 0e f8 2c
+90 10 75 ec
+21 4c dd 08
+cf b5 3b a2
+3f cc 95 34
+51 da 85 65
+a2 5b 81 a3
+ec 65 e6 ed
+f2 12 c9 24
+ae d8 7a f1
+22 0e 3e 39
+7a 86 87 83
+e0 8d 65 ab
+cd 72 29 f7
+1d f2 20 9b
+4b ad 5b 99
+d0 83 f6 70
+8e 44 7c 10
+67 cc 67 06
+4c 55 61 2d
+c6 c3 3f 73
+d9 24 ce 7f
+1e a9 92 e5
+24 c1 38 78
+d9 be 17 f8
+d2 f7 82 32
+20 6f c5 38
+3d 0d c5 14
+08 4a fe 90
+5d 75 85 79
+f4 ee d3 af
+69 b3 9c 06
+40 f6 ab 52
+52 53 9c 59
+CRC	\\ CRC=e4 5d 16 1d
+EOFt(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 02
+0a 0f 98 7c
+41 70 41 92
+44 40 27 cd
+0d fa be 17
+f1 6c ff c1
+a9 7d 3d f4
+86 46 33 9c
+ea 0c 67 5c
+CRC	\\ CRC=3f 8b 75 74
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 03
+0a 0f 9a 7c
+41 74 f1 d2
+5c 20 26 ab
+d5 a3 b9 ab
+6d 64 df 70
+94 4b 89 44
+c6 09 50 ed
+29 45 88 0b
+e1 c1 15 d2
+f7 61 b5 b0
+af 12 11 46
+f4 5f d4 c3
+4f 01 c3 db
+CRC	\\ CRC=d9 41 2d 15
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+R-Rdy
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+R-Rdy
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+14 72 27 80
+4a bc 08 19
+7e 94 ee 21
+bc ea 66 f7
+67 1b 5b 3d
+ed 8d c6 ea
+70 68 5e d5
+56 d7 6c 56
+60 cf 00 d5
+2c cb fa 19
+12 9f fc 80
+79 05 87 f8
+e1 2e 68 61
+2a e5 3b 83
+8a 11 b5 25
+96 a0 8b c0
+26 1e e3 bc
+36 80 93 75
+c7 4f 7d f5
+95 a9 9f 64
+ee 15 12 eb
+5e ef e2 fe
+9a e7 04 d7
+8e a0 c7 64
+5d c1 16 d8
+68 49 02 06
+1c b9 ef 11
+95 f1 20 5f
+b0 cf 56 65
+0d f6 9b da
+7d 68 4d 38
+d4 b1 a7 92
+dd e0 19 7c
+7b 1d 96 7d
+9f 08 f9 cd
+c1 f0 c1 aa
+5b f0 80 29
+68 13 bf 7a
+3a fb ba 97
+7f 43 c2 42
+f4 e9 0b 01
+1e c1 bf 85
+67 ee b6 28
+99 d3 a9 85
+9c 76 ce 6d
+88 51 b7 bc
+89 a7 87 4f
+40 84 64 e9
+5e fc d6 ad
+b9 4a 55 92
+3d 04 34 2f
+65 73 c9 71
+f1 59 17 29
+9a 05 e7 79
+bb e1 bf d4
+b7 98 f5 d4
+0f 81 6f 8c
+3a c8 38 bf
+c6 0b 12 2c
+b8 21 7d c2
+13 5b 48 00
+3b a1 8d 9f
+29 88 29 2a
+ee ed 52 79
+e0 d2 8b 81
+02 76 e8 8c
+8e 1f 0f a6
+a2 51 d0 0f
+14 3a 24 49
+4a 67 3c 80
+24 3b 0e 8c
+2e 89 71 25
+2a d0 fa cd
+f3 f7 83 3f
+4b 27 58 14
+ee 6a 34 f0
+b9 c2 85 c1
+0d 73 fc 50
+df ab 52 35
+90 a6 2a 94
+c4 e1 8c 1e
+0a fd 46 90
+25 5a bb ea
+ca 5b 88 36
+92 48 90 1c
+63 58 e1 6a
+55 4d d5 a4
+b7 ff e2 82
+2b 5d ba 94
+3f 81 e2 c2
+07 2b 1c d9
+09 e5 f4 12
+e9 80 90 6e
+33 ba eb d2
+08 0f ec d1
+36 c0 cf fe
+2b fa fb 17
+c9 e1 ee 06
+be 66 20 c1
+10 5d 08 ac
+dd 1c 1d 50
+2f 7a 44 e9
+95 4e fd 57
+d5 c2 c8 46
+cd 56 f3 23
+ce 09 3d 1e
+0d 41 47 de
+6c 05 3d f6
+0c 82 ff a2
+1c 1d df ec
+06 03 53 75
+9a 96 36 50
+c5 d1 e7 fa
+a5 91 cf fd
+a8 e8 34 a0
+b7 9b 7e 90
+b4 42 ed 97
+d7 52 5f 3c
+e2 66 e0 32
+df 39 1b d2
+2f 5d e7 77
+ea 88 e1 f4
+40 b3 3b 4e
+14 de e7 cd
+b9 49 41 da
+57 11 cc f1
+3b 79 3d d9
+55 86 5a 4f
+6e 98 66 e1
+24 f8 23 a9
+54 ca 1b 10
+CRC	\\ CRC=30 36 d7 45
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+15 72 27 80
+4a bc 08 19
+3e 94 ee 23
+9b 04 cd f0
+ff 16 51 70
+d1 d4 5b c6
+b2 b0 f3 0a
+80 4a 5f 5d
+d2 5a d6 1c
+79 ad 05 ee
+ba 68 bb 3c
+d5 23 3c 98
+3a f0 2e 00
+b9 76 76 2e
+94 23 a3 e6
+a8 63 37 1a
+14 20 fa e7
+4a 56 8e 64
+e8 6d a5 c6
+e4 1d 7f f0
+b0 50 d4 66
+7a 0d bf 3e
+1d 7a 65 75
+ab 37 a9 b6
+12 7f ff ca
+d0 b6 99 28
+20 0b 78 e0
+60 28 e0 63
+97 85 52 7f
+e5 7e a0 56
+66 b6 8f 20
+8a 37 7c fa
+b8 c7 69 7a
+02 82 3a d3
+40 86 e4 05
+82 73 50 bf
+6d e9 d3 45
+90 d0 9b f9
+e6 5d 34 32
+75 cf 29 ff
+b8 eb 3e 6b
+15 bf 12 2c
+6e 8b 79 68
+df 7a 93 bc
+94 5d 55 77
+92 4b 97 ba
+99 11 50 1a
+e4 5d 5a 1e
+3d c1 3b 37
+87 c9 4f c5
+df a4 76 83
+f6 94 1b ee
+d4 72 fc b3
+b9 19 26 40
+37 ae c3 79
+20 e3 ca f7
+2f 86 3a 7b
+47 71 73 2a
+61 8e c3 21
+12 f7 0c 4f
+3b 2c 66 3f
+f2 b1 5e 9f
+9f 14 fb ef
+60 58 9c 47
+72 d3 35 53
+c8 47 19 5a
+00 10 61 d2
+9d d2 9c 31
+f7 a1 7b 90
+3c 76 0c 7a
+55 f7 54 7d
+4b e5 d9 a8
+85 62 2f eb
+ab da 1f 69
+02 ab 61 77
+7c 95 9f d9
+f4 b1 da c1
+46 36 b0 43
+cc 7a e0 d5
+35 5d 71 99
+0c 41 90 31
+b0 27 ae 2f
+14 ef a1 81
+fa a4 30 8f
+11 de ac bb
+20 01 7a 3d
+5b b4 09 12
+1c 2a 01 c8
+99 f5 a7 f4
+7b 83 85 bb
+e8 6f 41 c7
+6d 48 59 3e
+22 b3 3e 23
+ff fb 20 4a
+0c d2 5a d8
+23 07 14 73
+1e d2 a4 19
+f8 70 27 01
+98 e8 6d d8
+28 9e eb 65
+32 41 13 dd
+d7 8e 84 c1
+29 ac 81 c6
+3b 25 77 f7
+8c f0 8d fe
+ac a7 1d 9f
+63 7d e5 ba
+a2 7f 9d e0
+fa 27 f1 6b
+1d 9a d1 5e
+17 b6 80 06
+68 74 95 56
+00 7f 2d 3c
+64 db b6 a2
+4a 78 08 00
+a7 0e a1 d9
+4a 67 f5 eb
+bf e6 27 a1
+4f 76 8c ef
+cb 67 8d a3
+a1 38 c4 20
+5d 53 fc da
+89 4c b1 b2
+e1 37 b4 cf
+fe f5 17 a1
+da 79 eb d2
+6b fe 10 fe
+51 04 44 36
+47 37 8f 85
+6b b9 7a 62
+4a 5e 4c f7
+CRC	\\ CRC=9f 93 4c 0c
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+16 72 27 80
+4a bc 08 19
+fe 94 ee 25
+9d b1 14 d6
+aa 58 3c 55
+25 e3 3b 3e
+ac fb 39 b6
+4d f7 07 71
+7d a7 fa 0f
+4c 73 65 f1
+a3 c9 b0 27
+76 cd 04 b9
+8a 68 37 91
+00 21 b8 11
+fd ed ce 8b
+93 8c 28 bd
+dc 24 16 84
+82 59 a5 de
+7f 22 8e 90
+6c a8 34 e4
+9f e0 4a 9e
+14 86 f4 0b
+10 55 a0 35
+9e e1 dd 01
+f8 4e a6 39
+ea 03 7c 75
+03 28 a0 95
+0c 8a 17 db
+be 0f 84 9a
+4b 0f c3 57
+de df 00 99
+fc a6 63 de
+3d 93 b2 81
+a6 c7 27 4a
+61 d4 62 4c
+20 8b c5 cb
+5e ea 39 06
+9c 7b e5 e5
+9b c5 82 e7
+57 83 2b b6
+4d 38 41 c9
+f2 ef 7d 52
+eb ca ed fb
+c4 c2 4f cd
+94 bf 89 b6
+be 11 c2 1d
+80 db ca 22
+3d 22 ee 42
+d6 c5 87 3d
+b0 34 11 44
+fc df d1 2d
+14 c3 08 26
+8a 67 61 b6
+23 d0 b3 c1
+41 a9 bc 9a
+b6 8a 18 e2
+59 7b c9 47
+7f 02 ee 4d
+8a c3 c9 8f
+48 43 fe 01
+2c 0b eb 81
+99 f4 aa 1d
+63 a6 9f 45
+f5 95 a1 36
+5b a7 c3 c8
+a2 d3 be 79
+d0 3e 4d ca
+58 a3 60 dd
+17 fb 53 8a
+6f d7 19 f5
+fb 7e 91 01
+f3 ed f9 61
+c0 b5 ba 41
+b4 ed 39 e9
+c1 d0 cb 37
+15 47 78 16
+e8 22 fb 59
+bd 2b 04 2b
+8d 53 28 c7
+19 2c 78 a7
+4a be fa a9
+25 07 8e b8
+1b 7d a7 55
+ae 79 0a 63
+ab 7b 38 a0
+fc a2 38 57
+0b 92 d5 cb
+03 c6 56 80
+6f 19 ba 92
+ee 67 36 8c
+b4 7e e7 c5
+ee 54 16 eb
+b7 e0 18 78
+9d e3 f5 df
+73 97 43 b0
+53 2f c1 61
+75 b4 0a 82
+2e 70 62 38
+fc c9 95 d6
+dd ee 71 af
+0e 44 69 2f
+33 b4 ff a2
+28 d2 7d df
+7f 1d c5 e7
+03 c8 aa 9f
+aa 55 c8 2b
+26 e4 b8 98
+ed ff c9 44
+13 f4 78 83
+ad 0b 29 08
+bb 3b 0b 86
+ae 81 14 a8
+6d 4c f5 26
+b1 d0 e7 ba
+8c 6a 17 39
+62 9d 19 c5
+d3 c1 f2 8a
+6a 3f 0a b3
+b0 e4 b3 ce
+15 3e d4 7f
+e0 fb 16 4c
+75 28 b0 c2
+e3 02 b4 52
+fd ff ef d4
+be d2 ad 4c
+01 49 49 37
+f8 84 fe 18
+3c ec 27 e3
+46 02 b4 75
+e7 b4 f3 7e
+16 d8 36 db
+CRC	\\ CRC=08 a2 12 3c
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 50 12
+17 62 27 80
+6a bc 08 1b
+be 94 ee 27
+cc 84 1b a6
+a6 24 0e b4
+0e a1 e7 94
+d8 bb 17 31
+58 10 c3 85
+34 ed 35 62
+33 0c 2e 8b
+2e ee 84 f4
+98 c5 47 3a
+fe 57 74 03
+8c be f8 c8
+5d 29 2f d1
+6c c8 dd da
+51 3c ec f6
+a5 41 b8 d7
+90 a6 86 56
+b0 6e f6 41
+69 30 96 f5
+7e e0 43 dc
+2a a0 bc 78
+0e 24 ca 70
+83 04 9a 2c
+18 b5 35 7c
+cb 19 c1 a6
+2f cb 43 45
+05 a9 3f dd
+79 04 6f 2c
+42 85 d9 c4
+66 b3 01 28
+bc 0d 0f 64
+09 7d 44 4c
+4b ce e7 d1
+12 f8 a2 0f
+5d f4 2a 6b
+8e bc 09 7c
+4a 1f be 9f
+a1 a0 97 72
+62 ee ba 34
+da ce 6b 64
+8e 92 11 70
+2d 77 b6 05
+de ef 7a b1
+87 65 33 6a
+cc b4 d4 7f
+e2 24 5f bb
+a8 28 09 ac
+d4 80 f4 d5
+c6 16 f2 12
+a1 15 46 7d
+8b 17 55 00
+68 ad 20 64
+95 92 ae 21
+c6 0b 34 06
+c7 b3 ba 54
+ba fe 55 0a
+da 66 b9 41
+80 bb f4 6b
+c4 11 42 1d
+77 fe d8 ee
+e5 63 18 a8
+5e 83 4a 19
+57 43 f9 8d
+cc 7e f0 41
+33 87 36 d3
+60 0b a7 c1
+99 6a bf ae
+37 32 bd f2
+62 8a d4 2a
+02 50 75 ed
+d1 30 82 19
+55 db a7 78
+60 c4 95 d6
+bd b2 de c9
+3f 41 52 14
+9c 33 02 b4
+42 fd 01 f7
+35 19 dd af
+7f 6c 2f d5
+95 f1 01 30
+8c a4 22 8c
+bb 77 53 be
+d8 c4 3b 88
+f7 69 33 c1
+bf 19 5a 88
+b7 fd 57 70
+f2 61 2a f0
+04 9e 8b f3
+d3 46 53 9d
+fb 2e f5 8d
+40 1f 76 6c
+6f 53 c3 41
+f6 85 b7 91
+57 4d cd b8
+6c 42 8e 52
+ec b3 72 0d
+0d ab c9 ef
+36 6d 6f c9
+30 15 ef bb
+b9 67 e5 d2
+7b 1e 18 02
+52 a0 20 6d
+f6 76 cf 44
+cc 6f 3d d7
+ef 49 ae 04
+13 ec d6 7c
+1e fc d5 55
+cb fe e3 44
+c5 dc e3 47
+93 d4 e2 57
+3d 6c 46 11
+7a 11 32 a6
+ae 49 9c 84
+86 fe 6f a4
+36 ef f0 2a
+24 d3 d5 a6
+09 43 7d ac
+77 da ee 41
+33 2d 8e e8
+dd 8f 69 6e
+36 7f 54 21
+25 8d 29 3b
+60 5d 6e 23
+ad 62 fd e1
+9c 4b 63 cb
+c8 f5 2b b7
+27 0d 84 24
+1d aa 2d 33
+02 41 30 c0
+CRC	\\ CRC=27 e9 03 48
+EOFt(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+R-Rdy
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+14 72 27 1d
+34 6c 56 75
+c5 29 36 61
+0a 3d 15 4c
+8a 26 ee fd
+80 56 30 ce
+9f 73 b2 dd
+1c c0 4d ee
+b0 80 7d 67
+bc c3 c7 4b
+73 d8 1a b7
+74 6f 95 74
+3f 1f 7d f1
+6b 0c b9 48
+69 e2 fd ec
+ab 1b 20 cd
+1a b2 4f d1
+75 3a 69 33
+fd 70 3c d7
+04 ac a0 f8
+4e a2 75 bf
+87 3e de af
+27 6d 35 da
+d2 40 94 5b
+0b 98 77 54
+0d 7d dd 74
+08 59 1d 6e
+f2 5e 8f 90
+b7 8c 96 a4
+7d 60 84 fd
+35 a3 4a 7d
+fb c7 c6 99
+96 15 0b d6
+d1 b2 e1 92
+26 e6 e9 1e
+78 52 94 d2
+47 b5 10 18
+f3 62 0e 2d
+31 0b f9 1c
+35 14 da d4
+9a 72 fb 9c
+d0 64 c8 c2
+94 5d 70 3e
+ef 54 36 ee
+78 be 09 a8
+af 4e e5 f8
+15 ec 3f 34
+5d 72 59 55
+07 5c a7 15
+b3 39 b0 e0
+7f b3 3c 34
+2c e6 65 a9
+2d 0f ef 3d
+5b 73 06 ef
+64 e1 d6 de
+ef 9e 67 a0
+5d 5e 4f 6f
+5a ee ac b3
+7e dc a2 1a
+d6 d3 6d 22
+fb 5b 78 e7
+1d ff 8d ba
+0b 28 ec 6d
+28 11 f7 29
+31 c5 b2 87
+0e 1e a0 af
+58 a4 4b 59
+dc c4 1b 0f
+7f 20 ba c6
+b3 b9 1e 4f
+9d 52 8a a6
+2a a6 90 69
+ed 65 b8 84
+32 64 1a a5
+de d6 a4 85
+6a 75 5a 1c
+97 e1 e5 52
+99 11 c5 15
+b4 ac 70 3e
+72 3c 9b a0
+b6 52 c3 16
+cf a2 e3 9b
+bd 43 cf 03
+7f a4 48 3e
+59 71 f6 04
+b3 0c d5 e9
+bc 58 36 aa
+eb 0f 76 38
+5a 26 46 5e
+ff 67 41 bd
+5e 3d 4e 7c
+47 98 56 7c
+b3 b4 5b 3d
+12 0a db 4e
+35 82 03 fc
+a4 df df 24
+19 3a ad 5b
+88 c9 9d 0a
+50 55 f7 b3
+65 82 64 30
+73 9b a5 06
+6c cc c3 33
+ff cf 2c 51
+84 e1 cb 32
+3f ea b9 9c
+4e 36 6b 2d
+c9 12 b7 e7
+aa 06 60 b8
+d0 c7 09 92
+ad 9a c3 95
+e9 fc 84 81
+31 79 8a 1d
+44 4d de 67
+b7 f0 77 00
+da b5 12 10
+a3 b9 a4 98
+78 a5 bb 24
+83 04 4c d7
+02 60 fd c2
+14 b2 59 18
+69 98 97 07
+9e a7 30 94
+3a 6a ba f4
+e0 3c 78 8f
+85 3b 71 73
+8d 62 69 e1
+8a d0 8e 93
+b9 61 8d bb
+7f 8b da 02
+3e 11 5f e3
+3e b1 7f 3e
+CRC	\\ CRC=24 7f b2 7d
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+15 72 27 1d
+34 6c 56 75
+85 29 36 63
+e7 2f b5 74
+fa 73 32 4c
+2c 7d 7a 4b
+d5 90 59 7d
+46 a9 1b 9f
+d2 5b 6f d4
+b8 d4 e2 73
+a4 f1 f8 2a
+25 e1 f7 9d
+93 25 18 14
+6a 4c 1d d1
+e7 92 9c 59
+2e c0 d6 db
+fb fc cc f7
+c5 f2 8b 8e
+2a 35 80 42
+32 8d 8d f0
+6e 37 ea 73
+64 0f 50 fb
+f0 83 10 af
+81 f7 93 00
+02 73 f9 47
+9c 72 0f 2d
+63 04 b9 b1
+ae ec 4a 65
+ea 9e c9 05
+1b 0c 05 17
+bf 54 38 27
+8a bb f8 d0
+fe dc ec ad
+00 34 4a 9b
+d9 5c 90 e1
+86 4c 8e b7
+ec 4e b7 2b
+78 87 16 d5
+95 2d 0b 56
+9f 70 78 a6
+dc f8 d3 71
+5c 5b fb 34
+ba 81 28 31
+f5 74 c3 8f
+e9 2b a2 d6
+6e ae 4c 9e
+b7 2a 1c 27
+79 a7 c7 66
+7b 4f da 07
+27 fb 17 bb
+3e 33 90 59
+fd ea 54 64
+57 7b c0 41
+61 9e b3 74
+21 b1 22 af
+b9 7f 0e bd
+8d 31 59 2d
+39 75 77 80
+45 53 2c 87
+53 a3 be 74
+91 9f 42 4d
+d6 8f d3 77
+5d 3d 45 a0
+63 c3 10 47
+01 cd af 93
+fa 31 9a f4
+36 82 92 e6
+60 9a a6 97
+5f 96 7f 6c
+a3 70 8a 6b
+c3 39 fc 96
+0c 7b ef eb
+35 b6 e4 4f
+a5 b5 b2 f0
+3e e9 2d eb
+df 9d 71 73
+4c 60 a8 a3
+0d 61 d9 bf
+fe 3e 4d a2
+b7 06 35 56
+3f 50 ee 68
+fb 01 70 38
+19 93 a9 52
+55 48 30 06
+d2 82 03 06
+7a 56 48 10
+7b 4a d3 6f
+fe b1 5e 66
+64 94 82 1a
+86 39 32 54
+24 88 97 b9
+a6 22 cf a5
+c2 b4 b9 d2
+5a df 1b fe
+2a b9 6f c6
+1f 4f fe 6a
+00 bf 32 f8
+7d 68 54 12
+7e 2f 34 ae
+8f dd b5 89
+49 bb 68 4a
+47 e5 c5 11
+83 22 8b f5
+9f cd 77 67
+b9 67 84 8a
+10 cd d0 6e
+4f 34 81 fd
+0f 87 de 52
+7f fa 2b 65
+0a 70 93 8b
+9d 84 e7 fe
+ef 3b 71 ab
+c6 5a 4f ed
+5e 49 b5 d9
+7e 35 4c ca
+2b 18 78 2b
+ed 0f 17 45
+c6 7a e1 0d
+78 24 eb 8d
+4d 6e 3c 5e
+37 07 e5 e8
+cb c1 9d ee
+a8 e0 3a 0e
+7b ab 81 44
+13 fe 15 12
+1a 44 1b 83
+6d f5 21 32
+78 38 f4 0f
+b0 77 71 8e
+92 35 f8 3b
+d0 97 27 b4
+CRC	\\ CRC=9c 74 4e 57
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+16 72 27 1d
+34 6c 56 75
+45 29 36 65
+04 b1 5e eb
+6f a4 d8 74
+12 32 e5 92
+72 a8 74 21
+ae 2e d2 22
+61 7e be 55
+1e 54 65 fa
+94 f7 22 d0
+f8 6d 98 f7
+a8 8d 3f 29
+7f 66 2b 90
+28 17 1e 74
+f2 05 04 15
+f8 ea 66 a1
+d5 fa d3 e2
+9b 20 fe 84
+b3 20 2f 0c
+86 c6 3a 08
+c7 1d 1f 0e
+92 58 16 4a
+0a 58 fe c2
+7a 0a 49 7d
+b8 e9 a7 32
+30 7e d6 b4
+24 13 f0 f0
+cd ec 1e da
+40 41 1d 93
+d1 98 ab 86
+09 f0 d5 e2
+3e ce ba 3c
+5a e9 cf 33
+01 0e 40 40
+0b 8b 5a 6f
+f1 18 af aa
+c2 35 f1 93
+a6 d6 7f b9
+76 fe 98 cb
+77 33 2f d8
+a7 bc 34 93
+0d 0b 76 f0
+85 d3 b8 6d
+d0 6b 57 69
+fd e1 9b cb
+ce eb c0 60
+5b 65 85 63
+c3 10 1b 2e
+07 00 57 d0
+47 f2 75 f2
+29 63 1c 66
+65 21 01 2b
+5f a4 82 46
+fd f3 c7 46
+5a 1f c5 c7
+3b 9b c6 28
+a6 6e ed be
+22 1e a0 16
+6c 29 93 bb
+8f 7f ef 27
+92 3c 97 69
+2f 33 99 c9
+45 ba 82 74
+cf e5 50 7f
+07 fe 42 0a
+3d eb 14 04
+62 64 95 46
+fa 41 e8 4e
+0b 3a bf 8a
+bf 4a cd bf
+9c 67 49 29
+ca b3 5d 92
+b2 8d ea d6
+0d 9a 0f 7b
+0c 9a 86 c7
+5b 51 e8 2b
+6b e0 60 04
+1e 1f 91 2b
+c4 3f 54 c1
+7d c3 48 19
+dc 28 ba f3
+45 c1 58 f6
+3b 35 f6 db
+31 c5 50 b0
+4c b1 1a ea
+99 81 67 7d
+df 5d 24 a6
+92 20 da 5f
+94 16 a9 74
+dd bb 07 d2
+bc e7 e1 b6
+96 2a a6 6c
+2d 55 05 d0
+76 de 3c 47
+e0 7b c6 76
+3e 16 51 21
+06 1d fd 40
+33 6d 6d c6
+53 2f 79 61
+f9 1a 4f 3f
+e9 57 2f e7
+d9 7d 2b 81
+46 5c ed f4
+f2 0b d0 2c
+23 28 5d d7
+8d d5 30 1d
+4f c2 79 b0
+4e c8 20 ba
+5f cd a4 26
+e5 e1 6f 2a
+5c c4 09 8c
+71 fa 1f fa
+57 45 88 96
+68 18 a8 0e
+e0 f0 91 2c
+80 50 9a ab
+53 cb 25 46
+e6 51 28 db
+e4 49 fd 46
+02 09 2a c4
+2c 1c fb 01
+3e 52 f8 8a
+e4 91 07 1a
+62 41 87 c0
+79 e6 bc 36
+9c e9 9c d6
+9f 80 1b 13
+d9 1d f4 de
+16 c2 e1 6e
+ab f5 33 67
+CRC	\\ CRC=02 cf 3c f8
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 50 12
+17 62 27 1d
+14 6c 56 77
+05 29 36 67
+dc 8b 24 27
+83 3d 3d 75
+cd 93 6e 6c
+74 03 a7 fc
+52 0b d3 37
+f2 34 f1 21
+de 12 ec ce
+95 d9 85 4f
+61 49 64 b1
+45 38 72 1c
+86 b9 06 8a
+9e 34 77 82
+64 55 d2 ac
+5c d7 a1 53
+15 03 64 d6
+4c 9b f6 cc
+8d 77 44 45
+75 bf d0 2b
+a4 78 37 73
+a5 a2 40 94
+c1 5e 8b ee
+48 95 15 2a
+c7 7b 9f a2
+ff 4a 02 1c
+88 25 7f 49
+15 de e7 89
+b4 04 55 ae
+6d c5 7b fb
+b0 52 9d 90
+d4 23 71 c3
+b7 85 dc 3f
+00 a7 b7 cb
+ec 9a 25 e1
+a4 08 b7 ca
+00 c8 e2 f7
+41 1b e1 68
+92 0c 50 00
+22 19 4c 3d
+11 5e 9d 34
+2b 06 08 78
+90 75 66 31
+ea 04 1d 99
+97 b5 e7 4a
+58 03 d3 b6
+58 c7 74 07
+7d 28 ab fe
+5c f1 5a 66
+e8 d3 40 71
+a0 6b 1b c9
+71 85 e3 92
+f8 4e b6 5c
+e4 73 7f f0
+b4 c9 22 12
+14 63 a2 3e
+17 79 4d 1d
+e9 3a ad 46
+6b 95 2a ee
+86 2a 1c d7
+98 47 9f c2
+00 9f bb 7c
+1f c0 a3 44
+21 c7 06 e3
+7e 50 ba 0e
+1e bf c1 65
+3c 96 9c c6
+49 c2 86 e5
+a1 74 e3 88
+cf d7 fd d7
+ec 3e 3e 5a
+78 95 12 b9
+56 db 14 bf
+8d 45 60 aa
+7b 8b 04 78
+e7 a0 7c 63
+4f 77 bd 14
+39 cd 4f d1
+ae af 92 6b
+53 5b 9a 23
+a8 44 0b 41
+09 81 18 c8
+e8 83 cc 1a
+f8 27 d9 ed
+72 f7 f7 22
+51 50 d8 3c
+33 66 c0 67
+f2 a5 7a 53
+03 15 c8 a6
+58 5d 88 95
+a2 c2 81 49
+28 e3 d7 ff
+85 bd cb 1e
+be a7 2c ab
+3f 5a 54 6d
+fe c1 0f dc
+12 40 40 eb
+10 e0 b3 74
+b0 bd a1 36
+64 15 53 bf
+4d 0e 2d 63
+81 3c b7 18
+2d 08 72 fd
+b0 64 13 4d
+69 c1 79 31
+6a 4b a6 64
+11 d4 92 a7
+45 a4 bf 9f
+68 e2 0e 95
+a6 23 29 eb
+39 7f 9c 36
+00 9d ef 42
+7d 85 a8 21
+f4 a5 42 33
+d8 59 97 ef
+94 d5 e7 14
+12 ea 5d ca
+bd 79 8a 4b
+72 1b c0 ab
+f5 6b a7 7e
+83 ba ae a1
+be 02 ab b8
+84 dc 1d fb
+93 76 0f b6
+7d 09 de e5
+b8 38 ba 4c
+fa c9 e1 4a
+22 e9 04 b5
+43 59 c6 84
+20 0c 63 a6
+CRC	\\ CRC=ce 98 e6 dc
+EOFt(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+R-Rdy
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 02
+0a 0f 98 7c
+41 70 41 92
+44 40 27 81
+2e be 4c 0f
+7f 88 ce c1
+a0 16 ac 8e
+ce 47 bf 8c
+ac d6 1c ea
+CRC	\\ CRC=d8 aa b1 ac
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+14 72 27 a0
+e5 fd ea 53
+ef 50 7b 21
+d4 ca 3d e1
+92 e7 c0 fb
+49 f2 95 33
+71 ac 72 71
+af aa 77 c6
+37 d9 5c f8
+02 95 86 72
+74 12 e2 35
+bd fd 08 e7
+f6 ee b8 04
+0c 59 e4 2f
+67 a0 c1 34
+5d 3b 40 2d
+b4 a9 22 2d
+87 b5 5c 09
+71 40 23 e5
+ea 69 6b be
+2a 86 be 1f
+8a 94 0b 00
+c3 5d 0b f9
+20 ed 2a d1
+d8 6a ef 77
+d4 f4 de 25
+23 dc 91 69
+b3 07 bc 2b
+49 1b f8 e8
+4d 76 d2 7d
+22 1e 58 66
+c1 16 18 49
+44 b3 cb 1e
+74 96 ae 23
+9d d3 b4 8d
+21 4c b4 8f
+92 b8 ac d9
+06 08 01 30
+3b 47 4d c4
+e7 d4 36 9b
+8d 35 a9 98
+2f d3 b8 35
+4a f8 9a 59
+ce 41 ef e7
+f6 cb 12 31
+9d 9a 36 c1
+9d 1b f4 3f
+3a fc 67 c4
+9c fc 38 9b
+69 bc df e7
+ed 64 e1 38
+04 3b 2b 01
+34 42 42 35
+78 51 98 51
+8d dd f8 ea
+d1 8a a1 e5
+f7 6b 22 f6
+86 5b 03 8a
+e2 2d a8 dc
+af 48 42 9c
+4f 1a d4 84
+c4 78 1c 34
+19 f5 48 1e
+09 aa f0 80
+d8 77 9d d3
+4a ae a8 70
+07 56 34 8b
+b3 d1 64 db
+70 1c da a9
+9b ad ef 19
+d7 05 ce 1f
+51 98 0c 86
+67 6b bd 42
+c8 f1 6b 48
+f5 0b 79 2f
+59 1f 81 bf
+c2 1a e8 e9
+bf d2 dd 4e
+73 11 e8 d1
+dc 7e 54 57
+6c 06 1e 56
+d0 65 b6 f3
+0c 25 61 35
+87 f8 2c f8
+ea df 7e f8
+53 3c 56 07
+4f 43 4a 97
+66 1c d0 b8
+5c 3b 66 8b
+bd 71 31 49
+40 4c fe 36
+69 0b 7b b3
+43 41 cc af
+58 37 bd 25
+bd 72 5d 39
+8c 84 78 39
+be 8d e0 a4
+45 77 f4 cf
+01 b7 8e bc
+17 18 bc 03
+7d 57 99 b7
+ae f0 cf 3b
+39 be d1 cf
+f7 48 1c a4
+83 b0 eb 50
+aa 89 15 d0
+33 0b 7a c2
+df f2 48 6b
+df ce 74 73
+48 25 d0 f9
+d2 ae 8c 52
+ed 34 c9 40
+83 ae ea 9c
+15 1d fc 24
+13 0e 08 11
+75 02 77 2e
+c8 1e 21 03
+b2 2c a1 55
+0a 3c 3b fb
+b7 4a d3 8d
+80 b8 0b 72
+2c fe 9f 52
+67 2b 9b 47
+29 80 49 cc
+f5 95 2d 07
+f5 c3 b4 57
+e1 80 4e 6e
+19 79 a2 2d
+21 bc ca a0
+ba c5 54 94
+93 49 d6 8d
+CRC	\\ CRC=92 81 fd ff
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+15 72 27 a0
+e5 fd ea 53
+af 50 7b 23
+1e a8 43 33
+80 69 13 13
+0e c6 47 71
+22 2f 7a a5
+87 ae e0 02
+79 07 43 eb
+75 bb 7c 1c
+cd 7e 69 76
+fc 63 17 e8
+29 3e 88 5e
+22 c4 49 42
+67 90 86 9c
+0f c4 a7 2f
+6c 82 d4 c1
+7d 05 01 22
+93 12 31 5a
+fc 24 fc ea
+d1 55 6e 20
+05 1f b5 01
+53 63 54 58
+df ca d4 e6
+e0 c5 92 e6
+a0 0b d2 44
+b2 27 0d 84
+ba 4f 9f 7c
+f7 f2 3c b7
+f2 02 89 56
+c0 8e ed e2
+7a 9e 62 e3
+ce e4 22 a5
+d4 e3 33 8b
+9f 7c e9 84
+d9 1b 48 94
+df aa 28 dd
+24 75 3e b5
+74 5c 03 ff
+ff 71 d4 5d
+f3 ac 72 b3
+77 63 2d 63
+14 cf 21 6e
+aa 0d 4f a7
+c2 37 20 41
+74 72 57 37
+83 40 6c cc
+d8 e5 5d 3e
+5d 7d c7 17
+c5 5f fa 35
+9a 85 f3 3e
+8a f9 06 51
+00 1e 43 d0
+63 7a 0a 09
+67 fc e4 3a
+66 2f 52 94
+93 65 44 67
+39 dc a3 1a
+be 11 89 8c
+b7 ac f3 d2
+f2 ed e5 9e
+dc 40 f7 03
+f2 5d 58 ca
+07 cb 28 56
+63 e0 34 3a
+37 02 a1 c3
+39 10 a1 8f
+e0 01 60 29
+9a e6 c1 5d
+eb 91 9b de
+67 c6 f4 8e
+29 ae 67 50
+e3 43 a7 fa
+df 10 b0 c5
+8d 42 3d 11
+db 9b 36 ef
+a2 fc e6 47
+a5 89 21 35
+a1 0c 43 58
+c9 bd bc ae
+fd 2e e9 aa
+4d 88 b1 17
+ca e3 63 de
+55 ec 9f b2
+16 64 d7 83
+cf ab 18 75
+c2 8a 06 66
+f8 68 70 d9
+a9 95 8e 3d
+30 e2 bb eb
+86 5a d8 40
+11 2d f0 12
+6f 19 9c 6d
+86 bb ed 29
+2e 56 5f 9a
+37 30 d8 40
+8b 36 6d 44
+98 f3 a2 d7
+cd 2c 78 51
+0a 79 c5 ce
+68 3d 9d f1
+15 e6 77 44
+19 49 15 f9
+c3 b5 48 81
+5e 3b f9 2e
+32 97 54 f1
+a4 30 ea 2a
+c5 53 54 7b
+eb ab 7e 80
+88 9a 56 11
+69 69 af 91
+d0 b3 41 4b
+0e 52 67 61
+ad cf 96 3b
+85 c4 b1 38
+f2 1d be da
+38 67 d9 46
+4d 80 cd 6c
+60 b9 2d 4c
+af 05 16 8a
+8f 48 23 c6
+9e ad 09 63
+83 8c eb 43
+c7 6a a4 57
+d4 02 85 78
+fb 41 21 89
+9c f7 12 18
+8c 0c 5b 34
+46 56 27 07
+e9 1c 70 98
+4f 76 86 af
+CRC	\\ CRC=dd a6 0d 64
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 58 12
+16 72 27 a0
+e5 fd ea 53
+6f 50 7b 25
+69 c1 b2 1f
+bd 3d 38 13
+b5 f1 66 fd
+da 0a 57 5e
+97 f9 c1 19
+0b 29 46 78
+c0 e9 47 df
+ac 53 43 eb
+54 fe 78 e0
+9a 11 7d 32
+15 d7 7d ed
+65 ff ae 91
+27 06 0f d9
+27 ec bd c6
+06 37 97 08
+8e 10 9f 00
+9b cf 2d 5b
+e4 6f b3 05
+14 e9 c6 8a
+27 84 db 33
+29 60 51 3d
+4e 35 3e 8a
+1e bd 2f 5b
+1c f1 34 78
+79 ef 59 71
+b2 19 81 be
+4b c0 c4 06
+8b 64 57 12
+ba cb 81 97
+2d 03 4e 59
+f2 79 c7 56
+ea 51 f8 96
+4c 74 42 62
+bd d4 7c 12
+a6 cc 67 9c
+74 a1 30 a8
+9d ca 35 de
+bc 66 47 80
+1c eb a3 03
+2f ea 5e 06
+ac 84 5f 02
+e2 9a 4d 55
+bb 20 5a 42
+8c 83 ad 9b
+f4 b5 24 39
+6d 93 d8 c9
+71 f2 57 32
+84 c0 93 14
+56 8a 28 d7
+82 74 23 3b
+69 9a b2 79
+a0 af 40 44
+f6 d9 62 73
+0b 45 f3 4a
+56 e6 fb 5d
+af b6 be 14
+b5 47 08 0b
+9e a4 f1 b1
+00 8c d9 e5
+f2 98 c6 57
+46 e6 7c 8d
+3b bc 3e 4b
+3a 3e e4 43
+7d e4 67 92
+b2 23 9e 4c
+27 3e 1b 02
+63 02 19 a7
+1a f0 fb 7f
+38 da 4c 8b
+6d 8b 99 1e
+f2 c3 1c e4
+43 4f 76 12
+6b 9c 02 4d
+53 4d 38 7e
+2b 0e ac 59
+27 2d ab d1
+6a 7c db 71
+f7 b4 7a db
+ef 6e 5c 77
+b0 e2 19 ed
+5d e2 45 0d
+0d 1c 13 e7
+03 8d ad a5
+61 4b ab ae
+86 ef 81 40
+43 69 ab b6
+ea 91 33 8f
+4d 10 7e d8
+62 df df e1
+51 0e 7d 65
+b8 8b 61 71
+07 e1 90 5d
+c3 7e 79 cd
+ac 5f f6 37
+36 7c 29 20
+40 5a 16 68
+95 9f 7d 36
+7f bd af 3b
+9d 29 85 05
+76 53 56 ad
+c8 8f 6f 43
+23 ab b2 3d
+23 65 fa 8a
+af 68 83 39
+fd 6e 4a da
+33 47 98 17
+44 dc 73 75
+68 bc 1c bc
+7d 57 1d 08
+0d a7 ac 28
+51 08 d4 23
+26 98 15 11
+84 44 63 27
+8f 88 18 4e
+c7 6c 45 81
+78 69 53 79
+f2 3c e0 bd
+e0 03 fb 41
+48 7f ea d1
+96 3b f4 56
+07 02 af d8
+6e 9a f6 74
+16 02 3e b6
+31 2a a9 96
+09 c2 19 ce
+77 62 58 f7
+db 6c 8a d3
+f3 0d ca ff
+CRC	\\ CRC=ee c4 9a 1c
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 50 12
+17 62 27 a0
+c5 fd ea 51
+2f 50 7b 27
+a0 86 a5 70
+6d f0 85 ed
+79 ec 72 3b
+dd 97 63 c1
+c1 92 b6 fd
+49 5a db d1
+37 fd 5f bb
+e8 2a ad cc
+13 08 63 10
+d4 a3 0a 1a
+fd 77 e5 b2
+e0 ce 2d 57
+30 d2 b8 eb
+f9 bd e9 27
+c9 d3 02 ee
+ae f5 e8 9b
+b2 b1 5b 2c
+4f 84 8e 7f
+d8 2e 8a 63
+0e f6 83 25
+72 3a 3c a1
+b7 7a fc f1
+40 da 96 45
+34 f8 de e9
+73 ea 45 73
+b2 d3 ee 35
+ac 61 ec 95
+77 3f 89 8c
+84 19 4c a3
+a6 e9 18 62
+f0 1a 7d 98
+b2 b3 33 55
+ed ae ac b6
+bd 32 64 8d
+c8 be 57 f9
+42 95 a1 33
+0f 96 f8 b1
+c6 ac 02 09
+48 18 29 fa
+a9 e9 e2 b3
+36 0d bf 12
+78 e7 33 c6
+c4 82 d0 6c
+d4 95 ed 47
+fc 26 ca 31
+3d 49 10 b1
+48 3d 6b 31
+24 a6 f7 61
+93 a7 5b 64
+91 70 72 4c
+fe a2 88 88
+4b f6 16 f6
+0a 83 be 3a
+00 8d 64 1a
+32 61 d0 2e
+61 b3 27 f2
+5e fa 0f 99
+90 72 a4 f3
+44 3b 43 ff
+bf 24 5a 87
+ce a7 9a 36
+19 df e1 21
+b7 2c 20 51
+1f 71 92 5e
+ad 60 34 16
+97 59 bd 57
+00 f7 a0 91
+27 aa 64 87
+6c 57 bf 69
+d3 78 34 b3
+73 7a be e4
+07 f1 fb 00
+6f 49 fa f1
+93 c7 90 22
+47 cf a6 46
+f1 78 98 c9
+a4 47 51 12
+65 26 ac 44
+94 6b b0 7d
+8d c3 91 95
+8c 75 d8 3e
+e5 71 81 87
+6d 6c d9 17
+b5 9b 0b 64
+e9 6e c1 21
+ab ee 2d 89
+df 57 31 be
+25 12 33 fb
+ed 6e 58 4c
+8b 0b f0 79
+e4 90 8d 52
+69 5b 74 48
+57 f3 f8 2f
+52 7f 64 25
+50 df e9 82
+82 a9 99 0a
+ea b7 fa 39
+82 0a af 9e
+21 72 df 7b
+b5 27 c8 6f
+a0 ca 60 21
+86 95 1e e7
+9f 7e 4e 69
+cc b5 05 6f
+d7 46 c4 b4
+96 36 f9 19
+65 f8 06 85
+54 b8 88 86
+7f d5 b5 27
+01 fb 65 c7
+bf 7b 01 dc
+02 9e d3 7c
+14 2d 66 12
+f9 fb c3 f0
+50 cd 9c 84
+1c f6 b0 c1
+82 17 0b 39
+b1 a0 a7 1c
+cf 1f 1c fd
+d8 89 3b 1f
+da b7 9d fb
+6c 67 70 d1
+c5 36 bf 47
+36 13 b7 51
+d5 5b 90 57
+86 59 29 34
+f6 fc 16 5a
+ac 32 d4 f6
+CRC	\\ CRC=f8 53 7b d3
+EOFt(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 04
+0b 0f 94 7c
+49 68 d8 12
+14 72 26 aa
+a2 e0 fc b1
+ed 7c ff a0
+41 62 e4 77
+8b 70 4d 5c
+dc 72 2b 7e
+08 fa 50 cf
+d7 69 af 9d
+45 cc 68 fe
+66 ed c7 55
+dd 9b d7 e6
+94 85 38 d8
+03 80 94 66
+0e 35 f2 c1
+99 a2 91 e6
+34 ef b5 59
+c2 f2 d6 60
+db 32 f3 c5
+ae 36 10 ce
+b5 35 3f 0a
+81 0a 66 1f
+02 b7 af 8f
+63 f5 5c 6e
+59 c9 8d 58
+33 2d 09 9e
+0f 0e 26 85
+62 4c 94 a3
+b3 00 a4 79
+d4 45 55 0a
+fd fe 36 46
+ef 6f 3f fd
+87 9e 7e 4e
+97 6c 61 6c
+e4 c6 64 81
+25 ee 32 03
+0e 4c a5 5f
+77 df 76 15
+c9 b5 2a f8
+b1 ad 1d a1
+69 46 88 67
+cd dd 90 13
+f0 42 16 81
+b8 8f 79 c5
+5e 09 bd bc
+cd e9 27 fe
+6c 3c 75 48
+2a 51 ec 36
+ee 55 d8 d4
+be b1 34 21
+bc 76 6a 5d
+d1 85 3d 5a
+7e 3a be 4f
+5a 57 c8 b6
+a6 d7 b9 02
+41 d8 44 88
+c0 b4 88 2a
+ba a6 a6 08
+50 29 06 9a
+e0 27 ad 92
+b4 bc 12 a7
+98 52 98 dd
+ca c2 54 1a
+24 0d c3 ac
+c8 e7 00 4f
+23 b2 c9 0f
+ff bc c8 05
+6b 59 b7 22
+3e 57 fd 18
+13 a2 a5 07
+d4 f8 52 0a
+02 51 72 75
+d1 e3 dd fd
+0d dd 14 35
+63 b7 f9 a9
+ea 26 f3 71
+99 93 82 49
+4e cc fa 87
+84 87 47 ec
+0e 2c 67 90
+71 b6 00 f5
+83 eb 0a 0d
+20 af 85 be
+72 13 d7 f0
+05 40 42 86
+46 5a e6 c4
+c4 13 b6 f7
+3f 6a 7d c2
+db ad 9a 2e
+ff 41 05 51
+f6 fb 6c 9f
+7e 84 00 3c
+2c 99 5d ff
+df 88 f1 59
+df a9 96 31
+31 8b f9 47
+b3 30 74 13
+94 3e 7c 3e
+82 ea f3 91
+4d 69 20 32
+7e 8a 89 5c
+98 de ed 78
+1b 62 9c 14
+9b 50 62 cd
+b0 a0 ed 9d
+40 a7 48 18
+90 cc 9e d2
+e3 6a 67 30
+a5 35 a9 5e
+69 bd 96 61
+db 22 51 52
+2d 97 96 42
+87 7e a9 4d
+11 42 60 ea
+b3 6d 73 ca
+92 fe 32 92
+7c ad be 88
+2d 72 54 79
+94 d0 67 79
+fe 36 26 e0
+47 a0 54 73
+60 8e 04 14
+a5 00 f7 bb
+4c fe 71 56
+d5 7d 2c 68
+c8 c7 4c 95
+d5 68 e3 a2
+b1 a4 5f 90
+5c 08 f8 77
+9e d5 d3 47
+a1 7e d7 e3
+df e4 da eb
+CRC	\\ CRC=d8 ce b4 72
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 d8 12
+15 72 26 aa
+a2 e0 fc b1
+ad 7c ff a2
+57 46 61 f3
+91 5b b1 ec
+16 3b f8 e5
+28 7e 44 6e
+1d 06 74 3d
+fe 8f 95 62
+0e a9 4d d1
+23 2c 5b 2a
+a5 a2 00 40
+a9 18 9e b0
+08 6c 7e 18
+b8 5c d7 55
+78 b9 55 9d
+3c 91 8a 26
+8e d6 17 1d
+38 21 18 7b
+52 e0 20 ef
+72 9f 69 da
+57 ad bb 0f
+16 15 02 df
+3c 1f b4 d2
+a2 ba 96 cb
+07 f0 6e 3c
+59 0a 0a f8
+99 8c 8f 4b
+68 21 84 61
+c9 38 36 00
+d7 07 20 82
+08 b2 5f 99
+92 1a b3 ea
+fd 41 52 59
+5e 29 da 9d
+91 2f e6 3f
+c5 92 80 44
+e7 1c 51 92
+e6 9a ed 12
+19 87 d4 21
+96 50 ed c6
+45 b3 98 76
+e4 5a f1 80
+bf de 65 c4
+e2 f3 f6 02
+17 03 f2 f9
+d5 fe d8 09
+e2 5b df 07
+19 fc 73 da
+fc 85 5f 92
+c7 52 52 c9
+40 be 2f ae
+88 e1 fa 38
+61 1e 32 d2
+fd 90 e1 5e
+aa b8 8f af
+89 ca 98 38
+df 10 c8 2c
+d2 18 aa 50
+6d 9a ee be
+b6 e6 12 82
+fc ed 79 34
+35 20 cf e9
+3e d0 74 6f
+ba ab e7 df
+83 8a 58 24
+4b 69 ed 3b
+ba 9e de 8f
+b0 fd cf 9e
+03 6e 68 29
+c1 6e 63 1e
+6f 0f 87 48
+9a 8e 94 44
+e3 2a c2 ab
+37 43 16 8e
+ef 07 64 87
+81 8b 1d 41
+be 26 18 55
+69 6d 97 70
+a2 16 65 e2
+e6 4b ba 5b
+e2 9d 34 19
+09 dd ae 62
+2f da 5f d8
+75 a5 a6 66
+98 04 55 fe
+e1 74 01 89
+32 a7 57 56
+50 13 de 75
+f8 7d dd a3
+84 c5 1f 59
+54 fe a6 61
+51 fa 09 93
+f5 99 24 26
+08 93 d0 ac
+3c b7 d2 98
+5e 53 c2 2b
+e0 40 3d 8d
+8f a3 85 8d
+b3 31 d4 39
+f2 cc b9 00
+6b cd b2 c5
+1e 99 5c c1
+42 0a 9e 89
+43 d2 68 d9
+0b 24 d6 03
+6f 22 24 e4
+71 26 14 32
+a7 28 ff 0f
+7f 7f db 34
+2f 4b b1 40
+10 f7 66 36
+00 2c f1 95
+b1 46 ba 63
+20 4f c3 04
+77 55 d3 6c
+ce ff 95 8f
+74 6e 38 dc
+74 37 de b4
+d4 4a 80 40
+9b cc be b8
+17 bb 7a cb
+06 d4 75 07
+60 de ed fc
+19 7a 69 eb
+02 61 d1 2f
+d6 e9 4c ef
+37 c5 6f 00
+36 03 7e 98
+67 a6 0b 18
+4a 1f 4d 2a
+CRC	\\ CRC=6e 64 4c 76
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 d8 12
+16 72 26 aa
+a2 e0 fc b1
+6d 7c ff a4
+57 be 7c 73
+d1 59 41 2a
+ec 87 3f 63
+74 9f 7e 78
+18 ff 11 86
+72 49 71 c6
+7f d5 c8 cd
+df c7 3f 18
+24 f2 b0 95
+18 83 b4 cb
+2a 5f 0f ff
+51 f3 fd 97
+90 52 e8 80
+d2 d3 36 83
+92 43 30 96
+2a 12 be c6
+b8 a6 5b 59
+25 dd 39 4a
+61 93 b0 ff
+76 96 dc 15
+b1 bc 86 ad
+77 ef ba 83
+cd 65 c6 dc
+b9 19 7c c7
+ed 65 07 cd
+47 89 d3 6f
+8b cf 43 38
+7a 0a f0 35
+b6 dd 85 fd
+53 89 77 61
+5c 46 70 cc
+c9 a5 66 1a
+53 5e 80 03
+a2 ab 39 3e
+b1 5c 2f 25
+b5 e1 53 55
+a9 35 1c d8
+da a8 48 4c
+8f 80 f2 73
+33 ad a3 cf
+cc df 07 db
+5d 12 08 28
+ed 04 7d a7
+72 cd e8 a6
+49 a8 89 88
+4d 33 b6 1b
+fb b4 1e 27
+dc ff dc e0
+aa 25 e5 a3
+be 7e 04 8d
+18 d1 54 ee
+84 96 74 82
+7d 9b 2a 4f
+19 b7 86 ea
+21 47 06 20
+a3 8a 63 e2
+e2 10 3f ed
+e2 5e 48 1c
+11 2b 44 f0
+59 1b a2 c6
+78 ef c9 00
+98 9b 74 90
+ca 1a 38 5f
+e4 b2 25 91
+3c cb 27 c0
+84 06 73 81
+75 db f4 60
+89 a2 24 17
+78 49 04 3b
+b2 b3 6d bf
+60 98 bf 82
+ea 75 0d 4c
+fc 6a 7a f5
+02 3f 0f f6
+ee d7 de 7a
+a7 84 eb d2
+a3 f4 14 4e
+9f 32 10 8d
+41 d3 e2 0a
+02 c2 74 86
+ed 48 36 6b
+0c 52 0e b8
+07 4e b4 34
+4c 17 e6 b8
+53 84 06 32
+cc e4 6a d3
+38 28 53 74
+27 4b 6a 4c
+f8 d0 96 9b
+2e f1 4c 6b
+68 f7 5c 6a
+a7 6a 49 d9
+51 3e 5e d2
+6e 6a d2 96
+48 d9 2d 35
+af 1c 5e 01
+eb ad 0b 87
+83 29 b7 e7
+f2 5a 15 3f
+e0 de 44 78
+23 7a 35 34
+3c 83 74 43
+b2 61 4b b3
+8a ec d4 a5
+82 e9 ca 83
+08 28 70 50
+ef 85 a4 70
+c9 0c dc 02
+5c 8d f9 4e
+14 c4 66 4e
+9e f4 98 69
+22 54 72 b2
+60 ae d3 57
+f7 ec 50 17
+13 20 fd 92
+af 6e f6 d4
+cb 0d a9 01
+08 6f 61 ac
+fa 0c 2c 92
+50 a2 f5 73
+61 7c 7f 27
+81 e2 9e 94
+27 8a 43 7a
+f5 c6 5a 21
+a8 de 75 b7
+37 77 77 80
+ed a0 9e eb
+eb 6e 21 84
+CRC	\\ CRC=42 5b 8c db
+EOFn(-)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFn3
+01 85 60 04
+0b 0f 94 7c
+49 68 d1 12
+17 60 26 aa
+86 e0 bc b3
+2d 7c ff a6
+c8 54 f7 da
+5c e0 01 f2
+22 24 02 68
+8b 6b 80 ce
+00 40 e5 2f
+f5 19 5f ea
+a9 6f f3 f5
+77 74 de 57
+15 06 ad d1
+65 3f 13 f5
+35 2b 4a b8
+1f fe 43 45
+30 b3 1d 3c
+54 41 1d c4
+60 a0 b9 c5
+3e c1 ce 61
+38 88 03 6b
+f5 65 e0 83
+83 d9 24 c1
+7e 64 66 e7
+f7 a2 41 b9
+33 b4 a1 14
+8e 94 28 12
+0f 70 8d 6b
+76 e6 75 6f
+11 af f1 d2
+a8 21 92 0d
+a6 66 56 4c
+d4 94 8c ec
+bc 6a 3e 40
+9e cc 8e 54
+83 08 a7 d2
+dd d6 dd 5f
+e6 ab 09 e3
+c8 ac 38 1d
+52 cd 43 98
+f8 33 7f 06
+a2 5f b9 14
+1c d5 38 a1
+bf 4e 95 79
+5d 75 f0 a3
+35 e7 de 8f
+c5 fb a3 d5
+6c d8 cb a3
+ff 97 7a 00
+6c 7b a9 4a
+e0 96 b6 45
+b0 ac 4b 0b
+7a 3c d1 8c
+22 4f 55 6a
+a9 42 e2 eb
+1f d8 ea ab
+1c fd fe 41
+ba f4 19 83
+5a 81 ae 32
+fe 3a ba c2
+09 bb 11 36
+71 fb 97 16
+fa 3d dc 6c
+2f 9c 88 95
+29 aa 0a f7
+9b 5e 63 25
+ef ad e4 e8
+95 21 b0 c4
+ae b1 6c 75
+f2 1f c0 a9
+51 84 0d ea
+f3 0f 15 ee
+b3 a8 bf 44
+19 8c 78 3b
+8c 33 0e 25
+eb 7c 10 51
+3a 5e ad b5
+60 76 52 e6
+fa 45 e0 20
+93 7b 39 50
+06 d0 26 e2
+4c 58 b1 4c
+44 5d 80 f5
+8f 0c 0c e1
+16 95 71 d5
+43 75 29 9a
+51 10 f0 52
+34 0b c5 a2
+20 b0 8b 8b
+fd 2c 95 74
+21 71 69 64
+9b 4b 2e 2d
+77 c5 f9 bd
+c5 6d 0b 2c
+bd 01 1a d3
+34 d5 98 a9
+cc 93 cd da
+ab c4 7a f4
+89 11 47 48
+43 69 63 68
+20 ec ac db
+3d ff 82 f0
+84 5e 49 c1
+de e2 65 37
+fe f3 31 5f
+2c 5b c9 e9
+7a 26 a0 58
+63 d4 2d 2b
+59 82 a1 85
+f7 7c bf 64
+ab 07 8d 7e
+ec f3 7e 55
+ef 13 22 c0
+50 30 0b d9
+fd 35 29 e6
+3c ab 59 75
+1e ce 99 bd
+3e cb 46 d5
+15 75 18 53
+87 c4 16 a6
+9b 12 2b da
+85 99 aa 25
+a9 09 41 dc
+a4 80 09 74
+62 c3 ca b3
+13 c4 20 08
+b8 09 c0 ff
+c2 3c 3e 78
+04 10 42 32
+4c f1 a2 29
+e9 3a c5 36
+5f 88 b8 cf
+CRC	\\ CRC=91 99 e9 46
+EOFt(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+R-Rdy
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 02
+0a 0f 98 7c
+41 70 41 92
+44 40 27 a1
+81 ff ae 45
+ee 4c 5b c1
+e9 56 3d 68
+37 41 03 8a
+e0 bc 41 dc
+CRC	\\ CRC=f4 d6 c9 ce
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+SOFi3
+01 85 60 02
+0a 0f 98 7c
+41 70 41 92
+44 40 27 1e
+50 6e 16 63
+c4 3d 16 01
+7b b8 99 65
+69 42 44 cd
+77 96 f4 91
+CRC	\\ CRC=5c 81 d5 c1
+EOFn(+)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+ARB(FF,FF)
+		</Pattern>
+	</ComparePattern>
+</FinisarBERT>

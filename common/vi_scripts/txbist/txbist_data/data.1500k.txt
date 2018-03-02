@@ -1,0 +1,62 @@
+4096
+Test Name: data
+-----Sequence of Events
+[9a04][CH1] CMD (WR) - 0.000000ns
+[b58f][CH1] CMD (WR) - 560.490000ns
+[b58f][CH1] T_RDY - 1120.980000ns
+[b58f][CH1] DATA - 1657.920000ns
+[2b6d][CH1] CMD (WR) - 3306.420000ns
+[feb2][CH0] CMD (WR) - 3866.910000ns
+[efdb][CH0] CMD (WR) - 4427.400000ns
+[2b6d][CH1] T_RDY - 4987.890000ns
+[efdb][CH0] T_RDY - 5524.830000ns
+[e582][CH1] CMD (RD) - 6061.770000ns
+[2b6d][CH1] DATA - 6622.260000ns
+[9a04][CH1] T_RDY - 8270.760000ns
+[b58f][CH1] STATUS - 8807.700000ns
+[feb2][CH0] T_RDY - 9358.770000ns
+[2b6d][CH1] STATUS - 9895.710000ns
+[9a04][CH1] DATA - 10446.780000ns
+[feb2][CH0] DATA - 12095.280000ns
+[9a04][CH1] STATUS - 13743.780000ns
+[e582][CH1] DATA - 14294.850000ns
+[efdb][CH0] DATA - 15943.350000ns
+[e582][CH1] STATUS - 17591.850000ns
+[feb2][CH0] STATUS - 18128.790000ns
+[efdb][CH0] STATUS - 18679.860000ns
+-----
+Frame Report Summary
+-----
+OX_ID:b58f Type: CMD (WR)
+Time of CMD TX: 119.000000ns
+Time To First Response: 560.490000ns
+Exchange Completion Time: 8247.210000ns
+-----
+OX_ID:feb2 Type: CMD (WR)
+Time of CMD TX: 821.000000ns
+Time To First Response: 5491.860000ns
+Exchange Completion Time: 14261.880000ns
+-----
+OX_ID:e582 Type: CMD (RD)
+Time of CMD TX: 1287.000000ns
+Time To First Response: 8233.080000ns
+Exchange Completion Time: 11530.080000ns
+-----
+OX_ID:9a04 Type: CMD (WR)
+Time of CMD TX: 0.000000ns
+Time To First Response: 8270.760000ns
+Exchange Completion Time: 13743.780000ns
+-----
+OX_ID:efdb Type: CMD (WR)
+Time of CMD TX: 940.000000ns
+Time To First Response: 1097.430000ns
+Exchange Completion Time: 14252.460000ns
+-----
+OX_ID:2b6d Type: CMD (WR)
+Time of CMD TX: 702.000000ns
+Time To First Response: 1681.470000ns
+Exchange Completion Time: 6589.290000ns
+-----
+Reported Frame Rate: 1503201.300425
+Average Time To First Response: 4222.515000ns
+Average Exchange Completion Time: 11437.450000ns

@@ -1,0 +1,4 @@
+set_global_assignment -library pcie_mwr_bist_wrap -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../bali_pcie_app/include/pcie_app_pkg.sv]
+set_global_assignment -library pcie_mwr_bist_wrap -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) pcie_mwr_bist_wrap.sv]
+set_global_assignment -library pcie_mwr_bist_wrap -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) pcie_mwr_bist_regs.v]
+set_global_assignment -library pcie_mwr_bist_wrap -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) pcie_mwr_bist.sv]
