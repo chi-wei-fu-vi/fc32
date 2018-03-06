@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Fri Feb  9 15:22:02 2018
+| Date         : Mon Mar  5 11:16:10 2018
 | Host         : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
 | Command      : report_utilization -file pcie4_uscale_plus_1_utilization_synth.rpt -pb pcie4_uscale_plus_1_utilization_synth.pb
 | Design       : pcie4_uscale_plus_1
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| CLB LUTs*                  |  7623 |     0 |    522720 |  1.46 |
-|   LUT as Logic             |  7602 |     0 |    522720 |  1.45 |
+| CLB LUTs*                  |  7642 |     0 |    522720 |  1.46 |
+|   LUT as Logic             |  7621 |     0 |    522720 |  1.46 |
 |   LUT as Memory            |    21 |     0 |    161280 |  0.01 |
 |     LUT as Distributed RAM |     0 |     0 |           |       |
 |     LUT as Shift Register  |    21 |     0 |           |       |
@@ -126,10 +126,10 @@ Table of Contents
 |    Site Type    | Used | Fixed | Available | Util% |
 +-----------------+------+-------+-----------+-------+
 | CMACE4          |    0 |     0 |         4 |  0.00 |
-| GTHE4_CHANNEL   |    0 |     0 |        32 |  0.00 |
-| GTHE4_COMMON    |    0 |     0 |         8 |  0.00 |
-| GTYE4_CHANNEL   |    8 |     0 |        24 | 33.33 |
-| GTYE4_COMMON    |    2 |     0 |         6 | 33.33 |
+| GTHE4_CHANNEL   |    8 |     0 |        32 | 25.00 |
+| GTHE4_COMMON    |    2 |     0 |         8 | 25.00 |
+| GTYE4_CHANNEL   |    0 |     0 |        24 |  0.00 |
+| GTYE4_COMMON    |    0 |     0 |         6 |  0.00 |
 | ILKNE4          |    0 |     0 |         4 |  0.00 |
 | OBUFDS_GTE4     |    0 |     0 |        28 |  0.00 |
 | OBUFDS_GTE4_ADV |    0 |     0 |        28 |  0.00 |
@@ -162,10 +162,10 @@ Table of Contents
 |    Ref Name   |  Used | Functional Category |
 +---------------+-------+---------------------+
 | FDRE          | 10713 |            Register |
-| LUT6          |  2880 |                 CLB |
-| LUT5          |  2088 |                 CLB |
-| LUT4          |  1600 |                 CLB |
-| LUT3          |  1170 |                 CLB |
+| LUT6          |  2951 |                 CLB |
+| LUT5          |  2096 |                 CLB |
+| LUT4          |  1521 |                 CLB |
+| LUT3          |  1124 |                 CLB |
 | LUT2          |  1009 |                 CLB |
 | FDCE          |   569 |            Register |
 | CARRY8        |   171 |                 CLB |
@@ -178,9 +178,9 @@ Table of Contents
 | SRL16E        |    13 |                 CLB |
 | BUFG_GT_SYNC  |     9 |               Clock |
 | SRLC32E       |     8 |                 CLB |
-| GTYE4_CHANNEL |     8 |            Advanced |
+| GTHE4_CHANNEL |     8 |            Advanced |
 | MUXF8         |     7 |                 CLB |
-| GTYE4_COMMON  |     2 |            Advanced |
+| GTHE4_COMMON  |     2 |            Advanced |
 | PCIE40E4      |     1 |            Advanced |
 +---------------+-------+---------------------+
 

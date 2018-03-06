@@ -65,7 +65,7 @@ module xilinx_pcie4_uscale_ep # (
 */
   parameter [4:0]    PL_LINK_CAP_MAX_LINK_WIDTH     = 8,  // 1- X1, 2 - X2, 4 - X4, 8 - X8, 16 - X16
   parameter          C_DATA_WIDTH                   = 256,         // RX/TX interface data width
-  parameter          AXISTEN_IF_MC_RX_STRADDLE      = 0,
+  parameter          AXISTEN_IF_MC_RX_STRADDLE      = 1,
   parameter          PL_LINK_CAP_MAX_LINK_SPEED     = 4,  // 1- GEN1, 2 - GEN2, 4 - GEN3, 8 - GEN4
   parameter          KEEP_WIDTH                     = C_DATA_WIDTH / 32,
   parameter          EXT_PIPE_SIM                   = "FALSE",  // This Parameter has effect on selecting Enable External PIPE Interface in GUI.

@@ -6388,11 +6388,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 20:35:35 UTC 2018</spirit:value>
+            <spirit:value>Fri Mar 02 19:25:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:87daeddc</spirit:value>
+            <spirit:value>7:6a33960e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6407,11 +6407,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:18:30 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:12:35 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d55218c6</spirit:value>
+            <spirit:value>7:1372ae6d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6427,11 +6427,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:18:33 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:12:38 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d55218c6</spirit:value>
+            <spirit:value>7:1372ae6d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6446,11 +6446,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:18:33 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:12:38 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d55218c6</spirit:value>
+            <spirit:value>7:1372ae6d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6466,11 +6466,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:18:33 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:12:38 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d892aa4a</spirit:value>
+            <spirit:value>7:595d9ae0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6485,11 +6485,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:18:34 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:12:38 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d892aa4a</spirit:value>
+            <spirit:value>7:595d9ae0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6503,11 +6503,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:18:34 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:12:38 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d55218c6</spirit:value>
+            <spirit:value>7:1372ae6d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6521,11 +6521,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:18:34 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:12:38 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d55218c6</spirit:value>
+            <spirit:value>7:1372ae6d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6539,11 +6539,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 23:22:04 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 05 19:16:13 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:d55218c6</spirit:value>
+            <spirit:value>7:1372ae6d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19189,7 +19189,7 @@
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>AXISTEN_IF_RC_STRADDLE</spirit:name>
         <spirit:displayName>Axisten If Rc Straddle</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXISTEN_IF_RC_STRADDLE">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXISTEN_IF_RC_STRADDLE">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>PF0_AER_CAP_ECRC_GEN_AND_CHECK_CAPABLE</spirit:name>
@@ -20540,7 +20540,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>gen_x0y2_xdc</spirit:name>
         <spirit:displayName>Generate X0Y2 XDC</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gen_x0y2_xdc">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gen_x0y2_xdc">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>gen_x0y3_xdc</spirit:name>
@@ -20560,7 +20560,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>gen_x1y0_xdc</spirit:name>
         <spirit:displayName>Generate X1Y0 XDC</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gen_x1y0_xdc">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gen_x1y0_xdc">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>gen_x1y1_xdc</spirit:name>
@@ -20595,7 +20595,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>pcie_blk_locn</spirit:name>
         <spirit:displayName>Pcie Blk Locn</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pcie_blk_locn">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pcie_blk_locn">6</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>PIPE_SIM</spirit:name>
@@ -20783,7 +20783,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>SELECT_QUAD</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SELECT_QUAD">GTY_Quad_130</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SELECT_QUAD">GTH_Quad_227</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>silicon_revision</spirit:name>
@@ -21005,13 +21005,6 @@
       <spirit:enumeration>Backplane</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_11fe6f54</spirit:name>
-      <spirit:enumeration>GTY_Quad_130</spirit:enumeration>
-      <spirit:enumeration>GTY_Quad_129</spirit:enumeration>
-      <spirit:enumeration>GTY_Quad_128</spirit:enumeration>
-      <spirit:enumeration>GTY_Quad_127</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_1e9fb93b</spirit:name>
       <spirit:enumeration>X1</spirit:enumeration>
       <spirit:enumeration>X2</spirit:enumeration>
@@ -21046,6 +21039,14 @@
     <spirit:choice>
       <spirit:name>choice_list_4533bbc2</spirit:name>
       <spirit:enumeration>BAR_2</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_4a68658a</spirit:name>
+      <spirit:enumeration>None</spirit:enumeration>
+      <spirit:enumeration>Tandem_PROM</spirit:enumeration>
+      <spirit:enumeration>Tandem_PCIe</spirit:enumeration>
+      <spirit:enumeration>Tandem_PCIe_with_Field_Updates</spirit:enumeration>
+      <spirit:enumeration>PR_over_PCIe</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_4c7d106c</spirit:name>
@@ -21185,10 +21186,6 @@
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_6f5507b7</spirit:name>
-      <spirit:enumeration>None</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_75aee2a8</spirit:name>
       <spirit:enumeration>X8G3</spirit:enumeration>
       <spirit:enumeration>X16G3</spirit:enumeration>
@@ -21227,6 +21224,13 @@
       <spirit:name>choice_list_8b5e4915</spirit:name>
       <spirit:enumeration>4</spirit:enumeration>
       <spirit:enumeration>5</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_8bcf081d</spirit:name>
+      <spirit:enumeration>GTH_Quad_227</spirit:enumeration>
+      <spirit:enumeration>GTH_Quad_226</spirit:enumeration>
+      <spirit:enumeration>GTH_Quad_225</spirit:enumeration>
+      <spirit:enumeration>GTH_Quad_224</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_914704bd</spirit:name>
@@ -21401,7 +21405,7 @@
         </spirit:define>
       </spirit:file>
       <spirit:file>
-        <spirit:name>source/ip_pcie4_uscale_plus_x0y2.xdc</spirit:name>
+        <spirit:name>source/ip_pcie4_uscale_plus_x1y0.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -21822,7 +21826,7 @@
     <spirit:parameter>
       <spirit:name>AXISTEN_IF_RC_STRADDLE</spirit:name>
       <spirit:displayName>Axisten If Rc Straddle</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.AXISTEN_IF_RC_STRADDLE" spirit:choiceRef="choice_list_7a7dde49" spirit:order="302">false</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.AXISTEN_IF_RC_STRADDLE" spirit:choiceRef="choice_list_7a7dde49" spirit:order="302">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>axisten_if_enable_client_tag</spirit:name>
@@ -22665,7 +22669,7 @@
     <spirit:parameter>
       <spirit:name>pcie_blk_locn</spirit:name>
       <spirit:displayName>Pcie Blk Locn</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pcie_blk_locn" spirit:choiceRef="choice_list_87d07b18" spirit:order="4">X0Y2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pcie_blk_locn" spirit:choiceRef="choice_list_87d07b18" spirit:order="4">X1Y0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>pf0_sriov_bar1_64bit</spirit:name>
@@ -23814,7 +23818,7 @@
     <spirit:parameter>
       <spirit:name>gen_x0y2</spirit:name>
       <spirit:displayName>Gen X0y2</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gen_x0y2" spirit:choiceRef="choice_list_7a7dde49" spirit:order="7">true</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gen_x0y2" spirit:choiceRef="choice_list_7a7dde49" spirit:order="7">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -23862,7 +23866,7 @@
     <spirit:parameter>
       <spirit:name>gen_x1y0</spirit:name>
       <spirit:displayName>Gen X1y0</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gen_x1y0" spirit:choiceRef="choice_list_7a7dde49" spirit:order="329.2">false</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gen_x1y0" spirit:choiceRef="choice_list_7a7dde49" spirit:order="329.2">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -26379,14 +26383,7 @@
     <spirit:parameter>
       <spirit:name>mcap_enablement</spirit:name>
       <spirit:displayName>MCAP Enable</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.mcap_enablement" spirit:choiceRef="choice_list_6f5507b7" spirit:order="330">None</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.mcap_enablement">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.mcap_enablement" spirit:choiceRef="choice_list_4a68658a" spirit:order="330">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>enable_code</spirit:name>
@@ -26406,7 +26403,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>select_quad</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.select_quad" spirit:choiceRef="choice_list_11fe6f54" spirit:order="4.5">GTY_Quad_130</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.select_quad" spirit:choiceRef="choice_list_8bcf081d" spirit:order="4.5">GTH_Quad_227</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -26610,7 +26607,11 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.en_parity" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.en_pcie_drp" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.en_transceiver_status_ports" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.gen_x0y2" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.gen_x0y3" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.gen_x1y0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.mode_selection" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pcie_blk_locn" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_bar0_enabled" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_bar0_type" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_bar1_enabled" xilinx:valueSource="user"/>
@@ -26648,6 +26649,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf3_vendor_id" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pipe_sim" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.plltype" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.select_quad" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.type1_membase_memlimit_enable" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.type1_prefetchable_membase_memlimit" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.vendor_id" xilinx:valueSource="user"/>

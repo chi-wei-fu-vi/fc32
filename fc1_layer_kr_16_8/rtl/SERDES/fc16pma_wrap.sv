@@ -380,6 +380,10 @@ generate
 
         assign atx_pll_locked_425[gi] = 1'b1;              //   per channel PLL locked from ATX PLLs fixme
         assign atx_pll_locked_219[gi] = 1'b1;              //   per channel PLL locked from ATX PLLs fixme
+  end
+endgenerate
+generate
+  for (gi    =  0; gi < 24; gi   =  gi+1) begin : bufg_gen
 BUFG_GT txusrclk2_bufg_inst   (.I (txoutclk_out[gi] ), .CE (1'b1     ), .O   (txusrclk2_in[gi]), .CLR(userclk_tx_reset_in));
 //BUFG_GT txusrclk_bufg_inst    (.I (txoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (txusrclk_in[gi]  ), .CLR(userclk_tx_reset_in));
 BUFG_GT rxusrclk2_bufg_inst   (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .O   (rxusrclk2_in[gi]), .CLR(userclk_rx_reset_in));
@@ -390,11 +394,44 @@ endgenerate
 
 //assign tx_pma_clkout = txoutclk_out;
 //assign rx_pma_clkout = rxoutclk_out;
-assign txusrclk_in=txusrclk2_in;
-assign rxusrclk_in=rxusrclk2_in;
-assign tx_pma_clkout = txusrclk_in;
-assign rx_pma_clkout = rxusrclk_in;
+assign txusrclk_in[0 +: 24]=txusrclk2_in[0 +: 24];
+assign rxusrclk_in[0 +: 24]=rxusrclk2_in[0 +: 24];
+assign tx_pma_clkout = {2'b0,txusrclk_in[0 +: 24]};
+assign rx_pma_clkout = {2'b0,rxusrclk_in[0 +: 24]};
 
+s5_native_phy_16gbps s5_native_phy_16gbps ( 
+  .gtwiz_userclk_tx_active_in( gtwiz_userclk_tx_active_in                         ),                  // input wire [0 : 0] gtwiz_userclk_tx_active_in
+  .gtwiz_userclk_rx_active_in( gtwiz_userclk_rx_active_in                         ),                  // input wire [0 : 0] gtwiz_userclk_rx_active_in
+  .gtwiz_reset_clk_freerun_in( mgmt_clk_clk                                       ),                  // input wire [0 : 0] gtwiz_reset_clk_freerun_in
+  .gtwiz_reset_all_in( rst                                                ),                                  // input wire [0 : 0] gtwiz_reset_all_in
+  .gtwiz_reset_tx_pll_and_datapath_in( !tx_rst_n                                          ),  // input wire [0 : 0] gtwiz_reset_tx_pll_and_datapath_in
+  .gtwiz_reset_tx_datapath_in( !tx_rst_n                                          ),                  // input wire [0 : 0] gtwiz_reset_tx_datapath_in
+  .gtwiz_reset_rx_pll_and_datapath_in( !rx_rst_n                                          ),  // input wire [0 : 0] gtwiz_reset_rx_pll_and_datapath_in
+  .gtwiz_reset_rx_datapath_in( !rx_rst_n                                          ),                  // input wire [0 : 0] gtwiz_reset_rx_datapath_in
+  .gtwiz_reset_rx_cdr_stable_out( gtwiz_reset_rx_cdr_stable_out                      ),            // output wire [0 : 0] gtwiz_reset_rx_cdr_stable_out
+  .gtwiz_reset_tx_done_out( gtwiz_reset_tx_done_out                            ),                        // output wire [0 : 0] gtwiz_reset_tx_done_out
+  .gtwiz_reset_rx_done_out( gtwiz_reset_rx_done_out                            ),                        // output wire [0 : 0] gtwiz_reset_rx_done_out
+  .gtwiz_userdata_tx_in( gtwiz_userdata_tx_in [1535 : 0]                              ),                              // input wire [1535 : 0] gtwiz_userdata_tx_in
+  .gtwiz_userdata_rx_out( gtwiz_userdata_rx_out [1535 : 0]                             ),                            // output wire [1535 : 0] gtwiz_userdata_rx_out
+  .gtrefclk00_in( {{3{ref_clk_425[1]}},{3{ref_clk_425[0]}}}          ),                                            // input wire [5 : 0] gtrefclk00_in
+  .qpll0outclk_out( qpll0outclk_out                                    ),                                        // output wire [5 : 0] qpll0outclk_out
+  .qpll0outrefclk_out( qpll0outrefclk_out                                 ),                                  // output wire [5 : 0] qpll0outrefclk_out
+  .gtyrxn_in( rx_serial_data_n                                   ),                                                    // input wire [23 : 0] gtyrxn_in
+  .gtyrxp_in( rx_serial_data                                     ),                                                    // input wire [23 : 0] gtyrxp_in
+  .rxusrclk_in( rxusrclk_in                                        ),                                                // input wire [23 : 0] rxusrclk_in
+  .rxusrclk2_in( rxusrclk2_in                                       ),                                              // input wire [23 : 0] rxusrclk2_in
+  .txusrclk_in( txusrclk_in                                        ),                                                // input wire [23 : 0] txusrclk_in
+  .txusrclk2_in( txusrclk2_in                                       ),                                              // input wire [23 : 0] txusrclk2_in
+  .gtpowergood_out( gtpowergood_out                                    ),                                        // output wire [23 : 0] gtpowergood_out
+  .gtytxn_out( tx_serial_data_n                                   ),                                                  // output wire [23 : 0] gtytxn_out
+  .gtytxp_out( tx_serial_data                                     ),                                                  // output wire [23 : 0] gtytxp_out
+  .rxoutclk_out( rxoutclk_out                                       ),                                              // output wire [23 : 0] rxoutclk_out
+  .rxpmaresetdone_out(rxpmaresetdone_out),                                  // output wire [23 : 0] rxpmaresetdone_out
+  .txoutclk_out( txoutclk_out                                       ),                                              // output wire [23 : 0] txoutclk_out
+  .txpmaresetdone_out( txpmaresetdone_out                                 )                                  // output wire [23 : 0] txpmaresetdone_out
+);
+assign gtwiz_userdata_rx_out[1536 +: 128]=128'b0;
+/*
 s5_native_phy_16gbps s5_native_phy_16gbps (
   .gtwiz_userdata_tx_in(gtwiz_userdata_tx_in),                              // input wire [1663 : 0] gtwiz_userdata_tx_in
   .gtwiz_userdata_rx_out(gtwiz_userdata_rx_out),                            // output wire [1663 : 0] gtwiz_userdata_rx_out
@@ -439,6 +476,7 @@ s5_native_phy_16gbps s5_native_phy_16gbps (
   .qpll0outclk_out(qpll0outclk_out),                                        // output wire [6 : 0] qpll0outclk_out
   .qpll0outrefclk_out(qpll0outrefclk_out)                                   // output wire [6 : 0] qpll0outrefclk_out
 );
+*/
 
 
 //genvar                      gi;

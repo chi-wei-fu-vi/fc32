@@ -65,24 +65,24 @@ COMPONENT s5_native_phy_16gbps
     gtwiz_reset_rx_cdr_stable_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     gtwiz_reset_tx_done_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     gtwiz_reset_rx_done_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_userdata_tx_in : IN STD_LOGIC_VECTOR(1663 DOWNTO 0);
-    gtwiz_userdata_rx_out : OUT STD_LOGIC_VECTOR(1663 DOWNTO 0);
-    gtrefclk00_in : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-    qpll0outclk_out : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-    qpll0outrefclk_out : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-    gthrxn_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-    gthrxp_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-    rxusrclk_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-    rxusrclk2_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-    txusrclk_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-    txusrclk2_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-    gthtxn_out : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
-    gthtxp_out : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
-    gtpowergood_out : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
-    rxoutclk_out : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
-    rxpmaresetdone_out : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
-    txoutclk_out : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
-    txpmaresetdone_out : OUT STD_LOGIC_VECTOR(25 DOWNTO 0)
+    gtwiz_userdata_tx_in : IN STD_LOGIC_VECTOR(1535 DOWNTO 0);
+    gtwiz_userdata_rx_out : OUT STD_LOGIC_VECTOR(1535 DOWNTO 0);
+    gtrefclk00_in : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+    qpll0outclk_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    qpll0outrefclk_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    gtyrxn_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    gtyrxp_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    rxusrclk_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    rxusrclk2_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    txusrclk_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    txusrclk2_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    gtpowergood_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+    gtytxn_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+    gtytxp_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+    rxoutclk_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+    rxpmaresetdone_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+    txoutclk_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+    txpmaresetdone_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -109,15 +109,15 @@ your_instance_name : s5_native_phy_16gbps
     gtrefclk00_in => gtrefclk00_in,
     qpll0outclk_out => qpll0outclk_out,
     qpll0outrefclk_out => qpll0outrefclk_out,
-    gthrxn_in => gthrxn_in,
-    gthrxp_in => gthrxp_in,
+    gtyrxn_in => gtyrxn_in,
+    gtyrxp_in => gtyrxp_in,
     rxusrclk_in => rxusrclk_in,
     rxusrclk2_in => rxusrclk2_in,
     txusrclk_in => txusrclk_in,
     txusrclk2_in => txusrclk2_in,
-    gthtxn_out => gthtxn_out,
-    gthtxp_out => gthtxp_out,
     gtpowergood_out => gtpowergood_out,
+    gtytxn_out => gtytxn_out,
+    gtytxp_out => gtytxp_out,
     rxoutclk_out => rxoutclk_out,
     rxpmaresetdone_out => rxpmaresetdone_out,
     txoutclk_out => txoutclk_out,

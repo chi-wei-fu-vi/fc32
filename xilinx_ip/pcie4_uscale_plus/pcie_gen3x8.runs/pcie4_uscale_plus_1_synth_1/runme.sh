@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1'
+HD_PWD='/home/chiwei/work/checkout/fc32.git/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -33,11 +33,11 @@ vlog -work gtwizard_ultrascale_v1_7_1  -v2k5 \
 "../../../ipstatic/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v" \
 
 vlog -work xil_defaultlib  -v2k5 \
-"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/gtwizard_ultrascale_v1_7_gthe4_channel.v" \
-"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps_gthe4_channel_wrapper.v" \
-"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/gtwizard_ultrascale_v1_7_gthe4_common.v" \
-"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps_gthe4_common_wrapper.v" \
-"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps_gtwizard_gthe4.v" \
+"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/gtwizard_ultrascale_v1_7_gtye4_channel.v" \
+"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps_gtye4_channel_wrapper.v" \
+"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/gtwizard_ultrascale_v1_7_gtye4_common.v" \
+"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps_gtye4_common_wrapper.v" \
+"../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps_gtwizard_gtye4.v" \
 "../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps_gtwizard_top.v" \
 "../../../../gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/sim/s5_native_phy_16gbps.v" \
 

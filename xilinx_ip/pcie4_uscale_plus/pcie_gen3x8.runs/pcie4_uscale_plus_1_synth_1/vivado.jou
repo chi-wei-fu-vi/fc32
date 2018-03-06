@@ -2,11 +2,11 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Fri Feb  9 15:18:39 2018
-# Process ID: 9270
-# Current directory: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1
+# Start of session at: Mon Mar  5 11:12:44 2018
+# Process ID: 10589
+# Current directory: /home/chiwei/work/checkout/fc32.git/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1
 # Command line: vivado -log pcie4_uscale_plus_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pcie4_uscale_plus_1.tcl
-# Log file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1/pcie4_uscale_plus_1.vds
-# Journal file: /home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1/vivado.jou
+# Log file: /home/chiwei/work/checkout/fc32.git/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1/pcie4_uscale_plus_1.vds
+# Journal file: /home/chiwei/work/checkout/fc32.git/xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.runs/pcie4_uscale_plus_1_synth_1/vivado.jou
 #-----------------------------------------------------------
 source pcie4_uscale_plus_1.tcl -notrace

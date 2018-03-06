@@ -42,11 +42,11 @@ vlog -work gtwizard_ultrascale_v1_7_1 -64 "+incdir+../../../../pcie4_uscale_plus
 "../../../ipstatic/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/source" "+incdir+../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/source" \
-"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gtye4_channel.v" \
-"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtye4_channel_wrapper.v" \
-"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gtye4_common.v" \
-"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtye4_common_wrapper.v" \
-"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtwizard_gtye4.v" \
+"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gthe4_channel.v" \
+"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gthe4_channel_wrapper.v" \
+"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gthe4_common.v" \
+"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gthe4_common_wrapper.v" \
+"../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtwizard_gthe4.v" \
 "../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtwizard_top.v" \
 "../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt.v" \
 "../../../../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/source/pcie4_uscale_plus_1_gtwizard_top.v" \

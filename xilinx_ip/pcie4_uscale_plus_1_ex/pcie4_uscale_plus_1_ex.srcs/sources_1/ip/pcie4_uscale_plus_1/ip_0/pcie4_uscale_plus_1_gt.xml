@@ -15,7 +15,7 @@
 				<spirit:parameters>
 					<spirit:parameter>
 						<spirit:name>outputProductCRC</spirit:name>
-						<spirit:value>7:259c0680</spirit:value>
+						<spirit:value>7:7bd837e6</spirit:value>
 					</spirit:parameter>
 				</spirit:parameters>
 			</spirit:view>
@@ -31,11 +31,11 @@
 				<spirit:parameters>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Fri Feb 09 23:18:36 UTC 2018</spirit:value>
+						<spirit:value>Mon Mar 05 19:12:40 UTC 2018</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>outputProductCRC</spirit:name>
-						<spirit:value>7:10b0cd5f</spirit:value>
+						<spirit:value>7:3ca7b0aa</spirit:value>
 					</spirit:parameter>
 				</spirit:parameters>
 			</spirit:view>
@@ -50,11 +50,11 @@
 				<spirit:parameters>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Fri Feb 09 23:18:36 UTC 2018</spirit:value>
+						<spirit:value>Mon Mar 05 19:12:40 UTC 2018</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>outputProductCRC</spirit:name>
-						<spirit:value>7:10b0cd5f</spirit:value>
+						<spirit:value>7:3ca7b0aa</spirit:value>
 					</spirit:parameter>
 				</spirit:parameters>
 			</spirit:view>
@@ -70,11 +70,11 @@
 				<spirit:parameters>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Fri Feb 09 23:18:37 UTC 2018</spirit:value>
+						<spirit:value>Mon Mar 05 19:12:42 UTC 2018</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>outputProductCRC</spirit:name>
-						<spirit:value>7:d3721061</spirit:value>
+						<spirit:value>7:c8d37e62</spirit:value>
 					</spirit:parameter>
 				</spirit:parameters>
 			</spirit:view>
@@ -89,11 +89,11 @@
 				<spirit:parameters>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Fri Feb 09 23:18:38 UTC 2018</spirit:value>
+						<spirit:value>Mon Mar 05 19:12:42 UTC 2018</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>outputProductCRC</spirit:name>
-						<spirit:value>7:d3721061</spirit:value>
+						<spirit:value>7:c8d37e62</spirit:value>
 					</spirit:parameter>
 				</spirit:parameters>
 			</spirit:view>
@@ -1301,9 +1301,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
+							<xilinx:presence>required</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtwiz_gthe4_cpll_cal_txoutclk_period_in">false</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtwiz_gthe4_cpll_cal_txoutclk_period_in">true</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -1332,9 +1332,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
+							<xilinx:presence>required</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtwiz_gthe4_cpll_cal_cnt_tol_in">false</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtwiz_gthe4_cpll_cal_cnt_tol_in">true</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -1363,9 +1363,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
+							<xilinx:presence>required</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtwiz_gthe4_cpll_cal_bufg_ce_in">false</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtwiz_gthe4_cpll_cal_bufg_ce_in">true</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -1394,9 +1394,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>required</xilinx:presence>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtwiz_gtye4_cpll_cal_txoutclk_period_in">true</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtwiz_gtye4_cpll_cal_txoutclk_period_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -1425,9 +1425,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>required</xilinx:presence>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtwiz_gtye4_cpll_cal_cnt_tol_in">true</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtwiz_gtye4_cpll_cal_cnt_tol_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -1456,9 +1456,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>required</xilinx:presence>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtwiz_gtye4_cpll_cal_bufg_ce_in">true</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtwiz_gtye4_cpll_cal_bufg_ce_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -1637,7 +1637,7 @@
 					</spirit:wireTypeDefs>
 					<spirit:driver>
 						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="10">0x210</spirit:defaultValue>
+								spirit:bitStringLength="10">0x3FF</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
@@ -3287,7 +3287,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 10))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 10))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">19</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3298,13 +3298,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="20">0x00000</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.tcongpi_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3318,7 +3318,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">1</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3329,13 +3329,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="2">0x0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.tconpowerup_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3349,7 +3349,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">3</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3360,13 +3360,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="4">0x0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.tconreset_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3380,7 +3380,38 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">3</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>wire</spirit:typeName>
+							<spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+					<spirit:driver>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="4">0x0</spirit:defaultValue>
+					</spirit:driver>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<xilinx:portInfo>
+						<xilinx:enablement>
+							<xilinx:isEnabled xilinx:resolve="generated"
+									xilinx:id="PORT_ENABLEMENT.tconrsvdin1_in">false</xilinx:isEnabled>
+						</xilinx:enablement>
+					</xilinx:portInfo>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>ubcfgstreamen_in</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long"
+								spirit:resolve="dependent"
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3399,37 +3430,6 @@
 						<xilinx:enablement>
 							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.tconrsvdin1_in">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>ubcfgstreamen_in</spirit:name>
-				<spirit:wire>
-					<spirit:direction>in</spirit:direction>
-					<spirit:vector>
-						<spirit:left spirit:format="long"
-								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
-						<spirit:right spirit:format="long">0</spirit:right>
-					</spirit:vector>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>wire</spirit:typeName>
-							<spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-							<spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
-					</spirit:driver>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubcfgstreamen_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
@@ -3442,7 +3442,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 16))) - 1)">31</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 16))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3453,13 +3453,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="32">0x00000000</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubdo_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3473,7 +3473,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3484,13 +3484,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubdrdy_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3504,7 +3504,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3515,13 +3515,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubenable_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3535,7 +3535,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) - 1)">3</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3546,13 +3546,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="4">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubgpi_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3566,7 +3566,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) - 1)">3</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 2))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3577,13 +3577,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="4">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubintr_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3597,7 +3597,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3608,13 +3608,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubiolmbrst_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3628,7 +3628,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3639,13 +3639,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmbrst_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3659,7 +3659,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3670,13 +3670,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmcapture_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3690,7 +3690,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3701,13 +3701,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmdbgrst_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3721,7 +3721,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3732,13 +3732,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmdbgupdate_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3752,7 +3752,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 4))) - 1)">7</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 4))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3763,13 +3763,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="8">0x00</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmregen_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3783,7 +3783,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3794,13 +3794,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmshift_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3814,7 +3814,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3825,13 +3825,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmsysrst_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3845,7 +3845,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3856,13 +3856,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmtck_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -3876,7 +3876,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -3887,13 +3887,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="bitString"
-								spirit:bitStringLength="2">0x0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmtdi_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -4692,7 +4692,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 10))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 10))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">19</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4709,7 +4709,6 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.tcongpo_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -4723,7 +4722,37 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">1</spirit:left>
+						<spirit:right spirit:format="long">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>wire</spirit:typeName>
+							<spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+					<spirit:driver>
+						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+					</spirit:driver>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<xilinx:portInfo>
+						<xilinx:enablement>
+							<xilinx:isEnabled xilinx:resolve="generated"
+									xilinx:id="PORT_ENABLEMENT.tconrsvdout0_out">false</xilinx:isEnabled>
+						</xilinx:enablement>
+					</xilinx:portInfo>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>ubdaddr_out</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long"
+								spirit:resolve="dependent"
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 16))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4742,36 +4771,6 @@
 						<xilinx:enablement>
 							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.tconrsvdout0_out">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>ubdaddr_out</spirit:name>
-				<spirit:wire>
-					<spirit:direction>out</spirit:direction>
-					<spirit:vector>
-						<spirit:left spirit:format="long"
-								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 16))) - 1)">31</spirit:left>
-						<spirit:right spirit:format="long">0</spirit:right>
-					</spirit:vector>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>wire</spirit:typeName>
-							<spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-							<spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-					</spirit:driver>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubdaddr_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
@@ -4784,7 +4783,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4801,6 +4800,7 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubden_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -4814,7 +4814,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 16))) - 1)">31</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 16))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4831,6 +4831,7 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubdi_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -4844,7 +4845,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4861,6 +4862,7 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubdwe_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -4874,7 +4876,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4891,6 +4893,7 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubmdmtdo_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -4904,7 +4907,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4921,6 +4924,7 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubrsvdout_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -4934,7 +4938,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">1</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_COMMON_SCALING_FACTOR&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -4951,6 +4955,7 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.ubtxuart_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -5976,7 +5981,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -5993,9 +5998,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
+							<xilinx:presence>required</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gthrxn_in">false</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gthrxn_in">true</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -6007,7 +6012,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -6024,9 +6029,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
+							<xilinx:presence>required</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gthrxp_in">false</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gthrxp_in">true</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -6440,7 +6445,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">7</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -6457,9 +6462,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>required</xilinx:presence>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtyrxn_in">true</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtyrxn_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -6471,7 +6476,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">7</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -6488,9 +6493,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>required</xilinx:presence>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtyrxp_in">true</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtyrxp_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -7580,7 +7585,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 2)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 2))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 2)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 2))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">15</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -7591,13 +7596,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="16">0x5555</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.rxdfeagcctrl_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -10186,7 +10191,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -10197,13 +10202,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="8">0x00</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.rxphovrden_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -10399,7 +10404,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -10410,13 +10415,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="8">0x00</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.rxqpien_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -12830,7 +12835,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -12841,13 +12846,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="8">0x00</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.txqpibiasen_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -12892,7 +12897,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -12903,13 +12908,13 @@
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
 					<spirit:driver>
-						<spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+						<spirit:defaultValue spirit:format="bitString"
+								spirit:bitStringLength="8">0x00</spirit:defaultValue>
 					</spirit:driver>
 				</spirit:wire>
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.txqpiweakpup_in">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -13652,7 +13657,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -13669,9 +13674,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
+							<xilinx:presence>required</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gthtxn_out">false</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gthtxn_out">true</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -13683,7 +13688,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -13700,9 +13705,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
+							<xilinx:presence>required</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gthtxp_out">false</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gthtxp_out">true</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -13775,7 +13780,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">7</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -13792,9 +13797,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>required</xilinx:presence>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtytxn_out">true</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtytxn_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -13806,7 +13811,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">7</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * 1) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) - 1)">0</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -13823,9 +13828,9 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>required</xilinx:presence>
+							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
-									xilinx:id="PORT_ENABLEMENT.gtytxp_out">true</xilinx:isEnabled>
+									xilinx:id="PORT_ENABLEMENT.gtytxp_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
 					</xilinx:portInfo>
 				</spirit:vendorExtensions>
@@ -15530,7 +15535,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -15547,7 +15552,6 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.rxqpisenn_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -15561,7 +15565,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -15578,7 +15582,6 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.rxqpisenp_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -16289,7 +16292,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -16306,7 +16309,6 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.txqpisenn_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -16320,7 +16322,7 @@
 					<spirit:vector>
 						<spirit:left spirit:format="long"
 								spirit:resolve="dependent"
-								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">0</spirit:left>
+								spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 0) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 1) * 1)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 2) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * 1))) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_GT_TYPE&apos;)) = 3) * 1)) - 1)">7</spirit:left>
 						<spirit:right spirit:format="long">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -16337,7 +16339,6 @@
 				<spirit:vendorExtensions>
 					<xilinx:portInfo>
 						<xilinx:enablement>
-							<xilinx:presence>illegal</xilinx:presence>
 							<xilinx:isEnabled xilinx:resolve="generated"
 									xilinx:id="PORT_ENABLEMENT.txqpisenp_out">false</xilinx:isEnabled>
 						</xilinx:enablement>
@@ -16517,13 +16518,13 @@
 				<spirit:name>C_GT_TYPE</spirit:name>
 				<spirit:value spirit:format="long"
 						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_GT_TYPE">3</spirit:value>
+						spirit:id="MODELPARAM_VALUE.C_GT_TYPE">2</spirit:value>
 			</spirit:modelParameter>
 			<spirit:modelParameter spirit:dataType="integer">
 				<spirit:name>C_GT_REV</spirit:name>
 				<spirit:value spirit:format="long"
 						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_GT_REV">67</spirit:value>
+						spirit:id="MODELPARAM_VALUE.C_GT_REV">57</spirit:value>
 			</spirit:modelParameter>
 			<spirit:modelParameter spirit:dataType="integer">
 				<spirit:name>C_INCLUDE_CPLL_CAL</spirit:name>
@@ -17084,25 +17085,6 @@
 			<spirit:enumeration>62.5</spirit:enumeration>
 		</spirit:choice>
 		<spirit:choice>
-			<spirit:name>choice_list_3145f35e</spirit:name>
-			<spirit:enumeration>100</spirit:enumeration>
-			<spirit:enumeration>200</spirit:enumeration>
-			<spirit:enumeration>250</spirit:enumeration>
-			<spirit:enumeration>330</spirit:enumeration>
-			<spirit:enumeration>350</spirit:enumeration>
-			<spirit:enumeration>400</spirit:enumeration>
-			<spirit:enumeration>500</spirit:enumeration>
-			<spirit:enumeration>550</spirit:enumeration>
-			<spirit:enumeration>600</spirit:enumeration>
-			<spirit:enumeration>700</spirit:enumeration>
-			<spirit:enumeration>800</spirit:enumeration>
-			<spirit:enumeration>850</spirit:enumeration>
-			<spirit:enumeration>900</spirit:enumeration>
-			<spirit:enumeration>950</spirit:enumeration>
-			<spirit:enumeration>1000</spirit:enumeration>
-			<spirit:enumeration>1100</spirit:enumeration>
-		</spirit:choice>
-		<spirit:choice>
 			<spirit:name>choice_list_3179277f</spirit:name>
 			<spirit:enumeration>QPLL0</spirit:enumeration>
 			<spirit:enumeration>QPLL1</spirit:enumeration>
@@ -17593,6 +17575,25 @@
 			<spirit:enumeration>800</spirit:enumeration>
 		</spirit:choice>
 		<spirit:choice>
+			<spirit:name>choice_list_f490bbca</spirit:name>
+			<spirit:enumeration>260</spirit:enumeration>
+			<spirit:enumeration>260</spirit:enumeration>
+			<spirit:enumeration>306</spirit:enumeration>
+			<spirit:enumeration>345</spirit:enumeration>
+			<spirit:enumeration>388</spirit:enumeration>
+			<spirit:enumeration>430</spirit:enumeration>
+			<spirit:enumeration>520</spirit:enumeration>
+			<spirit:enumeration>563</spirit:enumeration>
+			<spirit:enumeration>610</spirit:enumeration>
+			<spirit:enumeration>700</spirit:enumeration>
+			<spirit:enumeration>800</spirit:enumeration>
+			<spirit:enumeration>830</spirit:enumeration>
+			<spirit:enumeration>875</spirit:enumeration>
+			<spirit:enumeration>915</spirit:enumeration>
+			<spirit:enumeration>960</spirit:enumeration>
+			<spirit:enumeration>1030</spirit:enumeration>
+		</spirit:choice>
+		<spirit:choice>
 			<spirit:name>choice_pairs_03018cc1</spirit:name>
 			<spirit:enumeration spirit:text="1">1</spirit:enumeration>
 			<spirit:enumeration spirit:text="2">2</spirit:enumeration>
@@ -17918,30 +17919,30 @@
 				<spirit:logicalName>gtwizard_ultrascale_v1_7_1</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>synth/gtwizard_ultrascale_v1_7_gtye4_channel.v</spirit:name>
+				<spirit:name>synth/gtwizard_ultrascale_v1_7_gthe4_channel.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>synth/pcie4_uscale_plus_1_gt_gtye4_channel_wrapper.v</spirit:name>
+				<spirit:name>synth/pcie4_uscale_plus_1_gt_gthe4_channel_wrapper.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>synth/gtwizard_ultrascale_v1_7_gtye4_common.v</spirit:name>
+				<spirit:name>synth/gtwizard_ultrascale_v1_7_gthe4_common.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>synth/pcie4_uscale_plus_1_gt_gtye4_common_wrapper.v</spirit:name>
+				<spirit:name>synth/pcie4_uscale_plus_1_gt_gthe4_common_wrapper.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>synth/pcie4_uscale_plus_1_gt_gtwizard_gtye4.v</spirit:name>
+				<spirit:name>synth/pcie4_uscale_plus_1_gt_gtwizard_gthe4.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
-				<spirit:exportedName>pcie4_uscale_plus_1_gt_gtwizard_gtye4</spirit:exportedName>
+				<spirit:exportedName>pcie4_uscale_plus_1_gt_gtwizard_gthe4</spirit:exportedName>
 			</spirit:file>
 			<spirit:file>
 				<spirit:name>synth/pcie4_uscale_plus_1_gt_gtwizard_top.v</spirit:name>
@@ -18099,30 +18100,30 @@
 				<spirit:logicalName>gtwizard_ultrascale_v1_7_1</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>sim/gtwizard_ultrascale_v1_7_gtye4_channel.v</spirit:name>
+				<spirit:name>sim/gtwizard_ultrascale_v1_7_gthe4_channel.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>sim/pcie4_uscale_plus_1_gt_gtye4_channel_wrapper.v</spirit:name>
+				<spirit:name>sim/pcie4_uscale_plus_1_gt_gthe4_channel_wrapper.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>sim/gtwizard_ultrascale_v1_7_gtye4_common.v</spirit:name>
+				<spirit:name>sim/gtwizard_ultrascale_v1_7_gthe4_common.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>sim/pcie4_uscale_plus_1_gt_gtye4_common_wrapper.v</spirit:name>
+				<spirit:name>sim/pcie4_uscale_plus_1_gt_gthe4_common_wrapper.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
 			</spirit:file>
 			<spirit:file>
-				<spirit:name>sim/pcie4_uscale_plus_1_gt_gtwizard_gtye4.v</spirit:name>
+				<spirit:name>sim/pcie4_uscale_plus_1_gt_gtwizard_gthe4.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:logicalName>xil_defaultlib</spirit:logicalName>
-				<spirit:exportedName>pcie4_uscale_plus_1_gt_gtwizard_gtye4</spirit:exportedName>
+				<spirit:exportedName>pcie4_uscale_plus_1_gt_gtwizard_gthe4</spirit:exportedName>
 			</spirit:file>
 			<spirit:file>
 				<spirit:name>sim/pcie4_uscale_plus_1_gt_gtwizard_top.v</spirit:name>
@@ -18149,13 +18150,13 @@
 			<spirit:value spirit:resolve="user"
 					spirit:id="PARAM_VALUE.GT_TYPE"
 					spirit:choiceRef="choice_list_20920dd1"
-					spirit:order="2">GTY</spirit:value>
+					spirit:order="2">GTH</spirit:value>
 		</spirit:parameter>
 		<spirit:parameter>
 			<spirit:name>INTERNAL_GT_PRIM_TYPE</spirit:name>
 			<spirit:value spirit:resolve="generated"
 					spirit:id="PARAM_VALUE.INTERNAL_GT_PRIM_TYPE"
-					spirit:order="3">gtye4</spirit:value>
+					spirit:order="3">gthe4</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -18419,7 +18420,7 @@
 					spirit:id="PARAM_VALUE.TX_LINE_RATE"
 					spirit:order="24"
 					spirit:minimum="0.5"
-					spirit:maximum="32.75">8</spirit:value>
+					spirit:maximum="16.375">8</spirit:value>
 		</spirit:parameter>
 		<spirit:parameter>
 			<spirit:name>TX_PLL_TYPE</spirit:name>
@@ -18518,7 +18519,7 @@
 					spirit:id="PARAM_VALUE.RX_LINE_RATE"
 					spirit:order="34"
 					spirit:minimum="0.5"
-					spirit:maximum="32.75">8</spirit:value>
+					spirit:maximum="16.375">8</spirit:value>
 		</spirit:parameter>
 		<spirit:parameter>
 			<spirit:name>RX_PLL_TYPE</spirit:name>
@@ -18662,7 +18663,7 @@
 			<spirit:value spirit:format="long"
 					spirit:resolve="user"
 					spirit:id="PARAM_VALUE.RX_TERMINATION_PROG_VALUE"
-					spirit:choiceRef="choice_list_3145f35e"
+					spirit:choiceRef="choice_list_f490bbca"
 					spirit:order="49">800</spirit:value>
 		</spirit:parameter>
 		<spirit:parameter>
@@ -20212,7 +20213,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 			<spirit:value spirit:format="long"
 					spirit:resolve="generated"
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLEMENT_UPDATED"
-					spirit:order="165">24</spirit:value>
+					spirit:order="165">23</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -20226,7 +20227,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 			<spirit:value spirit:format="long"
 					spirit:resolve="generated"
 					spirit:id="PARAM_VALUE.INTERNAL_CHANNEL_SITES_UPDATED"
-					spirit:order="166">6</spirit:value>
+					spirit:order="166">5</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -20254,7 +20255,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 			<spirit:value spirit:format="long"
 					spirit:resolve="generated"
 					spirit:id="PARAM_VALUE.INTERNAL_RX_COMMA_PRESET_UPDATE"
-					spirit:order="168">7</spirit:value>
+					spirit:order="168">6</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -20295,7 +20296,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.SECONDARY_QPLL_LINE_RATE"
 					spirit:order="171"
 					spirit:minimum="0.5"
-					spirit:maximum="32.75">10.3125</spirit:value>
+					spirit:maximum="16.375">10.3125</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -21071,7 +21072,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTWIZ_GTHE4_CPLL_CAL_TXOUTCLK_PERIOD_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -21087,7 +21088,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTWIZ_GTHE4_CPLL_CAL_CNT_TOL_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -21103,7 +21104,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTWIZ_GTHE4_CPLL_CAL_BUFG_CE_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -21119,7 +21120,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTWIZ_GTYE4_CPLL_CAL_TXOUTCLK_PERIOD_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">1</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -21135,7 +21136,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTWIZ_GTYE4_CPLL_CAL_CNT_TOL_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">1</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -21151,7 +21152,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTWIZ_GTYE4_CPLL_CAL_BUFG_CE_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">1</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22111,7 +22112,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TCONGPI_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22127,7 +22128,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TCONPOWERUP_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22143,7 +22144,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TCONRESET_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22159,7 +22160,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TCONRSVDIN1_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22175,7 +22176,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBCFGSTREAMEN_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22191,7 +22192,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBDO_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22207,7 +22208,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBDRDY_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22223,7 +22224,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBENABLE_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22239,7 +22240,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBGPI_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22255,7 +22256,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBINTR_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22271,7 +22272,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBIOLMBRST_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22287,7 +22288,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMBRST_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22303,7 +22304,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMCAPTURE_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22319,7 +22320,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMDBGRST_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22335,7 +22336,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMDBGUPDATE_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22351,7 +22352,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMREGEN_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22367,7 +22368,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMSHIFT_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22383,7 +22384,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMSYSRST_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22399,7 +22400,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMTCK_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22415,7 +22416,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMTDI_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22847,7 +22848,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TCONGPO_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22863,7 +22864,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TCONRSVDOUT0_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22879,7 +22880,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBDADDR_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22895,7 +22896,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBDEN_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22911,7 +22912,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBDI_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22927,7 +22928,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBDWE_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22943,7 +22944,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBMDMTDO_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22959,7 +22960,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBRSVDOUT_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -22975,7 +22976,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_UBTXUART_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">0</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -23519,7 +23520,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTHRXN_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -23535,7 +23536,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTHRXP_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -23759,7 +23760,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTYRXN_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">1</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -23775,7 +23776,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTYRXP_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">1</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -24351,7 +24352,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_RXDFEAGCCTRL_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -25711,7 +25712,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_RXPHOVRDEN_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -25823,7 +25824,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_RXQPIEN_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -27087,7 +27088,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TXQPIBIASEN_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -27119,7 +27120,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TXQPIWEAKPUP_IN"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -27519,7 +27520,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTHTXN_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -27535,7 +27536,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTHTXP_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -27583,7 +27584,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTYTXN_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">1</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -27599,7 +27600,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_GTYTXP_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">1</spirit:value>
+					spirit:rangeType="long">-1</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -28511,7 +28512,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_RXQPISENN_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -28527,7 +28528,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_RXQPISENP_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -28911,7 +28912,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TXQPISENN_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>
@@ -28927,7 +28928,7 @@ l_in cplllock_out gtrefclk0_in</spirit:value>
 					spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLED_TXQPISENP_OUT"
 					spirit:minimum="-1"
 					spirit:maximum="2"
-					spirit:rangeType="long">-1</spirit:value>
+					spirit:rangeType="long">0</spirit:value>
 			<spirit:vendorExtensions>
 				<xilinx:parameterInfo>
 					<xilinx:enablement>

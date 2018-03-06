@@ -89,7 +89,7 @@ module  pcie_app_uscale #(
   parameter        AXISTEN_IF_CC_PARITY_CHECK     = 0,
   parameter        AXISTEN_IF_RC_PARITY_CHECK     = 0,
   parameter        AXISTEN_IF_CQ_PARITY_CHECK     = 0,
-  parameter        AXISTEN_IF_MC_RX_STRADDLE      = 0,
+  parameter        AXISTEN_IF_MC_RX_STRADDLE      = 1,
   parameter        AXISTEN_IF_ENABLE_RX_MSG_INTFC = 0,
   parameter [17:0] AXISTEN_IF_ENABLE_MSG_ROUTE    = 18'h2FFFF
 )(

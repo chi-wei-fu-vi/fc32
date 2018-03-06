@@ -63,7 +63,7 @@ module pcie4_uscale_plus_1_pcie4_uscale_core_top
    , parameter           IMPL_TARGET = "HARD"
    , parameter           AXISTEN_IF_EXT_512_INTFC_RAM_STYLE = "BRAM"
    , parameter           FPGA_FAMILY = "USM"
-   , parameter           FPGA_XCVR = "Y"
+   , parameter           FPGA_XCVR = "H"
    , parameter integer   PIPE_PIPELINE_STAGES = 1
    , parameter integer   PHY_REFCLK_FREQ  = 0
    , parameter           CRM_CORE_CLK_FREQ_500="TRUE"

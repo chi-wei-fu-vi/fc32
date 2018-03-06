@@ -552,15 +552,15 @@ endgenerate
     assign GTCOM_DRPDO = drpdo_common_out;
 
     wire gtwiz_userclk_tx_reset_in;
-    wire [(PHY_LANE* 18)-1:0] gtwiz_gtye4_cpll_cal_txoutclk_period_in;
-    wire [(PHY_LANE* 18)-1:0] gtwiz_gtye4_cpll_cal_cnt_tol_in;
-    wire [(PHY_LANE*  1)-1:0] gtwiz_gtye4_cpll_cal_bufg_ce_in;
+    wire [(PHY_LANE* 18)-1:0] gtwiz_gthe4_cpll_cal_txoutclk_period_in;
+    wire [(PHY_LANE* 18)-1:0] gtwiz_gthe4_cpll_cal_cnt_tol_in;
+    wire [(PHY_LANE*  1)-1:0] gtwiz_gthe4_cpll_cal_bufg_ce_in;
 
-    assign gtwiz_gtye4_cpll_cal_txoutclk_period_in = {PHY_LANE{18'd5000}};  
-    assign gtwiz_gtye4_cpll_cal_cnt_tol_in         = {PHY_LANE{18'd50}};    
+    assign gtwiz_gthe4_cpll_cal_txoutclk_period_in = {PHY_LANE{18'd5000}};  
+    assign gtwiz_gthe4_cpll_cal_cnt_tol_in         = {PHY_LANE{18'd50}};    
 
     assign gtwiz_userclk_tx_reset_in                 = bufgtreset_out[7];
-    assign gtwiz_gtye4_cpll_cal_bufg_ce_in  = {PHY_LANE{bufgtce_out[7]}};
+    assign gtwiz_gthe4_cpll_cal_bufg_ce_in  = {PHY_LANE{bufgtce_out[7]}};
 //-------------------------------------------------------------------------------------------------
 //  Internal Signals
 //-------------------------------------------------------------------------------------------------- 
@@ -570,11 +570,10 @@ endgenerate
     wire [(PHY_LANE*16)-1:0] pcsrsvdin_in;
     wire [((((PHY_LANE-1)>>2)+1)* 5)-1:0] qpllrsvd2_3;
  
- 
-    wire [PHY_LANE-1:0]         gtyrxn_in ; 
-    wire [PHY_LANE-1:0]         gtyrxp_in ; 
-    wire [PHY_LANE-1:0]         gtytxn_out; 
-    wire [PHY_LANE-1:0]         gtytxp_out; 
+    wire [PHY_LANE-1:0]         gthrxn_in ; 
+    wire [PHY_LANE-1:0]         gthrxp_in ; 
+    wire [PHY_LANE-1:0]         gthtxn_out; 
+    wire [PHY_LANE-1:0]         gthtxp_out; 
 
     wire [PHY_LANE-1:0] eyescandataerror_out;
     wire [PHY_LANE-1:0] txinhibit_in;    // Check                                      
@@ -657,24 +656,24 @@ endgenerate
    .drpwe_common_in(drpwe_common_in),
    .drpwe_in(drpwe_in),
    .eyescanreset_in(eyescanreset_in),
+   .gthrxn_in(gthrxn_in),
+   .gthrxp_in(gthrxp_in),
+   .gthtxn_out(gthtxn_out),
+   .gthtxp_out(gthtxp_out),
    .gtpowergood_out(gtpowergood_out),
    .gtrefclk00_in(gtrefclk00_in),
    .gtrefclk01_in(gtrefclk01_in),
    .gtrefclk0_in(gtrefclk0_in),
    .gtrxreset_in(gtrxreset_in),
    .gttxreset_in(gttxreset_in),
-   .gtwiz_gtye4_cpll_cal_bufg_ce_in(gtwiz_gtye4_cpll_cal_bufg_ce_in),
-   .gtwiz_gtye4_cpll_cal_cnt_tol_in(gtwiz_gtye4_cpll_cal_cnt_tol_in),
-   .gtwiz_gtye4_cpll_cal_txoutclk_period_in(gtwiz_gtye4_cpll_cal_txoutclk_period_in),
+   .gtwiz_gthe4_cpll_cal_bufg_ce_in(gtwiz_gthe4_cpll_cal_bufg_ce_in),
+   .gtwiz_gthe4_cpll_cal_cnt_tol_in(gtwiz_gthe4_cpll_cal_cnt_tol_in),
+   .gtwiz_gthe4_cpll_cal_txoutclk_period_in(gtwiz_gthe4_cpll_cal_txoutclk_period_in),
    .gtwiz_reset_rx_done_in(gtwiz_reset_rx_done_in),
    .gtwiz_reset_tx_done_in(gtwiz_reset_tx_done_in),
    .gtwiz_userclk_rx_active_in(gtwiz_userclk_rx_active_in),
    .gtwiz_userclk_tx_active_in(gtwiz_userclk_tx_active_in),
    .gtwiz_userclk_tx_reset_in(gtwiz_userclk_tx_reset_in),
-   .gtyrxn_in(gtyrxn_in),
-   .gtyrxp_in(gtyrxp_in),
-   .gtytxn_out(gtytxn_out),
-   .gtytxp_out(gtytxp_out),
    .loopback_in(loopback_in),
    .pcieeqrxeqadaptdone_in(pcieeqrxeqadaptdone_in),
    .pcierategen3_out(pcierategen3_out),
@@ -846,10 +845,10 @@ endgenerate
     assign pcierateqpll1_in = {2{1'b0,GT_RATE[1:0]}};
     assign rate             = {{1'd0,GT_RATE[1:0]},{1'd0,GT_RATE[3:2]},{1'd0,GT_RATE[5:4]},{1'd0,GT_RATE[7:6]},{1'd0,GT_RATE[9:8]},{1'd0,GT_RATE[11:10]},{1'd0,GT_RATE[13:12]},{1'd0,GT_RATE[15:14]}};
 
-    assign gtyrxn_in              = {GT_RXN[0],GT_RXN[1],GT_RXN[2],GT_RXN[3],GT_RXN[4],GT_RXN[5],GT_RXN[6],GT_RXN[7]};
-    assign gtyrxp_in              = {GT_RXP[0],GT_RXP[1],GT_RXP[2],GT_RXP[3],GT_RXP[4],GT_RXP[5],GT_RXP[6],GT_RXP[7]};
-    assign GT_TXN                 = {gtytxn_out[0],gtytxn_out[1],gtytxn_out[2],gtytxn_out[3],gtytxn_out[4],gtytxn_out[5],gtytxn_out[6],gtytxn_out[7]};                                      
-    assign GT_TXP                 = {gtytxp_out[0],gtytxp_out[1],gtytxp_out[2],gtytxp_out[3],gtytxp_out[4],gtytxp_out[5],gtytxp_out[6],gtytxp_out[7]};                                      
+    assign gthrxn_in              = {GT_RXN[0],GT_RXN[1],GT_RXN[2],GT_RXN[3],GT_RXN[4],GT_RXN[5],GT_RXN[6],GT_RXN[7]};
+    assign gthrxp_in              = {GT_RXP[0],GT_RXP[1],GT_RXP[2],GT_RXP[3],GT_RXP[4],GT_RXP[5],GT_RXP[6],GT_RXP[7]};
+    assign GT_TXN                 = {gthtxn_out[0],gthtxn_out[1],gthtxn_out[2],gthtxn_out[3],gthtxn_out[4],gthtxn_out[5],gthtxn_out[6],gthtxn_out[7]};                                      
+    assign GT_TXP                 = {gthtxp_out[0],gthtxp_out[1],gthtxp_out[2],gthtxp_out[3],gthtxp_out[4],gthtxp_out[5],gthtxp_out[6],gthtxp_out[7]};                                      
     assign rxratemode_in          = {GT_RXRATEMODE[0],GT_RXRATEMODE[1],GT_RXRATEMODE[2],GT_RXRATEMODE[3],GT_RXRATEMODE[4],GT_RXRATEMODE[5],GT_RXRATEMODE[6],GT_RXRATEMODE[7]};
     assign cpllpd_in              = {GT_CPLLPD[0],GT_CPLLPD[1],GT_CPLLPD[2],GT_CPLLPD[3],GT_CPLLPD[4],GT_CPLLPD[5],GT_CPLLPD[6],GT_CPLLPD[7]};
     assign rxtermination_in           = {GT_RXTERMINATION[0],GT_RXTERMINATION[1],GT_RXTERMINATION[2],GT_RXTERMINATION[3],GT_RXTERMINATION[4],GT_RXTERMINATION[5],GT_RXTERMINATION[6],GT_RXTERMINATION[7]};

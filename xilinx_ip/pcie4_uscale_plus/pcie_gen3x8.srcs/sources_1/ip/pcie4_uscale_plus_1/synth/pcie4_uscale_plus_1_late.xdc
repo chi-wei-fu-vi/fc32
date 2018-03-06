@@ -60,8 +60,8 @@
 # ASYNC CLOCK GROUPINGS
 ###############################################################################
 # sys_clk vs TXOUTCLK
-set_clock_groups -name async_sysClk_txoutClk -asynchronous -group [get_clocks -of_objects [get_pins bufg_gt_sysclk/O]] -group [get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ *gen_channel_container[*].*gen_gtye4_channel_inst[*].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK}]]
-set_clock_groups -name async_txoutClk_sysClk -asynchronous -group [get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ *gen_channel_container[*].*gen_gtye4_channel_inst[*].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK}]] -group [get_clocks -of_objects [get_pins bufg_gt_sysclk/O]]
+set_clock_groups -name async_sysClk_txoutClk -asynchronous -group [get_clocks -of_objects [get_pins bufg_gt_sysclk/O]] -group [get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ *gen_channel_container[*].*gen_gthe4_channel_inst[*].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK}]]
+set_clock_groups -name async_txoutClk_sysClk -asynchronous -group [get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ *gen_channel_container[*].*gen_gthe4_channel_inst[*].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK}]] -group [get_clocks -of_objects [get_pins bufg_gt_sysclk/O]]
 #
 # sys_clk vs intclk
 set_clock_groups -name async_sysClk_intClk -asynchronous -group [get_clocks -of_objects [get_pins gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_intclk/O]] -group [get_clocks -of_objects [get_pins bufg_gt_sysclk/O]]

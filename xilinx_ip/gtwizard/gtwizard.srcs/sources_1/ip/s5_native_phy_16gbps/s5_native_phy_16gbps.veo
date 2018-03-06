@@ -66,24 +66,24 @@ s5_native_phy_16gbps your_instance_name (
   .gtwiz_reset_rx_cdr_stable_out(gtwiz_reset_rx_cdr_stable_out),            // output wire [0 : 0] gtwiz_reset_rx_cdr_stable_out
   .gtwiz_reset_tx_done_out(gtwiz_reset_tx_done_out),                        // output wire [0 : 0] gtwiz_reset_tx_done_out
   .gtwiz_reset_rx_done_out(gtwiz_reset_rx_done_out),                        // output wire [0 : 0] gtwiz_reset_rx_done_out
-  .gtwiz_userdata_tx_in(gtwiz_userdata_tx_in),                              // input wire [1663 : 0] gtwiz_userdata_tx_in
-  .gtwiz_userdata_rx_out(gtwiz_userdata_rx_out),                            // output wire [1663 : 0] gtwiz_userdata_rx_out
-  .gtrefclk00_in(gtrefclk00_in),                                            // input wire [6 : 0] gtrefclk00_in
-  .qpll0outclk_out(qpll0outclk_out),                                        // output wire [6 : 0] qpll0outclk_out
-  .qpll0outrefclk_out(qpll0outrefclk_out),                                  // output wire [6 : 0] qpll0outrefclk_out
-  .gthrxn_in(gthrxn_in),                                                    // input wire [25 : 0] gthrxn_in
-  .gthrxp_in(gthrxp_in),                                                    // input wire [25 : 0] gthrxp_in
-  .rxusrclk_in(rxusrclk_in),                                                // input wire [25 : 0] rxusrclk_in
-  .rxusrclk2_in(rxusrclk2_in),                                              // input wire [25 : 0] rxusrclk2_in
-  .txusrclk_in(txusrclk_in),                                                // input wire [25 : 0] txusrclk_in
-  .txusrclk2_in(txusrclk2_in),                                              // input wire [25 : 0] txusrclk2_in
-  .gthtxn_out(gthtxn_out),                                                  // output wire [25 : 0] gthtxn_out
-  .gthtxp_out(gthtxp_out),                                                  // output wire [25 : 0] gthtxp_out
-  .gtpowergood_out(gtpowergood_out),                                        // output wire [25 : 0] gtpowergood_out
-  .rxoutclk_out(rxoutclk_out),                                              // output wire [25 : 0] rxoutclk_out
-  .rxpmaresetdone_out(rxpmaresetdone_out),                                  // output wire [25 : 0] rxpmaresetdone_out
-  .txoutclk_out(txoutclk_out),                                              // output wire [25 : 0] txoutclk_out
-  .txpmaresetdone_out(txpmaresetdone_out)                                  // output wire [25 : 0] txpmaresetdone_out
+  .gtwiz_userdata_tx_in(gtwiz_userdata_tx_in),                              // input wire [1535 : 0] gtwiz_userdata_tx_in
+  .gtwiz_userdata_rx_out(gtwiz_userdata_rx_out),                            // output wire [1535 : 0] gtwiz_userdata_rx_out
+  .gtrefclk00_in(gtrefclk00_in),                                            // input wire [5 : 0] gtrefclk00_in
+  .qpll0outclk_out(qpll0outclk_out),                                        // output wire [5 : 0] qpll0outclk_out
+  .qpll0outrefclk_out(qpll0outrefclk_out),                                  // output wire [5 : 0] qpll0outrefclk_out
+  .gtyrxn_in(gtyrxn_in),                                                    // input wire [23 : 0] gtyrxn_in
+  .gtyrxp_in(gtyrxp_in),                                                    // input wire [23 : 0] gtyrxp_in
+  .rxusrclk_in(rxusrclk_in),                                                // input wire [23 : 0] rxusrclk_in
+  .rxusrclk2_in(rxusrclk2_in),                                              // input wire [23 : 0] rxusrclk2_in
+  .txusrclk_in(txusrclk_in),                                                // input wire [23 : 0] txusrclk_in
+  .txusrclk2_in(txusrclk2_in),                                              // input wire [23 : 0] txusrclk2_in
+  .gtpowergood_out(gtpowergood_out),                                        // output wire [23 : 0] gtpowergood_out
+  .gtytxn_out(gtytxn_out),                                                  // output wire [23 : 0] gtytxn_out
+  .gtytxp_out(gtytxp_out),                                                  // output wire [23 : 0] gtytxp_out
+  .rxoutclk_out(rxoutclk_out),                                              // output wire [23 : 0] rxoutclk_out
+  .rxpmaresetdone_out(rxpmaresetdone_out),                                  // output wire [23 : 0] rxpmaresetdone_out
+  .txoutclk_out(txoutclk_out),                                              // output wire [23 : 0] txoutclk_out
+  .txpmaresetdone_out(txpmaresetdone_out)                                  // output wire [23 : 0] txpmaresetdone_out
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

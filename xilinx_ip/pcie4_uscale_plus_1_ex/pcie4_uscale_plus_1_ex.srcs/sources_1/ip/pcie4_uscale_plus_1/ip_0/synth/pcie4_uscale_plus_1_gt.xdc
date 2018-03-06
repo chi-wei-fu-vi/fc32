@@ -50,18 +50,18 @@
 # UltraScale FPGAs Transceivers Wizard IP core-level XDC file
 # ----------------------------------------------------------------------------------------------------------------------
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y8
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y8
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y8 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y8 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin Y37 [get_ports gtyrxn_in[0]]
-#set_property package_pin Y36 [get_ports gtyrxp_in[0]]
-#set_property package_pin V32 [get_ports gtytxn_out[0]]
-#set_property package_pin V31 [get_ports gtytxp_out[0]]
+#set_property package_pin AL3 [get_ports gthrxn_in[0]]
+#set_property package_pin AL4 [get_ports gthrxp_in[0]]
+#set_property package_pin AL7 [get_ports gthtxn_out[0]]
+#set_property package_pin AL8 [get_ports gthtxp_out[0]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[0].*bufg_gt_txoutclkmon_inst/O}]
@@ -71,18 +71,18 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 
 
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y9
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y9
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y9 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y9 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin W39 [get_ports gtyrxn_in[1]]
-#set_property package_pin W38 [get_ports gtyrxp_in[1]]
-#set_property package_pin U34 [get_ports gtytxn_out[1]]
-#set_property package_pin U33 [get_ports gtytxp_out[1]]
+#set_property package_pin AK1 [get_ports gthrxn_in[1]]
+#set_property package_pin AK2 [get_ports gthrxp_in[1]]
+#set_property package_pin AK5 [get_ports gthtxn_out[1]]
+#set_property package_pin AK6 [get_ports gthtxp_out[1]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[1].*bufg_gt_txoutclkmon_inst/O}]
@@ -92,18 +92,18 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 
 
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y10
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y10
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y10 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y10 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin V37 [get_ports gtyrxn_in[2]]
-#set_property package_pin V36 [get_ports gtyrxp_in[2]]
-#set_property package_pin T32 [get_ports gtytxn_out[2]]
-#set_property package_pin T31 [get_ports gtytxp_out[2]]
+#set_property package_pin AJ3 [get_ports gthrxn_in[2]]
+#set_property package_pin AJ4 [get_ports gthrxp_in[2]]
+#set_property package_pin AJ7 [get_ports gthtxn_out[2]]
+#set_property package_pin AJ8 [get_ports gthtxp_out[2]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[2].*bufg_gt_txoutclkmon_inst/O}]
@@ -113,18 +113,18 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 
 
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y11
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y11
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y11 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y11 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin U39 [get_ports gtyrxn_in[3]]
-#set_property package_pin U38 [get_ports gtyrxp_in[3]]
-#set_property package_pin R34 [get_ports gtytxn_out[3]]
-#set_property package_pin R33 [get_ports gtytxp_out[3]]
+#set_property package_pin AH1 [get_ports gthrxn_in[3]]
+#set_property package_pin AH2 [get_ports gthrxp_in[3]]
+#set_property package_pin AH5 [get_ports gthtxn_out[3]]
+#set_property package_pin AH6 [get_ports gthtxp_out[3]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[3].*bufg_gt_txoutclkmon_inst/O}]
@@ -134,18 +134,18 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 
 
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y12
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y12
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y12 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y12 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin T37 [get_ports gtyrxn_in[4]]
-#set_property package_pin T36 [get_ports gtyrxp_in[4]]
-#set_property package_pin P32 [get_ports gtytxn_out[4]]
-#set_property package_pin P31 [get_ports gtytxp_out[4]]
+#set_property package_pin AG3 [get_ports gthrxn_in[4]]
+#set_property package_pin AG4 [get_ports gthrxp_in[4]]
+#set_property package_pin AG7 [get_ports gthtxn_out[4]]
+#set_property package_pin AG8 [get_ports gthtxp_out[4]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[4].*bufg_gt_txoutclkmon_inst/O}]
@@ -155,18 +155,18 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 
 
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y13
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y13
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y13 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y13 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin R39 [get_ports gtyrxn_in[5]]
-#set_property package_pin R38 [get_ports gtyrxp_in[5]]
-#set_property package_pin N34 [get_ports gtytxn_out[5]]
-#set_property package_pin N33 [get_ports gtytxp_out[5]]
+#set_property package_pin AF1 [get_ports gthrxn_in[5]]
+#set_property package_pin AF2 [get_ports gthrxp_in[5]]
+#set_property package_pin AF5 [get_ports gthtxn_out[5]]
+#set_property package_pin AF6 [get_ports gthtxp_out[5]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[5].*bufg_gt_txoutclkmon_inst/O}]
@@ -176,18 +176,18 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 
 
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y14
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y14
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y14 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y14 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin P37 [get_ports gtyrxn_in[6]]
-#set_property package_pin P36 [get_ports gtyrxp_in[6]]
-#set_property package_pin M32 [get_ports gtytxn_out[6]]
-#set_property package_pin M31 [get_ports gtytxp_out[6]]
+#set_property package_pin AE3 [get_ports gthrxn_in[6]]
+#set_property package_pin AE4 [get_ports gthrxp_in[6]]
+#set_property package_pin AE7 [get_ports gthtxn_out[6]]
+#set_property package_pin AE8 [get_ports gthtxp_out[6]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[6].*bufg_gt_txoutclkmon_inst/O}]
@@ -197,18 +197,18 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 
 
 
-# Commands for enabled transceiver GTYE4_CHANNEL_X0Y15
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y15
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTYE4_CHANNEL_X0Y15 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y15 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin N39 [get_ports gtyrxn_in[7]]
-#set_property package_pin N38 [get_ports gtyrxp_in[7]]
-#set_property package_pin L34 [get_ports gtytxn_out[7]]
-#set_property package_pin L33 [get_ports gtytxp_out[7]]
+#set_property package_pin AD1 [get_ports gthrxn_in[7]]
+#set_property package_pin AD2 [get_ports gthrxp_in[7]]
+#set_property package_pin AD5 [get_ports gthtxn_out[7]]
+#set_property package_pin AD6 [get_ports gthtxp_out[7]]
 
 # CPLL calibration block constraints
 create_clock -period 8.0 [get_pins -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[7].*bufg_gt_txoutclkmon_inst/O}]

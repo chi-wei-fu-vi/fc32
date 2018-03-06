@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/chiwei/work/checkout/xilinx-bali.git.new/xilinx_ip/gtwizard/gtwizard.runs/s5_native_phy_16gbps_synth_1'
+HD_PWD='/home/chiwei/work/checkout/fc32.git/xilinx_ip/gtwizard/gtwizard.runs/s5_native_phy_16gbps_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

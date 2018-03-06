@@ -2841,535 +2841,1014 @@ module s5_native_phy_16gbps_gtwizard_top #(
   else if (C_GT_TYPE == `s5_native_phy_16gbps_GT_TYPE__GTYE4) begin : gen_gtwizard_gtye4_top
 
     // Generate GTYE4-type Transceivers Wizard submodule
-    s5_native_phy_16gbps_gtwizard_gtye4 #(
-      .C_CHANNEL_ENABLE                          (C_CHANNEL_ENABLE                         ),
-      .C_PCIE_ENABLE                             (C_PCIE_ENABLE                            ),
-      .C_PCIE_CORECLK_FREQ                       (C_PCIE_CORECLK_FREQ                      ),
-      .C_COMMON_SCALING_FACTOR                   (C_COMMON_SCALING_FACTOR                  ),
-      .C_CPLL_VCO_FREQUENCY                      (C_CPLL_VCO_FREQUENCY                     ),
-      .C_FREERUN_FREQUENCY                       (C_FREERUN_FREQUENCY                      ),
-      .C_GT_REV                                  (C_GT_REV                                 ),
-      .C_INCLUDE_CPLL_CAL                        (C_INCLUDE_CPLL_CAL                       ),
-      .C_USER_GTPOWERGOOD_DELAY_EN               (C_USER_GTPOWERGOOD_DELAY_EN              ),
-      .C_SIM_CPLL_CAL_BYPASS                     (C_SIM_CPLL_CAL_BYPASS                    ),
-      .C_LOCATE_RESET_CONTROLLER                 (C_LOCATE_RESET_CONTROLLER                ),
-      .C_LOCATE_USER_DATA_WIDTH_SIZING           (C_LOCATE_USER_DATA_WIDTH_SIZING          ),
-      .C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER      (C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER     ),
-      .C_LOCATE_RX_USER_CLOCKING                 (C_LOCATE_RX_USER_CLOCKING                ),
-      .C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER      (C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER     ),
-      .C_LOCATE_TX_USER_CLOCKING                 (C_LOCATE_TX_USER_CLOCKING                ),
-      .C_RESET_CONTROLLER_INSTANCE_CTRL          (C_RESET_CONTROLLER_INSTANCE_CTRL         ),
-      .C_RX_BUFFBYPASS_MODE                      (C_RX_BUFFBYPASS_MODE                     ),
-      .C_RX_BUFFER_BYPASS_INSTANCE_CTRL          (C_RX_BUFFER_BYPASS_INSTANCE_CTRL         ),
-      .C_RX_BUFFER_MODE                          (C_RX_BUFFER_MODE                         ),
-      .C_RX_DATA_DECODING                        (C_RX_DATA_DECODING                       ),
-      .C_RX_ENABLE                               (C_RX_ENABLE                              ),
-      .C_RX_INT_DATA_WIDTH                       (C_RX_INT_DATA_WIDTH                      ),
-      .C_RX_LINE_RATE                            (C_RX_LINE_RATE                           ),
-      .C_RX_MASTER_CHANNEL_IDX                   (C_RX_MASTER_CHANNEL_IDX                  ),
-      .C_RX_OUTCLK_BUFG_GT_DIV                   (C_RX_OUTCLK_BUFG_GT_DIV                  ),
-      .C_RX_PLL_TYPE                             (C_RX_PLL_TYPE                            ),
-      .C_RX_USER_CLOCKING_CONTENTS               (C_RX_USER_CLOCKING_CONTENTS              ),
-      .C_RX_USER_CLOCKING_INSTANCE_CTRL          (C_RX_USER_CLOCKING_INSTANCE_CTRL         ),
-      .C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 (C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2),
-      .C_RX_USER_CLOCKING_SOURCE                 (C_RX_USER_CLOCKING_SOURCE                ),
-      .C_RX_USER_DATA_WIDTH                      (C_RX_USER_DATA_WIDTH                     ),
-      .C_TOTAL_NUM_CHANNELS                      (C_TOTAL_NUM_CHANNELS                     ),
-      .C_TOTAL_NUM_COMMONS                       (C_TOTAL_NUM_COMMONS                      ),
-      .C_TXPROGDIV_FREQ_ENABLE                   (C_TXPROGDIV_FREQ_ENABLE                  ),
-      .C_TXPROGDIV_FREQ_SOURCE                   (C_TXPROGDIV_FREQ_SOURCE                  ),
-      .C_TX_BUFFBYPASS_MODE                      (C_TX_BUFFBYPASS_MODE                     ),
-      .C_TX_BUFFER_BYPASS_INSTANCE_CTRL          (C_TX_BUFFER_BYPASS_INSTANCE_CTRL         ),
-      .C_TX_BUFFER_MODE                          (C_TX_BUFFER_MODE                         ),
-      .C_TX_DATA_ENCODING                        (C_TX_DATA_ENCODING                       ),
-      .C_TX_ENABLE                               (C_TX_ENABLE                              ),
-      .C_TX_INT_DATA_WIDTH                       (C_TX_INT_DATA_WIDTH                      ),
-      .C_TX_MASTER_CHANNEL_IDX                   (C_TX_MASTER_CHANNEL_IDX                  ),
-      .C_TX_OUTCLK_BUFG_GT_DIV                   (C_TX_OUTCLK_BUFG_GT_DIV                  ),
-      .C_TX_PLL_TYPE                             (C_TX_PLL_TYPE                            ),
-      .C_TX_USER_CLOCKING_CONTENTS               (C_TX_USER_CLOCKING_CONTENTS              ),
-      .C_TX_USER_CLOCKING_INSTANCE_CTRL          (C_TX_USER_CLOCKING_INSTANCE_CTRL         ),
-      .C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 (C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2),
-      .C_TX_USER_CLOCKING_SOURCE                 (C_TX_USER_CLOCKING_SOURCE                ),
-      .C_TX_USER_DATA_WIDTH                      (C_TX_USER_DATA_WIDTH                     )
-    ) s5_native_phy_16gbps_gtwizard_gtye4_inst (
-      .gtwiz_userclk_tx_reset_in          (gtwiz_userclk_tx_reset_in         ),
-      .gtwiz_userclk_tx_active_in         (gtwiz_userclk_tx_active_in        ),
-      .gtwiz_userclk_tx_srcclk_out        (gtwiz_userclk_tx_srcclk_out       ),
-      .gtwiz_userclk_tx_usrclk_out        (gtwiz_userclk_tx_usrclk_out       ),
-      .gtwiz_userclk_tx_usrclk2_out       (gtwiz_userclk_tx_usrclk2_out      ),
-      .gtwiz_userclk_tx_active_out        (gtwiz_userclk_tx_active_out       ),
-      .gtwiz_userclk_rx_reset_in          (gtwiz_userclk_rx_reset_in         ),
-      .gtwiz_userclk_rx_active_in         (gtwiz_userclk_rx_active_in        ),
-      .gtwiz_userclk_rx_srcclk_out        (gtwiz_userclk_rx_srcclk_out       ),
-      .gtwiz_userclk_rx_usrclk_out        (gtwiz_userclk_rx_usrclk_out       ),
-      .gtwiz_userclk_rx_usrclk2_out       (gtwiz_userclk_rx_usrclk2_out      ),
-      .gtwiz_userclk_rx_active_out        (gtwiz_userclk_rx_active_out       ),
-      .gtwiz_buffbypass_tx_reset_in       (gtwiz_buffbypass_tx_reset_in      ),
-      .gtwiz_buffbypass_tx_start_user_in  (gtwiz_buffbypass_tx_start_user_in ),
-      .gtwiz_buffbypass_tx_done_out       (gtwiz_buffbypass_tx_done_out      ),
-      .gtwiz_buffbypass_tx_error_out      (gtwiz_buffbypass_tx_error_out     ),
-      .gtwiz_buffbypass_rx_reset_in       (gtwiz_buffbypass_rx_reset_in      ),
-      .gtwiz_buffbypass_rx_start_user_in  (gtwiz_buffbypass_rx_start_user_in ),
-      .gtwiz_buffbypass_rx_done_out       (gtwiz_buffbypass_rx_done_out      ),
-      .gtwiz_buffbypass_rx_error_out      (gtwiz_buffbypass_rx_error_out     ),
-      .gtwiz_reset_clk_freerun_in         (gtwiz_reset_clk_freerun_in        ),
-      .gtwiz_reset_all_in                 (gtwiz_reset_all_in                ),
-      .gtwiz_reset_tx_pll_and_datapath_in (gtwiz_reset_tx_pll_and_datapath_in),
-      .gtwiz_reset_tx_datapath_in         (gtwiz_reset_tx_datapath_in        ),
-      .gtwiz_reset_rx_pll_and_datapath_in (gtwiz_reset_rx_pll_and_datapath_in),
-      .gtwiz_reset_rx_datapath_in         (gtwiz_reset_rx_datapath_in        ),
-      .gtwiz_reset_tx_done_in             (gtwiz_reset_tx_done_in            ),
-      .gtwiz_reset_rx_done_in             (gtwiz_reset_rx_done_in            ),
-      .gtwiz_reset_qpll0lock_in           (gtwiz_reset_qpll0lock_in          ),
-      .gtwiz_reset_qpll1lock_in           (gtwiz_reset_qpll1lock_in          ),
-      .gtwiz_reset_rx_cdr_stable_out      (gtwiz_reset_rx_cdr_stable_out     ),
-      .gtwiz_reset_tx_done_out            (gtwiz_reset_tx_done_out           ),
-      .gtwiz_reset_rx_done_out            (gtwiz_reset_rx_done_out           ),
-      .gtwiz_reset_qpll0reset_out         (gtwiz_reset_qpll0reset_out        ),
-      .gtwiz_reset_qpll1reset_out         (gtwiz_reset_qpll1reset_out        ),
-      .gtwiz_gtye4_cpll_cal_txoutclk_period_in (gtwiz_gtye4_cpll_cal_txoutclk_period_in),
-      .gtwiz_gtye4_cpll_cal_cnt_tol_in         (gtwiz_gtye4_cpll_cal_cnt_tol_in        ),
-      .gtwiz_gtye4_cpll_cal_bufg_ce_in         (gtwiz_gtye4_cpll_cal_bufg_ce_in        ),
-      .gtwiz_userdata_tx_in               (gtwiz_userdata_tx_in              ),
-      .gtwiz_userdata_rx_out              (gtwiz_userdata_rx_out             ),
-      .bgbypassb_in                       (bgbypassb_in                      ),
-      .bgmonitorenb_in                    (bgmonitorenb_in                   ),
-      .bgpdb_in                           (bgpdb_in                          ),
-      .bgrcalovrd_in                      (bgrcalovrd_in                     ),
-      .bgrcalovrdenb_in                   (bgrcalovrdenb_in                  ),
-      .drpaddr_common_in                  (drpaddr_common_in                 ),
-      .drpclk_common_in                   (drpclk_common_in                  ),
-      .drpdi_common_in                    (drpdi_common_in                   ),
-      .drpen_common_in                    (drpen_common_in                   ),
-      .drpwe_common_in                    (drpwe_common_in                   ),
-      .gtgrefclk0_in                      (gtgrefclk0_in                     ),
-      .gtgrefclk1_in                      (gtgrefclk1_in                     ),
-      .gtnorthrefclk00_in                 (gtnorthrefclk00_in                ),
-      .gtnorthrefclk01_in                 (gtnorthrefclk01_in                ),
-      .gtnorthrefclk10_in                 (gtnorthrefclk10_in                ),
-      .gtnorthrefclk11_in                 (gtnorthrefclk11_in                ),
-      .gtrefclk00_in                      (gtrefclk00_in                     ),
-      .gtrefclk01_in                      (gtrefclk01_in                     ),
-      .gtrefclk10_in                      (gtrefclk10_in                     ),
-      .gtrefclk11_in                      (gtrefclk11_in                     ),
-      .gtsouthrefclk00_in                 (gtsouthrefclk00_in                ),
-      .gtsouthrefclk01_in                 (gtsouthrefclk01_in                ),
-      .gtsouthrefclk10_in                 (gtsouthrefclk10_in                ),
-      .gtsouthrefclk11_in                 (gtsouthrefclk11_in                ),
-      .pcierateqpll0_in                   (pcierateqpll0_in                  ),
-      .pcierateqpll1_in                   (pcierateqpll1_in                  ),
-      .pmarsvd0_in                        (pmarsvd0_in                       ),
-      .pmarsvd1_in                        (pmarsvd1_in                       ),
-      .qpll0clkrsvd0_in                   (qpll0clkrsvd0_in                  ),
-      .qpll0clkrsvd1_in                   (qpll0clkrsvd1_in                  ),
-      .qpll0fbdiv_in                      (qpll0fbdiv_in                     ),
-      .qpll0lockdetclk_in                 (qpll0lockdetclk_in                ),
-      .qpll0locken_in                     (qpll0locken_in                    ),
-      .qpll0pd_in                         (qpll0pd_in                        ),
-      .qpll0refclksel_in                  (qpll0refclksel_in                 ),
-      .qpll0reset_in                      (qpll0reset_in                     ),
-      .qpll1clkrsvd0_in                   (qpll1clkrsvd0_in                  ),
-      .qpll1clkrsvd1_in                   (qpll1clkrsvd1_in                  ),
-      .qpll1fbdiv_in                      (qpll1fbdiv_in                     ),
-      .qpll1lockdetclk_in                 (qpll1lockdetclk_in                ),
-      .qpll1locken_in                     (qpll1locken_in                    ),
-      .qpll1pd_in                         (qpll1pd_in                        ),
-      .qpll1refclksel_in                  (qpll1refclksel_in                 ),
-      .qpll1reset_in                      (qpll1reset_in                     ),
-      .qpllrsvd1_in                       (qpllrsvd1_in                      ),
-      .qpllrsvd2_in                       (qpllrsvd2_in                      ),
-      .qpllrsvd3_in                       (qpllrsvd3_in                      ),
-      .qpllrsvd4_in                       (qpllrsvd4_in                      ),
-      .rcalenb_in                         (rcalenb_in                        ),
-      .sdm0data_in                        (sdm0data_in                       ),
-      .sdm0reset_in                       (sdm0reset_in                      ),
-      .sdm0toggle_in                      (sdm0toggle_in                     ),
-      .sdm0width_in                       (sdm0width_in                      ),
-      .sdm1data_in                        (sdm1data_in                       ),
-      .sdm1reset_in                       (sdm1reset_in                      ),
-      .sdm1toggle_in                      (sdm1toggle_in                     ),
-      .sdm1width_in                       (sdm1width_in                      ),
-      .ubcfgstreamen_in                   (ubcfgstreamen_in                  ),
-      .ubdo_in                            (ubdo_in                           ),
-      .ubdrdy_in                          (ubdrdy_in                         ),
-      .ubenable_in                        (ubenable_in                       ),
-      .ubgpi_in                           (ubgpi_in                          ),
-      .ubintr_in                          (ubintr_in                         ),
-      .ubiolmbrst_in                      (ubiolmbrst_in                     ),
-      .ubmbrst_in                         (ubmbrst_in                        ),
-      .ubmdmcapture_in                    (ubmdmcapture_in                   ),
-      .ubmdmdbgrst_in                     (ubmdmdbgrst_in                    ),
-      .ubmdmdbgupdate_in                  (ubmdmdbgupdate_in                 ),
-      .ubmdmregen_in                      (ubmdmregen_in                     ),
-      .ubmdmshift_in                      (ubmdmshift_in                     ),
-      .ubmdmsysrst_in                     (ubmdmsysrst_in                    ),
-      .ubmdmtck_in                        (ubmdmtck_in                       ),
-      .ubmdmtdi_in                        (ubmdmtdi_in                       ),
-      .drpdo_common_out                   (drpdo_common_out                  ),
-      .drprdy_common_out                  (drprdy_common_out                 ),
-      .pmarsvdout0_out                    (pmarsvdout0_out                   ),
-      .pmarsvdout1_out                    (pmarsvdout1_out                   ),
-      .qpll0fbclklost_out                 (qpll0fbclklost_out                ),
-      .qpll0lock_out                      (qpll0lock_out                     ),
-      .qpll0outclk_out                    (qpll0outclk_out                   ),
-      .qpll0outrefclk_out                 (qpll0outrefclk_out                ),
-      .qpll0refclklost_out                (qpll0refclklost_out               ),
-      .qpll1fbclklost_out                 (qpll1fbclklost_out                ),
-      .qpll1lock_out                      (qpll1lock_out                     ),
-      .qpll1outclk_out                    (qpll1outclk_out                   ),
-      .qpll1outrefclk_out                 (qpll1outrefclk_out                ),
-      .qpll1refclklost_out                (qpll1refclklost_out               ),
-      .qplldmonitor0_out                  (qplldmonitor0_out                 ),
-      .qplldmonitor1_out                  (qplldmonitor1_out                 ),
-      .refclkoutmonitor0_out              (refclkoutmonitor0_out             ),
-      .refclkoutmonitor1_out              (refclkoutmonitor1_out             ),
-      .rxrecclk0sel_out                   (rxrecclk0sel_out                  ),
-      .rxrecclk1sel_out                   (rxrecclk1sel_out                  ),
-      .sdm0finalout_out                   (sdm0finalout_out                  ),
-      .sdm0testdata_out                   (sdm0testdata_out                  ),
-      .sdm1finalout_out                   (sdm1finalout_out                  ),
-      .sdm1testdata_out                   (sdm1testdata_out                  ),
-      .ubdaddr_out                        (ubdaddr_out                       ),
-      .ubden_out                          (ubden_out                         ),
-      .ubdi_out                           (ubdi_out                          ),
-      .ubdwe_out                          (ubdwe_out                         ),
-      .ubmdmtdo_out                       (ubmdmtdo_out                      ),
-      .ubrsvdout_out                      (ubrsvdout_out                     ),
-      .ubtxuart_out                       (ubtxuart_out                      ),
-      .cdrstepdir_in                      (cdrstepdir_in                     ),
-      .cdrstepsq_in                       (cdrstepsq_in                      ),
-      .cdrstepsx_in                       (cdrstepsx_in                      ),
-      .cfgreset_in                        (cfgreset_in                       ),
-      .clkrsvd0_in                        (clkrsvd0_in                       ),
-      .clkrsvd1_in                        (clkrsvd1_in                       ),
-      .cpllfreqlock_in                    (cpllfreqlock_in                   ),
-      .cplllockdetclk_in                  (cplllockdetclk_in                 ),
-      .cplllocken_in                      (cplllocken_in                     ),
-      .cpllpd_in                          (cpllpd_in                         ),
-      .cpllrefclksel_in                   (cpllrefclksel_in                  ),
-      .cpllreset_in                       (cpllreset_in                      ),
-      .dmonfiforeset_in                   (dmonfiforeset_in                  ),
-      .dmonitorclk_in                     (dmonitorclk_in                    ),
-      .drpaddr_in                         (drpaddr_in                        ),
-      .drpclk_in                          (drpclk_in                         ),
-      .drpdi_in                           (drpdi_in                          ),
-      .drpen_in                           (drpen_in                          ),
-      .drprst_in                          (drprst_in                         ),
-      .drpwe_in                           (drpwe_in                          ),
-      .eyescanreset_in                    (eyescanreset_in                   ),
-      .eyescantrigger_in                  (eyescantrigger_in                 ),
-      .freqos_in                          (freqos_in                         ),
-      .gtgrefclk_in                       (gtgrefclk_in                      ),
-      .gtnorthrefclk0_in                  (gtnorthrefclk0_in                 ),
-      .gtnorthrefclk1_in                  (gtnorthrefclk1_in                 ),
-      .gtrefclk0_in                       (gtrefclk0_in                      ),
-      .gtrefclk1_in                       (gtrefclk1_in                      ),
-      .gtrsvd_in                          (gtrsvd_in                         ),
-      .gtrxreset_in                       (gtrxreset_in                      ),
-      .gtrxresetsel_in                    (gtrxresetsel_in                   ),
-      .gtsouthrefclk0_in                  (gtsouthrefclk0_in                 ),
-      .gtsouthrefclk1_in                  (gtsouthrefclk1_in                 ),
-      .gttxreset_in                       (gttxreset_in                      ),
-      .gttxresetsel_in                    (gttxresetsel_in                   ),
-      .incpctrl_in                        (incpctrl_in                       ),
-      .gtyrxn_in                          (gtyrxn_in                         ),
-      .gtyrxp_in                          (gtyrxp_in                         ),
-      .loopback_in                        (loopback_in                       ),
-      .pcieeqrxeqadaptdone_in             (pcieeqrxeqadaptdone_in            ),
-      .pcierstidle_in                     (pcierstidle_in                    ),
-      .pciersttxsyncstart_in              (pciersttxsyncstart_in             ),
-      .pcieuserratedone_in                (pcieuserratedone_in               ),
-      .pcsrsvdin_in                       (pcsrsvdin_in                      ),
-      .qpll0clk_in                        (qpll0clk_in                       ),
-      .qpll0freqlock_in                   (qpll0freqlock_in                  ),
-      .qpll0refclk_in                     (qpll0refclk_in                    ),
-      .qpll1clk_in                        (qpll1clk_in                       ),
-      .qpll1freqlock_in                   (qpll1freqlock_in                  ),
-      .qpll1refclk_in                     (qpll1refclk_in                    ),
-      .resetovrd_in                       (resetovrd_in                      ),
-      .rx8b10ben_in                       (rx8b10ben_in                      ),
-      .rxafecfoken_in                     (rxafecfoken_in                    ),
-      .rxbufreset_in                      (rxbufreset_in                     ),
-      .rxcdrfreqreset_in                  (rxcdrfreqreset_in                 ),
-      .rxcdrhold_in                       (rxcdrhold_in                      ),
-      .rxcdrovrden_in                     (rxcdrovrden_in                    ),
-      .rxcdrreset_in                      (rxcdrreset_in                     ),
-      .rxchbonden_in                      (rxchbonden_in                     ),
-      .rxchbondi_in                       (rxchbondi_in                      ),
-      .rxchbondlevel_in                   (rxchbondlevel_in                  ),
-      .rxchbondmaster_in                  (rxchbondmaster_in                 ),
-      .rxchbondslave_in                   (rxchbondslave_in                  ),
-      .rxckcalreset_in                    (rxckcalreset_in                   ),
-      .rxckcalstart_in                    (rxckcalstart_in                   ),
-      .rxcommadeten_in                    (rxcommadeten_in                   ),
-      .rxdfeagchold_in                    (rxdfeagchold_in                   ),
-      .rxdfeagcovrden_in                  (rxdfeagcovrden_in                 ),
-      .rxdfecfokfcnum_in                  (rxdfecfokfcnum_in                 ),
-      .rxdfecfokfen_in                    (rxdfecfokfen_in                   ),
-      .rxdfecfokfpulse_in                 (rxdfecfokfpulse_in                ),
-      .rxdfecfokhold_in                   (rxdfecfokhold_in                  ),
-      .rxdfecfokovren_in                  (rxdfecfokovren_in                 ),
-      .rxdfekhhold_in                     (rxdfekhhold_in                    ),
-      .rxdfekhovrden_in                   (rxdfekhovrden_in                  ),
-      .rxdfelfhold_in                     (rxdfelfhold_in                    ),
-      .rxdfelfovrden_in                   (rxdfelfovrden_in                  ),
-      .rxdfelpmreset_in                   (rxdfelpmreset_in                  ),
-      .rxdfetap10hold_in                  (rxdfetap10hold_in                 ),
-      .rxdfetap10ovrden_in                (rxdfetap10ovrden_in               ),
-      .rxdfetap11hold_in                  (rxdfetap11hold_in                 ),
-      .rxdfetap11ovrden_in                (rxdfetap11ovrden_in               ),
-      .rxdfetap12hold_in                  (rxdfetap12hold_in                 ),
-      .rxdfetap12ovrden_in                (rxdfetap12ovrden_in               ),
-      .rxdfetap13hold_in                  (rxdfetap13hold_in                 ),
-      .rxdfetap13ovrden_in                (rxdfetap13ovrden_in               ),
-      .rxdfetap14hold_in                  (rxdfetap14hold_in                 ),
-      .rxdfetap14ovrden_in                (rxdfetap14ovrden_in               ),
-      .rxdfetap15hold_in                  (rxdfetap15hold_in                 ),
-      .rxdfetap15ovrden_in                (rxdfetap15ovrden_in               ),
-      .rxdfetap2hold_in                   (rxdfetap2hold_in                  ),
-      .rxdfetap2ovrden_in                 (rxdfetap2ovrden_in                ),
-      .rxdfetap3hold_in                   (rxdfetap3hold_in                  ),
-      .rxdfetap3ovrden_in                 (rxdfetap3ovrden_in                ),
-      .rxdfetap4hold_in                   (rxdfetap4hold_in                  ),
-      .rxdfetap4ovrden_in                 (rxdfetap4ovrden_in                ),
-      .rxdfetap5hold_in                   (rxdfetap5hold_in                  ),
-      .rxdfetap5ovrden_in                 (rxdfetap5ovrden_in                ),
-      .rxdfetap6hold_in                   (rxdfetap6hold_in                  ),
-      .rxdfetap6ovrden_in                 (rxdfetap6ovrden_in                ),
-      .rxdfetap7hold_in                   (rxdfetap7hold_in                  ),
-      .rxdfetap7ovrden_in                 (rxdfetap7ovrden_in                ),
-      .rxdfetap8hold_in                   (rxdfetap8hold_in                  ),
-      .rxdfetap8ovrden_in                 (rxdfetap8ovrden_in                ),
-      .rxdfetap9hold_in                   (rxdfetap9hold_in                  ),
-      .rxdfetap9ovrden_in                 (rxdfetap9ovrden_in                ),
-      .rxdfeuthold_in                     (rxdfeuthold_in                    ),
-      .rxdfeutovrden_in                   (rxdfeutovrden_in                  ),
-      .rxdfevphold_in                     (rxdfevphold_in                    ),
-      .rxdfevpovrden_in                   (rxdfevpovrden_in                  ),
-      .rxdfexyden_in                      (rxdfexyden_in                     ),
-      .rxdlybypass_in                     (rxdlybypass_in                    ),
-      .rxdlyen_in                         (rxdlyen_in                        ),
-      .rxdlyovrden_in                     (rxdlyovrden_in                    ),
-      .rxdlysreset_in                     (rxdlysreset_in                    ),
-      .rxelecidlemode_in                  (rxelecidlemode_in                 ),
-      .rxeqtraining_in                    (rxeqtraining_in                   ),
-      .rxgearboxslip_in                   (rxgearboxslip_in                  ),
-      .rxlatclk_in                        (rxlatclk_in                       ),
-      .rxlpmen_in                         (rxlpmen_in                        ),
-      .rxlpmgchold_in                     (rxlpmgchold_in                    ),
-      .rxlpmgcovrden_in                   (rxlpmgcovrden_in                  ),
-      .rxlpmhfhold_in                     (rxlpmhfhold_in                    ),
-      .rxlpmhfovrden_in                   (rxlpmhfovrden_in                  ),
-      .rxlpmlfhold_in                     (rxlpmlfhold_in                    ),
-      .rxlpmlfklovrden_in                 (rxlpmlfklovrden_in                ),
-      .rxlpmoshold_in                     (rxlpmoshold_in                    ),
-      .rxlpmosovrden_in                   (rxlpmosovrden_in                  ),
-      .rxmcommaalignen_in                 (rxmcommaalignen_in                ),
-      .rxmonitorsel_in                    (rxmonitorsel_in                   ),
-      .rxoobreset_in                      (rxoobreset_in                     ),
-      .rxoscalreset_in                    (rxoscalreset_in                   ),
-      .rxoshold_in                        (rxoshold_in                       ),
-      .rxosovrden_in                      (rxosovrden_in                     ),
-      .rxoutclksel_in                     (rxoutclksel_in                    ),
-      .rxpcommaalignen_in                 (rxpcommaalignen_in                ),
-      .rxpcsreset_in                      (rxpcsreset_in                     ),
-      .rxpd_in                            (rxpd_in                           ),
-      .rxphalign_in                       (rxphalign_in                      ),
-      .rxphalignen_in                     (rxphalignen_in                    ),
-      .rxphdlypd_in                       (rxphdlypd_in                      ),
-      .rxphdlyreset_in                    (rxphdlyreset_in                   ),
-      .rxpllclksel_in                     (rxpllclksel_in                    ),
-      .rxpmareset_in                      (rxpmareset_in                     ),
-      .rxpolarity_in                      (rxpolarity_in                     ),
-      .rxprbscntreset_in                  (rxprbscntreset_in                 ),
-      .rxprbssel_in                       (rxprbssel_in                      ),
-      .rxprogdivreset_in                  (rxprogdivreset_in                 ),
-      .rxrate_in                          (rxrate_in                         ),
-      .rxratemode_in                      (rxratemode_in                     ),
-      .rxslide_in                         (rxslide_in                        ),
-      .rxslipoutclk_in                    (rxslipoutclk_in                   ),
-      .rxslippma_in                       (rxslippma_in                      ),
-      .rxsyncallin_in                     (rxsyncallin_in                    ),
-      .rxsyncin_in                        (rxsyncin_in                       ),
-      .rxsyncmode_in                      (rxsyncmode_in                     ),
-      .rxsysclksel_in                     (rxsysclksel_in                    ),
-      .rxtermination_in                   (rxtermination_in                  ),
-      .rxuserrdy_in                       (rxuserrdy_in                      ),
-      .rxusrclk_in                        (rxusrclk_in                       ),
-      .rxusrclk2_in                       (rxusrclk2_in                      ),
-      .sigvalidclk_in                     (sigvalidclk_in                    ),
-      .tstin_in                           (tstin_in                          ),
-      .tx8b10bbypass_in                   (tx8b10bbypass_in                  ),
-      .tx8b10ben_in                       (tx8b10ben_in                      ),
-      .txcominit_in                       (txcominit_in                      ),
-      .txcomsas_in                        (txcomsas_in                       ),
-      .txcomwake_in                       (txcomwake_in                      ),
-      .txctrl0_in                         (txctrl0_in                        ),
-      .txctrl1_in                         (txctrl1_in                        ),
-      .txctrl2_in                         (txctrl2_in                        ),
-      .txdata_in                          (txdata_in                         ),
-      .txdataextendrsvd_in                (txdataextendrsvd_in               ),
-      .txdccforcestart_in                 (txdccforcestart_in                ),
-      .txdccreset_in                      (txdccreset_in                     ),
-      .txdeemph_in                        (txdeemph_in                       ),
-      .txdetectrx_in                      (txdetectrx_in                     ),
-      .txdiffctrl_in                      (txdiffctrl_in                     ),
-      .txdlybypass_in                     (txdlybypass_in                    ),
-      .txdlyen_in                         (txdlyen_in                        ),
-      .txdlyhold_in                       (txdlyhold_in                      ),
-      .txdlyovrden_in                     (txdlyovrden_in                    ),
-      .txdlysreset_in                     (txdlysreset_in                    ),
-      .txdlyupdown_in                     (txdlyupdown_in                    ),
-      .txelecidle_in                      (txelecidle_in                     ),
-      .txheader_in                        (txheader_in                       ),
-      .txinhibit_in                       (txinhibit_in                      ),
-      .txlatclk_in                        (txlatclk_in                       ),
-      .txlfpstreset_in                    (txlfpstreset_in                   ),
-      .txlfpsu2lpexit_in                  (txlfpsu2lpexit_in                 ),
-      .txlfpsu3wake_in                    (txlfpsu3wake_in                   ),
-      .txmaincursor_in                    (txmaincursor_in                   ),
-      .txmargin_in                        (txmargin_in                       ),
-      .txmuxdcdexhold_in                  (txmuxdcdexhold_in                 ),
-      .txmuxdcdorwren_in                  (txmuxdcdorwren_in                 ),
-      .txoneszeros_in                     (txoneszeros_in                    ),
-      .txoutclksel_in                     (txoutclksel_in                    ),
-      .txpcsreset_in                      (txpcsreset_in                     ),
-      .txpd_in                            (txpd_in                           ),
-      .txpdelecidlemode_in                (txpdelecidlemode_in               ),
-      .txphalign_in                       (txphalign_in                      ),
-      .txphalignen_in                     (txphalignen_in                    ),
-      .txphdlypd_in                       (txphdlypd_in                      ),
-      .txphdlyreset_in                    (txphdlyreset_in                   ),
-      .txphdlytstclk_in                   (txphdlytstclk_in                  ),
-      .txphinit_in                        (txphinit_in                       ),
-      .txphovrden_in                      (txphovrden_in                     ),
-      .txpippmen_in                       (txpippmen_in                      ),
-      .txpippmovrden_in                   (txpippmovrden_in                  ),
-      .txpippmpd_in                       (txpippmpd_in                      ),
-      .txpippmsel_in                      (txpippmsel_in                     ),
-      .txpippmstepsize_in                 (txpippmstepsize_in                ),
-      .txpisopd_in                        (txpisopd_in                       ),
-      .txpllclksel_in                     (txpllclksel_in                    ),
-      .txpmareset_in                      (txpmareset_in                     ),
-      .txpolarity_in                      (txpolarity_in                     ),
-      .txpostcursor_in                    (txpostcursor_in                   ),
-      .txprbsforceerr_in                  (txprbsforceerr_in                 ),
-      .txprbssel_in                       (txprbssel_in                      ),
-      .txprecursor_in                     (txprecursor_in                    ),
-      .txprogdivreset_in                  (txprogdivreset_in                 ),
-      .txrate_in                          (txrate_in                         ),
-      .txratemode_in                      (txratemode_in                     ),
-      .txsequence_in                      (txsequence_in                     ),
-      .txswing_in                         (txswing_in                        ),
-      .txsyncallin_in                     (txsyncallin_in                    ),
-      .txsyncin_in                        (txsyncin_in                       ),
-      .txsyncmode_in                      (txsyncmode_in                     ),
-      .txsysclksel_in                     (txsysclksel_in                    ),
-      .txuserrdy_in                       (txuserrdy_in                      ),
-      .txusrclk_in                        (txusrclk_in                       ),
-      .txusrclk2_in                       (txusrclk2_in                      ),
-      .bufgtce_out                        (bufgtce_out                       ),
-      .bufgtcemask_out                    (bufgtcemask_out                   ),
-      .bufgtdiv_out                       (bufgtdiv_out                      ),
-      .bufgtreset_out                     (bufgtreset_out                    ),
-      .bufgtrstmask_out                   (bufgtrstmask_out                  ),
-      .cpllfbclklost_out                  (cpllfbclklost_out                 ),
-      .cplllock_out                       (cplllock_out                      ),
-      .cpllrefclklost_out                 (cpllrefclklost_out                ),
-      .dmonitorout_out                    (dmonitorout_out                   ),
-      .dmonitoroutclk_out                 (dmonitoroutclk_out                ),
-      .drpdo_out                          (drpdo_out                         ),
-      .drprdy_out                         (drprdy_out                        ),
-      .eyescandataerror_out               (eyescandataerror_out              ),
-      .gtpowergood_out                    (gtpowergood_out                   ),
-      .gtrefclkmonitor_out                (gtrefclkmonitor_out               ),
-      .gtytxn_out                         (gtytxn_out                        ),
-      .gtytxp_out                         (gtytxp_out                        ),
-      .pcierategen3_out                   (pcierategen3_out                  ),
-      .pcierateidle_out                   (pcierateidle_out                  ),
-      .pcierateqpllpd_out                 (pcierateqpllpd_out                ),
-      .pcierateqpllreset_out              (pcierateqpllreset_out             ),
-      .pciesynctxsyncdone_out             (pciesynctxsyncdone_out            ),
-      .pcieusergen3rdy_out                (pcieusergen3rdy_out               ),
-      .pcieuserphystatusrst_out           (pcieuserphystatusrst_out          ),
-      .pcieuserratestart_out              (pcieuserratestart_out             ),
-      .pcsrsvdout_out                     (pcsrsvdout_out                    ),
-      .phystatus_out                      (phystatus_out                     ),
-      .pinrsrvdas_out                     (pinrsrvdas_out                    ),
-      .powerpresent_out                   (powerpresent_out                  ),
-      .resetexception_out                 (resetexception_out                ),
-      .rxbufstatus_out                    (rxbufstatus_out                   ),
-      .rxbyteisaligned_out                (rxbyteisaligned_out               ),
-      .rxbyterealign_out                  (rxbyterealign_out                 ),
-      .rxcdrlock_out                      (rxcdrlock_out                     ),
-      .rxcdrphdone_out                    (rxcdrphdone_out                   ),
-      .rxchanbondseq_out                  (rxchanbondseq_out                 ),
-      .rxchanisaligned_out                (rxchanisaligned_out               ),
-      .rxchanrealign_out                  (rxchanrealign_out                 ),
-      .rxchbondo_out                      (rxchbondo_out                     ),
-      .rxckcaldone_out                    (rxckcaldone_out                   ),
-      .rxclkcorcnt_out                    (rxclkcorcnt_out                   ),
-      .rxcominitdet_out                   (rxcominitdet_out                  ),
-      .rxcommadet_out                     (rxcommadet_out                    ),
-      .rxcomsasdet_out                    (rxcomsasdet_out                   ),
-      .rxcomwakedet_out                   (rxcomwakedet_out                  ),
-      .rxctrl0_out                        (rxctrl0_out                       ),
-      .rxctrl1_out                        (rxctrl1_out                       ),
-      .rxctrl2_out                        (rxctrl2_out                       ),
-      .rxctrl3_out                        (rxctrl3_out                       ),
-      .rxdata_out                         (rxdata_out                        ),
-      .rxdataextendrsvd_out               (rxdataextendrsvd_out              ),
-      .rxdatavalid_out                    (rxdatavalid_out                   ),
-      .rxdlysresetdone_out                (rxdlysresetdone_out               ),
-      .rxelecidle_out                     (rxelecidle_out                    ),
-      .rxheader_out                       (rxheader_out                      ),
-      .rxheadervalid_out                  (rxheadervalid_out                 ),
-      .rxlfpstresetdet_out                (rxlfpstresetdet_out               ),
-      .rxlfpsu2lpexitdet_out              (rxlfpsu2lpexitdet_out             ),
-      .rxlfpsu3wakedet_out                (rxlfpsu3wakedet_out               ),
-      .rxmonitorout_out                   (rxmonitorout_out                  ),
-      .rxosintdone_out                    (rxosintdone_out                   ),
-      .rxosintstarted_out                 (rxosintstarted_out                ),
-      .rxosintstrobedone_out              (rxosintstrobedone_out             ),
-      .rxosintstrobestarted_out           (rxosintstrobestarted_out          ),
-      .rxoutclk_out                       (rxoutclk_out                      ),
-      .rxoutclkfabric_out                 (rxoutclkfabric_out                ),
-      .rxoutclkpcs_out                    (rxoutclkpcs_out                   ),
-      .rxphaligndone_out                  (rxphaligndone_out                 ),
-      .rxphalignerr_out                   (rxphalignerr_out                  ),
-      .rxpmaresetdone_out                 (rxpmaresetdone_out                ),
-      .rxprbserr_out                      (rxprbserr_out                     ),
-      .rxprbslocked_out                   (rxprbslocked_out                  ),
-      .rxprgdivresetdone_out              (rxprgdivresetdone_out             ),
-      .rxratedone_out                     (rxratedone_out                    ),
-      .rxrecclkout_out                    (rxrecclkout_out                   ),
-      .rxresetdone_out                    (rxresetdone_out                   ),
-      .rxsliderdy_out                     (rxsliderdy_out                    ),
-      .rxslipdone_out                     (rxslipdone_out                    ),
-      .rxslipoutclkrdy_out                (rxslipoutclkrdy_out               ),
-      .rxslippmardy_out                   (rxslippmardy_out                  ),
-      .rxstartofseq_out                   (rxstartofseq_out                  ),
-      .rxstatus_out                       (rxstatus_out                      ),
-      .rxsyncdone_out                     (rxsyncdone_out                    ),
-      .rxsyncout_out                      (rxsyncout_out                     ),
-      .rxvalid_out                        (rxvalid_out                       ),
-      .txbufstatus_out                    (txbufstatus_out                   ),
-      .txcomfinish_out                    (txcomfinish_out                   ),
-      .txdccdone_out                      (txdccdone_out                     ),
-      .txdlysresetdone_out                (txdlysresetdone_out               ),
-      .txoutclk_out                       (txoutclk_out                      ),
-      .txoutclkfabric_out                 (txoutclkfabric_out                ),
-      .txoutclkpcs_out                    (txoutclkpcs_out                   ),
-      .txphaligndone_out                  (txphaligndone_out                 ),
-      .txphinitdone_out                   (txphinitdone_out                  ),
-      .txpmaresetdone_out                 (txpmaresetdone_out                ),
-      .txprgdivresetdone_out              (txprgdivresetdone_out             ),
-      .txratedone_out                     (txratedone_out                    ),
-      .txresetdone_out                    (txresetdone_out                   ),
-      .txsyncdone_out                     (txsyncdone_out                    ),
-      .txsyncout_out                      (txsyncout_out                     )
-    );
+reg  [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_tx_reset_in         ; old
+reg  [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_tx_active_in        ; old
+reg  [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_rx_reset_in         ; old
+reg  [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_rx_active_in        ; old
+reg  [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_tx_reset_in      ; old
+reg  [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_tx_start_user_in ; old
+reg  [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_rx_reset_in      ; old
+reg  [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_rx_start_user_in ; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_clk_freerun_in        ; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_all_in                ; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_tx_pll_and_datapath_in; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_tx_datapath_in        ; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_rx_pll_and_datapath_in; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_rx_datapath_in        ; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_tx_done_in            ; old
+reg  [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_rx_done_in            ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0]gtwiz_reset_qpll0lock_in          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0]gtwiz_reset_qpll1lock_in          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*18)-1:0]gtwiz_gtye4_cpll_cal_txoutclk_period_in; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*18)-1:0]gtwiz_gtye4_cpll_cal_cnt_tol_in        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtwiz_gtye4_cpll_cal_bufg_ce_in        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*C_TX_USER_DATA_WIDTH)-1:0]gtwiz_userdata_tx_in              ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]bgbypassb_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]bgmonitorenb_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]bgpdb_in                          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*5)-1:0]bgrcalovrd_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]bgrcalovrdenb_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0]drpaddr_common_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]drpclk_common_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0]drpdi_common_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]drpen_common_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]drpwe_common_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtgrefclk0_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtgrefclk1_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtnorthrefclk00_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtnorthrefclk01_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtnorthrefclk10_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtnorthrefclk11_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtrefclk00_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtrefclk01_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtrefclk10_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtrefclk11_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtsouthrefclk00_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtsouthrefclk01_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtsouthrefclk10_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]gtsouthrefclk11_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0]pcierateqpll0_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0]pcierateqpll1_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]pmarsvd0_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]pmarsvd1_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0clkrsvd0_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0clkrsvd1_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]qpll0fbdiv_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0lockdetclk_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0locken_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0pd_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0]qpll0refclksel_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0reset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1clkrsvd0_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1clkrsvd1_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]qpll1fbdiv_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1lockdetclk_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1locken_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1pd_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0]qpll1refclksel_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1reset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]qpllrsvd1_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*5)-1:0]qpllrsvd2_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*5)-1:0]qpllrsvd3_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]qpllrsvd4_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]rcalenb_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*25)-1:0]sdm0data_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]sdm0reset_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]sdm0toggle_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0]sdm0width_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*25)-1:0]sdm1data_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]sdm1reset_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]sdm1toggle_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0]sdm1width_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubcfgstreamen_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0]ubdo_in                           ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubdrdy_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubenable_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0]ubgpi_in                          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0]ubintr_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubiolmbrst_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmbrst_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmcapture_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmdbgrst_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmdbgupdate_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*4)-1:0]ubmdmregen_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmshift_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmsysrst_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmtck_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmtdi_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cdrstepdir_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cdrstepsq_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cdrstepsx_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cfgreset_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]clkrsvd0_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]clkrsvd1_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cpllfreqlock_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cplllockdetclk_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cplllocken_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cpllpd_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]cpllrefclksel_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cpllreset_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]dmonfiforeset_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]dmonitorclk_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*10)-1:0]drpaddr_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]drpclk_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]drpdi_in                          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]drpen_in                          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]drprst_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]drpwe_in                          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]eyescanreset_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]eyescantrigger_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]freqos_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtgrefclk_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtnorthrefclk0_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtnorthrefclk1_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtrefclk0_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtrefclk1_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]gtrsvd_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtrxreset_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtrxresetsel_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtsouthrefclk0_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtsouthrefclk1_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gttxreset_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gttxresetsel_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtyrxn_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtyrxp_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]incpctrl_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]loopback_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcieeqrxeqadaptdone_in            ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcierstidle_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pciersttxsyncstart_in             ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcieuserratedone_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]pcsrsvdin_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]qpll0clk_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]qpll0freqlock_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]qpll0refclk_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]qpll1clk_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]qpll1freqlock_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]qpll1refclk_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]resetovrd_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rx8b10ben_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxafecfoken_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxbufreset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcdrfreqreset_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcdrhold_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcdrovrden_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcdrreset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxchbonden_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0]rxchbondi_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]rxchbondlevel_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxchbondmaster_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxchbondslave_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxckcalreset_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*7)-1:0]rxckcalstart_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcommadeten_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfeagchold_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfeagcovrden_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*4)-1:0]rxdfecfokfcnum_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfecfokfen_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfecfokfpulse_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfecfokhold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfecfokovren_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfekhhold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfekhovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfelfhold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfelfovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfelpmreset_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap10hold_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap10ovrden_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap11hold_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap11ovrden_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap12hold_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap12ovrden_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap13hold_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap13ovrden_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap14hold_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap14ovrden_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap15hold_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap15ovrden_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap2hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap2ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap3hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap3ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap4hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap4ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap5hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap5ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap6hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap6ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap7hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap7ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap8hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap8ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap9hold_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfetap9ovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfeuthold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfeutovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfevphold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfevpovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdfexyden_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdlybypass_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdlyen_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdlyovrden_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdlysreset_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxelecidlemode_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxeqtraining_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxgearboxslip_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlatclk_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmen_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmgchold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmgcovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmhfhold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmhfovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmlfhold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmlfklovrden_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmoshold_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlpmosovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxmcommaalignen_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxmonitorsel_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxoobreset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxoscalreset_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxoshold_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxosovrden_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]rxoutclksel_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxpcommaalignen_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxpcsreset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxpd_in                           ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxphalign_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxphalignen_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxphdlypd_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxphdlyreset_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxpllclksel_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxpmareset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxpolarity_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxprbscntreset_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*4)-1:0]rxprbssel_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxprogdivreset_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]rxrate_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxratemode_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxslide_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxslipoutclk_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxslippma_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxsyncallin_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxsyncin_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxsyncmode_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxsysclksel_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxtermination_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxuserrdy_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxusrclk_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxusrclk2_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]sigvalidclk_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*20)-1:0]tstin_in                          ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0]tx8b10bbypass_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]tx8b10ben_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txcominit_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txcomsas_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txcomwake_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]txctrl0_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]txctrl1_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0]txctrl2_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*128)-1:0]txdata_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0]txdataextendrsvd_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdccforcestart_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdccreset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]txdeemph_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdetectrx_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0]txdiffctrl_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdlybypass_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdlyen_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdlyhold_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdlyovrden_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdlysreset_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdlyupdown_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txelecidle_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*6)-1:0]txheader_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txinhibit_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txlatclk_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txlfpstreset_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txlfpsu2lpexit_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txlfpsu3wake_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*7)-1:0]txmaincursor_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]txmargin_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txmuxdcdexhold_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txmuxdcdorwren_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txoneszeros_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]txoutclksel_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpcsreset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]txpd_in                           ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpdelecidlemode_in               ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphalign_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphalignen_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphdlypd_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphdlyreset_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphdlytstclk_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphinit_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphovrden_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpippmen_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpippmovrden_in                  ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpippmpd_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpippmsel_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0]txpippmstepsize_in                ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpisopd_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]txpllclksel_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpmareset_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpolarity_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0]txpostcursor_in                   ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txprbsforceerr_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*4)-1:0]txprbssel_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0]txprecursor_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txprogdivreset_in                 ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]txrate_in                         ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txratemode_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*7)-1:0]txsequence_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txswing_in                        ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txsyncallin_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txsyncin_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txsyncmode_in                     ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]txsysclksel_in                    ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txuserrdy_in                      ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txusrclk_in                       ; old
+reg  [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txusrclk2_in                      ; old
+wire [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_tx_srcclk_out       ; old
+wire [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_tx_usrclk_out       ; old
+wire [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_tx_usrclk2_out      ; old
+wire [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_tx_active_out       ; old
+wire [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_rx_srcclk_out       ; old
+wire [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_rx_usrclk_out       ; old
+wire [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_rx_usrclk2_out      ; old
+wire [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_userclk_rx_active_out       ; old
+wire [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_tx_done_out      ; old
+wire [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_tx_error_out     ; old
+wire [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_rx_done_out      ; old
+wire [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_buffbypass_rx_error_out     ; old
+wire [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_rx_cdr_stable_out     ; old
+wire [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_tx_done_out           ; old
+wire [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0]gtwiz_reset_rx_done_out           ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0]gtwiz_reset_qpll0reset_out        ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0]gtwiz_reset_qpll1reset_out        ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*C_RX_USER_DATA_WIDTH)-1:0]gtwiz_userdata_rx_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0]drpdo_common_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]drprdy_common_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]pmarsvdout0_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]pmarsvdout1_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0fbclklost_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0lock_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0outclk_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0outrefclk_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll0refclklost_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1fbclklost_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1lock_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1outclk_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1outrefclk_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]qpll1refclklost_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]qplldmonitor0_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0]qplldmonitor1_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]refclkoutmonitor0_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]refclkoutmonitor1_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0]rxrecclk0sel_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0]rxrecclk1sel_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*4)-1:0]sdm0finalout_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*15)-1:0]sdm0testdata_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*4)-1:0]sdm1finalout_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*15)-1:0]sdm1testdata_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0]ubdaddr_out                       ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubden_out                         ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0]ubdi_out                          ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubdwe_out                         ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubmdmtdo_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubrsvdout_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0]ubtxuart_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]bufgtce_out                       ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]bufgtcemask_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*9)-1:0]bufgtdiv_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]bufgtreset_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]bufgtrstmask_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cpllfbclklost_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cplllock_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]cpllrefclklost_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]dmonitorout_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]dmonitoroutclk_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]drpdo_out                         ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]drprdy_out                        ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]eyescandataerror_out              ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtpowergood_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtrefclkmonitor_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtytxn_out                        ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]gtytxp_out                        ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcierategen3_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcierateidle_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]pcierateqpllpd_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]pcierateqpllreset_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pciesynctxsyncdone_out            ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcieusergen3rdy_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcieuserphystatusrst_out          ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]pcieuserratestart_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]pcsrsvdout_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]phystatus_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]pinrsrvdas_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]powerpresent_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]resetexception_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]rxbufstatus_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxbyteisaligned_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxbyterealign_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcdrlock_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcdrphdone_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxchanbondseq_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxchanisaligned_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxchanrealign_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0]rxchbondo_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxckcaldone_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxclkcorcnt_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcominitdet_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcommadet_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcomsasdet_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxcomwakedet_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]rxctrl0_out                       ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0]rxctrl1_out                       ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0]rxctrl2_out                       ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0]rxctrl3_out                       ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*128)-1:0]rxdata_out                        ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0]rxdataextendrsvd_out              ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxdatavalid_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxdlysresetdone_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxelecidle_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*6)-1:0]rxheader_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxheadervalid_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlfpstresetdet_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlfpsu2lpexitdet_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxlfpsu3wakedet_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0]rxmonitorout_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxosintdone_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxosintstarted_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxosintstrobedone_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxosintstrobestarted_out          ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxoutclk_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxoutclkfabric_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxoutclkpcs_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxphaligndone_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxphalignerr_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxpmaresetdone_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxprbserr_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxprbslocked_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxprgdivresetdone_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxratedone_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxrecclkout_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxresetdone_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxsliderdy_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxslipdone_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxslipoutclkrdy_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxslippmardy_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]rxstartofseq_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0]rxstatus_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxsyncdone_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxsyncout_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]rxvalid_out                       ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0]txbufstatus_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txcomfinish_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdccdone_out                     ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txdlysresetdone_out               ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txoutclk_out                      ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txoutclkfabric_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txoutclkpcs_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphaligndone_out                 ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txphinitdone_out                  ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txpmaresetdone_out                ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txprgdivresetdone_out             ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txratedone_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txresetdone_out                   ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txsyncdone_out                    ; old
+wire [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0]txsyncout_out                     ; old
+s5_native_phy_16gbps_gtwizard_gtye4 #(
+  . C_TX_USER_DATA_WIDTH                               ( C_TX_USER_DATA_WIDTH                               ), old
+  . C_RX_DATA_DECODING                                 ( C_RX_DATA_DECODING                                 ), old
+  . C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER               ( C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER               ), old
+  . C_RX_PLL_TYPE                                      ( C_RX_PLL_TYPE                                      ), old
+  . C_RX_MASTER_CHANNEL_IDX                            ( C_RX_MASTER_CHANNEL_IDX                            ), old
+  . C_RX_INT_DATA_WIDTH                                ( C_RX_INT_DATA_WIDTH                                ), old
+  . C_TX_OUTCLK_BUFG_GT_DIV                            ( C_TX_OUTCLK_BUFG_GT_DIV                            ), old
+  . C_TOTAL_NUM_CHANNELS                               ( C_TOTAL_NUM_CHANNELS                               ), old
+  . C_CPLL_VCO_FREQUENCY                               ( C_CPLL_VCO_FREQUENCY                               ), old
+  . C_LOCATE_RX_USER_CLOCKING                          ( C_LOCATE_RX_USER_CLOCKING                          ), old
+  . C_GT_REV                                           ( C_GT_REV                                           ), old
+  . C_TX_PLL_TYPE                                      ( C_TX_PLL_TYPE                                      ), old
+  . C_RX_LINE_RATE                                     ( C_RX_LINE_RATE                                     ), old
+  . C_PCIE_ENABLE                                      ( C_PCIE_ENABLE                                      ), old
+  . C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2          ( C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2          ), old
+  . C_RESET_CONTROLLER_INSTANCE_CTRL                   ( C_RESET_CONTROLLER_INSTANCE_CTRL                   ), old
+  . C_RX_USER_CLOCKING_CONTENTS                        ( C_RX_USER_CLOCKING_CONTENTS                        ), old
+  . C_RX_USER_CLOCKING_INSTANCE_CTRL                   ( C_RX_USER_CLOCKING_INSTANCE_CTRL                   ), old
+  . C_TX_USER_CLOCKING_INSTANCE_CTRL                   ( C_TX_USER_CLOCKING_INSTANCE_CTRL                   ), old
+  . C_CHANNEL_ENABLE                                   ( C_CHANNEL_ENABLE                                   ), old
+  . C_SIM_CPLL_CAL_BYPASS                              ( C_SIM_CPLL_CAL_BYPASS                              ), old
+  . C_TX_DATA_ENCODING                                 ( C_TX_DATA_ENCODING                                 ), old
+  . C_TX_MASTER_CHANNEL_IDX                            ( C_TX_MASTER_CHANNEL_IDX                            ), old
+  . C_COMMON_SCALING_FACTOR                            ( C_COMMON_SCALING_FACTOR                            ), old
+  . C_TX_USER_CLOCKING_SOURCE                          ( C_TX_USER_CLOCKING_SOURCE                          ), old
+  . C_LOCATE_RESET_CONTROLLER                          ( C_LOCATE_RESET_CONTROLLER                          ), old
+  . C_RX_OUTCLK_BUFG_GT_DIV                            ( C_RX_OUTCLK_BUFG_GT_DIV                            ), old
+  . C_USER_GTPOWERGOOD_DELAY_EN                        ( C_USER_GTPOWERGOOD_DELAY_EN                        ), old
+  . C_TX_BUFFBYPASS_MODE                               ( C_TX_BUFFBYPASS_MODE                               ), old
+  . C_PCIE_CORECLK_FREQ                                ( C_PCIE_CORECLK_FREQ                                ), old
+  . C_TX_ENABLE                                        ( C_TX_ENABLE                                        ), old
+  . C_RX_USER_DATA_WIDTH                               ( C_RX_USER_DATA_WIDTH                               ), old
+  . C_RX_ENABLE                                        ( C_RX_ENABLE                                        ), old
+  . C_LOCATE_USER_DATA_WIDTH_SIZING                    ( C_LOCATE_USER_DATA_WIDTH_SIZING                    ), old
+  . C_TX_BUFFER_MODE                                   ( C_TX_BUFFER_MODE                                   ), old
+  . C_TX_INT_DATA_WIDTH                                ( C_TX_INT_DATA_WIDTH                                ), old
+  . C_RX_BUFFER_BYPASS_INSTANCE_CTRL                   ( C_RX_BUFFER_BYPASS_INSTANCE_CTRL                   ), old
+  . C_TOTAL_NUM_COMMONS                                ( C_TOTAL_NUM_COMMONS                                ), old
+  . C_INCLUDE_CPLL_CAL                                 ( C_INCLUDE_CPLL_CAL                                 ), old
+  . C_RX_BUFFBYPASS_MODE                               ( C_RX_BUFFBYPASS_MODE                               ), old
+  . C_TXPROGDIV_FREQ_ENABLE                            ( C_TXPROGDIV_FREQ_ENABLE                            ), old
+  . C_TXPROGDIV_FREQ_SOURCE                            ( C_TXPROGDIV_FREQ_SOURCE                            ), old
+  . C_LOCATE_TX_USER_CLOCKING                          ( C_LOCATE_TX_USER_CLOCKING                          ), old
+  . C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER               ( C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER               ), old
+  . C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2          ( C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2          ), old
+  . C_RX_BUFFER_MODE                                   ( C_RX_BUFFER_MODE                                   ), old
+  . C_RX_USER_CLOCKING_SOURCE                          ( C_RX_USER_CLOCKING_SOURCE                          ), old
+  . C_TX_BUFFER_BYPASS_INSTANCE_CTRL                   ( C_TX_BUFFER_BYPASS_INSTANCE_CTRL                   ), old
+  . C_TX_USER_CLOCKING_CONTENTS                        ( C_TX_USER_CLOCKING_CONTENTS                        ), old
+  . C_FREERUN_FREQUENCY                                ( C_FREERUN_FREQUENCY                                ) old
+) s5_native_phy_16gbps_gtwizard_gtye4_inst (
+  . gtwiz_userclk_tx_reset_in                          ( gtwiz_userclk_tx_reset_in                          ), // input [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_tx_active_in                         ( gtwiz_userclk_tx_active_in                         ), // input [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_tx_srcclk_out                        ( gtwiz_userclk_tx_srcclk_out                        ), // output [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_tx_usrclk_out                        ( gtwiz_userclk_tx_usrclk_out                        ), // output [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_tx_usrclk2_out                       ( gtwiz_userclk_tx_usrclk2_out                       ), // output [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_tx_active_out                        ( gtwiz_userclk_tx_active_out                        ), // output [(C_TX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_rx_reset_in                          ( gtwiz_userclk_rx_reset_in                          ), // input [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_rx_active_in                         ( gtwiz_userclk_rx_active_in                         ), // input [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_rx_srcclk_out                        ( gtwiz_userclk_rx_srcclk_out                        ), // output [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_rx_usrclk_out                        ( gtwiz_userclk_rx_usrclk_out                        ), // output [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_rx_usrclk2_out                       ( gtwiz_userclk_rx_usrclk2_out                       ), // output [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_userclk_rx_active_out                        ( gtwiz_userclk_rx_active_out                        ), // output [(C_RX_USER_CLOCKING_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_tx_reset_in                       ( gtwiz_buffbypass_tx_reset_in                       ), // input [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_tx_start_user_in                  ( gtwiz_buffbypass_tx_start_user_in                  ), // input [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_tx_done_out                       ( gtwiz_buffbypass_tx_done_out                       ), // output [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_tx_error_out                      ( gtwiz_buffbypass_tx_error_out                      ), // output [(C_TX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_rx_reset_in                       ( gtwiz_buffbypass_rx_reset_in                       ), // input [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_rx_start_user_in                  ( gtwiz_buffbypass_rx_start_user_in                  ), // input [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_rx_done_out                       ( gtwiz_buffbypass_rx_done_out                       ), // output [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_buffbypass_rx_error_out                      ( gtwiz_buffbypass_rx_error_out                      ), // output [(C_RX_BUFFER_BYPASS_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_clk_freerun_in                         ( gtwiz_reset_clk_freerun_in                         ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_all_in                                 ( gtwiz_reset_all_in                                 ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_tx_pll_and_datapath_in                 ( gtwiz_reset_tx_pll_and_datapath_in                 ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_tx_datapath_in                         ( gtwiz_reset_tx_datapath_in                         ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_rx_pll_and_datapath_in                 ( gtwiz_reset_rx_pll_and_datapath_in                 ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_rx_datapath_in                         ( gtwiz_reset_rx_datapath_in                         ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_tx_done_in                             ( gtwiz_reset_tx_done_in                             ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_rx_done_in                             ( gtwiz_reset_rx_done_in                             ), // input [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_qpll0lock_in                           ( gtwiz_reset_qpll0lock_in                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0] old
+  . gtwiz_reset_qpll1lock_in                           ( gtwiz_reset_qpll1lock_in                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0] old
+  . gtwiz_reset_rx_cdr_stable_out                      ( gtwiz_reset_rx_cdr_stable_out                      ), // output [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_tx_done_out                            ( gtwiz_reset_tx_done_out                            ), // output [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_rx_done_out                            ( gtwiz_reset_rx_done_out                            ), // output [(C_RESET_CONTROLLER_INSTANCE_CTRL*(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH-1)):0] old
+  . gtwiz_reset_qpll0reset_out                         ( gtwiz_reset_qpll0reset_out                         ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0] old
+  . gtwiz_reset_qpll1reset_out                         ( gtwiz_reset_qpll1reset_out                         ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM-1):0] old
+  . gtwiz_gtye4_cpll_cal_txoutclk_period_in            ( gtwiz_gtye4_cpll_cal_txoutclk_period_in            ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*18)-1:0] old
+  . gtwiz_gtye4_cpll_cal_cnt_tol_in                    ( gtwiz_gtye4_cpll_cal_cnt_tol_in                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*18)-1:0] old
+  . gtwiz_gtye4_cpll_cal_bufg_ce_in                    ( gtwiz_gtye4_cpll_cal_bufg_ce_in                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtwiz_userdata_tx_in                               ( gtwiz_userdata_tx_in                               ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*C_TX_USER_DATA_WIDTH)-1:0] old
+  . gtwiz_userdata_rx_out                              ( gtwiz_userdata_rx_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*C_RX_USER_DATA_WIDTH)-1:0] old
+  . bgbypassb_in                                       ( bgbypassb_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . bgmonitorenb_in                                    ( bgmonitorenb_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . bgpdb_in                                           ( bgpdb_in                                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . bgrcalovrd_in                                      ( bgrcalovrd_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*5)-1:0] old
+  . bgrcalovrdenb_in                                   ( bgrcalovrdenb_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . drpaddr_common_in                                  ( drpaddr_common_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0] old
+  . drpclk_common_in                                   ( drpclk_common_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . drpdi_common_in                                    ( drpdi_common_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0] old
+  . drpen_common_in                                    ( drpen_common_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . drpwe_common_in                                    ( drpwe_common_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtgrefclk0_in                                      ( gtgrefclk0_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtgrefclk1_in                                      ( gtgrefclk1_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtnorthrefclk00_in                                 ( gtnorthrefclk00_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtnorthrefclk01_in                                 ( gtnorthrefclk01_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtnorthrefclk10_in                                 ( gtnorthrefclk10_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtnorthrefclk11_in                                 ( gtnorthrefclk11_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtrefclk00_in                                      ( gtrefclk00_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtrefclk01_in                                      ( gtrefclk01_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtrefclk10_in                                      ( gtrefclk10_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtrefclk11_in                                      ( gtrefclk11_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtsouthrefclk00_in                                 ( gtsouthrefclk00_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtsouthrefclk01_in                                 ( gtsouthrefclk01_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtsouthrefclk10_in                                 ( gtsouthrefclk10_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . gtsouthrefclk11_in                                 ( gtsouthrefclk11_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . pcierateqpll0_in                                   ( pcierateqpll0_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0] old
+  . pcierateqpll1_in                                   ( pcierateqpll1_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0] old
+  . pmarsvd0_in                                        ( pmarsvd0_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . pmarsvd1_in                                        ( pmarsvd1_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . qpll0clkrsvd0_in                                   ( qpll0clkrsvd0_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0clkrsvd1_in                                   ( qpll0clkrsvd1_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0fbdiv_in                                      ( qpll0fbdiv_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . qpll0lockdetclk_in                                 ( qpll0lockdetclk_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0locken_in                                     ( qpll0locken_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0pd_in                                         ( qpll0pd_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0refclksel_in                                  ( qpll0refclksel_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0] old
+  . qpll0reset_in                                      ( qpll0reset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1clkrsvd0_in                                   ( qpll1clkrsvd0_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1clkrsvd1_in                                   ( qpll1clkrsvd1_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1fbdiv_in                                      ( qpll1fbdiv_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . qpll1lockdetclk_in                                 ( qpll1lockdetclk_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1locken_in                                     ( qpll1locken_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1pd_in                                         ( qpll1pd_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1refclksel_in                                  ( qpll1refclksel_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*3)-1:0] old
+  . qpll1reset_in                                      ( qpll1reset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpllrsvd1_in                                       ( qpllrsvd1_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . qpllrsvd2_in                                       ( qpllrsvd2_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*5)-1:0] old
+  . qpllrsvd3_in                                       ( qpllrsvd3_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*5)-1:0] old
+  . qpllrsvd4_in                                       ( qpllrsvd4_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . rcalenb_in                                         ( rcalenb_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . sdm0data_in                                        ( sdm0data_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*25)-1:0] old
+  . sdm0reset_in                                       ( sdm0reset_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . sdm0toggle_in                                      ( sdm0toggle_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . sdm0width_in                                       ( sdm0width_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0] old
+  . sdm1data_in                                        ( sdm1data_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*25)-1:0] old
+  . sdm1reset_in                                       ( sdm1reset_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . sdm1toggle_in                                      ( sdm1toggle_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . sdm1width_in                                       ( sdm1width_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0] old
+  . ubcfgstreamen_in                                   ( ubcfgstreamen_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubdo_in                                            ( ubdo_in                                            ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0] old
+  . ubdrdy_in                                          ( ubdrdy_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubenable_in                                        ( ubenable_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubgpi_in                                           ( ubgpi_in                                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0] old
+  . ubintr_in                                          ( ubintr_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0] old
+  . ubiolmbrst_in                                      ( ubiolmbrst_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmbrst_in                                         ( ubmbrst_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmcapture_in                                    ( ubmdmcapture_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmdbgrst_in                                     ( ubmdmdbgrst_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmdbgupdate_in                                  ( ubmdmdbgupdate_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmregen_in                                      ( ubmdmregen_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*4)-1:0] old
+  . ubmdmshift_in                                      ( ubmdmshift_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmsysrst_in                                     ( ubmdmsysrst_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmtck_in                                        ( ubmdmtck_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmtdi_in                                        ( ubmdmtdi_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . drpdo_common_out                                   ( drpdo_common_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0] old
+  . drprdy_common_out                                  ( drprdy_common_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . pmarsvdout0_out                                    ( pmarsvdout0_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . pmarsvdout1_out                                    ( pmarsvdout1_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . qpll0fbclklost_out                                 ( qpll0fbclklost_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0lock_out                                      ( qpll0lock_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0outclk_out                                    ( qpll0outclk_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0outrefclk_out                                 ( qpll0outrefclk_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll0refclklost_out                                ( qpll0refclklost_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1fbclklost_out                                 ( qpll1fbclklost_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1lock_out                                      ( qpll1lock_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1outclk_out                                    ( qpll1outclk_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1outrefclk_out                                 ( qpll1outrefclk_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qpll1refclklost_out                                ( qpll1refclklost_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . qplldmonitor0_out                                  ( qplldmonitor0_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . qplldmonitor1_out                                  ( qplldmonitor1_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*8)-1:0] old
+  . refclkoutmonitor0_out                              ( refclkoutmonitor0_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . refclkoutmonitor1_out                              ( refclkoutmonitor1_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . rxrecclk0sel_out                                   ( rxrecclk0sel_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0] old
+  . rxrecclk1sel_out                                   ( rxrecclk1sel_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*2)-1:0] old
+  . sdm0finalout_out                                   ( sdm0finalout_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*4)-1:0] old
+  . sdm0testdata_out                                   ( sdm0testdata_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*15)-1:0] old
+  . sdm1finalout_out                                   ( sdm1finalout_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*4)-1:0] old
+  . sdm1testdata_out                                   ( sdm1testdata_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*15)-1:0] old
+  . ubdaddr_out                                        ( ubdaddr_out                                        ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0] old
+  . ubden_out                                          ( ubden_out                                          ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubdi_out                                           ( ubdi_out                                           ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*16)-1:0] old
+  . ubdwe_out                                          ( ubdwe_out                                          ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubmdmtdo_out                                       ( ubmdmtdo_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubrsvdout_out                                      ( ubrsvdout_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . ubtxuart_out                                       ( ubtxuart_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_SF_CM*1)-1:0] old
+  . cdrstepdir_in                                      ( cdrstepdir_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cdrstepsq_in                                       ( cdrstepsq_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cdrstepsx_in                                       ( cdrstepsx_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cfgreset_in                                        ( cfgreset_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . clkrsvd0_in                                        ( clkrsvd0_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . clkrsvd1_in                                        ( clkrsvd1_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cpllfreqlock_in                                    ( cpllfreqlock_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cplllockdetclk_in                                  ( cplllockdetclk_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cplllocken_in                                      ( cplllocken_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cpllpd_in                                          ( cpllpd_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cpllrefclksel_in                                   ( cpllrefclksel_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . cpllreset_in                                       ( cpllreset_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . dmonfiforeset_in                                   ( dmonfiforeset_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . dmonitorclk_in                                     ( dmonitorclk_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . drpaddr_in                                         ( drpaddr_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*10)-1:0] old
+  . drpclk_in                                          ( drpclk_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . drpdi_in                                           ( drpdi_in                                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . drpen_in                                           ( drpen_in                                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . drprst_in                                          ( drprst_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . drpwe_in                                           ( drpwe_in                                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . eyescanreset_in                                    ( eyescanreset_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . eyescantrigger_in                                  ( eyescantrigger_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . freqos_in                                          ( freqos_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtgrefclk_in                                       ( gtgrefclk_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtnorthrefclk0_in                                  ( gtnorthrefclk0_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtnorthrefclk1_in                                  ( gtnorthrefclk1_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtrefclk0_in                                       ( gtrefclk0_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtrefclk1_in                                       ( gtrefclk1_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtrsvd_in                                          ( gtrsvd_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . gtrxreset_in                                       ( gtrxreset_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtrxresetsel_in                                    ( gtrxresetsel_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtsouthrefclk0_in                                  ( gtsouthrefclk0_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtsouthrefclk1_in                                  ( gtsouthrefclk1_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gttxreset_in                                       ( gttxreset_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gttxresetsel_in                                    ( gttxresetsel_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtyrxn_in                                          ( gtyrxn_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtyrxp_in                                          ( gtyrxp_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . incpctrl_in                                        ( incpctrl_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . loopback_in                                        ( loopback_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . pcieeqrxeqadaptdone_in                             ( pcieeqrxeqadaptdone_in                             ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcierstidle_in                                     ( pcierstidle_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pciersttxsyncstart_in                              ( pciersttxsyncstart_in                              ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcieuserratedone_in                                ( pcieuserratedone_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcsrsvdin_in                                       ( pcsrsvdin_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . qpll0clk_in                                        ( qpll0clk_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . qpll0freqlock_in                                   ( qpll0freqlock_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . qpll0refclk_in                                     ( qpll0refclk_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . qpll1clk_in                                        ( qpll1clk_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . qpll1freqlock_in                                   ( qpll1freqlock_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . qpll1refclk_in                                     ( qpll1refclk_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . resetovrd_in                                       ( resetovrd_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rx8b10ben_in                                       ( rx8b10ben_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxafecfoken_in                                     ( rxafecfoken_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxbufreset_in                                      ( rxbufreset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcdrfreqreset_in                                  ( rxcdrfreqreset_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcdrhold_in                                       ( rxcdrhold_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcdrovrden_in                                     ( rxcdrovrden_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcdrreset_in                                      ( rxcdrreset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxchbonden_in                                      ( rxchbonden_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxchbondi_in                                       ( rxchbondi_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0] old
+  . rxchbondlevel_in                                   ( rxchbondlevel_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . rxchbondmaster_in                                  ( rxchbondmaster_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxchbondslave_in                                   ( rxchbondslave_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxckcalreset_in                                    ( rxckcalreset_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxckcalstart_in                                    ( rxckcalstart_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*7)-1:0] old
+  . rxcommadeten_in                                    ( rxcommadeten_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfeagchold_in                                    ( rxdfeagchold_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfeagcovrden_in                                  ( rxdfeagcovrden_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfecfokfcnum_in                                  ( rxdfecfokfcnum_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*4)-1:0] old
+  . rxdfecfokfen_in                                    ( rxdfecfokfen_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfecfokfpulse_in                                 ( rxdfecfokfpulse_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfecfokhold_in                                   ( rxdfecfokhold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfecfokovren_in                                  ( rxdfecfokovren_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfekhhold_in                                     ( rxdfekhhold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfekhovrden_in                                   ( rxdfekhovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfelfhold_in                                     ( rxdfelfhold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfelfovrden_in                                   ( rxdfelfovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfelpmreset_in                                   ( rxdfelpmreset_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap10hold_in                                  ( rxdfetap10hold_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap10ovrden_in                                ( rxdfetap10ovrden_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap11hold_in                                  ( rxdfetap11hold_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap11ovrden_in                                ( rxdfetap11ovrden_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap12hold_in                                  ( rxdfetap12hold_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap12ovrden_in                                ( rxdfetap12ovrden_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap13hold_in                                  ( rxdfetap13hold_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap13ovrden_in                                ( rxdfetap13ovrden_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap14hold_in                                  ( rxdfetap14hold_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap14ovrden_in                                ( rxdfetap14ovrden_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap15hold_in                                  ( rxdfetap15hold_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap15ovrden_in                                ( rxdfetap15ovrden_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap2hold_in                                   ( rxdfetap2hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap2ovrden_in                                 ( rxdfetap2ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap3hold_in                                   ( rxdfetap3hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap3ovrden_in                                 ( rxdfetap3ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap4hold_in                                   ( rxdfetap4hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap4ovrden_in                                 ( rxdfetap4ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap5hold_in                                   ( rxdfetap5hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap5ovrden_in                                 ( rxdfetap5ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap6hold_in                                   ( rxdfetap6hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap6ovrden_in                                 ( rxdfetap6ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap7hold_in                                   ( rxdfetap7hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap7ovrden_in                                 ( rxdfetap7ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap8hold_in                                   ( rxdfetap8hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap8ovrden_in                                 ( rxdfetap8ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap9hold_in                                   ( rxdfetap9hold_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfetap9ovrden_in                                 ( rxdfetap9ovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfeuthold_in                                     ( rxdfeuthold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfeutovrden_in                                   ( rxdfeutovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfevphold_in                                     ( rxdfevphold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfevpovrden_in                                   ( rxdfevpovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdfexyden_in                                      ( rxdfexyden_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdlybypass_in                                     ( rxdlybypass_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdlyen_in                                         ( rxdlyen_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdlyovrden_in                                     ( rxdlyovrden_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxdlysreset_in                                     ( rxdlysreset_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxelecidlemode_in                                  ( rxelecidlemode_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxeqtraining_in                                    ( rxeqtraining_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxgearboxslip_in                                   ( rxgearboxslip_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlatclk_in                                        ( rxlatclk_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmen_in                                         ( rxlpmen_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmgchold_in                                     ( rxlpmgchold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmgcovrden_in                                   ( rxlpmgcovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmhfhold_in                                     ( rxlpmhfhold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmhfovrden_in                                   ( rxlpmhfovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmlfhold_in                                     ( rxlpmlfhold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmlfklovrden_in                                 ( rxlpmlfklovrden_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmoshold_in                                     ( rxlpmoshold_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlpmosovrden_in                                   ( rxlpmosovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxmcommaalignen_in                                 ( rxmcommaalignen_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxmonitorsel_in                                    ( rxmonitorsel_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxoobreset_in                                      ( rxoobreset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxoscalreset_in                                    ( rxoscalreset_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxoshold_in                                        ( rxoshold_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxosovrden_in                                      ( rxosovrden_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxoutclksel_in                                     ( rxoutclksel_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . rxpcommaalignen_in                                 ( rxpcommaalignen_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxpcsreset_in                                      ( rxpcsreset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxpd_in                                            ( rxpd_in                                            ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxphalign_in                                       ( rxphalign_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxphalignen_in                                     ( rxphalignen_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxphdlypd_in                                       ( rxphdlypd_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxphdlyreset_in                                    ( rxphdlyreset_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxpllclksel_in                                     ( rxpllclksel_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxpmareset_in                                      ( rxpmareset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxpolarity_in                                      ( rxpolarity_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxprbscntreset_in                                  ( rxprbscntreset_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxprbssel_in                                       ( rxprbssel_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*4)-1:0] old
+  . rxprogdivreset_in                                  ( rxprogdivreset_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxrate_in                                          ( rxrate_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . rxratemode_in                                      ( rxratemode_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxslide_in                                         ( rxslide_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxslipoutclk_in                                    ( rxslipoutclk_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxslippma_in                                       ( rxslippma_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxsyncallin_in                                     ( rxsyncallin_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxsyncin_in                                        ( rxsyncin_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxsyncmode_in                                      ( rxsyncmode_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxsysclksel_in                                     ( rxsysclksel_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxtermination_in                                   ( rxtermination_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxuserrdy_in                                       ( rxuserrdy_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxusrclk_in                                        ( rxusrclk_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxusrclk2_in                                       ( rxusrclk2_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . sigvalidclk_in                                     ( sigvalidclk_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . tstin_in                                           ( tstin_in                                           ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*20)-1:0] old
+  . tx8b10bbypass_in                                   ( tx8b10bbypass_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0] old
+  . tx8b10ben_in                                       ( tx8b10ben_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txcominit_in                                       ( txcominit_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txcomsas_in                                        ( txcomsas_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txcomwake_in                                       ( txcomwake_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txctrl0_in                                         ( txctrl0_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . txctrl1_in                                         ( txctrl1_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . txctrl2_in                                         ( txctrl2_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0] old
+  . txdata_in                                          ( txdata_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*128)-1:0] old
+  . txdataextendrsvd_in                                ( txdataextendrsvd_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0] old
+  . txdccforcestart_in                                 ( txdccforcestart_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdccreset_in                                      ( txdccreset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdeemph_in                                        ( txdeemph_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . txdetectrx_in                                      ( txdetectrx_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdiffctrl_in                                      ( txdiffctrl_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0] old
+  . txdlybypass_in                                     ( txdlybypass_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdlyen_in                                         ( txdlyen_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdlyhold_in                                       ( txdlyhold_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdlyovrden_in                                     ( txdlyovrden_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdlysreset_in                                     ( txdlysreset_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdlyupdown_in                                     ( txdlyupdown_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txelecidle_in                                      ( txelecidle_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txheader_in                                        ( txheader_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*6)-1:0] old
+  . txinhibit_in                                       ( txinhibit_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txlatclk_in                                        ( txlatclk_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txlfpstreset_in                                    ( txlfpstreset_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txlfpsu2lpexit_in                                  ( txlfpsu2lpexit_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txlfpsu3wake_in                                    ( txlfpsu3wake_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txmaincursor_in                                    ( txmaincursor_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*7)-1:0] old
+  . txmargin_in                                        ( txmargin_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . txmuxdcdexhold_in                                  ( txmuxdcdexhold_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txmuxdcdorwren_in                                  ( txmuxdcdorwren_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txoneszeros_in                                     ( txoneszeros_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txoutclksel_in                                     ( txoutclksel_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . txpcsreset_in                                      ( txpcsreset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpd_in                                            ( txpd_in                                            ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . txpdelecidlemode_in                                ( txpdelecidlemode_in                                ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphalign_in                                       ( txphalign_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphalignen_in                                     ( txphalignen_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphdlypd_in                                       ( txphdlypd_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphdlyreset_in                                    ( txphdlyreset_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphdlytstclk_in                                   ( txphdlytstclk_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphinit_in                                        ( txphinit_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphovrden_in                                      ( txphovrden_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpippmen_in                                       ( txpippmen_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpippmovrden_in                                   ( txpippmovrden_in                                   ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpippmpd_in                                       ( txpippmpd_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpippmsel_in                                      ( txpippmsel_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpippmstepsize_in                                 ( txpippmstepsize_in                                 ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0] old
+  . txpisopd_in                                        ( txpisopd_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpllclksel_in                                     ( txpllclksel_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . txpmareset_in                                      ( txpmareset_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpolarity_in                                      ( txpolarity_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpostcursor_in                                    ( txpostcursor_in                                    ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0] old
+  . txprbsforceerr_in                                  ( txprbsforceerr_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txprbssel_in                                       ( txprbssel_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*4)-1:0] old
+  . txprecursor_in                                     ( txprecursor_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0] old
+  . txprogdivreset_in                                  ( txprogdivreset_in                                  ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txrate_in                                          ( txrate_in                                          ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . txratemode_in                                      ( txratemode_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txsequence_in                                      ( txsequence_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*7)-1:0] old
+  . txswing_in                                         ( txswing_in                                         ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txsyncallin_in                                     ( txsyncallin_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txsyncin_in                                        ( txsyncin_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txsyncmode_in                                      ( txsyncmode_in                                      ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txsysclksel_in                                     ( txsysclksel_in                                     ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . txuserrdy_in                                       ( txuserrdy_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txusrclk_in                                        ( txusrclk_in                                        ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txusrclk2_in                                       ( txusrclk2_in                                       ), // input [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . bufgtce_out                                        ( bufgtce_out                                        ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . bufgtcemask_out                                    ( bufgtcemask_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . bufgtdiv_out                                       ( bufgtdiv_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*9)-1:0] old
+  . bufgtreset_out                                     ( bufgtreset_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . bufgtrstmask_out                                   ( bufgtrstmask_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . cpllfbclklost_out                                  ( cpllfbclklost_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cplllock_out                                       ( cplllock_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . cpllrefclklost_out                                 ( cpllrefclklost_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . dmonitorout_out                                    ( dmonitorout_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . dmonitoroutclk_out                                 ( dmonitoroutclk_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . drpdo_out                                          ( drpdo_out                                          ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . drprdy_out                                         ( drprdy_out                                         ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . eyescandataerror_out                               ( eyescandataerror_out                               ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtpowergood_out                                    ( gtpowergood_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtrefclkmonitor_out                                ( gtrefclkmonitor_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtytxn_out                                         ( gtytxn_out                                         ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . gtytxp_out                                         ( gtytxp_out                                         ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcierategen3_out                                   ( pcierategen3_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcierateidle_out                                   ( pcierateidle_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcierateqpllpd_out                                 ( pcierateqpllpd_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . pcierateqpllreset_out                              ( pcierateqpllreset_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . pciesynctxsyncdone_out                             ( pciesynctxsyncdone_out                             ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcieusergen3rdy_out                                ( pcieusergen3rdy_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcieuserphystatusrst_out                           ( pcieuserphystatusrst_out                           ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcieuserratestart_out                              ( pcieuserratestart_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pcsrsvdout_out                                     ( pcsrsvdout_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . phystatus_out                                      ( phystatus_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . pinrsrvdas_out                                     ( pinrsrvdas_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . powerpresent_out                                   ( powerpresent_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . resetexception_out                                 ( resetexception_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxbufstatus_out                                    ( rxbufstatus_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . rxbyteisaligned_out                                ( rxbyteisaligned_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxbyterealign_out                                  ( rxbyterealign_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcdrlock_out                                      ( rxcdrlock_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcdrphdone_out                                    ( rxcdrphdone_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxchanbondseq_out                                  ( rxchanbondseq_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxchanisaligned_out                                ( rxchanisaligned_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxchanrealign_out                                  ( rxchanrealign_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxchbondo_out                                      ( rxchbondo_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*5)-1:0] old
+  . rxckcaldone_out                                    ( rxckcaldone_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxclkcorcnt_out                                    ( rxclkcorcnt_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxcominitdet_out                                   ( rxcominitdet_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcommadet_out                                     ( rxcommadet_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcomsasdet_out                                    ( rxcomsasdet_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxcomwakedet_out                                   ( rxcomwakedet_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxctrl0_out                                        ( rxctrl0_out                                        ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . rxctrl1_out                                        ( rxctrl1_out                                        ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*16)-1:0] old
+  . rxctrl2_out                                        ( rxctrl2_out                                        ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0] old
+  . rxctrl3_out                                        ( rxctrl3_out                                        ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0] old
+  . rxdata_out                                         ( rxdata_out                                         ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*128)-1:0] old
+  . rxdataextendrsvd_out                               ( rxdataextendrsvd_out                               ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0] old
+  . rxdatavalid_out                                    ( rxdatavalid_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxdlysresetdone_out                                ( rxdlysresetdone_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxelecidle_out                                     ( rxelecidle_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxheader_out                                       ( rxheader_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*6)-1:0] old
+  . rxheadervalid_out                                  ( rxheadervalid_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxlfpstresetdet_out                                ( rxlfpstresetdet_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlfpsu2lpexitdet_out                              ( rxlfpsu2lpexitdet_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxlfpsu3wakedet_out                                ( rxlfpsu3wakedet_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxmonitorout_out                                   ( rxmonitorout_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*8)-1:0] old
+  . rxosintdone_out                                    ( rxosintdone_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxosintstarted_out                                 ( rxosintstarted_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxosintstrobedone_out                              ( rxosintstrobedone_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxosintstrobestarted_out                           ( rxosintstrobestarted_out                           ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxoutclk_out                                       ( rxoutclk_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxoutclkfabric_out                                 ( rxoutclkfabric_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxoutclkpcs_out                                    ( rxoutclkpcs_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxphaligndone_out                                  ( rxphaligndone_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxphalignerr_out                                   ( rxphalignerr_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxpmaresetdone_out                                 ( rxpmaresetdone_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxprbserr_out                                      ( rxprbserr_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxprbslocked_out                                   ( rxprbslocked_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxprgdivresetdone_out                              ( rxprgdivresetdone_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxratedone_out                                     ( rxratedone_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxrecclkout_out                                    ( rxrecclkout_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxresetdone_out                                    ( rxresetdone_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxsliderdy_out                                     ( rxsliderdy_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxslipdone_out                                     ( rxslipdone_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxslipoutclkrdy_out                                ( rxslipoutclkrdy_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxslippmardy_out                                   ( rxslippmardy_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxstartofseq_out                                   ( rxstartofseq_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . rxstatus_out                                       ( rxstatus_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*3)-1:0] old
+  . rxsyncdone_out                                     ( rxsyncdone_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxsyncout_out                                      ( rxsyncout_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . rxvalid_out                                        ( rxvalid_out                                        ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txbufstatus_out                                    ( txbufstatus_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*2)-1:0] old
+  . txcomfinish_out                                    ( txcomfinish_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdccdone_out                                      ( txdccdone_out                                      ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txdlysresetdone_out                                ( txdlysresetdone_out                                ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txoutclk_out                                       ( txoutclk_out                                       ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txoutclkfabric_out                                 ( txoutclkfabric_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txoutclkpcs_out                                    ( txoutclkpcs_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphaligndone_out                                  ( txphaligndone_out                                  ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txphinitdone_out                                   ( txphinitdone_out                                   ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txpmaresetdone_out                                 ( txpmaresetdone_out                                 ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txprgdivresetdone_out                              ( txprgdivresetdone_out                              ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txratedone_out                                     ( txratedone_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txresetdone_out                                    ( txresetdone_out                                    ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txsyncdone_out                                     ( txsyncdone_out                                     ), // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+  . txsyncout_out                                      ( txsyncout_out                                      )  // output [(`s5_native_phy_16gbps_gtwizard_gtye4_N_CH*1)-1:0] old
+);
+    s5_native_phy_16gbps_gtwizard_gtye4 #( old
+    ) s5_native_phy_16gbps_gtwizard_gtye4_inst ( old
+    ); old
 
     // Drive unused outputs to constant values
     assign rxrecclk0_sel_out = {{`s5_native_phy_16gbps_SF_CM}{1'b0}};
