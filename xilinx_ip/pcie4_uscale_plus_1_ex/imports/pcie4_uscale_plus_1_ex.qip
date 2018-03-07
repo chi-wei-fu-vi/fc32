@@ -48,11 +48,11 @@ set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [fil
 set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../../pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/source/pcie4_uscale_plus_1_sys_clk_gen_ps.v]
 set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../../pcie4_uscale_plus_1_ex/pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/source/pcie4_uscale_plus_1_vf_decode.v]
 
-set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gtye4_channel.v]
-set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gtye4_common.v]
-set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtwizard_gtye4.v]
-set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtye4_channel_wrapper.v]
-set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtye4_common_wrapper.v]
+#set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gtye4_channel.v]
+#set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gtye4_common.v]
+#set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtwizard_gtye4.v]
+#set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtye4_channel_wrapper.v]
+#set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/pcie4_uscale_plus_1_gt_gtye4_common_wrapper.v]
 
 set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gthe4_channel.v]
 set_global_assignment -library pcie4_uscale_plus_1_ex -name SIMVERILOG_FILE [file join $::quartus(qip_path) ../pcie4_uscale_plus_1_ex.srcs/sources_1/ip/pcie4_uscale_plus_1/ip_0/sim/gtwizard_ultrascale_v1_7_gthe4_common.v]

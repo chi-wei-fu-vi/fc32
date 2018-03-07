@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
--- Date        : Mon Mar  5 10:00:12 2018
+-- Date        : Wed Mar  7 10:31:40 2018
 -- Host        : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/chiwei/work/checkout/fc32.git/xilinx_ip/gtwizard/gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/s5_native_phy_16gbps_sim_netlist.vhdl
@@ -38691,13 +38691,13 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
     );
 \sm_reset_rx_cdr_to_ctr[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFDFFFFFFFFFFFFF"
+      INIT => X"DFFFFFFFFFFFFFFF"
     )
         port map (
       I0 => \sm_reset_rx_cdr_to_ctr[0]_i_3_n_0\,
-      I1 => sm_reset_rx_cdr_to_ctr_reg(1),
-      I2 => sm_reset_rx_cdr_to_ctr_reg(18),
-      I3 => sm_reset_rx_cdr_to_ctr_reg(0),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(2),
+      I2 => sm_reset_rx_cdr_to_ctr_reg(9),
+      I3 => sm_reset_rx_cdr_to_ctr_reg(17),
       I4 => \sm_reset_rx_cdr_to_ctr[0]_i_4_n_0\,
       I5 => \sm_reset_rx_cdr_to_ctr[0]_i_5_n_0\,
       O => \sm_reset_rx_cdr_to_ctr[0]_i_1_n_0\
@@ -38707,10 +38707,10 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
       INIT => X"8000"
     )
         port map (
-      I0 => sm_reset_rx_cdr_to_ctr_reg(5),
-      I1 => sm_reset_rx_cdr_to_ctr_reg(3),
-      I2 => sm_reset_rx_cdr_to_ctr_reg(16),
-      I3 => sm_reset_rx_cdr_to_ctr_reg(11),
+      I0 => sm_reset_rx_cdr_to_ctr_reg(1),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(0),
+      I2 => sm_reset_rx_cdr_to_ctr_reg(8),
+      I3 => sm_reset_rx_cdr_to_ctr_reg(6),
       O => \sm_reset_rx_cdr_to_ctr[0]_i_3_n_0\
     );
 \sm_reset_rx_cdr_to_ctr[0]_i_4\: unisim.vcomponents.LUT6
@@ -38718,12 +38718,12 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
       INIT => X"0000000000000001"
     )
         port map (
-      I0 => sm_reset_rx_cdr_to_ctr_reg(9),
+      I0 => sm_reset_rx_cdr_to_ctr_reg(11),
       I1 => sm_reset_rx_cdr_to_ctr_reg(7),
-      I2 => sm_reset_rx_cdr_to_ctr_reg(8),
-      I3 => sm_reset_rx_cdr_to_ctr_reg(2),
+      I2 => sm_reset_rx_cdr_to_ctr_reg(10),
+      I3 => sm_reset_rx_cdr_to_ctr_reg(3),
       I4 => sm_reset_rx_cdr_to_ctr_reg(4),
-      I5 => sm_reset_rx_cdr_to_ctr_reg(6),
+      I5 => sm_reset_rx_cdr_to_ctr_reg(5),
       O => \sm_reset_rx_cdr_to_ctr[0]_i_4_n_0\
     );
 \sm_reset_rx_cdr_to_ctr[0]_i_5\: unisim.vcomponents.LUT5
@@ -38732,8 +38732,8 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
     )
         port map (
       I0 => \sm_reset_rx_cdr_to_ctr[0]_i_7_n_0\,
-      I1 => sm_reset_rx_cdr_to_ctr_reg(17),
-      I2 => sm_reset_rx_cdr_to_ctr_reg(15),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(18),
+      I2 => sm_reset_rx_cdr_to_ctr_reg(16),
       I3 => sm_reset_rx_cdr_to_ctr_reg(19),
       I4 => \sm_reset_rx_cdr_to_ctr[0]_i_8_n_0\,
       O => \sm_reset_rx_cdr_to_ctr[0]_i_5_n_0\
@@ -38764,10 +38764,10 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
       INIT => X"0001"
     )
         port map (
-      I0 => sm_reset_rx_cdr_to_ctr_reg(14),
-      I1 => sm_reset_rx_cdr_to_ctr_reg(13),
-      I2 => sm_reset_rx_cdr_to_ctr_reg(12),
-      I3 => sm_reset_rx_cdr_to_ctr_reg(10),
+      I0 => sm_reset_rx_cdr_to_ctr_reg(15),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(14),
+      I2 => sm_reset_rx_cdr_to_ctr_reg(13),
+      I3 => sm_reset_rx_cdr_to_ctr_reg(12),
       O => \sm_reset_rx_cdr_to_ctr[0]_i_8_n_0\
     );
 \sm_reset_rx_cdr_to_ctr_reg[0]\: unisim.vcomponents.FDRE
@@ -50351,7 +50351,7 @@ entity s5_native_phy_16gbps_s5_native_phy_16gbps_gtwizard_top is
   attribute C_FORCE_COMMONS : integer;
   attribute C_FORCE_COMMONS of s5_native_phy_16gbps_s5_native_phy_16gbps_gtwizard_top : entity is 0;
   attribute C_FREERUN_FREQUENCY : string;
-  attribute C_FREERUN_FREQUENCY of s5_native_phy_16gbps_s5_native_phy_16gbps_gtwizard_top : entity is "250.000000";
+  attribute C_FREERUN_FREQUENCY of s5_native_phy_16gbps_s5_native_phy_16gbps_gtwizard_top : entity is "100.000000";
   attribute C_GT_REV : integer;
   attribute C_GT_REV of s5_native_phy_16gbps_s5_native_phy_16gbps_gtwizard_top : entity is 67;
   attribute C_GT_TYPE : integer;
@@ -51240,7 +51240,7 @@ architecture STRUCTURE of s5_native_phy_16gbps is
   attribute C_FORCE_COMMONS : integer;
   attribute C_FORCE_COMMONS of inst : label is 0;
   attribute C_FREERUN_FREQUENCY : string;
-  attribute C_FREERUN_FREQUENCY of inst : label is "250.000000";
+  attribute C_FREERUN_FREQUENCY of inst : label is "100.000000";
   attribute C_GT_REV : integer;
   attribute C_GT_REV of inst : label is 67;
   attribute C_GT_TYPE : integer;

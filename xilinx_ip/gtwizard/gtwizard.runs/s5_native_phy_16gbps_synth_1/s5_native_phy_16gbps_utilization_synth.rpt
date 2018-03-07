@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Mon Mar  5 10:00:11 2018
+| Date         : Wed Mar  7 10:31:40 2018
 | Host         : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
 | Command      : report_utilization -file s5_native_phy_16gbps_utilization_synth.rpt -pb s5_native_phy_16gbps_utilization_synth.pb
 | Design       : s5_native_phy_16gbps

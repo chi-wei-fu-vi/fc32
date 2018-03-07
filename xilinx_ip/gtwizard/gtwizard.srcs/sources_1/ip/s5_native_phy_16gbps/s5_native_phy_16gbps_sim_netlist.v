@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-// Date        : Mon Mar  5 10:00:11 2018
+// Date        : Wed Mar  7 10:31:40 2018
 // Host        : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/chiwei/work/checkout/fc32.git/xilinx_ip/gtwizard/gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/s5_native_phy_16gbps_sim_netlist.v
@@ -254,7 +254,7 @@ module s5_native_phy_16gbps
   (* C_COMMON_SCALING_FACTOR = "6" *) 
   (* C_CPLL_VCO_FREQUENCY = "2578.125000" *) 
   (* C_FORCE_COMMONS = "0" *) 
-  (* C_FREERUN_FREQUENCY = "250.000000" *) 
+  (* C_FREERUN_FREQUENCY = "100.000000" *) 
   (* C_GT_REV = "67" *) 
   (* C_GT_TYPE = "3" *) 
   (* C_INCLUDE_CPLL_CAL = "2" *) 
@@ -6377,39 +6377,39 @@ module s5_native_phy_16gbps_gtwizard_ultrascale_v1_7_1_gtwiz_reset
         .Q(sm_reset_rx_cdr_to_clr),
         .S(gtwiz_reset_rx_any_sync));
   LUT6 #(
-    .INIT(64'hFFDFFFFFFFFFFFFF)) 
+    .INIT(64'hDFFFFFFFFFFFFFFF)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_1 
        (.I0(\sm_reset_rx_cdr_to_ctr[0]_i_3_n_0 ),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[1]),
-        .I2(sm_reset_rx_cdr_to_ctr_reg[18]),
-        .I3(sm_reset_rx_cdr_to_ctr_reg[0]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[2]),
+        .I2(sm_reset_rx_cdr_to_ctr_reg[9]),
+        .I3(sm_reset_rx_cdr_to_ctr_reg[17]),
         .I4(\sm_reset_rx_cdr_to_ctr[0]_i_4_n_0 ),
         .I5(\sm_reset_rx_cdr_to_ctr[0]_i_5_n_0 ),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h8000)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_3 
-       (.I0(sm_reset_rx_cdr_to_ctr_reg[5]),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[3]),
-        .I2(sm_reset_rx_cdr_to_ctr_reg[16]),
-        .I3(sm_reset_rx_cdr_to_ctr_reg[11]),
+       (.I0(sm_reset_rx_cdr_to_ctr_reg[1]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[0]),
+        .I2(sm_reset_rx_cdr_to_ctr_reg[8]),
+        .I3(sm_reset_rx_cdr_to_ctr_reg[6]),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_4 
-       (.I0(sm_reset_rx_cdr_to_ctr_reg[9]),
+       (.I0(sm_reset_rx_cdr_to_ctr_reg[11]),
         .I1(sm_reset_rx_cdr_to_ctr_reg[7]),
-        .I2(sm_reset_rx_cdr_to_ctr_reg[8]),
-        .I3(sm_reset_rx_cdr_to_ctr_reg[2]),
+        .I2(sm_reset_rx_cdr_to_ctr_reg[10]),
+        .I3(sm_reset_rx_cdr_to_ctr_reg[3]),
         .I4(sm_reset_rx_cdr_to_ctr_reg[4]),
-        .I5(sm_reset_rx_cdr_to_ctr_reg[6]),
+        .I5(sm_reset_rx_cdr_to_ctr_reg[5]),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'h00020000)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_5 
        (.I0(\sm_reset_rx_cdr_to_ctr[0]_i_7_n_0 ),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[17]),
-        .I2(sm_reset_rx_cdr_to_ctr_reg[15]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[18]),
+        .I2(sm_reset_rx_cdr_to_ctr_reg[16]),
         .I3(sm_reset_rx_cdr_to_ctr_reg[19]),
         .I4(\sm_reset_rx_cdr_to_ctr[0]_i_8_n_0 ),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_5_n_0 ));
@@ -6431,10 +6431,10 @@ module s5_native_phy_16gbps_gtwizard_ultrascale_v1_7_1_gtwiz_reset
   LUT4 #(
     .INIT(16'h0001)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_8 
-       (.I0(sm_reset_rx_cdr_to_ctr_reg[14]),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[13]),
-        .I2(sm_reset_rx_cdr_to_ctr_reg[12]),
-        .I3(sm_reset_rx_cdr_to_ctr_reg[10]),
+       (.I0(sm_reset_rx_cdr_to_ctr_reg[15]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[14]),
+        .I2(sm_reset_rx_cdr_to_ctr_reg[13]),
+        .I3(sm_reset_rx_cdr_to_ctr_reg[12]),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_8_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -47214,7 +47214,7 @@ module s5_native_phy_16gbps_s5_native_phy_16gbps_gtwizard_gtye4
 endmodule
 
 (* C_CHANNEL_ENABLE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111" *) (* C_COMMON_SCALING_FACTOR = "6" *) (* C_CPLL_VCO_FREQUENCY = "2578.125000" *) 
-(* C_FORCE_COMMONS = "0" *) (* C_FREERUN_FREQUENCY = "250.000000" *) (* C_GT_REV = "67" *) 
+(* C_FORCE_COMMONS = "0" *) (* C_FREERUN_FREQUENCY = "100.000000" *) (* C_GT_REV = "67" *) 
 (* C_GT_TYPE = "3" *) (* C_INCLUDE_CPLL_CAL = "2" *) (* C_LOCATE_COMMON = "0" *) 
 (* C_LOCATE_IN_SYSTEM_IBERT_CORE = "2" *) (* C_LOCATE_RESET_CONTROLLER = "0" *) (* C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER = "0" *) 
 (* C_LOCATE_RX_USER_CLOCKING = "1" *) (* C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER = "0" *) (* C_LOCATE_TX_USER_CLOCKING = "1" *) 
